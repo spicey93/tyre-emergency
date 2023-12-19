@@ -1,6 +1,35 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import CTA from '../../components/CTA.astro';
 ---
 
 <Layout title="Emergency Mobile Tyre Fitting | Tyre Emergency Ltd">
+    <section id="hero" class="text-center text-white d-flex align-items-center justify-content-center">
+        <div class="container">
+            <p class="fw-bold display-5">Stuck With a Flat Tyre?</p>
+            <p class="lead fs-3">Our mobile tyre fitters can come to you in <strong class="fw-bold">60 minutes</strong></p>
+            <a href="tel:01636330055" class="btn btn-lg btn-warning fw-bold"><i class="bi bi-telephone-fill"></i> Call Now</a>
+        </div>
+    </section>
+    <main>
+        <div class="text-center py-5 bg-light">
+            <div class="container">
+    
+                <h1 class="fw-bold">Emergency Mobile Tyre Fitting</h1>
+                <h2 class="fw-bold text-warning mb-5">Fast Response Tyre Service at Home or Roadside</h2>
+                <p class="lead">If you're looking for a mobile tyre service in Nottingham that can come to you today, you've come to right place. At <strong class="fw-bold">Tyre Emergency</strong>, we specialise in providing a fast response emergency tyre fitting service at your home or roadside.</p>
+                <p class="lead">Our mobile tyre fitters are available seven days a week and cover a wide area of <strong class="fw-bold">Nottingham and Newark</strong>.</p>
+            </div>
+        </div>
+    </main>
+    <CTA />
 </Layout>
+<style>
+	#hero {
+		min-height: 60vh;
+		background:linear-gradient(0deg, rgba(51, 51, 51, 0.9), rgba(51, 51, 51, 0.9)), url("/img/mobile-tyre-fitting.jpeg");
+		background-size: cover;
+		background-position: bottom;
+		background-repeat: no-repeat;
+	}
+</style>
