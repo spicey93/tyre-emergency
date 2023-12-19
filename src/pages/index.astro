@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import CTA from "../components/CTA.astro"
 ---
 
 <Layout title="Home | Tyre Emergency Ltd">
@@ -7,7 +8,7 @@ import Layout from '../layouts/Layout.astro';
 	<div class="container">
 		<p class="fw-bold display-5">Flat Tyre? No Problem.</p>
 		<p class="lead fs-3">We'll get you back on the road in no time!</p>
-		<a href="#" class="btn btn-lg btn-warning"><i class="bi bi-telephone-fill"></i> Call Now</a>
+		<a href="tel:01636330055" class="btn btn-lg btn-warning fw-bold"><i class="bi bi-telephone-fill"></i> Call Now</a>
 	</div>
 </section>
 <main>
@@ -22,19 +23,13 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</div>
 </main>
-<section class="bg-warning text-center">
-	<div class="container py-5">
-		<p class="fs-3">Need a tyre urgently? Call <strong class="fw-bold">Tyre Emergency</strong></p>
-		<a href="#" class="btn btn-secondary btn-lg"><i class="bi bi-telephone-fill"></i> 0333 000 1111</a>
-
-	</div>
-</section>
+<CTA/>
 </Layout>
 
 <style>
 	#hero {
 		min-height: 60vh;
-		background:linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("/img/flat-tyre.jpg");
+		background:linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url("/img/mobile-tyre-fitting.jpeg");
 		background-size: cover;
 		background-position: bottom;
 		background-repeat: no-repeat;
