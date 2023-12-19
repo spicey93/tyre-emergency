@@ -1,0 +1,11 @@
+// $primary: #505e86;
+$warning: #ef961a;
+// $secondary: #cc2229;
+$secondary: #333333;
+$primary: #1A73EF;
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --bs-body-font-family: "Rubik", sans-serif;
+}
