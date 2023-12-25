@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Areas from '../../components/Areas.astro';
 import CTA from '../../components/CTA.astro';
 ---
 
@@ -14,12 +15,13 @@ import CTA from '../../components/CTA.astro';
     <main>
         <div class="text-center py-5 bg-light">
             <div class="container">
-    
+                
                 <h1 class="fw-bold">Emergency Mobile Tyre Fitting Services in Nottingham</h1>
                 <h2 class="fw-bold text-warning mb-5">Fast Response Tyre Service at Home or Roadside</h2>
                 <p class="lead">When a flat tyre strikes, you need a reliable and swift solution to get back on the road. At Tyre Emergency, we understand the urgency of these situations and offer specialised emergency mobile tyre fitting services in Nottingham and Newark.</p>
             </div>
         </div>
+        <CTA />
         <div class="container py-5 text-center">
             <h2 class="fw-bold mb-5">Our Emergency Tyre Fitting Service Includes</h2>
             <ul class="lead text-md-start">
@@ -29,6 +31,8 @@ import CTA from '../../components/CTA.astro';
             </ul>
         </div>
     </main>
+    <CTA />
+    <Areas />
     <CTA />
 </Layout>
 <style>
