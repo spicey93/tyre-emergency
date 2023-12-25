@@ -1,46 +1,110 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Areas from '../../components/Areas.astro';
-import CTA from '../../components/CTA.astro';
+import Layout from "../../layouts/Layout.astro";
+import Areas from "../../components/Areas.astro";
+import CTA from "../../components/CTA.astro";
 ---
 
-<Layout title="Emergency Mobile Tyre Fitting | Tyre Emergency Ltd" description=''>
-    <section id="hero" class="text-center text-white d-flex align-items-center justify-content-center">
+<Layout
+    title="Emergency Mobile Tyre Fitting | Tyre Emergency Ltd"
+    description="Get immediate emergency mobile tyre fitting services in Nottingham and Newark with Tyre Emergency Ltd. Fast, reliable, available 24/7."
+>
+    <section
+        id="hero"
+        class="text-center text-white d-flex align-items-center justify-content-center"
+    >
         <div class="container">
-            <p class="fw-bold display-5">Stuck With a Flat Tyre?</p>
-            <p class="lead fs-3 mb-4">Our mobile tyre fitters can come to you in <strong class="fw-bold">60 minutes</strong></p>
-            <a href="tel:01636330055" class="btn btn-lg btn-warning fw-bold"><i class="bi bi-telephone-fill"></i> Call Now</a>
+            <p class="fw-bold display-5">Facing a Flat Tyre Emergency?</p>
+            <p class="lead fs-3 mb-4">
+                Reach out to our expert mobile tyre fitters - Arriving in <strong
+                    class="fw-bold">60 minutes</strong
+                > or less
+            </p>
+            <a
+                href="tel:01636330055"
+                class="btn btn-lg btn-warning fw-bold text-secondary"
+                ><i class="bi bi-telephone-fill"></i> Call for Immediate Help</a
+            >
         </div>
     </section>
     <main>
         <div class="text-center py-5 bg-light">
             <div class="container">
-                
-                <h1 class="fw-bold">Emergency Mobile Tyre Fitting Services in Nottingham</h1>
-                <h2 class="fw-bold text-warning mb-5">Fast Response Tyre Service at Home or Roadside</h2>
-                <p class="lead">When a flat tyre strikes, you need a reliable and swift solution to get back on the road. At Tyre Emergency, we understand the urgency of these situations and offer specialised emergency mobile tyre fitting services in Nottingham and Newark.</p>
+                <h1 class="fw-bold">
+                    Emergency Mobile Tyre Fitting Services in Nottingham &
+                    Newark
+                </h1>
+                <h2 class="fw-bold text-warning mb-5">
+                    Your Rapid Response Tyre Solution - At Home or Roadside
+                </h2>
+                <p class="lead">
+                    Unexpected flat tyre? Don't let it disrupt your day. At Tyre
+                    Emergency, we specialize in rapid emergency mobile tyre
+                    fitting services, ensuring you're back on the road in no
+                    time. Serving both Nottingham and Newark, we're your go-to
+                    solution for tyre troubles at any hour.
+                </p>
             </div>
         </div>
-        <CTA />
         <div class="container py-5 text-center">
-            <h2 class="fw-bold mb-5">Our Emergency Tyre Fitting Service Includes</h2>
+            <h2 class="fw-bold mb-5">
+                What Sets Our Emergency Tyre Fitting Service Apart
+            </h2>
             <ul class="lead text-md-start">
-                <li><strong class="fw-bold">Rapid Response:</strong> We pride ourselves on our quick response time. When you call us, our skilled mobile tyre fitters are immediately dispatched to your location, whether you're at home, work, or stranded on the roadside.</li>
-                <li><strong class="fw-bold">7 Day Availability:</strong> Tyre emergencies don't wait for convenient hours, and neither do we. Our services are available seven days a week, ensuring you have access to assistance whenever you need it.</li>
-                <li><strong class="fw-bold">Comprehensive Coverage:</strong> Our mobile tyre fitters cover a wide area, serving Nottingham and Newark. No matter where you are in these regions, we'll reach you promptly.</li>
+                <li>
+                    <strong class="fw-bold">Unmatched Rapid Response:</strong>
+                     Our team is renowned for its quick action. Upon your call,
+                    we promptly dispatch our experienced mobile tyre fitters to
+                    your specified location, be it your home, workplace, or the
+                    middle of the road.
+                </li>
+                <li>
+                    <strong class="fw-bold">Consistent 7-Day Service:</strong>
+                     We're fully operational all week, ready to tackle tyre
+                    emergencies anytime they strike. Your peace of mind is our
+                    priority, any day of the week.
+                </li>
+                <li>
+                    <strong class="fw-bold">Extensive Service Area:</strong> Our
+                    reach extends across Nottingham and Newark, ensuring no
+                    matter where you find yourself within these areas, our team
+                    will be there to assist.
+                </li>
             </ul>
         </div>
     </main>
     <CTA />
+    <div class="container py-5 text-center">
+        <h2 class="fw-bold mb-5">Tyre Solutions for All Vehicles</h2>
+        <p class="lead">
+            At Tyre Emergency, our expertise isn't limited to just cars. We're
+            fully equipped to handle a wide range of vehicles including vans,
+            caravans, trailers, and motorhomes. Understanding the different
+            needs of each vehicle type, our team ensures the right tyre fit
+            every time.
+        </p>
+        <p class="lead">
+            Moreover, we take pride in our comprehensive inventory of tyres.
+            Stocking a vast variety of sizes, we aim to accommodate as many
+            types of vehicles as possible. This diversity in our stock means we
+            can quickly and efficiently replace tyres on virtually any vehicle,
+            ensuring you're back on the road with minimal delay.
+        </p>
+    </div>
+
     <Areas />
     <CTA />
 </Layout>
 <style>
-	#hero {
-		min-height: 60vh;
-		background:linear-gradient(0deg, rgba(51, 51, 51, 0.9), rgba(51, 51, 51, 0.9)), url("/img/mobile-tyre-fitting.jpeg");
-		background-size: cover;
-		background-position: bottom;
-		background-repeat: no-repeat;
-	}
+    #hero {
+        min-height: 60vh;
+        background: linear-gradient(
+                0deg,
+                rgba(51, 51, 51, 0.9),
+                rgba(51, 51, 51, 0.9)
+            ),
+            url("/img/mobile-tyre-fitting.jpeg");
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
 </style>

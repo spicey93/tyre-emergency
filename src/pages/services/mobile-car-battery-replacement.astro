@@ -1,24 +1,101 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Areas from '../../components/Areas.astro';
+import Layout from "../../layouts/Layout.astro";
+import Areas from "../../components/Areas.astro";
+import CTA2 from "../../components/CTA2.astro";
 ---
 
-<Layout title="Mobile Car Battery Replacement | Tyre Emergency Ltd" description=''>
-    <section id="hero" class="text-center text-white d-flex align-items-center justify-content-center">
+<Layout
+    title="Mobile Car Battery Replacement | Tyre Emergency Ltd"
+    description="Convenient and reliable mobile car battery replacement services in Nottingham and Newark. Quick response, professional service."
+>
+    <section
+        id="hero"
+        class="text-center text-white d-flex align-items-center justify-content-center"
+    >
         <div class="container">
-            <p class="fw-bold display-5">Mobile Car Battery Replacement</p>
-            <p class="lead fs-3">Have Your Flat Car Battery Changed at Home or Roadside</p>
-            <a href="tel:01636330055" class="btn btn-lg btn-warning fw-bold"><i class="bi bi-telephone-fill"></i> Call Now</a>
+            <p class="fw-bold display-5">
+                Car Battery Died? We've Got You Covered!
+            </p>
+            <p class="lead fs-3">
+                Professional Mobile Battery Replacement at Your Location
+            </p>
+            <a
+                href="tel:01636330055"
+                class="btn btn-lg btn-warning fw-bold text-secondary"
+                ><i class="bi bi-telephone-fill"></i> Call for Assistance</a
+            >
         </div>
     </section>
-    <Areas />
+    <main>
+        <div class="bg-light text-center py-5">
+
+            <div class="container">
+                <h1 class="fw-bold text-center">
+                    Expert Mobile Car Battery Replacement
+                </h1>
+                <h2 class="text-warning fw-bold mb-5">Mobile Service Available Across Nottingham & Newark</h2>
+                <p class="lead">
+                    A dead car battery can disrupt your schedule and leave you
+                    stranded. At Tyre Emergency, we provide rapid and reliable
+                    mobile car battery replacement services in Nottingham and
+                    Newark. Whether you're at home, work, or stuck in a parking lot,
+                    our team is equipped to come to your rescue.
+                </p>
+                <p class="lead">
+                    Our mobile battery replacement service is designed for
+                    convenience and efficiency. We understand the importance of
+                    getting your vehicle back in operation as quickly as possible.
+                    Our experts are skilled in handling a wide range of vehicle
+                    makes and models, ensuring the right battery fit every time.
+                </p>
+                </div>
+        </div>
+        <div class="container py-5">
+            <h2 class="fw-bold mb-5 text-center">Why Choose Our Mobile Battery Service?</h2>
+            <ul class="lead">
+                <li>
+                    <strong>Fast and Convenient:</strong> No need to tow your
+                    vehicle. We come to you, saving you time and hassle.
+                </li>
+                <li>
+                    <strong>Wide Range of Batteries:</strong> We stock a
+                    comprehensive selection of high-quality batteries suitable
+                    for various vehicle types.
+                </li>
+                <li>
+                    <strong>Expert Installation:</strong> Our technicians are
+                    highly trained and experienced in quick and safe battery
+                    replacement.
+                </li>
+                <li>
+                    <strong>Comprehensive Service:</strong> We not only replace
+                    your battery but also perform a check on the charging system
+                    to ensure your new battery performs optimally.
+                </li>
+            </ul>
+            <p class="lead">
+                Don't let a dead battery ruin your day. Reach out to Tyre
+                Emergency for a swift, professional mobile car battery
+                replacement service. We're committed to getting you back on the
+                road with minimal disruption to your routine.
+            </p>
+        </div>
+    </main>
+    <CTA2/>
+    <Areas/>
+    <CTA2/>
 </Layout>
 <style>
-	#hero {
-		min-height: 60vh;
-		background:linear-gradient(0deg, rgba(51, 51, 51, 0.9), rgba(51, 51, 51, 0.9)), url("/img/mobile-tyre-fitting.jpeg");
-		background-size: cover;
-		background-position: bottom;
-		background-repeat: no-repeat;
-	}
+    #hero {
+        min-height: 60vh;
+        background: linear-gradient(
+                0deg,
+                rgba(51, 51, 51, 0.9),
+                rgba(51, 51, 51, 0.9)
+            ),
+            url("/img/mobile-car-battery-replacement.jpeg");
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
 </style>

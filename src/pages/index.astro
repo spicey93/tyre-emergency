@@ -1,36 +1,84 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import CTA from "../components/CTA.astro"
+import Layout from "../layouts/Layout.astro";
+import CTA from "../components/CTA.astro";
 ---
 
-<Layout title="Mobile Tyre Service in Nottingham & Newark | Tyre Emergency Ltd" description='Tyre Emergency offers quick, reliable mobile tyre replacement services in Nottingham and Newark. Get assistance within 60 minutes - Available 7 days a week.'>
-<section id="hero" class="text-center text-white d-flex align-items-center justify-content-center">
-	<div class="container">
-		<p class="fw-bold display-5">Need a Tyre Urgently?</p>
-		<p class="lead fs-3 mb-4">We Can Replace or Fix Your Tyre <strong class="fw-bold">Today</strong></p>
-		<a href="tel:01636330055" class="btn btn-lg btn-warning fw-bold text-secondary"><i class="bi bi-telephone-fill"></i> Call Now</a>
-	</div>
-</section>
-<main>
-	<div class="text-center py-5 bg-light">
-		<div class="container">
-
-			<h1 class="fw-bold">Tyre Emergency</h1>
-			<h2 class="fw-bold text-warning mb-5">Your Local Mobile Tyre Service in Nottingham & Newark</h2>
-			<p class="lead">If you're looking for a mobile tyre service in Nottingham that can come to you today, you've come to right place. At <strong class="fw-bold">Tyre Emergency</strong>, we specialise in providing a fast response emergency tyre fitting service at your home or roadside.</p>
-			<p class="lead">Our mobile tyre fitters are available seven days a week and cover a wide area of <strong class="fw-bold">Nottingham and Newark</strong>.</p>
-		</div>
-	</div>
-</main>
-<CTA/>
+<Layout
+    title="Mobile Tyre Service in Nottingham & Newark | Tyre Emergency Ltd"
+    description="Tyre Emergency: Fast, reliable mobile tyre fitting and repair services in Nottingham & Newark. Available 7 days a week with a 60-minute response time. Call now for immediate assistance with your tyre emergency."
+>
+    <section
+        id="hero"
+        class="text-center text-white d-flex align-items-center justify-content-center"
+    >
+        <div class="container">
+            <p class="fw-bold display-5">
+                Flat Tyre Emergency? Immediate Help is Here!
+            </p>
+            <p class="lead fs-3 mb-4">
+                Rapid Mobile Tyre Replacement and Repair - Anywhere in
+                Nottingham & Newark
+            </p>
+            <a
+                href="tel:01636330055"
+                class="btn btn-lg btn-warning fw-bold text-secondary call-btn"
+                ><i class="bi bi-telephone-fill"></i> Call Now</a
+            >
+        </div>
+    </section>
+    <main>
+        <div class="text-center py-5 bg-light">
+            <div class="container">
+                <h1 class="fw-bold">Tyre Emergency</h1>
+                <h2 class="fw-bold text-warning mb-5">
+                    Rapid Mobile Tyre Services in Nottingham & Newark
+                </h2>
+                <p class="lead">
+                    In need of a quick tyre fix in Nottingham or Newark? Look no
+                    further. At
+                    <strong class="fw-bold">Tyre Emergency</strong>, we pride
+                    ourselves on providing prompt and reliable emergency tyre
+                    fitting services, right at your doorstep or by the roadside.
+                    Whether it's a flat tyre or a routine replacement, our team is
+                    equipped to handle it all with efficiency and care.
+                </p>
+                <p class="lead">
+                    Our expert mobile tyre fitters are on call <strong
+                    >seven days a week</strong
+                    >, ready to serve you across the wide expanse of <strong
+                    class="fw-bold">Nottingham and Newark</strong
+                    >. We understand the inconvenience of tyre troubles, which is
+                    why we aim to reach you within <strong>60 minutes</strong> of
+                    your call, ensuring minimal disruption to your day.
+                </p>
+                <p class="lead">
+                    From standard cars to light commercial vehicles, we have the
+                    expertise and equipment to service a variety of vehicle types.
+                    Safety, convenience, and promptness are at the heart of what we
+                    do, making us your go-to solution for all tyre emergencies.
+                </p>
+                <p class="lead">
+                    <strong>Need urgent tyre assistance?</strong> Don't hesitate to
+                    contact us. Our team is ready to swiftly respond to your needs
+                    and get you back on the road safely and quickly.
+                </p>
+            </div>
+        </div>
+    </main>
+    <CTA />
 </Layout>
-
-<style>
-	#hero {
-		min-height: 60vh;
-		background:linear-gradient(0deg, rgba(51, 51, 51, 0.9), rgba(51, 51, 51, 0.9)), url("/img/mobile-tyre-fitting.jpeg");
-		background-size: cover;
-		background-position: bottom;
-		background-repeat: no-repeat;
-	}
+    
+    <style>
+        #hero {
+            min-height: 60vh;
+            background: linear-gradient(
+                0deg,
+                rgba(51, 51, 51, 0.9),
+                rgba(51, 51, 51, 0.9)
+                ),
+                url("/img/mobile-tyre-fitting.jpeg");
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
 </style>
