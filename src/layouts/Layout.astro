@@ -6,6 +6,7 @@ interface Props {
 
 const { title, description } = Astro.props;
 
+import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css"
 import "../styles/main.min.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -15,8 +16,8 @@ import Footer from "../components/Footer.astro";
 <html lang="en">
     <head>
         <script src="../scripts/gtm/head.js"></script>
+        
         <meta charset="UTF-8" />
-        <meta name="description" content="Astro description" />
 
         <link rel="sitemap" href="/sitemap-index.xml" />
 
@@ -25,10 +26,7 @@ import Footer from "../components/Footer.astro";
         <meta name="description" content={description} />
         <link rel="icon" type="image/x-icon" href="/logos/favicon.ico" />
         <title>{title}</title>
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
-        />
+
     </head>
     <body>
         <!-- Google Tag Manager (noscript) -->
