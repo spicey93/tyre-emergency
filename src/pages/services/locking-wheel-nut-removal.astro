@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
 import Areas from "../../components/Areas.astro";
 import CTA from "../../components/CTA.astro";
 ---
@@ -8,24 +9,7 @@ import CTA from "../../components/CTA.astro";
     title="Locking Wheel Nut Removal | Tyre Emergency Ltd"
     description="Expert locking wheel nut removal services in Nottingham & Newark. Safe, quick, and efficient removal for any vehicle make and model."
 >
-    <section
-        id="hero"
-        class="text-center text-white d-flex align-items-center justify-content-center"
-    >
-        <div class="container">
-            <p class="fw-bold display-5">
-                Struggling with a Locking Wheel Nut?
-            </p>
-            <p class="lead fs-3">
-                Safe and Efficient Removal for Any Vehicle Make and Model
-            </p>
-            <a
-                href="tel:01636330055"
-                class="btn btn-lg btn-warning fw-bold text-secondary"
-                ><i class="bi bi-telephone-fill"></i> Get Help Now</a
-            >
-        </div>
-    </section>
+    <Hero bgImg="url(/img/locking-wheel-nut-removal.jpeg)" heading="Struggling with a Locking Wheel Nut?" tagline="Safe and Efficient Removal for Any Vehicle Make and Model" btnText="Get Help Now"/>
     <main>
         <div class="text-center py-5 bg-light">
             <div class="container">
@@ -84,17 +68,3 @@ import CTA from "../../components/CTA.astro";
     <Areas />
     <CTA/>
 </Layout>
-<style>
-    #hero {
-        min-height: 60vh;
-        background: linear-gradient(
-                0deg,
-                rgba(51, 51, 51, 0.9),
-                rgba(51, 51, 51, 0.9)
-            ),
-            url("/img/locking-wheel-nut-removal.jpeg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-</style>

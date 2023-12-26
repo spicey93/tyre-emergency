@@ -1,95 +1,113 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import Main from "../../components/Main.astro";
 import Areas from "../../components/Areas.astro";
 import CTA from "../../components/CTA.astro";
-import FAQs from '../../components/FAQs.astro';
+import FAQs from "../../components/FAQs.astro";
 
 const faqs = [
-  { question: "How quickly can you reach me?", answer: "We aim to reach you within 60 minutes in our service areas." },
-  { question: "Do you service all types of vehicles?", answer: "We can replace tyres on cars, vans, caravans, motorhomes, and trailers. We don't replace tyres on motorbikes, HGVs, or agricultural vehicles." },
-  { question: "What areas do you cover?", answer: "We cover most of Nottingham and Newark, as well as Lincoln and areas of Derby."},
-  { question: "Do you offer an out-of-hours or out-of-area service?", answer: "While we don't provide a 24 hour service, we do offer an out-of-hour and out-of-area service depending on availability."},
-  { question: "Do you charge a callout for same day fitting?", answer: "If you require immediate assistance then there is an additional fee; however, this will be included in your quote over the phone or via email."},
-  { question: "Can I book you in for a certain date?", answer: "We do provide a next day fitting and appointments if you would like to use our mobile service but don't require emergency fitting."},
-  { question: "Do you fit part worn tyres?", answer: "We don't stock part worn tyres and we only fit new tyres."},
-  { question: "Do you fit customers own tyres?", answer: "Providing the tyres are new and the correct size for the vehicle then yes."},
-  { question: "What if I can't find the locking wheel nut key?", answer: "We offer a locking wheel nut removal service in the event your locking wheel nut key is broken or missing."},
-  { question: "Can I pay by card?", answer: "Yes, card payment is fine."},
-  { question: "Do I have to be with the vehicle when you arrive?", answer: "So long as we have access to the locking wheel nut key then you don't need to be with the vehicle. However, we would require payment in advance."},
-  { question: "Can you attend breakdowns on the motorway?", answer: "For insurance reasons, we are not allowed to attend blowouts on the motorway. If you get recovered to a nearby service station or layby then we can help."},
+    {
+        question: "How quickly can you reach me?",
+        answer: "We aim to reach you within 60 minutes in our service areas.",
+    },
+    {
+        question: "Do you service all types of vehicles?",
+        answer: "We can replace tyres on cars, vans, caravans, motorhomes, and trailers. We don't replace tyres on motorbikes, HGVs, or agricultural vehicles.",
+    },
+    {
+        question: "What areas do you cover?",
+        answer: "We cover most of Nottingham and Newark, as well as Lincoln and areas of Derby.",
+    },
+    {
+        question: "Do you offer an out-of-hours or out-of-area service?",
+        answer: "While we don't provide a 24 hour service, we do offer an out-of-hour and out-of-area service depending on availability.",
+    },
+    {
+        question: "Do you charge a callout for same day fitting?",
+        answer: "If you require immediate assistance then there is an additional fee; however, this will be included in your quote over the phone or via email.",
+    },
+    {
+        question: "Can I book you in for a certain date?",
+        answer: "We do provide a next day fitting and appointments if you would like to use our mobile service but don't require emergency fitting.",
+    },
+    {
+        question: "Do you fit part worn tyres?",
+        answer: "We don't stock part worn tyres and we only fit new tyres.",
+    },
+    {
+        question: "Do you fit customers own tyres?",
+        answer: "Providing the tyres are new and the correct size for the vehicle then yes.",
+    },
+    {
+        question: "What if I can't find the locking wheel nut key?",
+        answer: "We offer a locking wheel nut removal service in the event your locking wheel nut key is broken or missing.",
+    },
+    { question: "Can I pay by card?", answer: "Yes, card payment is fine." },
+    {
+        question: "Do I have to be with the vehicle when you arrive?",
+        answer: "So long as we have access to the locking wheel nut key then you don't need to be with the vehicle. However, we would require payment in advance.",
+    },
+    {
+        question: "Can you attend breakdowns on the motorway?",
+        answer: "For insurance reasons, we are not allowed to attend blowouts on the motorway. If you get recovered to a nearby service station or layby then we can help.",
+    },
 ];
-
 ---
 
 <Layout
     title="Emergency Mobile Tyre Fitting | Tyre Emergency Ltd"
     description="Get immediate emergency mobile tyre fitting services in Nottingham and Newark with Tyre Emergency Ltd. Fast, reliable, available 24/7."
 >
-    <section
-        id="hero"
-        class="text-center text-white d-flex align-items-center justify-content-center"
+    <Hero
+        heading="Facing a Flat Tyre Emergency?"
+        bgImg="url(/img/mobile-tyre-fitting.jpeg)"
+        tagline=" Reach out to our expert mobile tyre fitters - Arriving in 60 minutes or less"
+        btnText="Call for Immediate Help"
+    />
+
+    <Main
+        h1="Emergency Mobile Tyre Fitting Services in Nottingham & Newark"
+        h2="Your Rapid Response Tyre Solution - At Home or Roadside"
     >
-        <div class="container">
-            <p class="fw-bold display-5">Facing a Flat Tyre Emergency?</p>
-            <p class="lead fs-3 mb-4">
-                Reach out to our expert mobile tyre fitters - Arriving in <strong
-                    class="fw-bold">60 minutes</strong
-                > or less
-            </p>
-            <a
-                href="tel:01636330055"
-                class="btn btn-lg btn-warning fw-bold text-secondary"
-                ><i class="bi bi-telephone-fill"></i> Call for Immediate Help</a
-            >
-        </div>
-    </section>
-    <main>
-        <div class="text-center py-5 bg-light">
-            <div class="container">
-                <h1 class="fw-bold">
-                    Emergency Mobile Tyre Fitting Services in Nottingham &
-                    Newark
-                </h1>
-                <h2 class="fw-bold text-warning mb-5">
-                    Your Rapid Response Tyre Solution - At Home or Roadside
-                </h2>
-                <p class="lead">
-                    Unexpected flat tyre? Don't let it disrupt your day. At Tyre
-                    Emergency, we specialize in rapid emergency mobile tyre
-                    fitting services, ensuring you're back on the road in no
-                    time. Serving both Nottingham and Newark, we're your go-to
-                    solution for tyre troubles at any hour.
-                </p>
-            </div>
-        </div>
-        <div class="container py-5 text-center">
-            <h2 class="fw-bold mb-5">
-                What Sets Our Emergency Tyre Fitting Service Apart
-            </h2>
-            <ul class="lead text-md-start">
-                <li>
-                    <strong class="fw-bold">Unmatched Rapid Response:</strong>
-                     Our team is renowned for its quick action. Upon your call,
-                    we promptly dispatch our experienced mobile tyre fitters to
-                    your specified location, be it your home, workplace, or the
-                    middle of the road.
-                </li>
-                <li>
-                    <strong class="fw-bold">Consistent 7-Day Service:</strong>
-                     We're fully operational all week, ready to tackle tyre
-                    emergencies anytime they strike. Your peace of mind is our
-                    priority, any day of the week.
-                </li>
-                <li>
-                    <strong class="fw-bold">Extensive Service Area:</strong> Our
-                    reach extends across Nottingham and Newark, ensuring no
-                    matter where you find yourself within these areas, our team
-                    will be there to assist.
-                </li>
-            </ul>
-        </div>
-    </main>
+        <p class="lead">
+            Unexpected flat tyre? Don't let it disrupt your day. At Tyre
+            Emergency, we specialize in rapid emergency mobile tyre fitting
+            services, ensuring you're back on the road in no time. Serving both
+            Nottingham and Newark, we're your go-to solution for tyre troubles
+            at any hour.
+        </p>
+    </Main>
+
+    <div class="container py-5 text-center">
+        <h2 class="fw-bold mb-5">
+            What Sets Our Emergency Tyre Fitting Service Apart
+        </h2>
+        <ul class="lead text-md-start">
+            <li>
+                <strong class="fw-bold">Unmatched Rapid Response:</strong>
+                 Our team is renowned for its quick action. Upon your call, we
+                promptly dispatch our experienced mobile tyre fitters to your
+                specified location, be it your home, workplace, or the middle of
+                the road.
+            </li>
+            <li>
+                <strong class="fw-bold">Consistent 7-Day Service:</strong>
+                 We're fully operational all week, ready to tackle tyre
+                emergencies anytime they strike. Your peace of mind is our
+                priority, any day of the week.
+            </li>
+            <li>
+                <strong class="fw-bold">Extensive Service Area:</strong> Our
+                reach extends across Nottingham and Newark, ensuring no matter
+                where you find yourself within these areas, our team will be
+                there to assist.
+            </li>
+        </ul>
+    </div>
+
     <CTA />
+    
     <div class="container py-5 text-center">
         <h2 class="fw-bold mb-5">Tyres for Cars, Vans, Caravans & Trailers</h2>
         <p class="lead">
@@ -112,17 +130,3 @@ const faqs = [
     <CTA />
     <FAQs faqs={faqs} />
 </Layout>
-<style>
-    #hero {
-        min-height: 60vh;
-        background: linear-gradient(
-                0deg,
-                rgba(51, 51, 51, 0.9),
-                rgba(51, 51, 51, 0.9)
-            ),
-            url("/img/mobile-tyre-fitting.jpeg");
-        background-size: cover;
-        background-position: bottom;
-        background-repeat: no-repeat;
-    }
-</style>

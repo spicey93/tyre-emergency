@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
 import Areas from "../../components/Areas.astro";
 import CTA from "../../components/CTA.astro";
 ---
@@ -8,24 +9,7 @@ import CTA from "../../components/CTA.astro";
     title="Mobile Car Battery Replacement | Tyre Emergency Ltd"
     description="Convenient and reliable mobile car battery replacement services in Nottingham and Newark. Quick response, professional service."
 >
-    <section
-        id="hero"
-        class="text-center text-white d-flex align-items-center justify-content-center"
-    >
-        <div class="container">
-            <p class="fw-bold display-5">
-                Car Battery Died? We've Got You Covered!
-            </p>
-            <p class="lead fs-3">
-                Professional Mobile Battery Replacement at Your Location
-            </p>
-            <a
-                href="tel:01636330055"
-                class="btn btn-lg btn-warning fw-bold text-secondary"
-                ><i class="bi bi-telephone-fill"></i> Call for Assistance</a
-            >
-        </div>
-    </section>
+    <Hero heading="Car Battery Died? We've Got You Covered!" tagline="Professional Mobile Battery Replacement at Your Location" btnText="Call for Assistance" bgImg="url(/img/mobile-car-battery-replacement.jpeg)"/>
     <main>
         <div class="bg-light text-center py-5">
 
@@ -85,17 +69,4 @@ import CTA from "../../components/CTA.astro";
     <Areas/>
     <CTA/>
 </Layout>
-<style>
-    #hero {
-        min-height: 60vh;
-        background: linear-gradient(
-                0deg,
-                rgba(51, 51, 51, 0.9),
-                rgba(51, 51, 51, 0.9)
-            ),
-            url("/img/mobile-car-battery-replacement.jpeg");
-        background-size: cover;
-        background-position: bottom;
-        background-repeat: no-repeat;
-    }
-</style>
+

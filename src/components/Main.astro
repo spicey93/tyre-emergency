@@ -1,0 +1,12 @@
+---
+const {h1, h2} = Astro.props;
+---
+<main class="text-center py-5 bg-light">
+        <div class="container">
+            <h1 class="fw-bold">{h1}</h1>
+            <h2 class="fw-bold text-warning mb-5">
+                {h2}
+            </h2>
+            <slot/>
+        </div>
+</main>

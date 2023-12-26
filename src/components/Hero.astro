@@ -1,0 +1,34 @@
+---
+const { bgImg, heading, tagline, btnText } = Astro.props;
+---
+
+<section id="hero" class="text-center text-white d-flex align-items-center justify-content-center">
+    <div class="container">
+        <p class="fw-bold display-5">
+            {heading}
+        </p>
+        <p class="lead fs-3 mb-4">
+            {tagline}
+        </p>
+        <a
+            href="tel:01636330055"
+            class="btn btn-lg btn-primary fw-bold text-light call-btn"
+            ><i class="bi bi-telephone-fill"></i> {btnText}</a
+        >
+    </div>
+</section>
+
+<style define:vars={{bgImg}}>
+    #hero {
+        min-height: 60vh;
+            background: linear-gradient(
+                0deg,
+                rgba(51, 51, 51, 0.9),
+                rgba(51, 51, 51, 0.9)
+                ),
+                var(--bgImg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+</style>
