@@ -1,0 +1,17 @@
+---
+const {h2, text, imgUrl, imgAltText} = Astro.props;
+---
+<section class="py-5 container ">
+    <div class="row">
+        <div class="col d-flex flex-column justify-content-center">
+            <div>
+
+                <h2 class="fw-bold">{h2}</h2>
+                <p class="lead mb-3">{text}</p>
+            </div>
+        </div>
+        <div class="col">
+            <img src={imgUrl} alt={imgAltText} class="w-100">
+        </div>
+    </div>
+</section>
