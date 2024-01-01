@@ -15,7 +15,7 @@ const { faqs } = Astro.props as FAQsProps;
 <div class="container py-5">
     <h3 class="fw-bold text-center mb-5">FAQs</h3>
 
-    <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion accordion-flush" id="faqAccordion">
         {
             faqs.map((faq, index) => (
                 <div class="accordion-item">
@@ -35,7 +35,7 @@ const { faqs } = Astro.props as FAQsProps;
                         id={`flush-collapse${index}`}
                         class="accordion-collapse collapse"
                         aria-labelledby={`flush-heading${index}`}
-                        data-bs-parent="#accordionFlushExample"
+                        data-bs-parent="#faqAccordion"
                     >
                         <div class="accordion-body">{faq.answer}</div>
                     </div>

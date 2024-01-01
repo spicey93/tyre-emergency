@@ -1,11 +1,18 @@
-// $primary: #505e86;
+// VARIABLES
 $warning: #ff6700 ;
-// $secondary: #cc2229;
 $secondary: #333333;
 $primary: #1A73EF;
+
+// IMPORT PACKAGES
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "./custom.scss";
 
+// SET BASE FONT
 :root {
     --bs-body-font-family: "Rubik", sans-serif;
+}
+
+.accordion {
+    --bs-accordion-active-bg: rgba(255, 103, 0, 0.5);
 }
