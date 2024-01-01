@@ -1,12 +1,17 @@
 ---
 const {h1, h2} = Astro.props;
 ---
-<main class="text-center py-5 bg-light">
+<main>
+    <div class="bg-light py-5 text-dark text-center">
         <div class="container">
+
             <h1 class="fw-bold">{h1}</h1>
-            <h2 class="fw-bold text-warning mb-5">
+            <h2 class="fw-bold">
                 {h2}
             </h2>
+        </div>
+    </div>
+        <div class="container py-5">
             <slot/>
         </div>
 </main>
