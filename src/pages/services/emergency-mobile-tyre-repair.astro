@@ -3,6 +3,42 @@ import Layout from "../../layouts/Layout.astro";
 import Hero from "../../components/Hero.astro";
 import Main from "../../components/Main.astro";
 import CTA from "../../components/CTA.astro";
+import Areas from "../../components/Areas.astro";
+import FAQs from "../../components/FAQs.astro";
+const faqs = [
+    {
+        question: "How much does a tyre repair cost?",
+        answer: "The price for a puncture repair varies depending on the type of vehicle, your location, and how soon you require the service."
+    },
+    {
+        question: "What if the tyre can't be fixed?",
+        answer: "We will always try to bring a tyre with us in the event we can't fix the tyre."
+    },
+    {
+        question: "Is there a callout charge?",
+        answer: "There is no callout charge if you are within our normal service area and need us during our normal work hours."
+    },
+    {
+        question: "Is the repair safe?",
+        answer: "Yes. Our repairs are within accordance to the BSAU159 standards, which means the repair is safe for the lifetime of the tyre."
+    },
+    {
+        question: "How soon can you fix the tyre?",
+        answer: "We aim to provide a same day service depending on availability."
+    },
+    {
+        question: "What areas do you cover?",
+        answer: "We cover a number of areas within Nottingham and Newark including Mansfield, Newark, Arnold and Ollerton."
+    },
+    {
+        question: "Do you repair run-flat tyres?",
+        answer: "We don't repair run-flat tyres."
+    },
+    {
+        question: "Do you repair motorbike or truck tyres?",
+        answer: "No. We only repair car, van, caravan, motorhome, and trailer tyres."
+    }
+]
 ---
 
 <Layout
@@ -68,5 +104,7 @@ import CTA from "../../components/CTA.astro";
     </Main>
 
     <CTA />
-
+    <Areas />
+    <CTA />
+    <FAQs faqs={faqs} />
 </Layout>
