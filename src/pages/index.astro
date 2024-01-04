@@ -19,7 +19,7 @@ import Hero from "../components/Hero.astro";
         h1="Tyre Emergency"
         h2="Rapid Mobile Tyre Services in Nottingham & Newark"
     >
-        <p class="lead">
+        <p class="lead text-center">
             In need of a quick tyre fix in Nottingham or Newark? Look no
             further. At
             <strong class="fw-bold">Tyre Emergency</strong>, we pride ourselves
@@ -28,7 +28,7 @@ import Hero from "../components/Hero.astro";
             or a routine replacement, our team is equipped to handle it all with
             efficiency and care.
         </p>
-        <p class="lead">
+        <p class="lead text-center">
             Our expert mobile tyre fitters are on call <strong
                 >seven days a week</strong
             >, ready to serve you across the wide expanse of <strong
@@ -37,17 +37,53 @@ import Hero from "../components/Hero.astro";
             aim to reach you within <strong>60 minutes</strong> of your call,
             ensuring minimal disruption to your day.
         </p>
-        <p class="lead">
+        <p class="lead text-center">
             From standard cars to light commercial vehicles, we have the
             expertise and equipment to service a variety of vehicle types.
             Safety, convenience, and promptness are at the heart of what we do,
             making us your go-to solution for all tyre emergencies.
         </p>
-        <p class="lead">
+        <p class="lead text-center">
             <strong>Need urgent tyre assistance?</strong> Don't hesitate to
             contact us. Our team is ready to swiftly respond to your needs and
             get you back on the road safely and quickly.
         </p>
     </Main>
+    <section class="py-5 bg-light">
+        <div class="container">
+
+            <h2 class="text-center fw-bold mb-5">Services</h2>
+            <div class="row g-5">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="border p-4 text-center shadow-sm rounded-3 bg-white">
+                        <p class="h5 fw-bold">Emergency Mobile Tyre Fitting</p>
+                        <p>Had a tyre blowout? We provide fast response tyre replacement service.</p>
+                        <a href="/services/emergency-mobile-tyre-fitting" class="btn btn-secondary">Find out more</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="border p-4 text-center shadow-sm rounded-3 bg-white">
+                        <p class="h5 fw-bold">Emergency Mobile Tyre Repair</p>
+                        <p>Need a puncture repair? We can come to you at home or roadside today.</p>
+                        <a href="/services/emergency-mobile-tyre-repair" class="btn btn-secondary">Find out more</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="border p-4 text-center shadow-sm rounded-3 bg-white">
+                        <p class="h5 fw-bold">Locking Wheel Nut Removal</p>
+                        <p>If you've lost or broke your locking wheel nut key, don't worry. We can help!</p>
+                        <a href="/services/locking-wheel-nut-removal" class="btn btn-secondary">Find out more</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="border p-4 text-center shadow-sm rounded-3 bg-white">
+                        <p class="h5 fw-bold">Mobile Car Battery Replacement</p>
+                        <p>Car not starting? We can replace your flat battery at your location today.</p>
+                        <a href="/services/mobile-car-battery-replacement" class="btn btn-secondary">Find out more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <CTA />
 </Layout>
