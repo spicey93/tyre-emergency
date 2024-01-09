@@ -3,18 +3,156 @@ const { bgImg, heading, tagline, btnText } = Astro.props;
 ---
 
 <section id="hero" class="d-flex align-items-center justify-content-center">
-    <div class="container text-center text-light">
-        <p class="fw-bold display-5">
-            {heading}
-        </p>
-        <p class="lead fs-3 mb-4">
-            {tagline}
-        </p>
-        <!-- <a href="tel:03301339311" class="btn btn-warning fw-bold btn-lg"><i class="bi bi-telephone-fill"></i> {btnText}</a> -->
-        <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+    <!-- Desktop -->
+    <div class="d-none d-lg-block container">
+        <div class="row">
+            <div class="col-6 text-light">
+                <p class="fw-bold display-5">
+                    {heading}
+                </p>
+                <p class="lead fs-3 mb-4">
+                    {tagline}
+                </p>
+            </div>
+            <div class="col-4 offset-2">
+                <form
+                    action="https://safe-island-80193.herokuapp.com/tyre-emergency"
+                    method="post"
+                    class="bg-light p-4 rounded-3"
+                >
+                    <p class="text-center mb-3 fs-4 fw-bold">Get A Quote</p>
 
-            <a href="tel:03301339311" class="btn btn-warning fw-bold btn-lg me-lg-3 mb-3 mb-lg-0"><i class="bi bi-telephone-fill"></i> Call Now</a>
-            <a href="/contact" class="btn btn-outline-light fw-bold btn-lg"><i class="bi bi-envelope-fill"></i> Message Us</a>
+                    <div class="d-none">
+                        <input type="text" name="url" id="urlInput" />
+                    </div>
+
+                    <!-- Registration Section -->
+                    <div>
+                        <div class="mb-2">
+                            <input
+                                type="text"
+                                class="form-control form-control-lg text-center"
+                                placeholder="Enter Reg"
+                                id="regInput"
+                                name="reg"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <div class="d-grid">
+                                <a
+                                    class="btn btn-primary fw-bold text-light btn-lg next-btn"
+                                    href="#">Next</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Postcode Section -->
+                    <div class="d-none">
+                        <div class="mb-2">
+                            <input
+                                type="text"
+                                class="form-control text-center form-control-lg"
+                                placeholder="Enter Postcode"
+                                id="postcodeInput"
+                                name="postcode"
+                            />
+                        </div>
+                        <div class="row g-1">
+                            <div class="col-6 d-grid">
+                                <a class="btn-dark btn btn-lg fw-bold back-btn" href="#"
+                                    >Back</a
+                                >
+                            </div>
+                            <div class="col-6 d-grid">
+                                <a class="btn btn-primary text-light fw-bold btn-lg next-btn" href="#"
+                                    >Next</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contact Section -->
+                    <div class="d-none">
+                        <div class="mb-2">
+                            <input
+                                type="text"
+                                class="form-control form-control-lg"
+                                placeholder="Name"
+                                required
+                                name="name"
+                                id="nameInput"
+                            />
+                        </div>
+                        <div class="mb-2">
+                            <input
+                                type="tel"
+                                class="form-control form-control-lg"
+                                placeholder="Tel"
+                                required
+                                name="tel"
+                                id="telInput"
+                            />
+                        </div>
+                        <div class="mb-2">
+                            <input
+                                type="email"
+                                class="form-control form-control-lg"
+                                placeholder="E-Mail"
+                                required
+                                name="email"
+                                id="emailInput"
+                            />
+                        </div>
+                        <div class="mb-2">
+                            <textarea
+                                name="message"
+                                id="message"
+                                cols="30"
+                                rows="3"
+                                class="form-control form-control-lg"
+                                placeholder="Message"
+                                required
+                                id="messageInput"></textarea>
+                        </div>
+                        <div class="row g-1">
+                            <div class="col-6 d-grid">
+                                <a class="btn-dark fw-bold btn btn-lg back-btn" href="#"
+                                    >Back</a
+                                >
+                            </div>
+                            <div class="col-6 d-grid">
+                                <button
+                                    class="btn btn-primary fw-bold text-light btn-lg"
+                                    id="submitBtn">Submit</button
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile -->
+    <div class="d-lg-none">
+        <div class="container text-center text-light">
+            <p class="fw-bold display-5">
+                {heading}
+            </p>
+            <p class="lead fs-3 mb-4">
+                {tagline}
+            </p>
+            <!-- <a href="tel:03301339311" class="btn btn-warning fw-bold btn-lg"><i class="bi bi-telephone-fill"></i> {btnText}</a> -->
+            <div
+                class="d-flex flex-column flex-lg-row align-items-center justify-content-center"
+            >
+                <a
+                    href="tel:03301339311"
+                    class="btn btn-warning fw-bold btn-lg me-lg-3 mb-3 mb-lg-0"
+                    ><i class="bi bi-telephone-fill"></i> Call Now</a
+                >
+                <!-- <a href="/contact" class="btn btn-outline-light fw-bold btn-lg"><i class="bi bi-envelope-fill"></i> Message Us</a> -->
+            </div>
         </div>
     </div>
 </section>
@@ -32,4 +170,51 @@ const { bgImg, heading, tagline, btnText } = Astro.props;
         background-repeat: no-repeat;
         min-height: 60vh;
     }
+
+    #regInput,
+    #postcodeInput {
+        text-transform: uppercase;
+    }
 </style>
+
+<script>
+    // Save URL href to the form
+    const urlInput = document.getElementById("urlInput");
+    urlInput.value = window.location.href;
+
+    // Find all elements with the class 'next-btn' and return them as an array
+    const nextBtns = document.querySelectorAll(".next-btn");
+
+    // Apply an event listener to each element that has the class of next-btn
+    nextBtns.forEach((el) => {
+        el.addEventListener("click", (event) => {
+            event.preventDefault();
+            // Return containing div
+            const currentDiv = el.parentElement.parentElement.parentElement;
+            // Return next div
+            const nextDiv = currentDiv.nextElementSibling;
+            // Hide div
+            currentDiv.classList.add("d-none");
+            // Show div
+            nextDiv.classList.remove("d-none");
+        });
+    });
+
+    // Find all elements with the class 'back-btn' and return them as an array
+    const backBtns = document.querySelectorAll(".back-btn");
+
+    // Apply an event listener to each element that has the class of back-btn
+    backBtns.forEach((el) => {
+        el.addEventListener("click", (event) => {
+            event.preventDefault();
+            // Return containing div
+            const currentDiv = el.parentElement.parentElement.parentElement;
+            // Return the previous div
+            const previousDiv = currentDiv.previousElementSibling;
+            // Hide div
+            currentDiv.classList.add("d-none");
+            // Show div
+            previousDiv.classList.remove("d-none");
+        });
+    });
+</script>
