@@ -3,6 +3,8 @@ import Layout from "../../layouts/Layout.astro";
 import Hero from "../../components/Hero.astro";
 import Main from "../../components/Main.astro";
 import CTA from "../../components/CTA.astro";
+import GeoContent from "../../components/GeoContent.astro";
+import Areas from "../../components/Areas.astro";
 ---
 <Layout title="Mobile Tyre Fitting in Arnold | Tyre Emergency Ltd" description="Swift and reliable mobile tyre fitting services in Arnold. Tyre Emergency Ltd offers on-the-spot tyre repairs and replacements. Contact us for fast and convenient tyre solutions delivered to your location.">
     <Hero bgImg="url(/img/arnold-tyre-service.jpeg)" heading="Mobile Tyre Fitting in Arnold" tagline="Efficient and Trusted Tyre Services in Arnold" btnText="Call Now for a Quote"/>
@@ -19,4 +21,8 @@ import CTA from "../../components/CTA.astro";
         
     </Main>
     <CTA/>
+    <GeoContent area="Arnold"/>
+    <CTA />
+    <Areas />
+    <CTA />
 </Layout>
