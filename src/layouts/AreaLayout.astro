@@ -5,6 +5,7 @@ import Main from "../components/Main.astro";
 import CTA from "../components/CTA.astro";
 import GeoContent from "../components/GeoContent.astro";
 import GeoAbout from "../components/GeoAbout.astro";
+import ContactUs from "../components/ContactUs.astro"
 
 const { title, description, bgImg, heading, tagline, h1, h2, city, aboutArea, subAreas } = Astro.props;
 ---
@@ -17,5 +18,5 @@ const { title, description, bgImg, heading, tagline, h1, h2, city, aboutArea, su
     <GeoAbout city={city} aboutArea={aboutArea} subAreas={subAreas}/>
     <GeoContent area={city}/>
     <CTA />
-
+    <ContactUs />
 </Layout>
