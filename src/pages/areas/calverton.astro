@@ -1,29 +1,25 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/Hero.astro";
-import Main from "../../components/Main.astro";
-import CTA from "../../components/CTA.astro";
-import GeoContent from "../../components/GeoContent.astro";
-import Areas from "../../components/Areas.astro";
+import AreaLayout from "../../layouts/AreaLayout.astro"
 ---
-
-<Layout title="Mobile Tyre Fitting in Calverton | Tyre Emergency Ltd" description="Expert mobile tyre fitting services in Calverton. Tyre Emergency Ltd provides quick and efficient on-the-spot tyre repairs and replacements. Reach out for prompt tyre solutions at your convenience.">
-    <Hero bgImg="url(/img/calverton-tyre-service.jpeg)" heading="Mobile Tyre Fitting in Calverton" tagline="Reliable and Speedy Tyre Services in Calverton" btnText="Get Your Quote Today"/>
-    <Main h1="Mobile Tyre Fitting in Calverton" h2="Calverton's Premier Choice for Tyre Services">
-        <p class="lead">
-            Discover Tyre Emergency Ltd, Calverton's premier mobile tyre fitting service. Our team, skilled in handling a diverse array of vehicles, delivers exceptional service for all your tyre needs.
-        </p>
-        <p class="lead">
-            Dealing with a tyre issue in Calverton? Whether you're at your home or stranded roadside, our comprehensive 7-day mobile tyre fitting service offers reliable and prompt support throughout Calverton.
-        </p>
-        <p class="lead">
-            Looking for mobile tyre fitting in Calverton? Contact us at 0330 133 9311. Your safety and convenience are paramount at Tyre Emergency Ltd, and we're dedicated to getting you back on the road quickly and safely.
-        </p>
-        
-    </Main>
-    <CTA/>
-    <GeoContent area="Calverton"/>
-    <CTA />
-    <Areas />
-    <CTA />
-</Layout>
+<AreaLayout
+    title="Mobile Tyre Fitting in Calverton"
+    description="Swift and reliable mobile tyre fitting services in Calverton. Tyre Emergency Ltd offers on-the-spot tyre repairs and replacements. Contact us for fast and convenient tyre solutions delivered to your location."
+    bgImg="url(/img/calverton-tyre-service.jpeg)"
+    heading="Mobile Tyre Fitting in Calverton"
+    tagline="Efficient and Trusted Tyre Services in Calverton"
+    h1="Mobile Tyre Fitting in Calverton"
+    h2="Your Local Source for Timely Tyre Assistance"
+    city="Calverton"
+    aboutArea="Calverton is a charming village situated in Nottinghamshire, England. It is known for its scenic countryside, historic architecture, and a tight-knit community. With a history that dates back to ancient times, Calverton offers a peaceful and idyllic environment. Explore the beautiful countryside, visit local pubs, and experience the serene atmosphere of Calverton."
+    subAreas="Arnold, Woodthorpe, Mapperley, Bestwood, Redhill, Calverton"
+>
+    <p class="lead">
+        Welcome to Tyre Emergency Ltd, your trusted provider of mobile tyre fitting in Calverton. Our experienced team is equipped to handle a wide range of vehicles, ensuring quality service for cars, vans, and more.
+    </p>
+    <p class="lead">
+        Facing a tyre dilemma in Calverton? Whether you're at home or on the road, our 7-day mobile tyre fitting service guarantees speedy and reliable assistance throughout Calverton and its surrounding areas.
+    </p>
+    <p class="lead">
+        If you're in need of mobile tyre fitting in Calverton, don't hesitate to reach out to us at 0330 133 9311. At Tyre Emergency Ltd, we prioritize your safety and convenience, striving to get you back on the road with minimal hassle.
+    </p>
+</AreaLayout>

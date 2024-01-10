@@ -1,0 +1,21 @@
+---
+import Layout from "./Layout.astro";
+import Hero from "../components/Hero.astro";
+import Main from "../components/Main.astro";
+import CTA from "../components/CTA.astro";
+import GeoContent from "../components/GeoContent.astro";
+import GeoAbout from "../components/GeoAbout.astro";
+
+const { title, description, bgImg, heading, tagline, h1, h2, city, aboutArea, subAreas } = Astro.props;
+---
+<Layout title={title} description={description}>
+    <Hero bgImg={bgImg} heading={heading} tagline={tagline} btnText="Call Now"/>
+    <Main h1={h1} h2={h2}>
+       <slot />
+    </Main>
+    <CTA/>
+    <GeoContent area={city}/>
+    <CTA />
+    <GeoAbout city={city} aboutArea={aboutArea} subAreas={subAreas}/>
+    <CTA />
+</Layout>

@@ -1,29 +1,26 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/Hero.astro";
-import Main from "../../components/Main.astro";
-import CTA from "../../components/CTA.astro";
-import GeoContent from "../../components/GeoContent.astro";
-import Areas from "../../components/Areas.astro";
+import AreaLayout from "../../layouts/AreaLayout.astro"
 ---
 
-<Layout title="Mobile Tyre Fitting in Nottingham | Tyre Emergency Ltd" description="Experience prompt and expert mobile tyre fitting services in Nottingham with Tyre Emergency Ltd. We provide convenient and efficient on-site tyre repairs and replacements. Contact us for rapid, hassle-free tyre solutions at your location.">
-    <Hero bgImg="url(/img/nottingham-tyre-service.jpeg)" heading="Mobile Tyre Fitting in Nottingham" tagline="Your Trusted Mobile Tyre Service in Nottingham" btnText="Call Now for a Quote"/>
-    <Main h1="Mobile Tyre Fitting in Nottingham" h2="Expert Tyre Services at Your Doorstep">
-        <p class="lead">
-            Tyre Emergency Ltd takes pride in offering top-tier mobile tyre fitting services throughout Nottingham. Our team of expert fitters is equipped to service a variety of vehicles, from family cars to commercial vans, ensuring a flexible solution for all your tyre needs.
-        </p>
-        <p class="lead">
-            We're ready to assist you wherever you are in Nottingham, whether you're at home, office, or roadside. Available 7 days a week, our aim is to provide quick, reliable, and convenient tyre fitting services to match the bustling pace of Nottingham life.
-        </p>
-        <p class="lead">
-            For a quote or to avail of our mobile tyre fitting services in Nottingham, simply call us at 0330 133 9311. Don't let tyre troubles disrupt your routine - our team is on standby to provide efficient, stress-free mobile tyre services across Nottingham.
-        </p>
-        
-    </Main>
-    <CTA/>
-    <GeoContent area="Nottingham" />
-    <CTA />
-    <Areas />
-    <CTA />
-</Layout>
+<AreaLayout
+    title="Mobile Tyre Fitting in Nottingham"
+    description="Prompt and reliable mobile tyre fitting services in Nottingham. Tyre Emergency Ltd offers on-the-spot tyre repairs and replacements. Reach out for swift and convenient tyre solutions delivered to your location."
+    bgImg="url(/img/nottingham-tyre-service.jpeg)"
+    heading="Mobile Tyre Fitting in Nottingham"
+    tagline="Efficient and Trusted Tyre Services in Nottinghamshire"
+    h1="Mobile Tyre Fitting in Nottingham"
+    h2="Your Local Source for Speedy Tyre Assistance"
+    city="Nottingham"
+    aboutArea="Nottingham is a vibrant city located in Nottinghamshire, England. It is known for its rich history, Nottingham Castle, and cultural diversity. Explore the city's cultural attractions, visit local shops, and experience the lively atmosphere of Nottingham."
+    subAreas="West Bridgford, Beeston, Arnold, Sherwood, Radford"
+>
+    <p class="lead">
+        Welcome to Tyre Emergency Ltd, your trusted provider of mobile tyre fitting in Nottingham. Our experienced team is equipped to handle a wide range of vehicles, ensuring quality service for cars, vans, and more.
+    </p>
+    <p class="lead">
+        Facing a tyre dilemma in Nottingham? Whether you're at home or on the road, our 7-day mobile tyre fitting service guarantees speedy and reliable assistance throughout Nottingham and its surrounding areas.
+    </p>
+    <p class="lead">
+        If you're in need of mobile tyre fitting in Nottingham, don't hesitate to reach out to us at 0330 133 9311. At Tyre Emergency Ltd, we prioritize your safety and convenience, striving to get you back on the road with minimal hassle.
+    </p>
+</AreaLayout>

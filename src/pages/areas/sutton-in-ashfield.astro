@@ -1,29 +1,26 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/Hero.astro";
-import Main from "../../components/Main.astro";
-import CTA from "../../components/CTA.astro";
-import GeoContent from "../../components/GeoContent.astro";
-import Areas from "../../components/Areas.astro";
+import AreaLayout from "../../layouts/AreaLayout.astro"
 ---
 
-<Layout title="Mobile Tyre Fitting in Sutton-in-Ashfield | Tyre Emergency Ltd" description="Reliable mobile tyre fitting services in Sutton-in-Ashfield. Tyre Emergency Ltd specializes in prompt tyre repairs and replacements. Contact for fast and efficient tyre solutions directly to your location.">
-    <Hero bgImg="url(/img/sutton-in-ashfield-tyre-service.jpeg)" heading="Mobile Tyre Fitting in Sutton-in-Ashfield" tagline="Trusted and Efficient Tyre Services in Sutton-in-Ashfield" btnText="Schedule Your Service"/>
-    <Main h1="Mobile Tyre Fitting in Sutton-in-Ashfield" h2="Sutton-in-Ashfield's Premier Tyre Assistance">
-        <p class="lead">
-            Introducing Tyre Emergency Ltd, Sutton-in-Ashfield's premier provider of mobile tyre fitting. Our dedicated team is proficient in servicing a wide array of vehicles, ensuring top-quality service for all tyre needs.
-        </p>
-        <p class="lead">
-            Have a tyre predicament in Sutton-in-Ashfield? Whether at your home or in the midst of a roadside emergency, our 7-day mobile tyre fitting service promises prompt and dependable assistance across Sutton-in-Ashfield.
-        </p>
-        <p class="lead">
-            Looking for mobile tyre fitting in Sutton-in-Ashfield? Reach out to us at 0330 133 9311. At Tyre Emergency Ltd, your safety and convenience are our highest concern, ensuring you're back on the road safely and efficiently.
-        </p>
-        
-    </Main>
-    <CTA/>
-    <GeoContent area="Sutton-in-Ashfield" />
-    <CTA />
-    <Areas />
-    <CTA />
-</Layout>
+<AreaLayout
+    title="Mobile Tyre Fitting in Sutton-in-Ashfield"
+    description="Reliable and efficient mobile tyre fitting services in Sutton-in-Ashfield. Tyre Emergency Ltd offers on-the-spot tyre repairs and replacements. Get in touch for prompt and convenient tyre solutions delivered to your location."
+    bgImg="url(/img/sutton-in-ashfield-tyre-service.jpeg)"
+    heading="Mobile Tyre Fitting in Sutton-in-Ashfield"
+    tagline="Efficient and Trusted Tyre Services in Sutton-in-Ashfield"
+    h1="Mobile Tyre Fitting in Sutton-in-Ashfield"
+    h2="Your Reliable Partner for Quick Tyre Solutions"
+    city="Sutton-in-Ashfield"
+    aboutArea="Sutton-in-Ashfield is a town located in Nottinghamshire, England. It is known for its history, local attractions, and a welcoming community. Explore the town's heritage, visit nearby places, and enjoy the friendly atmosphere of Sutton-in-Ashfield."
+    subAreas="Kirkby-in-Ashfield, Huthwaite, Stanton Hill, Skegby, Teversal"
+>
+    <p class="lead">
+        Welcome to Tyre Emergency Ltd, your trusted provider of mobile tyre fitting in Sutton-in-Ashfield. Our experienced team is equipped to handle a wide range of vehicles, ensuring quality service for cars, vans, and more.
+    </p>
+    <p class="lead">
+        In search of fast response mobile tyre fitting services in Sutton-in-Ashfield? Whether you're at home or on the road, our 7-day mobile tyre fitting service guarantees prompt and reliable assistance throughout Sutton-in-Ashfield and its surrounding areas.
+    </p>
+    <p class="lead">
+        When you require mobile tyre fitting in Sutton-in-Ashfield, don't hesitate to reach out to us at 0330 133 9311. At Tyre Emergency Ltd, we prioritize your safety and convenience, striving to get you back on the road with minimal hassle.
+    </p>
+</AreaLayout>

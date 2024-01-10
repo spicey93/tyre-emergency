@@ -1,29 +1,26 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/Hero.astro";
-import Main from "../../components/Main.astro";
-import CTA from "../../components/CTA.astro";
-import GeoContent from "../../components/GeoContent.astro";
-import Areas from "../../components/Areas.astro";
+import AreaLayout from "../../layouts/AreaLayout.astro"
 ---
 
-<Layout title="Mobile Tyre Fitting in Shirebrook | Tyre Emergency Ltd" description="Professional mobile tyre fitting services in Shirebrook. Tyre Emergency Ltd is dedicated to providing quick and reliable tyre repairs and replacements. Contact us for efficient tyre solutions at your convenience.">
-    <Hero bgImg="url(/img/shirebrook-tyre-service.jpeg)" heading="Mobile Tyre Fitting in Shirebrook" tagline="Dependable and Quick Tyre Services in Shirebrook" btnText="Get a Fast Quote"/>
-    <Main h1="Mobile Tyre Fitting in Shirebrook" h2="Your Reliable Partner for Tyre Services in Shirebrook">
-        <p class="lead">
-            Welcome to Tyre Emergency Ltd, Shirebrook's leading provider of mobile tyre fitting services. Our highly skilled team specializes in servicing a broad spectrum of vehicles, offering premium service for all your tyre needs.
-        </p>
-        <p class="lead">
-            Facing a tyre issue in Shirebrook? No matter where you are, be it at home or on the road, our 7-day mobile tyre fitting service delivers fast and trustworthy assistance throughout Shirebrook.
-        </p>
-        <p class="lead">
-            In search of mobile tyre fitting in Shirebrook? Contact us at 0330 133 9311. At Tyre Emergency Ltd, we prioritize your convenience and safety, ensuring you're back on the road swiftly and securely.
-        </p>
-        
-    </Main>
-    <CTA/>
-    <GeoContent area="Shirebrook" />
-    <CTA />
-    <Areas />
-    <CTA />
-</Layout>
+<AreaLayout
+    title="Mobile Tyre Fitting in Shirebrook"
+    description="Swift and dependable mobile tyre fitting services in Shirebrook. Tyre Emergency Ltd offers on-the-spot tyre repairs and replacements. Contact us for prompt and convenient tyre solutions delivered to your location."
+    bgImg="url(/img/shirebrook-tyre-service.jpeg)"
+    heading="Mobile Tyre Fitting in Shirebrook"
+    tagline="Efficient and Trusted Tyre Services in Shirebrook"
+    h1="Mobile Tyre Fitting in Shirebrook"
+    h2="Your Local Source for Quick Tyre Assistance"
+    city="Shirebrook"
+    aboutArea="Shirebrook is a charming town located in Nottinghamshire, England. It is known for its community spirit, local businesses, and scenic surroundings. Explore the town's friendly atmosphere, support local shops, and enjoy the peaceful environment of Shirebrook."
+    subAreas="Langwith, Warsop, Bolsover, Pleasley, Whaley Thorns"
+>
+    <p class="lead">
+        Welcome to Tyre Emergency Ltd, your trusted provider of mobile tyre fitting in Shirebrook. Our experienced team is equipped to handle a wide range of vehicles, ensuring quality service for cars, vans, and more.
+    </p>
+    <p class="lead">
+        Looking for fast response mobile tyre fitting in Shirebrook? Whether you're at home or on the road, our 7-day mobile tyre fitting service guarantees swift and reliable assistance throughout Shirebrook and its surrounding areas.
+    </p>
+    <p class="lead">
+        When you require mobile tyre fitting in Shirebrook, don't hesitate to reach out to us at 0330 133 9311. At Tyre Emergency Ltd, we prioritize your safety and convenience, striving to get you back on the road with minimal hassle.
+    </p>
+</AreaLayout>

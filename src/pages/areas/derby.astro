@@ -1,29 +1,26 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/Hero.astro";
-import Main from "../../components/Main.astro";
-import CTA from "../../components/CTA.astro";
-import GeoContent from "../../components/GeoContent.astro";
-import Areas from "../../components/Areas.astro";
+import AreaLayout from "../../layouts/AreaLayout.astro"
 ---
 
-<Layout title="Mobile Tyre Fitting in Derby | Tyre Emergency Ltd" description="Quick and efficient mobile tyre fitting services in Derby. Tyre Emergency Ltd offers on-site tyre repairs and replacements. Contact us for fast and reliable tyre solutions at your doorstep.">
-    <Hero bgImg="url(/img/derby-tyre-service.jpeg)" heading="Mobile Tyre Fitting in Derby" tagline="Expert Tyre Services Delivered Where You Need Them" btnText="Call Now for a Quote"/>
-    <Main h1="Mobile Tyre Fitting in Derby" h2="Convenient Tyre Services Tailored for Derby Residents">
-        <p class="lead">
-            Tyre Emergency Ltd is your trusted choice for mobile tyre fitting in Derby. Our skilled team of tyre fitters is equipped to handle various vehicle types, including cars, vans, and more.
-        </p>
-        <p class="lead">
-            We know the importance of reliable and prompt tyre services in Derby. Whether you're at home, work, or anywhere else in Derby, our mobile tyre fitting team is available 7 days a week to assist you with top-quality service.
-        </p>
-        <p class="lead">
-            If you're in Derby and need mobile tyre fitting, give us a call at 0330 133 9311. At Tyre Emergency Ltd, we aim to make tyre fitting hassle-free for you, so you can get back on the road swiftly and safely.
-        </p>
-        
-    </Main>
-    <CTA/>
-    <GeoContent area="Derby" />
-    <CTA /> 
-    <Areas />
-    <CTA />
-</Layout>
+<AreaLayout
+    title="Mobile Tyre Fitting in Derby"
+    description="Swift and reliable mobile tyre fitting services in Derby. Tyre Emergency Ltd offers on-the-spot tyre repairs and replacements. Contact us for fast and convenient tyre solutions delivered to your location."
+    bgImg="url(/img/derby-tyre-service.jpeg)"
+    heading="Mobile Tyre Fitting in Derby"
+    tagline="Efficient and Trusted Tyre Services in Derby"
+    h1="Mobile Tyre Fitting in Derby"
+    h2="Your Local Source for Timely Tyre Assistance"
+    city="Derby"
+    aboutArea="Derby is a vibrant city located in Derbyshire, England. It is known for its rich industrial heritage and modern developments. Explore the city's cultural attractions, shopping districts, and enjoy a mix of historical landmarks and contemporary experiences."
+    subAreas="Alvaston, Littleover, Mickleover, Chaddesden, Sinfin"
+>
+    <p class="lead">
+        Welcome to Tyre Emergency Ltd, your trusted provider of mobile tyre fitting in Derby. Our experienced team is equipped to handle a wide range of vehicles, ensuring quality service for cars, vans, and more.
+    </p>
+    <p class="lead">
+        Facing a tyre dilemma in Derby? Whether you're at home or on the road, our 7-day mobile tyre fitting service guarantees speedy and reliable assistance throughout Derby and its surrounding areas.
+    </p>
+    <p class="lead">
+        If you're in need of mobile tyre fitting in Derby, don't hesitate to reach out to us at 0330 133 9311. At Tyre Emergency Ltd, we prioritize your safety and convenience, striving to get you back on the road with minimal hassle.
+    </p>
+</AreaLayout>

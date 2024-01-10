@@ -1,29 +1,26 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/Hero.astro";
-import Main from "../../components/Main.astro";
-import CTA from "../../components/CTA.astro";
-import GeoContent from "../../components/GeoContent.astro";
-import Areas from "../../components/Areas.astro";
+import AreaLayout from "../../layouts/AreaLayout.astro"
 ---
 
-<Layout title="Mobile Tyre Fitting in Doncaster | Tyre Emergency Ltd" description="Fast and reliable mobile tyre fitting services in Doncaster. Tyre Emergency Ltd offers on-the-spot tyre repairs and replacements. Contact us for quick and convenient tyre solutions at your location.">
-    <Hero bgImg="url(/img/doncaster-tyre-service.jpeg)" heading="Mobile Tyre Fitting in Doncaster" tagline="Efficient and Trusted Tyre Services in South Yorkshire" btnText="Call Now for a Quote"/>
-    <Main h1="Mobile Tyre Fitting in Doncaster" h2="Your Solution for Timely Tyre Assistance">
-        <p class="lead">
-            Welcome to Tyre Emergency Ltd, your dedicated provider of mobile tyre fitting in Doncaster. Our skilled team of tyre fitters is well-prepared to service a wide range of vehicles, including cars, vans, and more.
-        </p>
-        <p class="lead">
-            Whether you're at home or facing a roadside tyre emergency in Doncaster, our mobile tyre fitting services, available 7 days a week, are here to offer you prompt and reliable solutions throughout South Yorkshire.
-        </p>
-        <p class="lead">
-            Require mobile tyre fitting in Doncaster? Contact us at 0330 133 9311. At Tyre Emergency Ltd, we prioritize your safety and convenience, ensuring you get back on the road without delay.
-        </p>
-        
-    </Main>
-    <CTA/>
-    <GeoContent area="Doncaster" />
-    <CTA />
-    <Areas />
-    <CTA />
-</Layout>
+<AreaLayout
+    title="Mobile Tyre Fitting in Doncaster"
+    description="Swift and reliable mobile tyre fitting services in Doncaster. Tyre Emergency Ltd offers on-the-spot tyre repairs and replacements. Contact us for fast and convenient tyre solutions delivered to your location."
+    bgImg="url(/img/doncaster-tyre-service.jpeg)"
+    heading="Mobile Tyre Fitting in Doncaster"
+    tagline="Efficient and Trusted Tyre Services in Doncaster"
+    h1="Mobile Tyre Fitting in Doncaster"
+    h2="Your Local Source for Timely Tyre Assistance"
+    city="Doncaster"
+    aboutArea="Doncaster is a bustling town located in South Yorkshire, England. It is known for its vibrant markets, historical attractions, and cultural events. Explore the town's heritage, enjoy shopping in the markets, and experience the lively atmosphere of Doncaster."
+    subAreas="Balby, Hexthorpe, Bentley, Wheatley, Sprotbrough"
+>
+    <p class="lead">
+        Welcome to Tyre Emergency Ltd, your trusted provider of mobile tyre fitting in Doncaster. Our experienced team is equipped to handle a wide range of vehicles, ensuring quality service for cars, vans, and more.
+    </p>
+    <p class="lead">
+        Facing a tyre dilemma in Doncaster? Whether you're at home or on the road, our 7-day mobile tyre fitting service guarantees speedy and reliable assistance throughout Doncaster and its surrounding areas.
+    </p>
+    <p class="lead">
+        If you're in need of mobile tyre fitting in Doncaster, don't hesitate to reach out to us at 0330 133 9311. At Tyre Emergency Ltd, we prioritize your safety and convenience, striving to get you back on the road with minimal hassle.
+    </p>
+</AreaLayout>

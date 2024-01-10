@@ -1,29 +1,26 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/Hero.astro";
-import Main from "../../components/Main.astro";
-import CTA from "../../components/CTA.astro";
-import GeoContent from "../../components/GeoContent.astro";
-import Areas from "../../components/Areas.astro";
+import AreaLayout from "../../layouts/AreaLayout.astro"
 ---
 
-<Layout title="Mobile Tyre Fitting in Mansfield | Tyre Emergency Ltd" description="Get fast and reliable mobile tyre fitting services in Mansfield with Tyre Emergency Ltd. Our expert team offers convenient, on-site tyre repairs and replacements. Call now for quick, hassle-free tyre solutions at your location.">
-    <Hero bgImg="url(/img/mansfield-tyre-service.jpeg)" heading="Mobile Tyre Fitting in Mansfield" tagline="Swift & Reliable Mobile Tyre Replacement in Mansfield" btnText="Call Now for a Quote"/>
-    <Main h1="Mobile Tyre Fitting in Mansfield" h2="We Can Come to You at Home or Roadside Today">
-        <p class="lead">
-            At Tyre Emergency Ltd, we are proud to offer our exceptional mobile tyre fitting service to the Mansfield community and its surrounding areas. Our skilled tyre fitters are adept at servicing a broad spectrum of vehicles, including cars, vans, caravans, and trailers.
-        </p>
-        <p class="lead">
-            Whether you're at home or find yourself needing assistance roadside, our mobile tyre fitting team in Mansfield is available 7 days a week. We're dedicated to providing you with fast, reliable service that accommodates your busy schedule.
-        </p>
-        <p class="lead">
-            If you're in Mansfield and require a quote for our mobile tyre fitting service, feel free to give us a call at 0330 133 9311. Don't let a flat tyre put a damper on your day - get in touch with us for efficient and convenient mobile tyre fitting services in Mansfield. Let us help you get back on the road swiftly and safely.
-        </p>
-        
-    </Main>
-    <CTA/>
-    <GeoContent area="Mansfield" />
-    <CTA />
-    <Areas />
-    <CTA />
-</Layout>
+<AreaLayout
+    title="Mobile Tyre Fitting in Mansfield"
+    description="Reliable and efficient mobile tyre fitting services in Mansfield. Tyre Emergency Ltd offers on-the-spot tyre repairs and replacements. Get in touch for prompt and convenient tyre solutions delivered to your location."
+    bgImg="url(/img/mansfield-tyre-service.jpeg)"
+    heading="Mobile Tyre Fitting in Mansfield"
+    tagline="Efficient and Trusted Tyre Services in Mansfield"
+    h1="Mobile Tyre Fitting in Mansfield"
+    h2="Your Local Source for Fast Tyre Assistance"
+    city="Mansfield"
+    aboutArea="Mansfield is a thriving market town located in Nottinghamshire, England. It is known for its historic market square, Sherwood Forest, and a range of recreational activities. Explore the town's heritage, visit local attractions, and experience the friendly atmosphere of Mansfield."
+    subAreas="Sutton-in-Ashfield, Forest Town, Warsop, Shirebrook, Clipstone"
+>
+    <p class="lead">
+        Welcome to Tyre Emergency Ltd, your trusted provider of mobile tyre fitting in Mansfield. Our experienced team is equipped to handle a wide range of vehicles, ensuring quality service for cars, vans, and more.
+    </p>
+    <p class="lead">
+        Need fast response mobile tyre fitting in Mansfield? Whether you're at home or on the road, our 7-day mobile tyre fitting service guarantees swift and reliable assistance throughout Mansfield and its surrounding areas.
+    </p>
+    <p class="lead">
+        When you're in need of mobile tyre fitting in Mansfield, don't hesitate to reach out to us at 0330 133 9311. At Tyre Emergency Ltd, we prioritize your safety and convenience, striving to get you back on the road with minimal hassle.
+    </p>
+</AreaLayout>

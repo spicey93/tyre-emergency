@@ -1,29 +1,26 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/Hero.astro";
-import Main from "../../components/Main.astro";
-import CTA from "../../components/CTA.astro";
-import GeoContent from "../../components/GeoContent.astro";
-import Areas from "../../components/Areas.astro";
+import AreaLayout from "../../layouts/AreaLayout.astro"
 ---
 
-<Layout title="Mobile Tyre Fitting in Newark | Tyre Emergency Ltd" description="Efficient and reliable mobile tyre fitting services in Newark. Tyre Emergency Ltd offers fast, on-site tyre repairs and replacements. Call us for immediate, top-quality tyre solutions at your convenience.">
-    <Hero bgImg="url(/img/newark-tyre-service.jpeg)" heading="Mobile Tyre Fitting in Newark" tagline="Professional Tyre Services Delivered to You" btnText="Call Now for a Quote"/>
-    <Main h1="Mobile Tyre Fitting in Newark" h2="Convenient and Reliable Tyre Solutions">
-        <p class="lead">
-            Welcome to Tyre Emergency Ltd, your reliable source for mobile tyre fitting in Newark. Our team of professional tyre fitters is ready to provide services for a wide array of vehicles, including personal cars, vans, and commercial fleets. 
-        </p>
-        <p class="lead">
-            Serving the Newark area, we understand the need for quick and dependable tyre fitting services, whether you're at home, work, or stuck on the roadside. Our services are available 7 days a week, ensuring that you have access to expert tyre assistance whenever you need it.
-        </p>
-        <p class="lead">
-            If you're in Newark and in need of mobile tyre fitting services, don't hesitate to reach out to us at 0330 133 9311. Let Tyre Emergency Ltd take the hassle out of tyre fitting for you. Our goal is to get you back on the road safely and efficiently, with minimal interruption to your day.
-        </p>
-        
-    </Main>
-    <CTA/>
-    <GeoContent area="Newark" />
-    <CTA />
-    <Areas />
-    <CTA />
-</Layout>
+<AreaLayout
+    title="Mobile Tyre Fitting in Newark"
+    description="Swift and dependable mobile tyre fitting services in Newark. Tyre Emergency Ltd offers on-the-spot tyre repairs and replacements. Contact us for swift and convenient tyre solutions delivered to your location."
+    bgImg="url(/img/newark-tyre-service.jpeg)"
+    heading="Mobile Tyre Fitting in Newark"
+    tagline="Efficient and Trusted Tyre Services in Newark"
+    h1="Mobile Tyre Fitting in Newark"
+    h2="Your Local Source for Rapid Tyre Assistance"
+    city="Newark"
+    aboutArea="Newark is a historic market town located in Nottinghamshire, England. It is known for its charming market square, Newark Castle, and picturesque riverside. Explore the town's heritage, attend local events, and enjoy the welcoming atmosphere of Newark."
+    subAreas="Balderton, Fernwood, Coddington, Winthorpe, Southwell"
+>
+    <p class="lead">
+        Welcome to Tyre Emergency Ltd, your trusted provider of mobile tyre fitting in Newark. Our experienced team is equipped to handle a wide range of vehicles, ensuring quality service for cars, vans, and more.
+    </p>
+    <p class="lead">
+        Facing a tyre dilemma in Newark? Whether you're at home or on the road, our 7-day mobile tyre fitting service guarantees speedy and reliable assistance throughout Newark and its surrounding areas.
+    </p>
+    <p class="lead">
+        If you're in need of mobile tyre fitting in Newark, don't hesitate to reach out to us at 0330 133 9311. At Tyre Emergency Ltd, we prioritize your safety and convenience, striving to get you back on the road with minimal hassle.
+    </p>
+</AreaLayout>

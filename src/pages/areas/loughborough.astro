@@ -1,29 +1,26 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/Hero.astro";
-import Main from "../../components/Main.astro";
-import CTA from "../../components/CTA.astro";
-import GeoContent from "../../components/GeoContent.astro";
-import Areas from "../../components/Areas.astro";
+import AreaLayout from "../../layouts/AreaLayout.astro"
 ---
 
-<Layout title="Mobile Tyre Fitting in Loughborough | Tyre Emergency Ltd" description="Efficient mobile tyre fitting services in Loughborough. Tyre Emergency Ltd offers on-site tyre repairs and replacements. Contact us for reliable tyre solutions delivered to your location.">
-    <Hero bgImg="url(/img/loughborough-tyre-service.jpeg)" heading="Mobile Tyre Fitting in Loughborough" tagline="Swift and Reliable Tyre Services in Leicestershire" btnText="Call Now for a Quote"/>
-    <Main h1="Mobile Tyre Fitting in Loughborough" h2="Your Trusted Partner for Tyre Emergencies">
-        <p class="lead">
-            Welcome to Tyre Emergency Ltd, your reliable choice for mobile tyre fitting in Loughborough. Our skilled team of tyre fitters is experienced in servicing various vehicle types, including cars and vans.
-        </p>
-        <p class="lead">
-            Whether you're at home or need assistance on the road in Loughborough, we're here to provide 7-day mobile tyre fitting services. Our commitment is to deliver prompt and dependable solutions throughout Leicestershire.
-        </p>
-        <p class="lead">
-            For mobile tyre fitting in Loughborough, give us a call at 0330 133 9311. At Tyre Emergency Ltd, we prioritize your convenience and safety, ensuring you're back on the road swiftly and securely.
-        </p>
-        
-    </Main>
-    <CTA/>
-    <GeoContent area="Loughborough" />
-    <CTA />
-    <Areas />
-    <CTA />
-</Layout>
+<AreaLayout
+    title="Mobile Tyre Fitting in Loughborough"
+    description="Reliable and efficient mobile tyre fitting services in Loughborough. Tyre Emergency Ltd offers on-the-spot tyre repairs and replacements. Get in touch for prompt and convenient tyre solutions delivered to your location."
+    bgImg="url(/img/loughborough-tyre-service.jpeg)"
+    heading="Mobile Tyre Fitting in Loughborough"
+    tagline="Efficient and Trusted Tyre Services in Loughborough"
+    h1="Mobile Tyre Fitting in Loughborough"
+    h2="Your Local Source for Quick Tyre Assistance"
+    city="Loughborough"
+    aboutArea="Loughborough is a vibrant town located in Leicestershire, England. It is known for its historic market, Loughborough University, and a lively atmosphere. Explore the town's cultural events, visit the local market, and enjoy the diverse experiences that Loughborough has to offer."
+    subAreas="Shepshed, Hathern, Quorn, Barrow upon Soar, Sileby"
+>
+    <p class="lead">
+        Welcome to Tyre Emergency Ltd, your trusted provider of mobile tyre fitting in Loughborough. Our experienced team is equipped to handle a wide range of vehicles, ensuring quality service for cars, vans, and more.
+    </p>
+    <p class="lead">
+        In search of fast response mobile tyre fitting in Loughborough? Whether you're at home or on the road, our 7-day mobile tyre fitting service guarantees swift and reliable assistance throughout Loughborough and its surrounding areas.
+    </p>
+    <p class="lead">
+        When you need mobile tyre fitting in Loughborough, don't hesitate to reach out to us at 0330 133 9311. At Tyre Emergency Ltd, we prioritize your safety and convenience, striving to get you back on the road with minimal hassle.
+    </p>
+</AreaLayout>

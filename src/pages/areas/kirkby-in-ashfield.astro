@@ -1,28 +1,26 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/Hero.astro";
-import Main from "../../components/Main.astro";
-import CTA from "../../components/CTA.astro";
-import GeoContent from "../../components/GeoContent.astro";
-import Areas from "../../components/Areas.astro";
+import AreaLayout from "../../layouts/AreaLayout.astro"
 ---
-<Layout title="Mobile Tyre Fitting in Kirkby in Ashfield | Tyre Emergency Ltd" description="Responsive mobile tyre fitting services in Kirkby in Ashfield. Tyre Emergency Ltd excels in rapid tyre repairs and replacements. Reach out for dependable tyre solutions at your location.">
-    <Hero bgImg="url(/img/kirkby-in-ashfield-tyre-service.jpeg)" heading="Mobile Tyre Fitting in Kirkby in Ashfield" tagline="Fast and Efficient Tyre Services in Kirkby in Ashfield" btnText="Request a Quote Now"/>
-    <Main h1="Mobile Tyre Fitting in Kirkby in Ashfield" h2="Top Choice for Tyre Services in Kirkby in Ashfield">
-        <p class="lead">
-            Introducing Tyre Emergency Ltd, your trusted partner for mobile tyre fitting in Kirkby in Ashfield. Our team is expertly trained to service an extensive range of vehicles, ensuring superior service for your car or van.
-        </p>
-        <p class="lead">
-            Encounter a tyre problem in Kirkby in Ashfield? Whether it's at your home or a roadside emergency, our 7-day mobile tyre fitting service is committed to providing you with prompt and reliable solutions throughout Kirkby in Ashfield.
-        </p>
-        <p class="lead">
-            Need mobile tyre fitting in Kirkby in Ashfield? Give us a call at 0330 133 9311. At Tyre Emergency Ltd, we're dedicated to ensuring your safety and comfort, helping you get back on your journey efficiently and safely.
-        </p>
-        
-    </Main>
-    <CTA/>
-    <GeoContent area="Giltbrook" />
-    <CTA />
-    <Areas />
-    <CTA />
-</Layout>
+
+<AreaLayout
+    title="Mobile Tyre Fitting in Kirkby-in-Ashfield"
+    description="Swift and reliable mobile tyre fitting services in Kirkby-in-Ashfield. Tyre Emergency Ltd offers on-the-spot tyre repairs and replacements. Contact us for fast and convenient tyre solutions delivered to your location."
+    bgImg="url(/img/kirkby-in-ashfield-tyre-service.jpeg)"
+    heading="Mobile Tyre Fitting in Kirkby-in-Ashfield"
+    tagline="Efficient and Trusted Tyre Services in Kirkby-in-Ashfield"
+    h1="Mobile Tyre Fitting in Kirkby-in-Ashfield"
+    h2="Your Local Source for Timely Tyre Assistance"
+    city="Kirkby-in-Ashfield"
+    aboutArea="Kirkby-in-Ashfield is a charming town located in Nottinghamshire, England. It is known for its friendly community, local shops, and historical landmarks. Explore the town's history, visit local businesses, and enjoy the warm atmosphere of Kirkby-in-Ashfield."
+    subAreas="Sutton-in-Ashfield, Selston, Annesley, Newstead, Jacksdale"
+>
+    <p class="lead">
+        Welcome to Tyre Emergency Ltd, your trusted provider of mobile tyre fitting in Kirkby-in-Ashfield. Our experienced team is equipped to handle a wide range of vehicles, ensuring quality service for cars, vans, and more.
+    </p>
+    <p class="lead">
+        Facing a tyre dilemma in Kirkby-in-Ashfield? Whether you're at home or on the road, our 7-day mobile tyre fitting service guarantees speedy and reliable assistance throughout Kirkby-in-Ashfield and its surrounding areas.
+    </p>
+    <p class="lead">
+        If you're in need of mobile tyre fitting in Kirkby-in-Ashfield, don't hesitate to reach out to us at 0330 133 9311. At Tyre Emergency Ltd, we prioritize your safety and convenience, striving to get you back on the road with minimal hassle.
+    </p>
+</AreaLayout>

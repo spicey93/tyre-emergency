@@ -1,29 +1,26 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/Hero.astro";
-import Main from "../../components/Main.astro";
-import CTA from "../../components/CTA.astro";
-import GeoContent from "../../components/GeoContent.astro";
-import Areas from "../../components/Areas.astro";
+import AreaLayout from "../../layouts/AreaLayout.astro"
 ---
 
-<Layout title="Mobile Tyre Fitting in Southwell | Tyre Emergency Ltd" description="Top-tier mobile tyre fitting services in Southwell. Tyre Emergency Ltd offers efficient on-the-spot tyre repairs and replacements. Contact for professional tyre solutions at your location.">
-    <Hero bgImg="url(/img/southwell-tyre-service.jpeg)" heading="Mobile Tyre Fitting in Southwell" tagline="Expert and Reliable Tyre Services in Southwell" btnText="Book Your Service Now"/>
-    <Main h1="Mobile Tyre Fitting in Southwell" h2="Southwell's Choice for Quick Tyre Assistance">
-        <p class="lead">
-            Welcome to Tyre Emergency Ltd, your dependable source for mobile tyre fitting in Southwell. Our team, proficient in handling a variety of vehicles, is committed to delivering exceptional service for your tyre requirements.
-        </p>
-        <p class="lead">
-            Experiencing a tyre complication in Southwell? Whether at your residence or stranded on the road, our 7-day mobile tyre fitting service ensures rapid and reliable support across Southwell.
-        </p>
-        <p class="lead">
-            Need mobile tyre fitting in Southwell? Call us at 0330 133 9311. Tyre Emergency Ltd places your safety and convenience first, aiming to get you back on the road quickly and with ease.
-        </p>
-        
-    </Main>
-    <CTA/>
-    <GeoContent area="Southwell" />
-    <CTA />
-    <Areas />
-    <CTA />
-</Layout>
+<AreaLayout
+    title="Mobile Tyre Fitting in Southwell"
+    description="Reliable and efficient mobile tyre fitting services in Southwell. Tyre Emergency Ltd offers on-the-spot tyre repairs and replacements. Get in touch for prompt and convenient tyre solutions delivered to your location."
+    bgImg="url(/img/southwell-tyre-service.jpeg)"
+    heading="Mobile Tyre Fitting in Southwell"
+    tagline="Efficient and Trusted Tyre Services in Southwell"
+    h1="Mobile Tyre Fitting in Southwell"
+    h2="Your Local Source for Quick Tyre Assistance"
+    city="Southwell"
+    aboutArea="Southwell is a charming town located in Nottinghamshire, England. It is known for its picturesque surroundings, Southwell Minster, and a welcoming community. Explore the town's natural beauty, visit local attractions, and enjoy the tranquil atmosphere of Southwell."
+    subAreas="Farnsfield, Halam, Kirklington, Normanton, Upton"
+>
+    <p class="lead">
+        Welcome to Tyre Emergency Ltd, your trusted provider of mobile tyre fitting in Southwell. Our experienced team is equipped to handle a wide range of vehicles, ensuring quality service for cars, vans, and more.
+    </p>
+    <p class="lead">
+        In search of fast response mobile tyre fitting in Southwell? Whether you're at home or on the road, our 7-day mobile tyre fitting service guarantees swift and reliable assistance throughout Southwell and its surrounding areas.
+    </p>
+    <p class="lead">
+        When you need mobile tyre fitting in Southwell, don't hesitate to reach out to us at 0330 133 9311. At Tyre Emergency Ltd, we prioritize your safety and convenience, striving to get you back on the road with minimal hassle.
+    </p>
+</AreaLayout>

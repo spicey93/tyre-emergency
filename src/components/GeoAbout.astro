@@ -1,0 +1,10 @@
+---
+const {city, aboutArea, subAreas} = Astro.props;
+---
+<article class="bg-light py-5">
+    <div class="container">
+        <h3 class="fw-bold">About {city}</h3>
+        <p class="lead">{aboutArea}</p>
+        <p class="lead">Our mobile tyre service is available in many areas of {city}, such as: <span class="fw-bold">{subAreas}</span></p>
+    </div>
+</article>

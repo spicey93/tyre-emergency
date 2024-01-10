@@ -1,29 +1,25 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/Hero.astro";
-import Main from "../../components/Main.astro";
-import CTA from "../../components/CTA.astro";
-import GeoContent from "../../components/GeoContent.astro";
-import Areas from "../../components/Areas.astro";
+import AreaLayout from "../../layouts/AreaLayout.astro"
 ---
-
-<Layout title="Mobile Tyre Fitting in Chesterfield | Tyre Emergency Ltd" description="Reliable mobile tyre fitting services in Chesterfield. Tyre Emergency Ltd offers on-the-spot tyre repairs and replacements. Contact us for fast and trustworthy tyre solutions delivered to your location.">
-    <Hero bgImg="url(/img/chesterfield-tyre-service.jpeg)" heading="Mobile Tyre Fitting in Chesterfield" tagline="Swift and Dependable Tyre Services in Derbyshire" btnText="Call Now for a Quote"/>
-    <Main h1="Mobile Tyre Fitting in Chesterfield" h2="Your Local Source for Prompt Tyre Assistance">
-        <p class="lead">
-            Welcome to Tyre Emergency Ltd, your trusted partner for mobile tyre fitting in Chesterfield. Our experienced team of tyre fitters is well-equipped to serve various types of vehicles, including cars and vans.
-        </p>
-        <p class="lead">
-            Whether you're at home or facing a roadside emergency in Chesterfield, our 7-day mobile tyre fitting services are here to provide you with quick and reliable solutions across Derbyshire.
-        </p>
-        <p class="lead">
-            Need mobile tyre fitting in Chesterfield? Reach us at 0330 133 9311. At Tyre Emergency Ltd, your safety and convenience are our top priorities. Let us get you back on the road promptly and securely.
-        </p>
-        
-    </Main>
-    <CTA/>
-    <GeoContent area="Chesterfield" />
-    <CTA />
-    <Areas />
-    <CTA />
-</Layout>
+<AreaLayout
+    title="Mobile Tyre Fitting in Chesterfield"
+    description="Swift and reliable mobile tyre fitting services in Chesterfield. Tyre Emergency Ltd offers on-the-spot tyre repairs and replacements. Contact us for fast and convenient tyre solutions delivered to your location."
+    bgImg="url(/img/chesterfield-tyre-service.jpeg)"
+    heading="Mobile Tyre Fitting in Chesterfield"
+    tagline="Efficient and Trusted Tyre Services in Chesterfield"
+    h1="Mobile Tyre Fitting in Chesterfield"
+    h2="Your Local Source for Timely Tyre Assistance"
+    city="Chesterfield"
+    aboutArea="Chesterfield is a historic market town located in Derbyshire, England. It is known for its picturesque market square with the iconic crooked spire of St Mary and All Saints Church. With a rich history and a blend of modern amenities, Chesterfield offers a unique and charming atmosphere. Explore the local markets, dine at quaint cafes, and discover the town's rich heritage."
+    subAreas="Brimington, Whittington Moor, Hasland, Newbold, Holymoorside"
+>
+    <p class="lead">
+        Welcome to Tyre Emergency Ltd, your trusted provider of mobile tyre fitting in Chesterfield. Our experienced team is equipped to handle a wide range of vehicles, ensuring quality service for cars, vans, and more.
+    </p>
+    <p class="lead">
+        Facing a tyre dilemma in Chesterfield? Whether you're at home or on the road, our 7-day mobile tyre fitting service guarantees speedy and reliable assistance throughout Chesterfield and its surrounding areas.
+    </p>
+    <p class="lead">
+        If you're in need of mobile tyre fitting in Chesterfield, don't hesitate to reach out to us at 0330 133 9311. At Tyre Emergency Ltd, we prioritize your safety and convenience, striving to get you back on the road with minimal hassle.
+    </p>
+</AreaLayout>
