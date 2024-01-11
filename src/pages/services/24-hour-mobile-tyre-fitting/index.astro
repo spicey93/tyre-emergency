@@ -1,0 +1,50 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Hero from "../../../components/Hero.astro";
+import Main from "../../../components/Main.astro";
+import Testimonial from "../../../components/Testimonial.astro"
+import CTA from "../../../components/CTA.astro";
+import ContactUs from "../../../components/ContactUs.astro";
+---
+
+<Layout
+    title="24 Hour Mobile Tyre Fitting | Tyre Emergency Ltd"
+    description="Hit a pothole or got a puncture? Our 24-hour mobile tyre service in Nottingham and Newark provides fast, reliable roadside assistance."
+>
+    <Hero
+        heading="Puncture? We're On Our Way!"
+        bgImg="url(/img/mobile-tyre-fitting.jpeg)"
+        tagline="Immediate 24/7 roadside tyre assistance. We aim for a 60-minute response."
+        btnText="Get Help Now"
+    />
+
+    <Main
+        h1="24 Hour Roadside Tyre Assistance"
+        h2="Fast, Reliable Service for Unexpected Punctures"
+    >
+        <p class="lead">
+            Stranded with a tyre puncture? Tyre Emergency Ltd is here to help, 24/7. Whether you've hit a pothole or have an unexpected flat tyre, our rapid-response team is committed to reaching you within 60 minutes in Nottingham, Newark, and surrounding areas.
+        </p>
+        <p class="lead">Call us on <a href="tel:03301339311" class="link-warning fw-bold">0330 133 9311</a> for urgent tyre assistance.</p>
+        <Testimonial />
+        <h2 class="fw-bold my-5">
+            Why Choose Us for Roadside Tyre Emergencies
+        </h2>
+        <ul class="lead text-md-start">
+            <li>
+                <strong class="fw-bold">60-Minute Response Time:</strong>
+                We understand the urgency. Our team aims to reach you in less than 60 minutes, minimizing your wait time.
+            </li>
+            <li>
+                <strong class="fw-bold">24/7 Availability:</strong>
+                Day or night, our mobile tyre fitting service is ready to assist you whenever a tyre emergency strikes.
+            </li>
+            <li>
+                <strong class="fw-bold">Expert Roadside Assistance:</strong> 
+                With over 10 years of experience, our skilled technicians provide reliable and efficient tyre repairs and replacements on the spot.
+            </li>
+        </ul>
+    </Main>
+    <CTA />
+    <ContactUs />
+</Layout>
