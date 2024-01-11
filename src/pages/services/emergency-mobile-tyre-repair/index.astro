@@ -2,6 +2,7 @@
 import Layout from "../../../layouts/Layout.astro";
 import Hero from "../../../components/Hero.astro";
 import Main from "../../../components/Main.astro";
+import Testimonial from "../../../components/Testimonial.astro";
 import CTA from "../../../components/CTA.astro";
 import Areas from "../../../components/Areas.astro";
 import FAQs from "../../../components/FAQs.astro";
@@ -9,7 +10,7 @@ import ContactUs from "../../../components/ContactUs.astro";
 const faqs = [
     {
         question: "How much does a tyre repair cost?",
-        answer: "The price for a puncture repair varies depending on the type of vehicle, your location, and how soon you require the service."
+        answer: "Our price for a mobile puncture repair starts from as little as £29.94. However, this may change depending on your location, tyre size, and time requirements."
     },
     {
         question: "What if the tyre can't be fixed?",
@@ -48,14 +49,14 @@ const faqs = [
 >
     <Hero
         bgImg="url(/img/tyre-repair-service.jpeg)"
-        heading="Got a Tyre Puncture? We're Here to Help!"
-        tagline="Expert Mobile Tyre Repair Services On-The-Spot"
+        heading="Got a Tyre Puncture? We're Here to Help"
+        tagline="Expert Mobile Tyre Repair Services, Just a Call Away!"
         btnText="Call for Immediate Repair"
     />
 
     <Main
-        h1="Rapid Response Mobile Tyre Puncture Repair"
-        h2="On-the-Spot Puncture Repairs in Nottingham & Newark"
+        h1="Emergency Mobile Tyre Repair"
+        h2="Mobile Puncture Repairs in Nottingham & Newark"
     >
         <p class="lead">
             A tyre puncture can be more than just an inconvenience; it can
@@ -72,8 +73,9 @@ const faqs = [
             safe, and reliable repair service that gets your vehicle back in
             action with minimal downtime.
         </p>
+        <Testimonial />
         <h2 class="fw-bold text-center my-5">
-            Why Choose Us for Tyre Puncture Repairs?
+            Why Choose Us for Mobile Puncture Repairs?
         </h2>
         <ul class="lead">
             <li>
