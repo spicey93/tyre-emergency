@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import Main from "../components/Main.astro";
 import CTA from "../components/CTA.astro";
 import Hero from "../components/Hero.astro";
+import HowItWorks from "../components/HowItWorks.astro";
+import Services from "../components/Services.astro"
 ---
 
 <Layout
@@ -11,7 +13,7 @@ import Hero from "../components/Hero.astro";
 >
     <Hero
         heading="Mobile Tyre Service in Nottingham & Newark"
-        tagline="Have Your Tyres Fitted at Home or Roadside Today"
+        tagline="Get Your Tyres Fitted Today – At Home or Roadside!"
         bgImg="url(/img/mobile-tyre-fitting.jpeg)"
         btnText="Call Now"
     />
@@ -19,71 +21,20 @@ import Hero from "../components/Hero.astro";
         h1="Tyre Emergency"
         h2="Mobile Tyre Fitting in Nottingham & Newark"
     >
+    <p class="lead text-center">
+        Need mobile tyre fitting after a pothole mishap or a flat tyre at home? <strong class="fw-bold">Tyre Emergency</strong> has you covered. We’re your on-the-spot solution in Nottingham and Newark for those sudden roadside and at-home tyre emergencies. Fast, reliable, and ready to get you back on track with the least possible delay.
+    </p>
+    
+    
         <p class="lead text-center">
-            In need of a quick tyre fix in Nottingham or Newark? Look no
-            further. At
-            <strong class="fw-bold">Tyre Emergency</strong>, we pride ourselves
-            on providing prompt and reliable emergency tyre fitting services,
-            right at your doorstep or by the roadside. Whether it's a flat tyre
-            or a routine replacement, our team is equipped to handle it all with
-            efficiency and care.
+            Why choose us? Our team arrives within <strong>60 minutes</strong>, equipped to handle any tyre situation for standard cars to light commercial vehicles. We're not just fast; we're thorough, ensuring your safety and convenience.
         </p>
         <p class="lead text-center">
-            Our expert mobile tyre fitters are on call <strong
-                >seven days a week</strong
-            >, ready to serve you across the wide expanse of <strong
-                class="fw-bold">Nottingham and Newark</strong
-            >. We understand the inconvenience of tyre troubles, which is why we
-            aim to reach you within <strong>60 minutes</strong> of your call,
-            ensuring minimal disruption to your day.
-        </p>
-        <p class="lead text-center">
-            From standard cars to light commercial vehicles, we have the
-            expertise and equipment to service a variety of vehicle types.
-            Safety, convenience, and promptness are at the heart of what we do,
-            making us your go-to solution for all tyre emergencies.
-        </p>
-        <p class="lead text-center">
-            <strong>Need urgent tyre assistance?</strong> Don't hesitate to
-            contact us. Our team is ready to swiftly respond to your needs and
-            get you back on the road safely and quickly.
+            In urgent need of tyre assistance? A quick, safe resolution is just a phone call away. Don’t let tyre troubles slow you down. <strong>Contact us now!</strong>
         </p>
     </Main>
-    <section class="py-5 bg-light">
-        <div class="container">
-
-            <h2 class="text-center fw-bold mb-5">Services</h2>
-            <div class="row g-5">
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="border p-4 text-center shadow-sm rounded-3 bg-white">
-                        <p class="h5 fw-bold">Emergency Mobile Tyre Fitting</p>
-                        <p>Had a tyre blowout? We provide fast response tyre replacement service.</p>
-                        <a href="/services/emergency-mobile-tyre-fitting" class="btn btn-secondary">Find out more</a>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="border p-4 text-center shadow-sm rounded-3 bg-white">
-                        <p class="h5 fw-bold">Emergency Mobile Tyre Repair</p>
-                        <p>Need a puncture repair? We can come to you at home or roadside today.</p>
-                        <a href="/services/emergency-mobile-tyre-repair" class="btn btn-secondary">Find out more</a>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="border p-4 text-center shadow-sm rounded-3 bg-white">
-                        <p class="h5 fw-bold">Locking Wheel Nut Removal</p>
-                        <p>If you've lost or broke your locking wheel nut key, don't worry. We can help!</p>
-                        <a href="/services/locking-wheel-nut-removal" class="btn btn-secondary">Find out more</a>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="border p-4 text-center shadow-sm rounded-3 bg-white">
-                        <p class="h5 fw-bold">Mobile Car Battery Replacement</p>
-                        <p>Car not starting? We can replace your flat battery at your location today.</p>
-                        <a href="/services/mobile-car-battery-replacement" class="btn btn-secondary">Find out more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <HowItWorks />
+    <CTA />
+    <Services />
     <CTA />
 </Layout>
