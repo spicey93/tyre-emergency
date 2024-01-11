@@ -1,0 +1,63 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Hero from "../../../components/Hero.astro";
+import Main from "../../../components/Main.astro";
+import Areas from "../../../components/Areas.astro";
+import CTA from "../../../components/CTA.astro";
+import ContactUs from "../../../components/ContactUs.astro";
+---
+
+<Layout
+    title="Mobile Tyre Fitting | Tyre Emergency Ltd"
+    description="Convenient mobile tyre fitting services at your home or office in Nottingham and Newark. Schedule your tyre replacement with Tyre Emergency Ltd for a hassle-free experience."
+>
+    <Hero
+        heading="Need New Tyres? No Hassle, No Waiting Rooms!"
+        bgImg="url(/img/mobile-tyre-fitting.jpeg)"
+        tagline="Schedule our expert mobile tyre fitters to come to you - at your convenience"
+        btnText="Book Your Tyre Fitting"
+    />
+
+    <Main
+        h1="Mobile Tyre Fitting Services in Nottingham & Newark"
+        h2="Convenient, Reliable Tyre Fitting - Wherever You Are"
+    >
+        <p class="lead">
+            Time for new tyres but can't make it to the garage? Tyre Emergency Ltd offers professional mobile tyre fitting services at your doorstep. Whether you're at home or at work, we come to you, making tyre replacement convenient and effortless in Nottingham and Newark.
+        </p>
+        <h2 class="fw-bold my-5">
+            Why Choose Our Mobile Tyre Fitting Service
+        </h2>
+        <ul class="lead text-md-start">
+            <li>
+                <strong class="fw-bold">Scheduled Service:</strong>
+                 Get your tyres fitted at a time that suits you. No more waiting at the garage - our team will be there when it's most convenient for you.
+            </li>
+            <li>
+                <strong class="fw-bold">Comfort and Convenience:</strong>
+                 Enjoy the ease of having tyre services come to your location, be it your home or workplace, saving you time and effort.
+            </li>
+            <li>
+                <strong class="fw-bold">Wide Range of Tyre Options:</strong> 
+                Our extensive inventory includes a variety of tyre types to suit different vehicles and preferences, ensuring you get the perfect match.
+            </li>
+        </ul>
+    </Main>
+
+    <CTA />
+    
+    <div class="container py-5 text-center">
+        <h2 class="fw-bold mb-5">Tyres for All Types of Vehicles</h2>
+        <p class="lead">
+            Beyond cars, our expertise extends to vans, caravans, trailers, and more. We're equipped to handle different vehicle types, ensuring the right fit for every tyre replacement.
+        </p>
+        <p class="lead">
+            Our comprehensive tyre selection ensures quick and efficient service for all vehicles, helping you get back to your day with minimal interruption.
+        </p>
+    </div>
+    <CTA />
+    <Areas />
+    <CTA />
+    <ContactUs />
+</Layout>
+
