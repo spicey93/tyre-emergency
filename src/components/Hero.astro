@@ -5,9 +5,8 @@ const { bgImg, heading, tagline, btnText } = Astro.props;
 
 <section id="hero" class="d-flex align-items-center justify-content-center">
     <!-- Desktop -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-6 text-light text-center text-lg-start my-5 my-lg-0">
+    <div class="container text-light text-center">
+
                 <p class="fw-bold display-5">
                     {heading}
                 </p>
@@ -17,130 +16,12 @@ const { bgImg, heading, tagline, btnText } = Astro.props;
                 <div class="mb-3">
                     <span class="bg-white px-3 py-2 rounded-3 text-dark fw-bold">Rated <i class="bi bi-star-fill text-warning"></i> <i class="bi bi-star-fill text-warning"></i> <i class="bi bi-star-fill text-warning"></i> <i class="bi bi-star-fill text-warning"></i> <i class="bi bi-star-fixl text-warning"></i> <i class="bi bi-star-fill text-warning"></i> On Google</span>
                 </div>
-                <div class="d-lg-none">
-                    <button class="btn btn-lg btn-warning fw-bold mt-3"><i class="bi bi-telephone-fill me-2"></i>Call Now For a Quote</button>
+                <div class="mt-5">
+                    <button class="btn btn-lg text-light btn-primary fw-bold me-3 d-lg-none"><i class="bi bi-telephone-fill me-2"></i>Call Now</button>
+                    <a href="/contact" class="btn btn-primary text-light fw-bold btn-lg d-none d-lg-inline"><i class="bi bi-envelope-fill me-2"></i>Get a Quote</a>
                 </div>
                 
-            </div>
-            <div class="col-12 col-lg-4 offset-lg-2 mb-5 mb-lg-0 d-none d-lg-block">
-                <form
-                    action="https://safe-island-80193.herokuapp.com/tyre-emergency"
-                    method="post"
-                    class="bg-light p-4 rounded-3"
-                >
-                    <p class="text-center mb-3 fs-4 fw-bold">Get A Quote</p>
 
-                    <div class="d-none">
-                        <input type="text" name="url" id="urlInput" />
-                    </div>
-
-                    <!-- Registration Section -->
-                    <div>
-                        <div class="mb-2">
-                            <input
-                                type="text"
-                                class="form-control form-control-lg text-center"
-                                placeholder="Enter Reg"
-                                id="regInput"
-                                name="reg"
-                                required
-                            />
-                        </div>
-                        <div>
-                            <div class="d-grid">
-                                <a
-                                    class="btn btn-primary fw-bold text-light btn-lg next-btn"
-                                    href="#">Next</a
-                                >
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Postcode Section -->
-                    <div class="d-none">
-                        <div class="mb-2">
-                            <input
-                                type="text"
-                                class="form-control text-center form-control-lg"
-                                placeholder="Enter Postcode"
-                                id="postcodeInput"
-                                name="postcode"
-                            />
-                        </div>
-                        <div class="row g-1">
-                            <div class="col-6 d-grid">
-                                <a class="btn-dark btn btn-lg fw-bold back-btn" href="#"
-                                    >Back</a
-                                >
-                            </div>
-                            <div class="col-6 d-grid">
-                                <a class="btn btn-primary text-light fw-bold btn-lg next-btn" href="#"
-                                    >Next</a
-                                >
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Contact Section -->
-                    <div class="d-none">
-                        <div class="mb-2">
-                            <input
-                                type="text"
-                                class="form-control form-control-lg"
-                                placeholder="Name"
-                                required
-                                name="name"
-                                id="nameInput"
-                            />
-                        </div>
-                        <div class="mb-2">
-                            <input
-                                type="tel"
-                                class="form-control form-control-lg"
-                                placeholder="Tel"
-                                required
-                                name="tel"
-                                id="telInput"
-                            />
-                        </div>
-                        <div class="mb-2">
-                            <input
-                                type="email"
-                                class="form-control form-control-lg"
-                                placeholder="E-Mail"
-                                required
-                                name="email"
-                                id="emailInput"
-                            />
-                        </div>
-                        <div class="mb-2">
-                            <textarea
-                                name="message"
-                                id="message"
-                                cols="30"
-                                rows="3"
-                                class="form-control form-control-lg"
-                                placeholder="Message"
-                                required
-                                id="messageInput"></textarea>
-                        </div>
-                        <div class="row g-1">
-                            <div class="col-6 d-grid">
-                                <a class="btn-dark fw-bold btn btn-lg back-btn" href="#"
-                                    >Back</a
-                                >
-                            </div>
-                            <div class="col-6 d-grid">
-                                <button
-                                    class="btn btn-primary fw-bold text-light btn-lg"
-                                    id="submitBtn">Submit</button
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <p class="text-center text-light my-3">Need help <span class="fw-bold">ASAP</span>? Call us on <a href="tel:03301339311" class="link-light">0330 133 9311</a></p>
-            </div>
-        </div>
     </div>
 </section>
 <!-- <Feature /> -->
@@ -164,7 +45,7 @@ const { bgImg, heading, tagline, btnText } = Astro.props;
     }
 </style>
 
-<script>
+<!-- <script>
     // Save URL href to the form
     const urlInput = document.getElementById("urlInput");
     urlInput.value = window.location.href;
@@ -204,4 +85,4 @@ const { bgImg, heading, tagline, btnText } = Astro.props;
             previousDiv.classList.remove("d-none");
         });
     });
-</script>
+</script> -->
