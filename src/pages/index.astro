@@ -3,38 +3,45 @@ import Layout from "../layouts/Layout.astro";
 import Main from "../components/Main.astro";
 import CTA from "../components/CTA.astro";
 import Hero from "../components/Hero.astro";
-import HowItWorks from "../components/HowItWorks.astro";
-import Services from "../components/Services.astro"
+import Services from "../components/Services.astro";
 ---
 
 <Layout
-    title="Mobile Tyre Service in Nottingham & Newark | Tyre Emergency Ltd"
-    description="Tyre Emergency: Fast, reliable mobile tyre fitting and repair services in Nottingham & Newark. Available 7 days a week with a 60-minute response time. Call now for immediate assistance with your tyre emergency."
+    title="Fast Response Tyre Fitting Service | Tyre Emergency Ltd"
+    description="Tyre Emergency: Fast, reliable mobile tyre fitting and repair service. Available 7 days a week with a 60-minute response time. Call now for immediate assistance with your tyre emergency."
 >
     <Hero
-        heading="Mobile Tyre Service in Nottingham & Newark"
-        tagline="Get Your Tyres Fitted Today – At Home or Roadside!"
+        heading="Need a Tyre Urgently?"
+        tagline="Get Your Tyres Fitted At Home or Roadside - Today!"
         bgImg="url(/img/mobile-tyre-fitting.jpeg)"
         btnText="Call Now"
     />
-    <Main
-        h1="Tyre Emergency"
-        h2="Mobile Tyre Fitting in Nottingham & Newark"
-    >
-    <p class="lead text-center">
-        Need mobile tyre fitting after a pothole mishap or a flat tyre at home? <strong class="fw-bold">Tyre Emergency</strong> has you covered. We’re your on-the-spot solution in Nottingham and Newark for those sudden roadside and at-home tyre emergencies. Fast, reliable, and ready to get you back on track with the least possible delay.
-    </p>
-    
-    
+    <Main h1="Tyre Emergency" h2="Expert 7 Day Mobile Tyre Service">
         <p class="lead text-center">
-            Why choose us? Our team arrives within <strong>60 minutes</strong>, equipped to handle any tyre situation for standard cars to light commercial vehicles. We're not just fast; we're thorough, ensuring your safety and convenience.
+            Welcome to Tyre Emergency, the mobile tyre company that specialises
+            in fast response tyre replacement at your location - whether that's
+            at home, work or roadside.
+        </p>
+
+        <p class="lead text-center">
+            If you've got a flat tyre after hitting a pothole or getting a screw
+            in your tyre, we can help! Our mobile tyre fitters have an average
+            arrival time of <strong class="fw-bold">60 minutes</strong> and will get you back on the road in no
+            time.
         </p>
         <p class="lead text-center">
-            In urgent need of tyre assistance? A quick, safe resolution is just a phone call away. Don’t let tyre troubles slow you down. <strong>Contact us now!</strong>
+            If you're looking for a mobile tyre service near you, give us a call
+            today on <a href="tel:03303119311" class="link-warning"
+                >0330 133 9311</a
+            >. Our tyre fitters cover a wide range of the East Midlands
+            including <a href="/areas/nottingham" class="link-dark"
+                >Nottingham</a
+            >, <a href="/areas/derby" class="link-dark">Derby</a>, <a
+                href="/areas/lincoln"
+                class="link-dark">Lincoln</a
+            >, and <a href="/areas/newark" class="link-dark">Newark</a>.
         </p>
     </Main>
-    <HowItWorks />
-    <CTA />
     <Services />
     <CTA />
 </Layout>
