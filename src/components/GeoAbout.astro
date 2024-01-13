@@ -1,13 +1,27 @@
 ---
-const {city, aboutArea, subAreas} = Astro.props;
----
-<article class="py-5">
-    <div class="container">
-        <div class="bg-light p-3 border">
+const { city, aboutArea, subAreas } = Astro.props;
 
-            <h3 class="fw-bold">About {city}</h3>
-            <p class="lead">{aboutArea}</p>
-            <p class="lead">Our mobile tyre fitting service is available in many areas of {city}, such as: <span class="fw-bold">{subAreas}</span></p>
-        </div>
+// Split the subAreas string into an array and prepare the slugs
+const subAreasArray = subAreas.split(', ').map(area => ({
+  name: area.trim(),
+  slug: area.trim().toLowerCase().replace(/\s+/g, '-')
+}));
+---
+
+<article class="py-5">
+  <div class="container">
+    <div class="bg-light p-3 border">
+      <h3 class="fw-bold">About {city}</h3>
+      <p class="lead">{aboutArea}</p>
+      <p class="lead">
+        Our mobile tyre fitting service is available in many areas of {city}, such as: 
+        {subAreasArray.map((area, index) => (
+          <Fragment>
+            <a href={`/areas/${area.slug}`} class="fw-bold">{area.name}</a>
+            {index < subAreasArray.length - 1 ? ', ' : ''}
+          </Fragment>
+        ))}
+      </p>
     </div>
+  </div>
 </article>
