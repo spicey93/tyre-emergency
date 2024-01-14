@@ -1,0 +1,21 @@
+---
+interface Props {
+    imgHeading: string;
+    paraOne: string;
+    paraTwo: string;
+    imgUrl: string;
+    imgAlt: string;
+}
+
+const {imgHeading, paraOne, paraTwo, imgUrl, imgAlt} = Astro.props;
+---
+<article class="row my-5 p-3 bg-light">
+    <div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center">
+        <h2 class="mb-3 fw-bold">{imgHeading}</h2>
+        <p>{paraOne}</p>
+        <p>{paraTwo}</p>
+    </div>
+    <div class="col-12 col-md-5 offset-md-1 d-flex align-items-center">
+        <img src=`${imgUrl}` alt=`${imgAlt}` class="w-100">
+    </div>
+</article>
