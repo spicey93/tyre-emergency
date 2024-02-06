@@ -41,8 +41,9 @@ const { bgImg, heading, tagline, btnText } = Astro.props;
       </div>
       <div class="d-none d-lg-block col-lg-4 offset-lg-1 d-flex align-items-center justify-content-center my-auto">
         <form
-          method="post"
-          action="https://safe-island-80193.herokuapp.com/tyre-emergency"
+          method="POST"
+          data-netlify="true"
+          name="quote"
           class="container bg-light p-4 rounded-3"
         >
           <p class="h4 fw-bold text-center">Get a Quote</p>
