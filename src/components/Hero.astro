@@ -1,28 +1,10 @@
 ---
 
 const { bgImg, heading, tagline, btnText } = Astro.props;
+import Feature from "./Feature.astro";
+
 ---
 
-<!-- <section id="hero" class="d-flex align-items-center justify-content-center">
-    <div class="container text-light text-center">
-
-                <p class="fw-bold display-5">
-                    {heading}
-                </p>
-                <p class="lead fs-3 mb-4">
-                    {tagline}
-                </p>
-                <div class="mb-3">
-                    <span class="bg-white px-3 py-2 rounded-3 text-dark fw-bold fw-bold">Rated <i class="bi bi-star-fill text-warning"></i> <i class="bi bi-star-fill text-warning"></i> <i class="bi bi-star-fill text-warning"></i> <i class="bi bi-star-fill text-warning"></i> <i class="bi bi-star-fixl text-warning"></i> <i class="bi bi-star-fill text-warning"></i> On Google</span>
-                </div>
-                <div class="mt-5">
-                    <a href="tel:03301339311" class="btn btn-lg text-light btn-primary fw-bold me-3 d-lg-none"><i class="bi bi-telephone-fill me-2"></i>Call Now</a>
-                    <a href="/contact" class="btn btn-primary text-light fw-bold btn-lg d-none d-lg-inline"><i class="bi bi-envelope-fill me-2"></i>Get a Quote</a>
-                </div>
-                
-
-    </div>
-</section> -->
 <section id="hero" class="d-flex align-items-center">
   <div class="container">
     <!-- Desktop -->
@@ -32,8 +14,6 @@ const { bgImg, heading, tagline, btnText } = Astro.props;
         <p class="lead fs-3 mb-4">{tagline}</p>
         <div>
             
-            
-            <!-- <a href="/contact" class="btn btn-primary text-light fw-bold mb-4 btn-lg d-none d-lg-inline-block"><i class="bi bi-envelope-fill me-2"></i>Get a Quote</a> -->
             <a href="tel:03301339311" class="btn btn-primary text-light fw-bold mb-4 btn-lg d-lg-none"><i class="bi bi-telephone-fill me-2"></i>Call Now</a>
         </div>
         <div data-romw-token="M4jsydDiEm6ys90IsmQ8YDUWFxN1iIqVRCmOduKoJ5oW7cw12X"></div>
@@ -154,6 +134,7 @@ const { bgImg, heading, tagline, btnText } = Astro.props;
     </div>
   </div>
 </section>
+<Feature />
 
 <!-- <Feature /> -->
 <style define:vars={{ bgImg }}>
