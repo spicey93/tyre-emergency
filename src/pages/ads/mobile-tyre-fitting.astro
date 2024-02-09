@@ -1,11 +1,12 @@
 ---
 import AdLayout from "../../layouts/AdLayout.astro"
 import Hero from "../../components/Hero.astro"
+import Areas from "../../components/Areas.astro"
 import Testimonial from "../../components/Testimonial.astro"
 import CTA from "../../components/CTA.astro"
 ---
 
-<AdLayout title="" description="">
+<AdLayout title="Mobile Tyre Fitting" description="Change Your Tyres the Easy Way. Our Expert Tyre Fitters Will Come to You and Fit Your Tyres Today.">
     
     <Hero
     heading="Change Your Tyres the Easy Way"
@@ -13,13 +14,16 @@ import CTA from "../../components/CTA.astro"
     bgImg="url(/img/mobile-tyre-fitting.jpeg)"
     />
     <main class="py-5 text-center">
-        <h1 class="fw-bold mb-5">Mobile Tyre Fitting</h1>
-        <p class="container">At Tyre Emergency, we don't just deal with roadside tyre replacements - we offer a convenient and affordable mobile tyre fitting service at your location. Our highly experienced tyre fitters will come to you at a time that suits your schedule.</p>
-        <p class="container">Not only do we operate 7 days a week, but we also offer <strong>same day fitting</strong> which means you don't have to wait 2-3 days for your tyres to be changed.
-        </p>
-        <p class="container">Why spend hours at a garage when you can put your feet up and have the tyre fitters come to you! Give us a call today to find out more and get a price.</p>
+        
+<h1 class="fw-bold mb-5">Convenient Mobile Tyre Fitting Services</h1>
+<p class="container lead">Tired of spending your valuable time waiting around in tyre shops? Need a quick fix after hitting a pothole on your way to work? Fear not, because Tyre Emergency has you covered!</p>
+<p class="container lead">Our mobile tyre fitting service brings the tyre shop to you, whether you're at home, work, or stranded on the road.</p>
+<p class="lead container">From cars to vans, or caravans to motorhomes - we've got the expertise to handle them all.</p>
+<p class="lead container">And the best part? Our service is available <strong class="fw-bold">7 days a week</strong>, ensuring your convenience no matter how hectic your schedule.</p>
+<p class="lead container">In the event of a tyre blowout, our emergency response team can be at your location in under <strong class="fw-bold">60 minutes</strong>, getting you back on the road swiftly and safely.</p>
+<p class="lead container">Why endure the hassle of traditional tyre shops when you can experience the ease and efficiency of our mobile service? Call us today for a quote on <a href="tel:03301339311" class="link-dark">0330 133 9311</a>.</p>
     </main>
-    <CTA />
+    <Areas />
     <Testimonial />
     <CTA />
 </AdLayout>
