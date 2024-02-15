@@ -1,0 +1,23 @@
+---
+import CallBtn from "../buttons/CallBtn.astro"
+import PhoneBtn from "../buttons/PhoneBtn.astro"
+---
+    <div class="container py-3 py-md-5">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex flex-column mx-aut mx-md-0">
+
+                <a class="navbar-brand" href="/">
+                    <img src="/logos/logo.png" alt="Tyre Emergency logo" width="300px">
+                </a>
+            </div>
+            <div class="d-md-none">
+                <PhoneBtn />
+            </div>
+            <div class="d-none d-md-flex flex-column">
+                <p class="fs-5 mb-2 fw-bold text-uppercase">
+                    Call Now for a Quote
+                </p>
+                <CallBtn/>
+            </div>
+        </div>
+    </div>
