@@ -1,7 +1,6 @@
 ---
 
 const { bgImg, heading, tagline } = Astro.props;
-import HeroForm from "../form/HeroForm.astro";
 import Feature from "../Feature.astro";
 import CallBtn from "../buttons/CallBtn.astro";
 
@@ -11,11 +10,11 @@ import CallBtn from "../buttons/CallBtn.astro";
   <div class="container">
     <!-- Desktop -->
     <div class="row">
-      <div class="col-12 col-lg-7 text-center text-lg-start text-light d-flex flex-column justify-content-center">
+      <div class="col-12 text-center text-light d-flex flex-column justify-content-center">
         <p class="fw-bold display-5 text-uppercase">{heading}</p>
         <p class="lead fs-3 mb-4">{tagline}</p>
       
-        <div class="mb-4 d-lg-none">
+        <div class="mb-4">
             
             <CallBtn/>
         </div>

@@ -2,17 +2,16 @@
 const {heading, tagline } = Astro.props;
 import Feature from "../Feature.astro";
 import CallBtn  from "../buttons/CallBtn.astro";
-import HeroForm from "../form/HeroForm.astro"
 ---
 
 <section id="hero" class="d-flex align-items-center bg-light">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-lg-7 text-center text-lg-start text-dark d-flex flex-column justify-content-center">
+      <div class="col-12 col-lg-7 text-center text-dark d-flex flex-column justify-content-center">
         <p class="fw-bold display-5 text-uppercase">{heading}</p>
         <p class="lead fs-3 mb-4">{tagline}</p>
       
-        <div class="mb-4 d-lg-none">
+        <div class="mb-4">
             
             <CallBtn/>
         </div>
