@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Main from "../components/Main.astro";
 import CTA from "../components/CTA.astro";
-import Hero from "../components/hero/BasicHero.astro";
+import Hero from "../components/hero/BgImgHero.astro";
 import Services from "../components/Services.astro";
 import Testimonial from "../components/Testimonial.astro";
 ---
@@ -11,9 +11,11 @@ import Testimonial from "../components/Testimonial.astro";
     title="24 Hour Mobile Tyre Fitting Service | Tyre Emergency Ltd"
     description="Tyre Emergency: Fast, reliable mobile tyre fitting and repair service. Available 7 days a week with a 60-minute response time. Call now for immediate assistance with your tyre emergency."
 >
-    <Hero
-        heading="Emergency Tyre Service"
-        tagline="24Hr Mobile Tyre Fitting in Mansfield, Newark & Nottingham"
+<Hero
+        heading="Tyres Fitted at Home or Roadside"
+        bgImg="url(/img/24-hour-mobile-tyre-fitting.jpeg)"
+        tagline="We Come to You 24 Hours a Day, 7 Days a Week"
+        btnText="Call for Immediate Help"
     />
     <Main h1="Tyre Emergency" h2="24 Hour Emergency Mobile Tyre Fitting Service">
         <p class="lead text-center">
@@ -41,6 +43,7 @@ import Testimonial from "../components/Testimonial.astro";
             >, and <a href="/areas/newark" class="link-dark">Newark</a>.
         </p>
     </Main>
+    <CTA />
     <Services />
     <CTA />
     <Testimonial />

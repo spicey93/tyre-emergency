@@ -1,0 +1,110 @@
+<form
+method="POST"
+data-netlify="true"
+name="quote"
+class="container bg-light p-4 rounded-3 border border-dark"
+>
+<p class="h4 fw-bold text-center mb-4">Get a Quote</p>
+<div class="d-none">
+  <input type="text" name="url" id="urlInput" />
+</div>
+
+<div class="">
+  <div class="mb-2">
+    <input
+      type="text"
+      class="form-control form-control-lg text-center"
+      placeholder="Enter Reg"
+      id="regInput"
+      name="Registration"
+    />
+  </div>
+  <div class="">
+    <div class="d-grid">
+      <a class="btn btn-warning fw-bold btn-lg next-btn" href="#">Next</a>
+    </div>
+  </div>
+</div>
+
+<div class="d-none">
+  <div class="mb-2">
+    <input
+      type="text"
+      class="form-control text-center form-control-lg"
+      placeholder="Enter Postcode"
+      id="postcodeInput"
+      name="Postcode"
+    />
+  </div>
+  <div class="row g-1">
+    <div class="col-6 d-grid">
+      <a class="btn-dark fw-bold btn btn-lg back-btn" href="#"
+        >Back</a
+      >
+    </div>
+    <div class="col-6 d-grid">
+      <a class="btn btn-primary text-light fw-bold btn-lg next-btn" href="#"
+        >Next</a
+      >
+    </div>
+  </div>
+</div>
+
+<div class="d-none">
+  <div class="mb-2">
+    <input
+      type="text"
+      class="form-control form-control-lg"
+      placeholder="Name"
+      required
+      name="Name"
+      id="nameInput"
+    />
+  </div>
+  <div class="mb-2">
+    <input
+      type="tel"
+      class="form-control form-control-lg"
+      placeholder="Tel"
+      required
+      name="Phone"
+      id="telInput"
+    />
+  </div>
+  <div class="mb-2">
+    <input
+      type="email"
+      class="form-control form-control-lg"
+      placeholder="E-Mail"
+      required
+      name="Email"
+      id="emailInput"
+    />
+  </div>
+  <div class="mb-2">
+    <textarea
+      name="Message"
+      id="message"
+      cols="30"
+      rows="3"
+      class="form-control form-control-lg"
+      placeholder="Message"
+      required
+      id="messageInput"></textarea>
+  </div>
+  <div class="row g-1">
+    <div class="col-6 d-grid">
+      <a class="btn-dark fw-bold btn btn-lg back-btn" href="#"
+        >Back</a
+      >
+    </div>
+    <div class="col-6 d-grid">
+      <button
+        class="btn btn-primary text-light fw-bold btn-lg"
+        id="submitBtn"
+        type="submit">Submit</button
+      >
+    </div>
+  </div>
+</div>
+</form>
