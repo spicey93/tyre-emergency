@@ -3,6 +3,7 @@
 const { bgImg, heading, tagline } = Astro.props;
 import Feature from "../Feature.astro";
 import CallBtn from "../buttons/CallBtn.astro";
+import HeroForm from "../form/HeroForm.astro";
 
 ---
 
@@ -10,20 +11,20 @@ import CallBtn from "../buttons/CallBtn.astro";
   <div class="container">
     <!-- Desktop -->
     <div class="row">
-      <div class="col-12 text-center text-light d-flex flex-column justify-content-center">
+      <div class="col-12 col-lg-7 text-center text-lg-start text-light d-flex flex-column justify-content-center">
         <p class="fw-bold display-5 text-uppercase">{heading}</p>
         <p class="lead fs-3 mb-4">{tagline}</p>
       
-        <div class="mb-4">
+        <div class="mb-4 d-lg-none">
             
             <CallBtn/>
         </div>
         <div data-romw-token="M4jsydDiEm6ys90IsmQ8YDUWFxN1iIqVRCmOduKoJ5oW7cw12X"></div>
         <script src="https://reviewsonmywebsite.com/js/v2/embed.js?id=7bf8acda5d5930b1a9db343a4ec1b31c" type="text/javascript"></script>
       </div>
-      <!-- <div class="d-none d-lg-block col-lg-4 offset-lg-1 d-flex align-items-center justify-content-center my-auto">
+      <div class="d-none d-lg-block col-lg-4 offset-lg-1 d-flex align-items-center justify-content-center my-auto">
        <HeroForm />
-      </div> -->
+      </div>
     </div>
   </div>
 </section>
