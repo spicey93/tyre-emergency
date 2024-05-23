@@ -1,37 +1,25 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/Hero.astro";
-import Main from "../../components/Main.astro";
-import CTA from "../../components/CTA.astro";
-import Testimonials from "../../components/Testimonials.astro";
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+const phoneNumber = import.meta.env.PHONE_NUMBER;
 ---
 
-<Layout
+<ServiceLayout
     title="Emergency Mobile Tyre Fitting | Tyre Emergency Ltd"
     description="Get immediate emergency mobile tyre fitting across the East Midlands with Tyre Emergency Ltd. Fast, reliable, available 24/7."
+    heading="Stuck with a Flat Tyre?"
+    bgImg="url(/img/mobile-tyre-fitting.jpeg)"
+    tagline=" Reach out to our expert mobile tyre fitters - Arriving in 60 minutes or less"
 >
-    <Hero
-        heading="Stuck with a Flat Tyre?"
-        bgImg="url(/img/mobile-tyre-fitting.jpeg)"
-        tagline=" Reach out to our expert mobile tyre fitters - Arriving in 60 minutes or less"
-        btnText="Call for Immediate Help"
-    />
-
-    <Main
-        h1="Emergency Mobile Tyre Fitting Services"
-        h2="Fast Tyre Replacement at Home or Roadside"
-    >
-        <p class="lead text-center">
-           If you're looking for an emergency mobile tyre fitting or a <a href="/services/24-hour-mobile-tyre-fitting">24 hour tyre service</a> service near you, then you've come to the right place. Tyre Emergency is the go-to solution for <strong class=fw-bold>fast response roadside tyre replacement</strong>. We specialise in helping people stranded at the side of the road with a flat tyre.
+    <main class="my-5 text-center container">
+        <h1>Emergency Mobile Tyre Fitting</h1>
+        <p>
+            If you're looking for an emergency mobile tyre fitting or a 24 hour tyre service service near you, then you've come to the right place. Tyre Emergency is the go-to solution for <strong class=fw-bold>fast response roadside tyre replacement</strong>. We specialise in helping people stranded at the side of the road with a flat tyre.
         </p>
-        <p class="lead text-center">
+        <p>
             Our emergency mobile tyre fitters cover a wide range of the East Midlands including Nottingham, Derby, Lincoln, and Newark. Our goal is get you back on the road within 60 minutes of calling us.
         </p>
-        <p class="lead text-center">
-            So if you're stuck with a flat car tyre and need help urgently, call Tyre Emergency now on <a href="tel:03301339311" class="link-warning">0330 133 9311</a>.
+        <p>
+            So if you're stuck with a flat car tyre and need help urgently, call Tyre Emergency now on <a href={`tel:${phoneNumber}`} class="link-dark">{phoneNumber}</a>.
         </p>
-    </Main>
-    <CTA />
-    <Testimonials />
-    <CTA />
-</Layout>
+    </main>
+</ServiceLayout>

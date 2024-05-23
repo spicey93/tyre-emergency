@@ -1,23 +1,27 @@
 ---
-import Layout from "./Layout.astro";
-import Hero from "../components/Hero.astro";
-import Main from "../components/Main.astro";
-import CTA from "../components/CTA.astro";
-import GeoContent from "../components/GeoContent.astro";
-import GeoAbout from "../components/GeoAbout.astro";
-import Testimonials from "../components/Testimonials.astro";
+import ServiceLayout from "./ServiceLayout.astro";
 
-const { title, description, bgImg, heading, tagline, h1, h2, city, aboutArea, subAreas } = Astro.props;
+const {title} = Astro.props;
+const phoneNumber = import.meta.env.PHONE_NUMBER;
 ---
-<Layout title={title} description={description}>
-    <Hero bgImg={bgImg} heading={heading} tagline={tagline} btnText="Call Now"/>
-    <Main h1={h1} h2={h2}>
-       <slot />
-    </Main>
-    <CTA/>
-    <GeoAbout city={city} aboutArea={aboutArea} subAreas={subAreas}/>
-    <GeoContent area={city}/>
-    <CTA/>
-    <Testimonials/>
-    <CTA />
-</Layout>
+
+<ServiceLayout 
+title={`Emergency Mobile Tyre Fitting in ${title}`} 
+description={`Stranded with a flat tyre in ${title}? We've got you covered! Tyre Emergency Ltd offers swift and dependable mobile tyre fitting services in ${title}. Don't hesitate—contact us now for prompt and hassle-free tyre solutions delivered to your location.`} 
+bgImg="url(/img/mobile-tyre-fitting.jpeg)" 
+heading={`Mobile Tyre Fitting in ${title}`}
+tagline="We Come to You 24 Hours a Day, 7 Days a Week" 
+>
+<main class="container text-center my-5">
+    <h1>Mobile Tyre Fitting in {title}</h1>
+    <p>
+        Welcome to Tyre Emergency Ltd, your trusted local provider of <strong class="fw-bold">mobile tyre fitting in {title}</strong>. Whether you're facing a <strong class="fw-bold">flat tyre</strong> at home or require roadside tyre assistance, our experienced team is just a phone call away. We're well-equipped to handle a wide range of vehicles, ensuring top-notch service for cars, vans, and more.
+    </p>
+    <p>
+        When you find yourself in a tyre predicament in {title}, there's no need to fret. Our <strong class="fw-bold">7-day mobile tyre fitting service</strong> guarantees swift and reliable help. Your safety and convenience are our top priorities, and we're dedicated to getting you back on the road without unnecessary delays. Don't hesitate to reach out to us at <a href={`tel:${phoneNumber}`} class="link-dark">{phoneNumber}</a>. We're here to assist you promptly!
+    </p>
+    <p>
+        In search of <strong class="fw-bold">tyres in {title}?</strong> Look no further than Tyre Emergency Ltd. Our services are accessible 7 days a week, ensuring a swift resolution to your tyre needs. Get in touch with us now, and we'll have you back on the road in no time.
+    </p>
+</main>
+</ServiceLayout>

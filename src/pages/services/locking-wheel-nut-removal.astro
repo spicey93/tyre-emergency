@@ -1,45 +1,35 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/Hero.astro";
-import Main from "../../components/Main.astro";
-
-import CTA from "../../components/CTA.astro";
-
-import Testimonials from "../../components/Testimonials.astro";
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
 ---
 
-<Layout
+<ServiceLayout
     title="Locking Wheel Nut Removal | Tyre Emergency Ltd"
     description="Expert locking wheel nut removal services in Nottingham & Newark. Safe, quick, and efficient removal for any vehicle make and model."
+    bgImg="url(/img/locking-wheel-nut-removal.jpeg)"
+    heading="Struggling with a Locking Wheel Nut?"
+    tagline="We Can Remove Lockers From Any Vehicle Make and Model"
 >
-    <Hero
-        bgImg="url(/img/locking-wheel-nut-removal.jpeg)"
-        heading="Struggling with a Locking Wheel Nut?"
-        tagline="We Can Remove Lockers From Any Vehicle Make and Model"
-        btnText="Get Help Now"
-    />
-    <Main
-        h1="Professional Locking Wheel Nut Removal Services"
-        h2="Mobile Service Available Across Nottingham & Newark"
-    >
-        <p class="lead">
+    <main class="container my-5 text-center">
+        <h1>Professional Locking Wheel Nut Removal</h1>
+
+        <p>
             Locking wheel nuts are essential for keeping your wheels secure, but
             when you lose the key or encounter a stubborn nut, they can become a
             significant headache. That's where Tyre Emergency comes in. We offer
             professional locking wheel nut removal services to drivers
             throughout Nottingham and Newark.
         </p>
-        <p class="lead">
+        <p>
             Our team is equipped with specialized tools and expertise to safely
             remove locking wheel nuts from any make and model of vehicle,
             without damaging your wheels or tyres. Whether you're at home, work,
             or stranded roadside, we're ready to provide quick and reliable
             assistance.
         </p>
-        <h2 class="fw-bold text-center my-5">
+        <h2 class="my-3">
             Why Choose Tyre Emergency for Your Wheel Nut Removal?
         </h2>
-        <ul class="lead">
+        <ul class="text-start">
             <li>
                 <strong>Expert Technicians:</strong> Our technicians are highly trained
                 and experienced in the removal of all types of locking wheel nuts.
@@ -56,15 +46,11 @@ import Testimonials from "../../components/Testimonials.astro";
                 wheel nuts effectively.
             </li>
         </ul>
-        <p class="lead">
+        <p>
             If you're facing a locking wheel nut challenge, don't hesitate to
             call Tyre Emergency. Our friendly team is ready to provide you with
             efficient, hassle-free service, wherever you are in Nottingham or
             Newark.
         </p>
-    </Main>
-
-    <CTA />
-    <Testimonials />
-    <CTA />
-</Layout>
+    </main>
+</ServiceLayout>

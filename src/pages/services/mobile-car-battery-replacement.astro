@@ -1,45 +1,36 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/Hero.astro";
-import Main from "../../components/Main.astro";
-import Areas from "../../components/Areas.astro";
-import CTA from "../../components/CTA.astro";
-import ContactUs from "../../components/ContactUs.astro";
-import Testimonials from "../../components/Testimonials.astro";
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
 ---
 
-<Layout
+<ServiceLayout
     title="Mobile Car Battery Replacement | Tyre Emergency Ltd"
-    description="Convenient and reliable mobile car battery replacement services in Nottingham and Newark. Quick response, professional service."
+    description=""
+    bgImg="url(/img/mobile-car-battery-replacement.jpeg)"
+    heading="Car Battery Died? We've Got You Covered!"
+    tagline="Professional Mobile Battery Replacement at Your Location"
 >
-    <Hero
-        heading="Car Battery Died? We've Got You Covered!"
-        tagline="Professional Mobile Battery Replacement at Your Location"
-        btnText="Call for Assistance"
-        bgImg="url(/img/mobile-car-battery-replacement.jpeg)"
-    />
-    <Main
-        h1="Expert Mobile Car Battery Replacement"
-        h2="Mobile Service Available Across Nottingham & Newark"
-    >
-        <p class="lead">
+
+    <main class="my-5 container text-center">
+        <h1>Mobile Car Battery Replacement</h1>
+
+        <p>
             A dead car battery can disrupt your schedule and leave you stranded.
             At Tyre Emergency, we provide rapid and reliable mobile car battery
             replacement services in Nottingham and Newark. Whether you're at
             home, work, or stuck in a parking lot, our team is equipped to come
             to your rescue.
         </p>
-        <p class="lead">
+        <p>
             Our mobile battery replacement service is designed for convenience
             and efficiency. We understand the importance of getting your vehicle
             back in operation as quickly as possible. Our experts are skilled in
             handling a wide range of vehicle makes and models, ensuring the
             right battery fit every time.
         </p>
-        <h2 class="fw-bold my-5 text-center">
+        <h2 class="my-3">
             Why Choose Our Mobile Battery Service?
         </h2>
-        <ul class="lead">
+        <ul class="text-start">
             <li>
                 <strong>Fast and Convenient:</strong> No need to tow your
                 vehicle. We come to you, saving you time and hassle.
@@ -59,14 +50,11 @@ import Testimonials from "../../components/Testimonials.astro";
                 ensure your new battery performs optimally.
             </li>
         </ul>
-        <p class="lead">
+        <p>
             Don't let a dead battery ruin your day. Reach out to Tyre Emergency
             for a swift, professional mobile car battery replacement service.
             We're committed to getting you back on the road with minimal
             disruption to your routine.
         </p>
-    </Main>
-    <CTA />
-    <Testimonials />
-    <CTA />
-</Layout>
+    </main>
+</ServiceLayout>
