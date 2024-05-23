@@ -1,11 +1,11 @@
 ---
 import Layout from "./Layout.astro";
-import Hero from "../components/hero/BgImgHero.astro";
+import Hero from "../components/Hero.astro";
 import Main from "../components/Main.astro";
 import CTA from "../components/CTA.astro";
 import GeoContent from "../components/GeoContent.astro";
 import GeoAbout from "../components/GeoAbout.astro";
-import Testimonial from "../components/Testimonial.astro";
+import Testimonials from "../components/Testimonials.astro";
 
 const { title, description, bgImg, heading, tagline, h1, h2, city, aboutArea, subAreas } = Astro.props;
 ---
@@ -18,6 +18,6 @@ const { title, description, bgImg, heading, tagline, h1, h2, city, aboutArea, su
     <GeoAbout city={city} aboutArea={aboutArea} subAreas={subAreas}/>
     <GeoContent area={city}/>
     <CTA/>
-    <Testimonial/>
+    <Testimonials/>
     <CTA />
 </Layout>

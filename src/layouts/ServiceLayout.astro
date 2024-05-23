@@ -1,0 +1,24 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    heading: string;
+    tagline: string;
+    bgImg: string;
+}
+
+const { title, description, heading, tagline, bgImg } = Astro.props;
+import Layout from "./Layout.astro";
+import Hero from "../components/Hero.astro";
+import ReviewBar from "../components/ReviewBar.astro";
+import Testimonials from "../components/Testimonials.astro";
+import CTA from "../components/CTA.astro";
+---
+
+<Layout title={title} description={description}>
+    <ReviewBar />
+    <Hero heading={heading} tagline={tagline} bgImg={bgImg} />
+    <slot />
+    <Testimonials />
+    <CTA />
+</Layout>

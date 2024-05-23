@@ -1,11 +1,11 @@
 ---
-import Layout from "../../../layouts/Layout.astro";
-import Hero from "../../../components/hero/BgImgHero.astro";
-import Main from "../../../components/Main.astro";
-import Areas from "../../../components/Areas.astro";
-import CTA from "../../../components/CTA.astro";
-import ContactUs from "../../../components/ContactUs.astro";
-import Testimonial from "../../../components/Testimonial.astro";
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import Main from "../../components/Main.astro";
+
+import CTA from "../../components/CTA.astro";
+
+import Testimonials from "../../components/Testimonials.astro";
 ---
 
 <Layout
@@ -41,20 +41,19 @@ import Testimonial from "../../../components/Testimonial.astro";
         </h2>
         <ul class="lead">
             <li>
-                <strong>Expert Technicians:</strong> Our technicians are highly
-                trained and experienced in the removal of all types of locking
-                wheel nuts.
+                <strong>Expert Technicians:</strong> Our technicians are highly trained
+                and experienced in the removal of all types of locking wheel nuts.
             </li>
             <li>
-                <strong>Fast and Convenient:</strong> Our mobile service means
-                we come to you, making the process as convenient as possible. We
-                aim to get you back on the road quickly with minimal disruption
-                to your day.
+                <strong>Fast and Convenient:</strong> Our mobile service means we
+                come to you, making the process as convenient as possible. We aim
+                to get you back on the road quickly with minimal disruption to your
+                day.
             </li>
             <li>
-                <strong>Service for All Vehicles:</strong> No matter what type
-                of vehicle you have, we have the tools and skills to handle its
-                locking wheel nuts effectively.
+                <strong>Service for All Vehicles:</strong> No matter what type of
+                vehicle you have, we have the tools and skills to handle its locking
+                wheel nuts effectively.
             </li>
         </ul>
         <p class="lead">
@@ -66,6 +65,6 @@ import Testimonial from "../../../components/Testimonial.astro";
     </Main>
 
     <CTA />
-    <Testimonial />
+    <Testimonials />
     <CTA />
 </Layout>

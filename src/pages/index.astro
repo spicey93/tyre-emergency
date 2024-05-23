@@ -1,39 +1,34 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Main from "../components/Main.astro";
-import CTA from "../components/CTA.astro";
-import Hero from "../components/hero/BgImgHero.astro";
-import Services from "../components/Services.astro";
-import Testimonial from "../components/Testimonial.astro";
+import ServiceLayout from "../layouts/ServiceLayout.astro";
+
+const phoneNumber = import.meta.env.PHONE_NUMBER;
 ---
 
-<Layout
+<ServiceLayout
     title="Home | Tyre Emergency Ltd"
     description="Tyre Emergency: Fast, reliable mobile tyre fitting and repair service. Available 7 days a week with a 60-minute response time. Call now for immediate assistance with your tyre emergency."
+    heading="Tyres Fitted at Home or Roadside"
+    bgImg="url(/img/mobile-tyre-fitting.jpeg)"
+    tagline="We Come to You 24 Hours a Day, 7 Days a Week"
 >
-<Hero
-        heading="Tyres Fitted at Home or Roadside"
-        bgImg="url(/img/mobile-tyre-fitting.jpeg)"
-        tagline="We Come to You 24 Hours a Day, 7 Days a Week"
-        btnText="Call for Immediate Help"
-    />
-    <Main h1="Tyre Emergency" h2="24 Hour Emergency Mobile Tyre Fitting Service">
-        <p class="lead text-center">
+    <main class="py-5 text-center container">
+        <h1>Tyre Emergency</h1>
+        <p>
             Welcome to Tyre Emergency, the mobile tyre company that specialises
             in fast response tyre replacement at your location - whether that's
             at home, work or roadside.
         </p>
 
-        <p class="lead text-center">
+        <p>
             If you've got a flat tyre after hitting a pothole or getting a screw
             in your tyre, we can help! Our mobile tyre fitters have an average
-            arrival time of <strong class="fw-bold">60 minutes</strong> and will get you back on the road in no
-            time.
+            arrival time of <strong class="fw-bold">60 minutes</strong> and will
+            get you back on the road in no time.
         </p>
-        <p class="lead text-center">
+        <p>
             If you're looking for a mobile tyre service near you, give us a call
-            today on <a href="tel:03301339311" class="link-danger"
-                >0330 133 9311</a
+            today on <a href={`tel:${phoneNumber}`} class="link-dark"
+                >{phoneNumber}</a
             >. Our tyre fitters cover a wide range of the East Midlands
             including <a href="/areas/nottingham" class="link-dark"
                 >Nottingham</a
@@ -42,10 +37,5 @@ import Testimonial from "../components/Testimonial.astro";
                 class="link-dark">Lincoln</a
             >, and <a href="/areas/newark" class="link-dark">Newark</a>.
         </p>
-    </Main>
-    <CTA />
-    <Services />
-    <CTA />
-    <Testimonial />
-    <CTA />
-</Layout>
+    </main>
+</ServiceLayout>
