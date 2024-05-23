@@ -4,10 +4,9 @@ interface Props {
     description: string;
     heading: string;
     tagline: string;
-    bgImg: string;
 }
 
-const { title, description, heading, tagline, bgImg } = Astro.props;
+const { title, description, heading, tagline } = Astro.props;
 import Layout from "./Layout.astro";
 import Hero from "../components/Hero.astro";
 import ReviewBar from "../components/ReviewBar.astro";
@@ -17,7 +16,7 @@ import CTA from "../components/CTA.astro";
 
 <Layout title={title} description={description}>
     <ReviewBar />
-    <Hero heading={heading} tagline={tagline} bgImg={bgImg} />
+    <Hero heading={heading} tagline={tagline} />
     <slot />
     <Testimonials />
     <CTA />
