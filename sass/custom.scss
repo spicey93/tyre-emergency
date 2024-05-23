@@ -1,3 +1,16 @@
 .no-underline {
     text-decoration: none;
 }
+
+.accordion {
+    --bs-accordion-active-bg: rgba(255, 103, 0, 0.5);
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+.nav-link, .btn, h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+}

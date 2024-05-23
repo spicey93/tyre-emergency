@@ -17,7 +17,7 @@ const subAreasArray = subAreas.split(', ').map(area => ({
         Our mobile tyre fitting service is available in many areas of {city}, such as: 
         {subAreasArray.map((area, index) => (
           <Fragment>
-            <a href={`/areas/${area.slug}`} class="fw-bold">{area.name}</a>
+            <a href={`/areas/${area.slug}`} class="fw-bold link-danger">{area.name}</a>
             {index < subAreasArray.length - 1 ? ', ' : ''}
           </Fragment>
         ))}
