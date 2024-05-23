@@ -1,8 +1,6 @@
 // VARIABLES
-$warning: #ff3131 ;
-$secondary: #231f20;
-$primary: #ff3131;
-$dark: #231f20;
+$danger: #ff3131 ;
+
 
 // IMPORT PACKAGES
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
@@ -12,17 +10,4 @@ $dark: #231f20;
 // SET BASE FONT
 :root {
     --bs-body-font-family: "Rubik", sans-serif;
-}
-
-.accordion {
-    --bs-accordion-active-bg: rgba(255, 103, 0, 0.5);
-}
-
-.btn {
-    border-radius: 0px;
-}
-
-.nav-link, .btn, h1 {
-    text-transform: uppercase;
-    font-weight: bold;
 }
