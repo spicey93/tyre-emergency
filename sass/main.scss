@@ -1,10 +1,9 @@
 // VARIABLES
-$danger: #ff3131 ;
-
+$danger: #ff3131;
 
 // IMPORT PACKAGES
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 // SET BASE FONT
 :root {
@@ -19,7 +18,26 @@ $danger: #ff3131 ;
     border-radius: 0px;
 }
 
-.nav-link, .btn, h1, h2, h3 {
+.nav-link,
+.btn,
+h1,
+h2,
+h3 {
     text-transform: uppercase;
     font-weight: bold;
+}
+
+#hero {
+    background: linear-gradient(
+            0deg,
+            rgba(20, 20, 20, 0.8),
+            rgba(20, 20, 20, 0.8)
+        ),
+        url(/img/mobile-tyre-fitting.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
 }
