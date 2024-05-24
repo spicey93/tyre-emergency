@@ -1,57 +1,65 @@
 ---
+import BottomBar from "./BottomBar.astro";
 const phoneNumber = import.meta.env.PHONE_NUMBER;
 ---
 
-<footer class="bg-dark text-light border-light border-top">
-    <div class="container py-5">
+<footer class="bg-dark text-light border-light border-top py-5">
+    <div class="container">
         <div class="row">
-            <!-- Existing Content -->
-            <div class="col-lg-4 col-xl-3 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start mb-4">
-                <img src="/logos/logo-dark.png" alt="Tyre Emergency Logo" srcset="" class=" mb-4" width="200px">
-                <!-- <p class="">24 Hour Mobile Tyre Service in Nottingham, Mansfield, Newark, Lincoln & Derby</p> -->
+            <div
+                class="col-lg-4 col-xl-3 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start mb-4"
+            >
+                <img
+                    src="/logos/logo-dark.png"
+                    alt="Tyre Emergency Logo"
+                    srcset=""
+                    class="mb-4"
+                    width="200px"
+                />
             </div>
-
-            <!-- New Services Column -->
             <div class="col-lg-4 col-xl-3 d-flex flex-column d-none d-lg-block">
-                <p class="h5 mb-3 fw-bold text-light text-uppercase">Services</p>
+                <p class="h5 mb-3 fw-bold text-light text-uppercase">
+                    Services
+                </p>
                 <ul class="list-unstyled">
-                    <li><a href="/services/emergency-mobile-tyre-fitting" class="text-light no-underline">Emergency Mobile Tyre Fitting</a></li>
-                    <li><a href="/services/locking-wheel-nut-removal" class="text-light no-underline">Locking Wheel Nut Removal</a></li>
-                    <li><a href="/services/mobile-car-battery-replacement" class="text-light no-underline">Mobile Car Battery Replacement</a></li>
-                    <!-- Add more services as needed -->
+                    <li>
+                        <a
+                            href="/services/emergency-mobile-tyre-fitting"
+                            class="text-light no-underline"
+                            >Emergency Mobile Tyre Fitting</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/services/locking-wheel-nut-removal"
+                            class="text-light no-underline"
+                            >Locking Wheel Nut Removal</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/services/mobile-car-battery-replacement"
+                            class="text-light no-underline"
+                            >Mobile Car Battery Replacement</a>
+                    </li>
                 </ul>
             </div>
-
-            <!-- Existing Contact Column -->
-            <div class="col-lg-4 offset-xl-2 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start mb-4">
+            <div
+                class="col-lg-4 offset-xl-2 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start mb-4"
+            >
                 <p class="h5">Call Us For Assistance</p>
-                <a href={`${phoneNumber}`} class="h5 fw-bold mb-3 text-light no-underline"><i class="bi bi-telephone-fill text-danger"></i> {phoneNumber}</a>
+                <a
+                    href={`${phoneNumber}`}
+                    class="h5 fw-bold mb-3 text-light no-underline"
+                    ><i class="bi bi-telephone-fill text-danger"></i>
+                    {phoneNumber}</a
+                >
                 <p class="h5">Or Email Us</p>
-                <a href="mailto:contact@tyreemergency.com" class="h5 fw-bold text-light no-underline"><i class="bi bi-envelope-fill text-danger"></i> contact@tyreemergency.com</a>
+                <a
+                    href="mailto:contact@tyreemergency.com"
+                    class="h5 fw-bold text-light no-underline"
+                    ><i class="bi bi-envelope-fill text-danger"></i> contact@tyreemergency.com</a
+                >
             </div>
         </div>
-    </div>
-    <div class="bg-light py-1 text-dark">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
-                    <small>Tyre Emergency Ltd 2024</small>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 text-center">
-    
-                    <small><a href="/privacy-policy" class="no-underline text-dark">Privacy Policy</a></small>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 text-center">
-    
-                    <small><a href="/terms-and-conditions" class="no-underline text-dark">Terms and Conditions</a></small>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 text-center">
-    
-                    <small><a href="/cookie-policy" class="no-underline text-dark">Cookie Policy</a></small>
-                </div>
-            </div>
-        </div>
-
     </div>
 </footer>
+<BottomBar />

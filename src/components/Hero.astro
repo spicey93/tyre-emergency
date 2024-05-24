@@ -3,13 +3,10 @@ const { heading, tagline } = Astro.props;
 const phoneNumber = import.meta.env.PHONE_NUMBER;
 ---
 
-<section id="hero">
-    <div class="container text-center text-light">
-        <!-- Desktop -->
-
+<section id="hero" class="text-center text-light">
+    <div class="container">
         <p class="fw-bold display-5 text-uppercase">{heading}</p>
         <p class="lead fs-3 mb-5">{tagline}</p>
-
         <a href={`tel:${phoneNumber}`} class="btn btn-danger text-white"
             ><i class="bi bi-telephone-fill me-2"></i>Call Now</a
         >
