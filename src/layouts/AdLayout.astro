@@ -1,0 +1,21 @@
+---
+interface Props {
+    title: string;
+    description: string;
+}
+
+const { title, description } = Astro.props;
+
+import Layout from "./Layout.astro";
+import ReviewBar from "../components/ReviewBar.astro";
+import CTA from "../components/CTA.astro";
+import Testimonials from "../components/Testimonials.astro";
+
+---
+
+<Layout noIndex={true} title={title} description={description}>
+    <ReviewBar />
+    <slot />
+    <Testimonials />
+    <CTA />
+    </Layout>
