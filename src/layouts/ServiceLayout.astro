@@ -18,7 +18,9 @@ import CTA from "../components/CTA.astro";
     <ReviewBar />
     <Hero heading={heading} tagline={tagline} />
     <main id="intro">
-        <slot />
+        <div>
+            <slot />
+        </div>
     </main>
     <Testimonials />
     <CTA />

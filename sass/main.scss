@@ -10,50 +10,49 @@ $danger: #ff3131;
     --bs-body-font-family: "Poppins", sans-serif;
 }
 
-.no-underline {
-    text-decoration: none;
-}
-
-.btn {
-    border-radius: 0px;
-}
-
-.nav-link,
-.btn,
-h1,
-h2,
-h3 {
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
 #hero {
-    background: linear-gradient(
-            0deg,
+    background: linear-gradient(0deg,
             rgba(20, 20, 20, 0.8),
-            rgba(20, 20, 20, 0.8)
-        ),
+            rgba(20, 20, 20, 0.8)),
         url(/img/mobile-tyre-fitting.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 70vh;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    @extend .text-light;
+
 }
 
+
 #intro {
-    @extend .py-5, .text-center, .container;
+    @extend .py-5, .text-center;
+    div {
+        @extend .container;
+    }
+
     h1 {
         @extend .mb-5;
     }
+
     h2 {
         @extend .my-5;
     }
+
     ul {
         @extend .text-start;
     }
-    p, li {
+
+    p,
+    li {
         @extend .lead;
     }
+}
+
+.call-btn {
+    @extend .btn, .btn-lg, .btn-danger, .text-light, .fw-bold;
 }
