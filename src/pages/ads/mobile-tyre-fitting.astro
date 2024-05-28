@@ -107,6 +107,9 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
     <Testimonials />
     <CTA />
     <Footer />
+    <div class="d-grid fixed-bottom d-md-none">
+        <a href={`tel:${phoneNumber}`} class="btn btn-danger text-light btn-lg"><i class="bi bi-telephone-fill"></i> Call {phoneNumber}</a>
+    </div>
 </html>
 
 <!-- Bootstrap script -->
