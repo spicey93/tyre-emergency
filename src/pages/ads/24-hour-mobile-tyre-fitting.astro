@@ -2,11 +2,10 @@
 import "../../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 import "../../styles/main.css";
 import Navbar from "../../components/Navbar.astro";
-import Features from "../../components/Benefits.astro"
+import Benefits from "../../components/Benefits.astro"
 import Testimonials from "../../components/Testimonials.astro";
 import CTA from "../../components/CTA.astro";
 import Footer from "../../components/Footer.astro";
-import Benefits from "../../components/Benefits.astro";
 const phoneNumber = import.meta.env.PHONE_NUMBER;
 ---
 
@@ -40,7 +39,7 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
                         <p class="mb-3 display-5 fw-bold">Stuck With a Flat Tyre?</p>
                         <p class="fs-3 mb-3 mb-lg-5"><em>We'll Come to You in 60 Minutes</em></p>
                         <div class="d-flex align-items-center flex-column flex-lg-row">
-                            <a href="" class="btn btn-danger btn-lg rounded-pill text-light">Call Now</a>
+                            <a href={`tel:${phoneNumber}`} class="btn btn-danger btn-lg rounded-pill text-light">Call Now</a>
                             <p class="ms-lg-3 mt-3 m-lg-0">Rated <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i> on Google</p>
                         </div>
                     </div>

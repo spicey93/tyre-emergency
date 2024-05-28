@@ -1,0 +1,143 @@
+---
+import "../../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+import "../../styles/main.css";
+import Navbar from "../../components/Navbar.astro";
+import Testimonials from "../../components/Testimonials.astro";
+import CTA from "../../components/CTA.astro";
+import Footer from "../../components/Footer.astro";
+const phoneNumber = import.meta.env.PHONE_NUMBER;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <script src="../../scripts/gtm/head.js"></script>
+        <meta charset="UTF-8" />
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="description" content="24 hour mobile tyre fitting" />
+        <link rel="icon" type="image/x-icon" href="/logos/favicon.ico" />
+        <meta name="robots" content="noindex, nofollow" />
+        <title>Mobile Tyre Fitting</title>
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript
+            ><iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-MC27JVL7"
+                height="0"
+                width="0"
+                style="display:none;visibility:hidden"></iframe></noscript
+        >
+        <!-- End Google Tag Manager (noscript) -->
+        <Navbar />
+        <main class="container py-5 my-5">
+            <div class="row g-5">
+                <div
+                    class="col-12 col-lg-6 d-flex flex-column justify-content-center text-center text-lg-start"
+                >
+                    <p class="mb-3 display-5 fw-bold">We Come to You!</p>
+                    <p class="fs-3 mb-3 mb-lg-5">
+                        <em
+                            >Get Your Tyres Fitted at Home, Work or Roadside <strong
+                                >Today</strong
+                            ></em
+                        >
+                    </p>
+                    <div
+                        class="d-flex align-items-center flex-column flex-lg-row"
+                    >
+                    <a href={`tel:${phoneNumber}`} class="btn btn-danger btn-lg rounded-pill text-light">Call Now</a>
+                        <p class="ms-lg-3 mt-3 m-lg-0">
+                            Rated <i class="bi bi-star-fill text-warning"></i><i
+                                class="bi bi-star-fill text-warning"></i><i
+                                class="bi bi-star-fill text-warning"></i><i
+                                class="bi bi-star-fill text-warning"></i><i
+                                class="bi bi-star-fill text-warning"></i> on Google
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="col-12 col-lg-6 d-flex align-items-center justify-content-center"
+                >
+                    <img
+                        src="/illustrations/car.png"
+                        alt="Car illustration"
+                        class="w-100"
+                    />
+                </div>
+            </div>
+        </main>
+    </body>
+    <section class="bg-light py-5">
+        <div class="container text-center my-5">
+            <h1 class="">Mobile Tyre Fitting</h1>
+            <em class="lead">Change Your Tyres the Easy Way!</em>
+            <p class="lead mt-5">
+                Why spend time sitting in a tyre shop waiting for your tyres to
+                be changed when you can have them fitted at home instead! Our
+                friendly fitters can come to you at your home or workplace and
+                replace your old tyres whilst you carry on with your day.
+            </p>
+            <p class="lead">
+                There's no need to take time off work or waste hours of your
+                free time in a waiting room. We take all the hassle out of
+                changing your tyres by bringing the tyre shop to you.
+            </p>
+            <p class="lead">
+                Booking our mobile tyre service is a simple as 1 2 3:
+            </p>
+            <div class="row mt-5 g-5">
+                <div class="col-12 col-lg-4">
+                    <div class="bg-white shadow rounded p-5">
+                        <i class="bi bi-telephone-fill fs-3"></i>
+                        <p class="fs-3 mt-3">Call Us</p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Excepturi voluptas obcaecati sint minus
+                            possimus consequatur numquam id odio iusto molestiae
+                            quae labore ad, harum aspernatur placeat! Aperiam
+                            adipisci laborum ducimus!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="bg-white shadow rounded p-5">
+                        <i class="bi bi-calendar-fill fs-3"></i>
+                        <p class="fs-3 mt-3">Make a Booking</p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Excepturi voluptas obcaecati sint minus
+                            possimus consequatur numquam id odio iusto molestiae
+                            quae labore ad, harum aspernatur placeat! Aperiam
+                            adipisci laborum ducimus!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="bg-white shadow rounded p-5">
+                        <i class="bi bi-credit-card-fill fs-3"></i>
+                        <p class="fs-3 mt-3">Payment</p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Excepturi voluptas obcaecati sint minus
+                            possimus consequatur numquam id odio iusto molestiae
+                            quae labore ad, harum aspernatur placeat! Aperiam
+                            adipisci laborum ducimus!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</html>
+<Testimonials />
+<CTA />
+<Footer />
+
+<!-- Bootstrap script -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
