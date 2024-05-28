@@ -7,6 +7,7 @@ import Benefits from "../../components/Benefits.astro";
 import Testimonials from "../../components/Testimonials.astro";
 import CTA from "../../components/CTA.astro";
 import Footer from "../../components/Footer.astro";
+import CTABar from "../../components/CTABar.astro"
 const phoneNumber = import.meta.env.PHONE_NUMBER;
 ---
 
@@ -107,9 +108,7 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
     <Testimonials />
     <CTA />
     <Footer />
-    <div class="d-grid fixed-bottom d-md-none">
-        <a href={`tel:${phoneNumber}`} class="btn btn-danger text-light btn-lg"><i class="bi bi-telephone-fill"></i> Call Now For a Quote</a>
-    </div>
+    <CTABar />
 </html>
 
 <!-- Bootstrap script -->
