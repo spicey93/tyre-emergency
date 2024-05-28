@@ -2,6 +2,8 @@
 import "../../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 import "../../styles/main.css";
 import Navbar from "../../components/Navbar.astro";
+import HowItWorks from "../../components/HowItWorks.astro";
+import Benefits from "../../components/Benefits.astro";
 import Testimonials from "../../components/Testimonials.astro";
 import CTA from "../../components/CTA.astro";
 import Footer from "../../components/Footer.astro";
@@ -48,7 +50,11 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
                     <div
                         class="d-flex align-items-center flex-column flex-lg-row"
                     >
-                    <a href={`tel:${phoneNumber}`} class="btn btn-danger btn-lg rounded-pill text-light">Call Now</a>
+                        <a
+                            href={`tel:${phoneNumber}`}
+                            class="btn btn-danger btn-lg rounded-pill text-light"
+                            >Call Now</a
+                        >
                         <p class="ms-lg-3 mt-3 m-lg-0">
                             Rated <i class="bi bi-star-fill text-warning"></i><i
                                 class="bi bi-star-fill text-warning"></i><i
@@ -81,48 +87,27 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
                 replace your old tyres whilst you carry on with your day.
             </p>
             <p class="lead">
-                There's no need to take time off work or waste hours of your
-                free time in a waiting room. We take all the hassle out of
-                changing your tyres by bringing the tyre shop to you.
+                Our experienced mobile tyre fitters are <strong
+                    >available 7 days a week</strong
+                > and we offer <strong>same day fitting</strong> if you need an emergency
+                mobile tyre replacement.
             </p>
             <p class="lead">
-                Booking our mobile tyre service is a simple as 1 2 3:
+                We cover a wide range of Nottinghamshire including <strong
+                    >Worksop, Mansfield, Newark.</strong
+                > Give us a call today on <a
+                    href={`tel:${phoneNumber}`}
+                    class="link-dark">{phoneNumber}</a
+                > for a quote.
             </p>
-            <div class="row mt-5 g-5">
-                <div class="col-12 col-lg-4">
-                    <div class="bg-white shadow rounded p-5">
-                        <i class="bi bi-telephone-fill fs-3"></i>
-                        <p class="fs-3 mt-3">Call Us</p>
-                        <p>
-                            Give us a call with your vehicle registration and tyre size, we can then provide you with a quote for some new tyres.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                    <div class="bg-white shadow rounded p-5">
-                        <i class="bi bi-calendar-fill fs-3"></i>
-                        <p class="fs-3 mt-3">Make a Booking</p>
-                        <p>
-                            If you're happy with the price then just let us know that you'd like to make a booking and provide us with a date and time that's convenient for you.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                    <div class="bg-white shadow rounded p-5">
-                        <i class="bi bi-credit-card-fill fs-3"></i>
-                        <p class="fs-3 mt-3">Payment</p>
-                        <p>
-                            On the day of fitting, a member of our team will call you when they're on their way to you. Upon completion you can pay by cash or card.
-                        </p>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
+    <HowItWorks />
+    <Benefits />
+    <Testimonials />
+    <CTA />
+    <Footer />
 </html>
-<Testimonials />
-<CTA />
-<Footer />
 
 <!-- Bootstrap script -->
 <script
