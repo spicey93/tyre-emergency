@@ -6,11 +6,12 @@ interface Props {
 const { title } = Astro.props;
 
 import ServiceLayout from "./ServiceLayout.astro";
+import HowItWorks from "../components/HowItWorks.astro";
 const phoneNumber = import.meta.env.PHONE_NUMBER;
 ---
 
 <ServiceLayout 
-title={`Emergency Mobile Tyre Fitting in ${title}`} 
+title={`Mobile Tyre Fitting in ${title}`} 
 description={`Stranded with a flat tyre in ${title}? We've got you covered! Tyre Emergency Ltd offers swift and dependable mobile tyre fitting services in ${title}. Don't hesitate—contact us now for prompt and hassle-free tyre solutions delivered to your location.`} 
 heading={`Mobile Tyre Fitting in ${title}`}
 tagline="We Come to You 24 Hours a Day, 7 Days a Week" 
@@ -26,5 +27,4 @@ tagline="We Come to You 24 Hours a Day, 7 Days a Week"
     <p>
         In search of <strong class="fw-bold">tyres in {title}?</strong> Look no further than Tyre Emergency Ltd. Our services are accessible 7 days a week, ensuring a swift resolution to your tyre needs. Get in touch with us now, and we'll have you back on the road in no time.
     </p>
-
 </ServiceLayout>
