@@ -6,7 +6,7 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
     <div class="row">
         <a
             href={`tel:${phoneNumber}`}
-            class="link-light col-6 bg-danger d-flex align-items-center justify-content-center p-3"
+            class="link-light col-6 bg-primary d-flex align-items-center justify-content-center p-3"
         >
             <i class="bi bi-telephone-fill"></i>
         </a>
@@ -26,30 +26,23 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+                <p>If you'd like a quote for our services then feel free to send us a message. We aim to respond as quickly as possible.</p>
                 <form method="POST" action="#" data-netlify="true">
                     <div class="mb-3">
                         <label for="name" class="form-label">Name *</label>
-                        <input type="text" class="form-control" name="name" placeholder="John Smith" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="tel" class="form-label">Tel *</label>
-                        <input type="tel" name="tel" id="tel" placeholder="07123 456789" required class="form-control">
+                        <input type="text" class="form-control form-control-lg" name="name" placeholder="" required>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email *</label>
-                        <input type="email" name="email" id="email" class="form-control" required placeholder="johnsmith@gmail.com">
+                        <input type="email" name="email" id="email" class="form-control form-control-lg" required placeholder="">
                     </div>
                     <div class="mb-3">
-                        <label for="registration">Vehicle Registration</label>
-                        <input type="text" class="form-control" name="registration" id="registration" placeholder="LD07 LTF">
+                        <label for="phone" class="form-label">Tel *</label>
+                        <input type="tel" name="phone" id="phone" class="form-control form-control-lg" required placeholder="">
                     </div>
                     <div class="mb-3">
-                        <label for="postcode" class="form-label">Postcode *</label>
-                        <input type="text" name="postcode" id="postcode" class="form-control" required placeholder="NG22 8GA">
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea name="messsage" id="message" class="form-control" placeholder="Write your message here..." rows="5"></textarea>
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea name="messsage" id="message" class="form-control form-control-lg" placeholder="" rows="5" required></textarea>
                     </div>
                     <div class="d-grid">
 
