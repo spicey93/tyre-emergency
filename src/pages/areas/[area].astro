@@ -21,7 +21,10 @@ export async function getStaticPaths() {
         { params: { area: "derby" }, props: { title: "Derby" } },
         { params: { area: "doncaster" }, props: { title: "Doncaster" } },
         { params: { area: "eakring" }, props: { title: "Eakring" } },
-        { params: { area: "east-bridgford" }, props: { title: "East Bridgford" } },
+        {
+            params: { area: "east-bridgford" },
+            props: { title: "East Bridgford" },
+        },
         { params: { area: "east-markham" }, props: { title: "East Markham" } },
         { params: { area: "eastwood" }, props: { title: "Eastwood" } },
         { params: { area: "edwalton" }, props: { title: "Edwalton" } },
@@ -32,7 +35,10 @@ export async function getStaticPaths() {
         { params: { area: "giltbrook" }, props: { title: "Giltbrook" } },
         { params: { area: "hucknall" }, props: { title: "Hucknall" } },
         { params: { area: "ilkeston" }, props: { title: "Ilkeston" } },
-        { params: { area: "kirbky-in-ashfield" }, props: { title: "Kirbky In Ashfield" } },
+        {
+            params: { area: "kirbky-in-ashfield" },
+            props: { title: "Kirbky In Ashfield" },
+        },
         { params: { area: "kirklington" }, props: { title: "Kirklington" } },
         { params: { area: "lincoln" }, props: { title: "Lincoln" } },
         { params: { area: "loughborough" }, props: { title: "Loughborough" } },
@@ -41,7 +47,10 @@ export async function getStaticPaths() {
         { params: { area: "newark" }, props: { title: "Newark" } },
         { params: { area: "nottingham" }, props: { title: "Nottingham" } },
         { params: { area: "ollerton" }, props: { title: "Ollerton" } },
-        { params: { area: "radcliffe-on-trent" }, props: { title: "Radcliffe On Trent" } },
+        {
+            params: { area: "radcliffe-on-trent" },
+            props: { title: "Radcliffe On Trent" },
+        },
         { params: { area: "rainworth" }, props: { title: "Rainworth" } },
         { params: { area: "ravenshead" }, props: { title: "Ravenshead" } },
         { params: { area: "retford" }, props: { title: "Retford" } },
@@ -49,18 +58,62 @@ export async function getStaticPaths() {
         { params: { area: "shirebrook" }, props: { title: "Shirebrook" } },
         { params: { area: "somercotes" }, props: { title: "Somercotes" } },
         { params: { area: "southwell" }, props: { title: "Southwell" } },
-        { params: { area: "sutton-in-ashfield" }, props: { title: "Sutton In Ashfield" } },
+        {
+            params: { area: "sutton-in-ashfield" },
+            props: { title: "Sutton In Ashfield" },
+        },
         { params: { area: "swadlincote" }, props: { title: "Swadlincote" } },
         { params: { area: "tuxford" }, props: { title: "Tuxford" } },
         { params: { area: "warsop" }, props: { title: "Warsop" } },
-        { params: { area: "west-bridgford" }, props: { title: "West Bridgford" } },
-        { params: { area: "worksop" }, props: { title: "Worksop" } },
+        {
+            params: { area: "west-bridgford" },
+            props: { title: "West Bridgford" },
+        },
+        {
+            params: { area: "worksop" },
+            props: {
+                title: "Worksop",
+            },
+        },
     ];
 }
 
-const { title } = Astro.props;
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
 
-import AreaLayout from "../../layouts/AreaLayout.astro";
+const { title } = Astro.props;
+const phoneNumber = import.meta.env.PHONE_NUMBER;
 ---
 
-<AreaLayout title={title} />
+<ServiceLayout
+    title={`Mobile Tyre Fitting in ${title}`}
+    description={`Tyre Emergency offers swift and dependable mobile tyre fitting services in ${title}. We come to you at home, work or roadside.`}
+    heading={`Mobile Tyre Fitting in ${title}`}
+    tagline="We Come to You 24 Hours a Day, 7 Days a Week"
+>
+    <h1>Mobile Tyre Fitting in {title}</h1>
+    <p>
+        Welcome to Tyre Emergency Ltd, your trusted local provider of <strong
+            class="fw-bold">mobile tyre fitting in {title}</strong
+        >. Whether you're facing a <strong class="fw-bold">flat tyre</strong> at
+        home or require roadside tyre assistance, our experienced team is just a
+        phone call away. We're well-equipped to handle a wide range of vehicles,
+        ensuring top-notch service for cars, vans, and more.
+    </p>
+    <p>
+        When you find yourself in a tyre predicament in {title}, there's no need
+        to fret. Our <strong class="fw-bold"
+            >7-day mobile tyre fitting service</strong
+        > guarantees swift and reliable help. Your safety and convenience are our
+        top priorities, and we're dedicated to getting you back on the road without
+        unnecessary delays. Don't hesitate to reach out to us at <a
+            href={`tel:${phoneNumber}`}
+            class="link-dark">{phoneNumber}</a
+        >. We're here to assist you promptly!
+    </p>
+    <p>
+        In search of <strong class="fw-bold">tyres in {title}?</strong> Look no further
+        than Tyre Emergency Ltd. Our services are accessible 7 days a week, ensuring
+        a swift resolution to your tyre needs. Get in touch with us now, and we'll
+        have you back on the road in no time.
+    </p>
+</ServiceLayout>
