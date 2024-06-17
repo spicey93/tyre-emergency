@@ -42,11 +42,11 @@ export async function getStaticPaths() {
         { params: { area: "kirklington" }, props: { title: "Kirklington" } },
         { params: { area: "lincoln" }, props: { title: "Lincoln" } },
         { params: { area: "loughborough" }, props: { title: "Loughborough" } },
-        { params: { area: "mansfield" }, props: { title: "Mansfield", nearbyAreas: ["Sutton-in-Ashfield", "Rainworth", "Blidworth", "Forest Town", "Shirebrook", "Kirkby-in-Ashfield", "Warsop"] } },
+        { params: { area: "mansfield" }, props: { title: "Mansfield", nearbyAreas: ["Sutton-in-Ashfield", "Rainworth", "Blidworth", "Forest-Town", "Shirebrook", "Kirkby-in-Ashfield", "Warsop"] } },
         { params: { area: "mapperley" }, props: { title: "Mapperley" } },
         { params: { area: "newark" }, props: { title: "Newark", nearbyAreas: ['Southwell', 'Bilsthorpe', 'Ollerton', 'Farnsfield', 'Edwinstowe', 'Ravenshead', 'Eakring', 'Kirklington', 'Clipstone', 'Averham', 'Fernwood', 'East-Markham', 'Balderton'] } },
         { params: { area: "nottingham" }, props: { title: "Nottingham", nearbyAreas: [
-            "Arnold", "Mapperley", "Burton Joyce", "Giltbrook", "Calverton", "Bestwood", "West Bridgford", "Bulwell", "Hucknall", "Radcliffe-on-Trent", "Eastwood", "East Bridgford", "Cotgrave", "Bingham", "Carlton", "Colwick", "Edwalton"
+            "Arnold", "Mapperley", "Burton-Joyce", "Giltbrook", "Calverton", "Bestwood", "West-Bridgford", "Bulwell", "Hucknall", "Radcliffe-on-Trent", "Eastwood", "East-Bridgford", "Cotgrave", "Bingham", "Carlton", "Colwick", "Edwalton"
         ] } },
         { params: { area: "ollerton" }, props: { title: "Ollerton" } },
         {
@@ -124,5 +124,5 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
         a swift resolution to your tyre needs. Get in touch with us now, and we'll
         have you back on the road in no time.
     </p>
-    {nearbyAreas.length > 0 && <p>We cover many areas of {title}, including: {nearbyAreas.map(area => <a class="link-dark" href={`/areas/${area.toLowerCase()}`}>{area}, </a> )}</p>}
+    {nearbyAreas.length > 0 && <p>We cover many areas of {title}, including: {nearbyAreas.map(area => <a class="link-dark" href={`/areas/${area.toLowerCase()}/`}>{area}, </a> )}</p>}
 </ServiceLayout>
