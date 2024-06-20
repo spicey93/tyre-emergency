@@ -8483,7 +8483,7 @@ textarea.form-control-lg {
   color: rgba(var(--bs-danger-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-light, .call-btn, #hero {
+.text-light, .call-btn, #hero .container, #hero #intro div, #intro #hero div {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important;
 }
@@ -12003,14 +12003,11 @@ textarea.form-control-lg {
 }
 
 #hero {
-  background: linear-gradient(0deg, rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 0.8)), url(/img/mobile-tyre-fitting.webp);
+  background: linear-gradient(0deg, rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.9)), url(/img/mobile-tyre-fitting.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+#hero .container, #hero #intro div, #intro #hero div {
   min-height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }/*# sourceMappingURL=main.css.map */

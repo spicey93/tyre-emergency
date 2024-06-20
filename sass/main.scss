@@ -12,19 +12,16 @@ $danger: #ff3131;
 
 #hero {
     background: linear-gradient(0deg,
-            rgba(20, 20, 20, 0.8),
-            rgba(20, 20, 20, 0.8)),
+            rgba(20, 20, 20, 0.9),
+            rgba(20, 20, 20, 0.9)),
         url(/img/mobile-tyre-fitting.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    @extend .text-light;
+    .container {
+        min-height: 70vh;
+        @extend .text-light;
+    }
 
 }
 
