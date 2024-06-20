@@ -1,7 +1,6 @@
 ---
 import "../../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 import "../../styles/main.css";
-import Navbar from "../../components/Navbar.astro";
 import HowItWorks from "../../components/HowItWorks.astro";
 import Benefits from "../../components/Benefits.astro";
 import Testimonials from "../../components/Testimonials.astro";
@@ -34,7 +33,12 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
                 style="display:none;visibility:hidden"></iframe></noscript
         >
         <!-- End Google Tag Manager (noscript) -->
-        <Navbar />
+        <div class="container py-3">
+            <a href="/">
+                <img src="/logos/logo.png" alt="logo symbol" width="200">
+            </a>
+        </div>
+        <!-- End Google Tag Manager (noscript) -->
         <section class="container py-5 my-5">
             <div class="row g-5">
                 <div
@@ -75,7 +79,7 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
                     />
                 </div>
             </div>
-        </main>
+        </section>
 
         <main class="py-5">
             <div class="container text-center my-5">
@@ -110,11 +114,10 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
         <CTA />
         <Footer />
         <CTABar />
+        <!-- Bootstrap script -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
     </body>
 </html>
-
-<!-- Bootstrap script -->
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
