@@ -1,10 +1,21 @@
-<nav class="navbar navbar-expand-lg py-4 bg-white">
-    <div class="container">
+---
+const phoneNumber = import.meta.env.PHONE_NUMBER;
+---
+<header class="container py-5 d-flex justify-content-between align-items-center">
+
         <a href="/">
             <img src="/logos/logo.png" alt="logo symbol" width="200" />
         </a>
+        <div class="flex-column d-none d-md-flex">
+            <p class="h5">Call Now For a Quote</p>
+            <a href={`tel:${phoneNumber}`} class="call-btn">{phoneNumber}</a>
+        </div>
+        <a href={`tel:${phoneNumber}`} class="d-md-none call-btn"><i class="bi bi-telephone-fill"></i></a>
+</header>
+<nav class="navbar navbar-expand-lg bg-light border">
+    <div class="container">
         <button
-            class="navbar-toggler"
+            class="navbar-toggler mx-auto"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarContent"
@@ -15,7 +26,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav text-center">
                 <li class="nav-item">
                     <a class="nav-link" href="/"
                         ><i class="bi bi-house-fill"></i></a
@@ -96,23 +107,35 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/areas/loughborough/" class="dropdown-item">
+                            <a
+                                href="/areas/loughborough/"
+                                class="dropdown-item"
+                            >
                                 Loughborough
                             </a>
                         </li>
                         <li>
-                            <a href="/areas/chesterfield/" class="dropdown-item">
+                            <a
+                                href="/areas/chesterfield/"
+                                class="dropdown-item"
+                            >
                                 Chesterfield
                             </a>
                         </li>
                         <li>
-                            <a href="/areas/derby/" class="dropdown-item">Derby</a>
+                            <a href="/areas/derby/" class="dropdown-item"
+                                >Derby</a
+                            >
                         </li>
                         <li>
-                            <a href="/areas/lincoln/" class="dropdown-item">Lincoln</a>
+                            <a href="/areas/lincoln/" class="dropdown-item"
+                                >Lincoln</a
+                            >
                         </li>
                         <li>
-                            <a href="/areas/doncaster/" class="dropdown-item">Doncaster</a>
+                            <a href="/areas/doncaster/" class="dropdown-item"
+                                >Doncaster</a
+                            >
                         </li>
                     </ul>
                 </li>

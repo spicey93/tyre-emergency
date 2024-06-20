@@ -9,13 +9,11 @@ interface Props {
 const { title, description, heading, tagline } = Astro.props;
 import Layout from "./Layout.astro";
 import Hero from "../components/Hero.astro";
-import ReviewBar from "../components/ReviewBar.astro";
 import Testimonials from "../components/Testimonials.astro";
 import CTA from "../components/CTA.astro";
 ---
 
 <Layout title={title} description={description} noIndex={false}>
-    <ReviewBar />
     <Hero heading={heading} tagline={tagline} />
     <main id="intro">
         <div>
