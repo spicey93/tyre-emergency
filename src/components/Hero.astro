@@ -25,17 +25,21 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
                     class="bi bi-star-fill text-warning"></i> on Google
             </span>
         </div>
-        <div class="d-none d-md-flex flex-column">
-            <p class="h5 text-center mb-3">Get a Quote</p>
-            <form
-                action="https://mobiletyrebookings-5e066c48bbce.herokuapp.com"
-                method="post"
-            >
-            <div class="input-group">
-                <input type="text" name="vrm" required class="text-uppercase form-control bg-warning border border-warning font-monospace form-control-lg fw-bold" placeholder="Enter Reg">
-                <button class="btn btn-primary btn-lg fw-bold"><i class="bi bi-arrow-right"></i></button>
-            </div>
+        <div class="d-none d-md-flex flex-column align-items-center">
+            <form action="https://mobiletyrebookings-5e066c48bbce.herokuapp.com" method="post" class="mb-3 text-center">
+                <h5 class="mb-3 text-light fs-3">Get a Quote</h5>
+                <div class="input-group">
+                    <input type="text" class="form-control text-center font-monospace fw-bold text-uppercase bg-warning border border-warning fs-3" name="vrm" placeholder="Enter Reg" required>
+                    <button class="btn btn-success fw-bold font-monospace fs-3 text-uppercase rounded-end" type="submit" id="lookUpVRMBtn">Go</button>
+                </div>
             </form>
+            <span>
+                Rated <i class="bi bi-star-fill text-warning"></i><i
+                    class="bi bi-star-fill text-warning"></i><i
+                    class="bi bi-star-fill text-warning"></i><i
+                    class="bi bi-star-fill text-warning"></i><i
+                    class="bi bi-star-fill text-warning"></i> on Google
+            </span>
         </div>
     </div>
 </section>
