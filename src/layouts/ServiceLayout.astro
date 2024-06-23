@@ -4,17 +4,20 @@ interface Props {
     description: string;
     heading: string;
     tagline: string;
+    bookOnline: boolean,
 }
 
-const { title, description, heading, tagline } = Astro.props;
+const { title, description, heading, tagline, bookOnline = false } = Astro.props;
 import Layout from "./Layout.astro";
 import Hero from "../components/Hero.astro";
 import Testimonials from "../components/Testimonials.astro";
 import CTA from "../components/CTA.astro";
+import BookNow from "../components/BookNow.astro";
 ---
 
 <Layout title={title} description={description} noIndex={false}>
-    <Hero heading={heading} tagline={tagline} />
+    {bookOnline && <BookNow heading={heading} tagline={tagline} />}
+    {!bookOnline &&<Hero heading={heading} tagline={tagline} />}
     <main id="intro">
         <div>
             <slot />
