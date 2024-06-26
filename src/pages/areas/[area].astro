@@ -85,6 +85,7 @@ export async function getStaticPaths() {
 }
 
 import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import WhyChooseUs from "../../components/WhyChooseUs.astro";
 
 const { title, nearbyAreas = [] } = Astro.props;
 const phoneNumber = import.meta.env.PHONE_NUMBER;
