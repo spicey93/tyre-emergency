@@ -18,11 +18,11 @@ import BookNow from "../components/BookNow.astro";
 <Layout title={title} description={description} noIndex={false}>
     {bookOnline && <BookNow heading={heading} tagline={tagline} />}
     {!bookOnline &&<Hero heading={heading} tagline={tagline} />}
+    <Testimonials />
     <main id="intro">
         <div>
             <slot />
         </div>
     </main>
-    <Testimonials />
     <CTA />
 </Layout>
