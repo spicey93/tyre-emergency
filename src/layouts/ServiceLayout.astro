@@ -12,17 +12,33 @@ import Layout from "./Layout.astro";
 import Hero from "../components/Hero.astro";
 import Testimonials from "../components/Testimonials.astro";
 import CTA from "../components/CTA.astro";
-import BookNow from "../components/BookNow.astro";
 ---
 
 <Layout title={title} description={description} noIndex={false}>
-    {bookOnline && <BookNow heading={heading} tagline={tagline} />}
-    {!bookOnline &&<Hero heading={heading} tagline={tagline} />}
-    <Testimonials />
-    <main id="intro">
-        <div>
-            <slot />
+    <Hero heading={heading} tagline={tagline} />
+    
+    <main class="container">
+        <div class="row mt-1 mb-5 g-5">
+            <div class="col-12 col-lg-8">
+                <slot />
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="p-5" id="whyChooseUs">
+                    <p class="h3 mb-3 fw-bold">Why Choose Us</p>
+                    <p class="mb-0"><i class="bi bi-check-circle-fill me-2"></i>Same day service</p>
+                    <p class="mb-0"><i class="bi bi-check-circle-fill me-2"></i>Hundreds of tyres in stock</p>
+                    <p class="mb-0"><i class="bi bi-check-circle-fill me-2"></i>Open 24/7</p>
+                    <p class="mb-0"><i class="bi bi-check-circle-fill me-2"></i>60 Minute Response</p>
+                </div>
+            </div>
         </div>
     </main>
+    <Testimonials />
     <CTA />
 </Layout>
+
+<style>
+    #whyChooseUs {
+        background-color: #9AFFFF;
+    }
+</style>
