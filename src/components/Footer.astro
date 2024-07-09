@@ -1,5 +1,4 @@
 ---
-import BottomBar from "./BottomBar.astro";
 const phoneNumber = import.meta.env.PHONE_NUMBER;
 ---
 
@@ -62,4 +61,32 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
         </div>
     </div>
 </footer>
-<BottomBar />
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
+            <small>Tyre Emergency Ltd 2024</small>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 text-center">
+            <small
+                ><a href="/privacy-policy/" class="no-underline text-dark"
+                    >Privacy Policy</a
+                ></small
+            >
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 text-center">
+            <small
+                ><a href="/terms-and-conditions/" class="no-underline text-dark"
+                    >Terms and Conditions</a
+                ></small
+            >
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 text-center">
+            <small
+                ><a href="/cookie-policy/" class="no-underline text-dark"
+                    >Cookie Policy</a
+                ></small
+            >
+        </div>
+    </div>
+</div>
+

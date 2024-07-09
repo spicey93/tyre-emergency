@@ -4,10 +4,9 @@ interface Props {
     description: string;
     heading: string;
     tagline: string;
-    bookOnline: boolean,
 }
 
-const { title, description, heading, tagline, bookOnline = false } = Astro.props;
+const { title, description, heading, tagline } = Astro.props;
 import Layout from "./Layout.astro";
 import Hero from "../components/Hero.astro";
 import Testimonials from "../components/Testimonials.astro";
