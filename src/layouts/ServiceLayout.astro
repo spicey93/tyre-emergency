@@ -18,16 +18,35 @@ import CTA from "../components/CTA.astro";
     <Hero heading={heading} tagline={tagline} />
     <main class="container">
         <div class="row mt-1 mb-5 g-5">
-            <div class="col-12 col-lg-8 text-center text-lg-start">
+            <div class="col-12 col-lg-7 text-center text-lg-start">
                 <slot />
             </div>
-            <div class="col-12 col-lg-4">
-                <div class="p-5" id="whyChooseUs">
+            <div class="col-12 col-lg-5">
+                <div class="p-5 mb-3" id="whyChooseUs">
                     <p class="h3 mb-3 fw-bold text-center text-lg-start">Why Choose Us</p>
                     <p class="mb-0"><i class="bi bi-check-circle-fill me-2"></i>Same day service</p>
                     <p class="mb-0"><i class="bi bi-check-circle-fill me-2"></i>Hundreds of tyres in stock</p>
                     <p class="mb-0"><i class="bi bi-check-circle-fill me-2"></i>Open 24/7</p>
                     <p class="mb-0"><i class="bi bi-check-circle-fill me-2"></i>60 Minute Response</p>
+                </div>
+                <div id="areasWeCover" class="p-5 text-light text-center">
+                    <p class="h3 fw-bold mb-3"><i class="bi bi-geo-alt-fill"></i> Areas We Cover</p>
+                    <div class="row">
+                        <div class="col">
+                            <p class="mb-0"><i class="bi bi-check"></i>Mansfield</p>
+                            <p class="mb-0"><i class="bi bi-check"></i>Alfreton</p>
+                            <p class="mb-0"><i class="bi bi-check"></i>Worksop</p>
+                            <p class="mb-0"><i class="bi bi-check"></i>Newark</p>
+                            <p class="mb-0"><i class="bi bi-check"></i>Nottingham</p>
+                        </div>
+                        <div class="col">
+                            <p class="mb-0"><i class="bi bi-check"></i>Shirebrook</p>
+                            <p class="mb-0"><i class="bi bi-check"></i>Retford</p>
+                            <p class="mb-0"><i class="bi bi-check"></i>Tuxford</p>
+                            <p class="mb-0"><i class="bi bi-check"></i>Chesterfield</p>
+                            <p class="mb-0"><i class="bi bi-check"></i>Lincoln</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -39,5 +58,15 @@ import CTA from "../components/CTA.astro";
 <style>
     #whyChooseUs {
         background-color: #9AFFFF;
+    }
+
+    #areasWeCover {
+        background: linear-gradient(0deg,
+            rgba(20, 20, 20, 0.8),
+            rgba(20, 20, 20, 0.8)),
+        url(/img/tyre-emergency-van.jpeg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 </style>
