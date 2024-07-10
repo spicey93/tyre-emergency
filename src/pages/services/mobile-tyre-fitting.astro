@@ -1,0 +1,25 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+const phoneNumber = import.meta.env.PHONE_NUMBER;
+---
+
+<ServiceLayout
+    title="Mobile Tyre Fitting | Tyre Emergency Ltd"
+    description="Get your tyres fitted at home, work or roadside today with our mobile tyre fitting service. Call today for a quote."
+    heading="Tyres Fitted at Home or Work"
+    tagline="Same Day Service - We Come to You!"
+>
+    <h1 class="fw-bold mb-3">Mobile Tyre Fitting</h1>
+    <p>Do you need <strong>new tyres</strong> for your car? Perhaps you've had an MOT and your tyres need replacing, but you don't have time to go to a tyre shop? Why not try having your <strong>tyres fitted at home</strong> instead!</p>
+    <p>We can supply and fit a wide range of tyre brands for your vehicle, whether it's a car, van, caravan or trailer.</p>
+    <p>With over 10 years of experience in the tyre industry, you can trust us to look after your vehicle.</p>
+    <h2>What Is Mobile Tyre Fitting?</h2>
+    <p>If you've never used a mobile tyre service before, it's actually quite simple. Just give us a call with your tyre size and location, we'll then give you a quote. If you're happy with the price we'll arrange a date and time that suits you.</p>
+    <p>Upon arrival, we'll ask for your locking wheel nut and then get to work! Our fitters will have all the equipment on their van to replace your tyres professionally and safely.</p>
+    <p>Once the tyres are installed you can pay the fitter by cash or card. </p>
+   <h2>Emergency Tyre Replacement</h2>
+   <p>A flat tyre can happen at any time, which is why we offer a <strong>24 hour emergency mobile tyre fitting service</strong>.</p>
+   <p>We cover a wide range of the East Midlands and keep hundreds of tyres in stock, so you can be confident we'll be able to help you wherever you are.</p>
+   <h3>Get a Quote Today</h3>
+   <p>If you'd like a price for our mobile tyre service, you can give us a call on <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>.</p>
+</ServiceLayout>
