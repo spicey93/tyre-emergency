@@ -1,6 +1,5 @@
 ---
-const { heading, tagline } = Astro.props;
-const phoneNumber = import.meta.env.PHONE_NUMBER;
+const { heading, tagline, phoneNumber = "0330 133 9311" } = Astro.props;
 ---
 
 <section id="hero">
@@ -15,7 +14,7 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
             <a
                 href={`tel:${phoneNumber}`}
                 class="btn btn-primary btn-lg text-darl mb-3 fw-bold fs-3"
-                ><i class="bi bi-telephone-fill me-2"></i>0330 133 9311</a
+                ><i class="bi bi-telephone-fill me-2"></i>{phoneNumber}</a
             >
         </div>
         

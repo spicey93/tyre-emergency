@@ -1,11 +1,5 @@
 ---
-interface Props {
-    title: string;
-    description: string;
-    noIndex: boolean;
-}
-
-const { title, description, noIndex = false } = Astro.props;
+const { title, description, noIndex = false, phoneNumber = "0330 133 9311" } = Astro.props;
 
 import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/main.css";
@@ -68,10 +62,10 @@ import CTABar from "../components/CTABar.astro";
                 style="display:none;visibility:hidden"></iframe></noscript
         >
         <!-- End Google Tag Manager (noscript) -->
-        <Navbar />
+        <Navbar phoneNumber={phoneNumber}/>
         <slot />
-        <Footer />
-        <CTABar />
+        <Footer phoneNumber={phoneNumber} />
+        <CTABar phoneNumber={phoneNumber}/>
         <!-- Bootstrap script -->
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

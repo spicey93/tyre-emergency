@@ -1,12 +1,5 @@
 ---
-interface Props {
-    title: string;
-    description: string;
-    heading: string;
-    tagline: string;
-}
-
-const { title, description, heading, tagline } = Astro.props;
+const { title, description, heading, tagline, phoneNumber = "0330 133 9311" } = Astro.props;
 import Layout from "./Layout.astro";
 import Hero from "../components/Hero.astro";
 import WhyChooseUs from "../components/WhyChooseUs.astro";
@@ -15,8 +8,8 @@ import Testimonials from "../components/Testimonials.astro";
 import CTA from "../components/CTA.astro";
 ---
 
-<Layout title={title} description={description} noIndex={false}>
-    <Hero heading={heading} tagline={tagline} />
+<Layout title={title} description={description} noIndex={false} phoneNumber={phoneNumber}>
+    <Hero heading={heading} tagline={tagline} phoneNumber={phoneNumber}/>
     <Testimonials />
     <main class="container">
         <div class="row mt-1 mb-5 g-5">
@@ -29,6 +22,6 @@ import CTA from "../components/CTA.astro";
             </aside>
         </div>
     </main>
-    <CTA />
+    <CTA phoneNumber={phoneNumber} />
 </Layout>
 
