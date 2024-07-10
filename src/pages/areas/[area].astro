@@ -3,10 +3,10 @@ export async function getStaticPaths() {
     return [
         { params: { area: "alfreton" }, props: { title: "Alfreton" } },
         { params: { area: "arnold" }, props: { title: "Arnold" } },
-        { params: { area: "averham" }, props: { title: "Averham" } },
-        { params: { area: "balderton" }, props: { title: "Balderton" } },
+        { params: { area: "averham" }, props: { title: "Averham", phoneNumber: "01636 33 00 44" } },
+        { params: { area: "balderton" }, props: { title: "Balderton", phoneNumber: "01636 33 00 44" } },
         { params: { area: "bestwood" }, props: { title: "Bestwood" } },
-        { params: { area: "bilsthorpe" }, props: { title: "Bilsthorpe" } },
+        { params: { area: "bilsthorpe" }, props: { title: "Bilsthorpe", phoneNumber: "01636 33 00 44" } },
         { params: { area: "bingham" }, props: { title: "Bingham" } },
         {
             params: { area: "blidworth" },
@@ -29,17 +29,17 @@ export async function getStaticPaths() {
             },
         },
         { params: { area: "doncaster" }, props: { title: "Doncaster" } },
-        { params: { area: "eakring" }, props: { title: "Eakring" } },
+        { params: { area: "eakring" }, props: { title: "Eakring", phoneNumber: "01636 33 00 44" } },
         {
             params: { area: "east-bridgford" },
             props: { title: "East Bridgford" },
         },
-        { params: { area: "east-markham" }, props: { title: "East Markham" } },
+        { params: { area: "east-markham" }, props: { title: "East Markham", phoneNumber: "01636 33 00 44" } },
         { params: { area: "eastwood" }, props: { title: "Eastwood" } },
         { params: { area: "edwalton" }, props: { title: "Edwalton" } },
-        { params: { area: "edwinstowe" }, props: { title: "Edwinstowe" } },
-        { params: { area: "farnsfield" }, props: { title: "Farnsfield" } },
-        { params: { area: "fernwood" }, props: { title: "Fernwood" } },
+        { params: { area: "edwinstowe" }, props: { title: "Edwinstowe", phoneNumber: "01636 33 00 44" } },
+        { params: { area: "farnsfield" }, props: { title: "Farnsfield", phoneNumber: "01636 33 00 44" } },
+        { params: { area: "fernwood" }, props: { title: "Fernwood", phoneNumber: "01636 33 00 44" } },
         {
             params: { area: "forest-town" },
             props: { title: "Forest Town", phoneNumber: "01623 325 123" },
@@ -51,7 +51,7 @@ export async function getStaticPaths() {
             params: { area: "kirkby-in-ashfield" },
             props: { title: "Kirkby In Ashfield", phoneNumber: "01623 325 123" },
         },
-        { params: { area: "kirklington" }, props: { title: "Kirklington" } },
+        { params: { area: "kirklington" }, props: { title: "Kirklington", phoneNumber: "01636 33 00 44" } },
         { params: { area: "lincoln" }, props: { title: "Lincoln" } },
         { params: { area: "loughborough" }, props: { title: "Loughborough" } },
         {
@@ -74,7 +74,7 @@ export async function getStaticPaths() {
         {
             params: { area: "newark" },
             props: {
-                title: "Newark",
+                title: "Newark", phoneNumber: "01636 33 00 44",
                 nearbyAreas: [
                     "Southwell",
                     "Bilsthorpe",
@@ -117,7 +117,7 @@ export async function getStaticPaths() {
                 ],
             },
         },
-        { params: { area: "ollerton" }, props: { title: "Ollerton" } },
+        { params: { area: "ollerton" }, props: { title: "Ollerton", phoneNumber: "01636 33 00 44" } },
         {
             params: { area: "radcliffe-on-trent" },
             props: { title: "Radcliffe On Trent" },
@@ -126,7 +126,7 @@ export async function getStaticPaths() {
             params: { area: "rainworth" },
             props: { title: "Rainworth", phoneNumber: "01623 325 123" },
         },
-        { params: { area: "ravenshead" }, props: { title: "Ravenshead" } },
+        { params: { area: "ravenshead" }, props: { title: "Ravenshead", phoneNumber: "01636 33 00 44" } },
         { params: { area: "retford" }, props: { title: "Retford" } },
         { params: { area: "ripley" }, props: { title: "Ripley" } },
         {
@@ -134,7 +134,7 @@ export async function getStaticPaths() {
             props: { title: "Shirebrook", phoneNumber: "01623 325 123" },
         },
         { params: { area: "somercotes" }, props: { title: "Somercotes" } },
-        { params: { area: "southwell" }, props: { title: "Southwell" } },
+        { params: { area: "southwell" }, props: { title: "Southwell", phoneNumber: "01636 33 00 44" } },
         {
             params: { area: "sutton-in-ashfield" },
             props: { title: "Sutton In Ashfield", phoneNumber: "01623 325 123" },
