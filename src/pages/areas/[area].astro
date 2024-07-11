@@ -16,7 +16,7 @@ export async function getStaticPaths() {
         { params: { area: "burton-joyce" }, props: { title: "Burton Joyce" } },
         { params: { area: "calverton" }, props: { title: "Calverton" } },
         { params: { area: "carlton" }, props: { title: "Carlton" } },
-        { params: { area: "caunton" }, props: { title: "Caunton" } },
+        { params: { area: "caunton" }, props: { title: "Caunton", phoneNumber: "01909 251013" } },
         { params: { area: "chesterfield" }, props: { title: "Chesterfield" } },
         { params: { area: "clipstone" }, props: { title: "Clipstone" } },
         { params: { area: "colwick" }, props: { title: "Colwick" } },
@@ -127,7 +127,7 @@ export async function getStaticPaths() {
             props: { title: "Rainworth", phoneNumber: "01623 325 123" },
         },
         { params: { area: "ravenshead" }, props: { title: "Ravenshead", phoneNumber: "01636 33 00 44" } },
-        { params: { area: "retford" }, props: { title: "Retford" } },
+        { params: { area: "retford" }, props: { title: "Retford", phoneNumber: "01909 251013" } },
         { params: { area: "ripley" }, props: { title: "Ripley" } },
         {
             params: { area: "shirebrook" },
@@ -139,7 +139,7 @@ export async function getStaticPaths() {
             params: { area: "sutton-in-ashfield" },
             props: { title: "Sutton In Ashfield", phoneNumber: "01623 325 123" },
         },
-        { params: { area: "tuxford" }, props: { title: "Tuxford" } },
+        { params: { area: "tuxford" }, props: { title: "Tuxford", phoneNumber: "01909 251013" } },
         { params: { area: "warsop" }, props: { title: "Warsop", phoneNumber: "01623 325 123" } },
         {
             params: { area: "west-bridgford" },
@@ -150,6 +150,7 @@ export async function getStaticPaths() {
             props: {
                 title: "Worksop",
                 nearbyAreas: ["Tuxford", "Retford", "Caunton"],
+                phoneNumber: "01909 251013"
             },
         },
     ];
