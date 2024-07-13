@@ -186,7 +186,7 @@ const { title, phoneNumber = "0330 133 9311", nearbyAreas = [], map = null } = A
         top priorities, and we're dedicated to getting you back on the road without
         unnecessary delays. Don't hesitate to reach out to us at <a
             href={`tel:${phoneNumber}`}
-            class="link-info">{phoneNumber}</a
+            class="link-danger">{phoneNumber}</a
         >. We're here to assist you promptly!
     </p>
     <p>
@@ -200,7 +200,7 @@ const { title, phoneNumber = "0330 133 9311", nearbyAreas = [], map = null } = A
             <p>
                 We cover many areas of {title}, including:{" "}
                 {nearbyAreas.map((area) => (
-                    <a class="link-info" href={`/areas/${area.toLowerCase()}/`}>
+                    <a class="link-danger" href={`/areas/${area.toLowerCase()}/`}>
                         {area},{" "}
                     </a>
                 ))}

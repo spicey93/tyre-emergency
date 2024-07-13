@@ -8,7 +8,7 @@ const { phoneNumber = "0330 133 9311" } = Astro.props;
         </a>
         <div class="flex-column d-none d-md-flex">
             <p class="h5">Call Now For a Quote</p>
-            <a href={`tel:${phoneNumber}`} class="call-btn">{phoneNumber}</a>
+            <a href={`tel:${phoneNumber}`} class="call-btn"><i class="bi bi-telephone-fill me-2"></i>{phoneNumber}</a>
         </div>
         <a href={`tel:${phoneNumber}`} class="d-md-none call-btn"><i class="bi bi-telephone-fill"></i></a>
 </header>
