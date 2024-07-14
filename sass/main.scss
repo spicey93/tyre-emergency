@@ -19,6 +19,7 @@ $danger: #ff3131;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
     .container {
         min-height: 70vh;
         @extend .text-light;
@@ -29,6 +30,7 @@ $danger: #ff3131;
 
 #intro {
     @extend .py-5, .text-center;
+
     div {
         @extend .container;
     }
@@ -53,4 +55,9 @@ $danger: #ff3131;
 
 .call-btn {
     @extend .btn, .btn-lg, .btn-danger, .text-light, .fw-bold;
+}
+
+
+#map {
+    height: 300px;
 }

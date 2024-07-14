@@ -12010,4 +12010,8 @@ textarea.form-control-lg {
 }
 #hero .container, #hero #intro div, #intro #hero div {
   min-height: 70vh;
+}
+
+#map {
+  height: 300px;
 }/*# sourceMappingURL=main.css.map */
