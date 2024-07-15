@@ -2,7 +2,7 @@
 const { phoneNumber = "0330 133 9311" } = Astro.props;
 ---
 
-<div class="d-grid fixed-bottom d-md-none text-light fs-3">
+<div class="d-grid fixed-bottom d-md-none text-light fs-3 d-none" id="ctaBar">
     <div class="row">
         <a
             href={`tel:${phoneNumber}`}
@@ -53,3 +53,19 @@ const { phoneNumber = "0330 133 9311" } = Astro.props;
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const ctaBar = document.getElementById("ctaBar");
+        
+        function checkScroll() {
+            if (window.scrollY >= 100) {
+                ctaBar.classList.remove("d-none");
+            } else {
+                ctaBar.classList.add("d-none");
+            }
+        }
+
+        window.addEventListener('scroll', checkScroll)
+    });
+</script>
