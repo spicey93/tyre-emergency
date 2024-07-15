@@ -1,8 +1,15 @@
 ---
-const { heading, tagline, phoneNumber = "0330 133 9311" } = Astro.props;
+const { heading, tagline, phoneNumber = "0330 133 9311", backgroundUrl = "/img/mobile-tyre-fitting.webp" } = Astro.props;
+
+const heroStyle = {
+    background: `linear-gradient(0deg, rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 0.8)), url(${backgroundUrl})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'
+};
 ---
 
-<section id="hero">
+<section id="hero" style={heroStyle}>
     <div class="container d-flex flex-column align-items-center justify-content-center text-center text-md-start">
         <!-- <p class="fs-3 mb-1">We Come to You</p> -->
 
@@ -20,6 +27,8 @@ const { heading, tagline, phoneNumber = "0330 133 9311" } = Astro.props;
         <div class="d-lg-none">
             <script defer async src='https://cdn.trustindex.io/loader.js?7879b9e328722239bd2655baba4'></script>
         </div>
-        
-
+    </div>
 </section>
+
+
+
