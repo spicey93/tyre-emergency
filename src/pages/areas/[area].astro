@@ -3,20 +3,36 @@ export async function getStaticPaths() {
     return [
         { params: { area: "alfreton" }, props: { title: "Alfreton" } },
         { params: { area: "arnold" }, props: { title: "Arnold" } },
-        { params: { area: "averham" }, props: { title: "Averham", phoneNumber: "01636 33 00 44" } },
-        { params: { area: "balderton" }, props: { title: "Balderton", phoneNumber: "01636 33 00 44" } },
+        {
+            params: { area: "averham" },
+            props: { title: "Averham", phoneNumber: "01636 33 00 44" },
+        },
+        {
+            params: { area: "balderton" },
+            props: { title: "Balderton", phoneNumber: "01636 33 00 44" },
+        },
         { params: { area: "bestwood" }, props: { title: "Bestwood" } },
-        { params: { area: "bilsthorpe" }, props: { title: "Bilsthorpe", phoneNumber: "01636 33 00 44" } },
+        {
+            params: { area: "bilsthorpe" },
+            props: { title: "Bilsthorpe", phoneNumber: "01636 33 00 44" },
+        },
         { params: { area: "bingham" }, props: { title: "Bingham" } },
         {
             params: { area: "blidworth" },
-            props: { title: "Blidworth", phoneNumber: "01623 325 123", map: "Mansfield" },
+            props: {
+                title: "Blidworth",
+                phoneNumber: "01623 325 123",
+                map: "Mansfield",
+            },
         },
         { params: { area: "bulwell" }, props: { title: "Bulwell" } },
         { params: { area: "burton-joyce" }, props: { title: "Burton Joyce" } },
         { params: { area: "calverton" }, props: { title: "Calverton" } },
         { params: { area: "carlton" }, props: { title: "Carlton" } },
-        { params: { area: "caunton" }, props: { title: "Caunton", phoneNumber: "01909 251013" } },
+        {
+            params: { area: "caunton" },
+            props: { title: "Caunton", phoneNumber: "01909 251013" },
+        },
         { params: { area: "chesterfield" }, props: { title: "Chesterfield" } },
         { params: { area: "clipstone" }, props: { title: "Clipstone" } },
         { params: { area: "colwick" }, props: { title: "Colwick" } },
@@ -29,29 +45,55 @@ export async function getStaticPaths() {
             },
         },
         { params: { area: "doncaster" }, props: { title: "Doncaster" } },
-        { params: { area: "eakring" }, props: { title: "Eakring", phoneNumber: "01636 33 00 44" } },
+        {
+            params: { area: "eakring" },
+            props: { title: "Eakring", phoneNumber: "01636 33 00 44" },
+        },
         {
             params: { area: "east-bridgford" },
             props: { title: "East Bridgford" },
         },
-        { params: { area: "east-markham" }, props: { title: "East Markham", phoneNumber: "01636 33 00 44" } },
+        {
+            params: { area: "east-markham" },
+            props: { title: "East Markham", phoneNumber: "01636 33 00 44" },
+        },
         { params: { area: "eastwood" }, props: { title: "Eastwood" } },
         { params: { area: "edwalton" }, props: { title: "Edwalton" } },
-        { params: { area: "edwinstowe" }, props: { title: "Edwinstowe", phoneNumber: "01636 33 00 44" } },
-        { params: { area: "farnsfield" }, props: { title: "Farnsfield", phoneNumber: "01636 33 00 44" } },
-        { params: { area: "fernwood" }, props: { title: "Fernwood", phoneNumber: "01636 33 00 44" } },
+        {
+            params: { area: "edwinstowe" },
+            props: { title: "Edwinstowe", phoneNumber: "01636 33 00 44" },
+        },
+        {
+            params: { area: "farnsfield" },
+            props: { title: "Farnsfield", phoneNumber: "01636 33 00 44" },
+        },
+        {
+            params: { area: "fernwood" },
+            props: { title: "Fernwood", phoneNumber: "01636 33 00 44" },
+        },
         {
             params: { area: "forest-town" },
-            props: { title: "Forest Town", phoneNumber: "01623 325 123", map: "Mansfield" },
+            props: {
+                title: "Forest Town",
+                phoneNumber: "01623 325 123",
+                map: "Mansfield",
+            },
         },
         { params: { area: "giltbrook" }, props: { title: "Giltbrook" } },
         { params: { area: "hucknall" }, props: { title: "Hucknall" } },
         { params: { area: "ilkeston" }, props: { title: "Ilkeston" } },
         {
             params: { area: "kirkby-in-ashfield" },
-            props: { title: "Kirkby In Ashfield", phoneNumber: "01623 325 123", map: "Mansfield" },
+            props: {
+                title: "Kirkby In Ashfield",
+                phoneNumber: "01623 325 123",
+                map: "Mansfield",
+            },
         },
-        { params: { area: "kirklington" }, props: { title: "Kirklington", phoneNumber: "01636 33 00 44" } },
+        {
+            params: { area: "kirklington" },
+            props: { title: "Kirklington", phoneNumber: "01636 33 00 44" },
+        },
         { params: { area: "lincoln" }, props: { title: "Lincoln" } },
         { params: { area: "loughborough" }, props: { title: "Loughborough" } },
         {
@@ -75,7 +117,9 @@ export async function getStaticPaths() {
         {
             params: { area: "newark" },
             props: {
-                title: "Newark", phoneNumber: "01636 33 00 44", map: "Newark",
+                title: "Newark",
+                phoneNumber: "01636 33 00 44",
+                map: "Newark",
                 nearbyAreas: [
                     "Southwell",
                     "Bilsthorpe",
@@ -90,7 +134,7 @@ export async function getStaticPaths() {
                     "Fernwood",
                     "East-Markham",
                     "Balderton",
-                ]
+                ],
             },
         },
         {
@@ -118,30 +162,64 @@ export async function getStaticPaths() {
                 ],
             },
         },
-        { params: { area: "ollerton" }, props: { title: "Ollerton", phoneNumber: "01636 33 00 44" } },
+        {
+            params: { area: "ollerton" },
+            props: { title: "Ollerton", phoneNumber: "01636 33 00 44" },
+        },
         {
             params: { area: "radcliffe-on-trent" },
             props: { title: "Radcliffe On Trent" },
         },
         {
             params: { area: "rainworth" },
-            props: { title: "Rainworth", phoneNumber: "01623 325 123", map: "Mansfield" },
+            props: {
+                title: "Rainworth",
+                phoneNumber: "01623 325 123",
+                map: "Mansfield",
+            },
         },
-        { params: { area: "ravenshead" }, props: { title: "Ravenshead", phoneNumber: "01636 33 00 44" } },
-        { params: { area: "retford" }, props: { title: "Retford", phoneNumber: "01909 251013" } },
+        {
+            params: { area: "ravenshead" },
+            props: { title: "Ravenshead", phoneNumber: "01636 33 00 44" },
+        },
+        {
+            params: { area: "retford" },
+            props: { title: "Retford", phoneNumber: "01909 251013" },
+        },
         { params: { area: "ripley" }, props: { title: "Ripley" } },
         {
             params: { area: "shirebrook" },
-            props: { title: "Shirebrook", phoneNumber: "01623 325 123", map: "Mansfield" },
+            props: {
+                title: "Shirebrook",
+                phoneNumber: "01623 325 123",
+                map: "Mansfield",
+            },
         },
         { params: { area: "somercotes" }, props: { title: "Somercotes" } },
-        { params: { area: "southwell" }, props: { title: "Southwell", phoneNumber: "01636 33 00 44" } },
+        {
+            params: { area: "southwell" },
+            props: { title: "Southwell", phoneNumber: "01636 33 00 44" },
+        },
         {
             params: { area: "sutton-in-ashfield" },
-            props: { title: "Sutton In Ashfield", phoneNumber: "01623 325 123", map: "Mansfield" },
+            props: {
+                title: "Sutton In Ashfield",
+                phoneNumber: "01623 325 123",
+                map: "Mansfield",
+            },
         },
-        { params: { area: "tuxford" }, props: { title: "Tuxford", phoneNumber: "01909 251013" } },
-        { params: { area: "warsop" }, props: { title: "Warsop", phoneNumber: "01623 325 123", map: "Mansfield" } },
+        {
+            params: { area: "tuxford" },
+            props: { title: "Tuxford", phoneNumber: "01909 251013" },
+        },
+        {
+            params: { area: "warsop" },
+            props: {
+                title: "Warsop",
+                phoneNumber: "01623 325 123",
+                map: "Mansfield",
+            },
+        },
         {
             params: { area: "west-bridgford" },
             props: { title: "West Bridgford" },
@@ -151,7 +229,7 @@ export async function getStaticPaths() {
             props: {
                 title: "Worksop",
                 nearbyAreas: ["Tuxford", "Retford", "Caunton"],
-                phoneNumber: "01909 251013"
+                phoneNumber: "01909 251013",
             },
         },
     ];
@@ -159,52 +237,65 @@ export async function getStaticPaths() {
 
 import ServiceLayout from "../../layouts/ServiceLayout.astro";
 
-const { title, phoneNumber = "0330 133 9311", nearbyAreas = [], map = null } = Astro.props;
+const {
+    title,
+    phoneNumber = "0330 133 9311",
+    nearbyAreas = [],
+    map = null,
+} = Astro.props;
 ---
 
 <ServiceLayout
     title={`Mobile Tyre Fitting in ${title}`}
     description={`Tyre Emergency offers 7 day mobile tyre fitting services in ${title}. We come to you at home, work or roadside.`}
-    heading={`Mobile Tyres ${title}`}
+    heading={`Tyre Fitting in ${title}`}
     tagline="We Come to You - 7 Days a Week"
     phoneNumber={phoneNumber}
 >
     <h1 class="fw-bold mb-3">Mobile Tyre Fitting in {title}</h1>
     <p>
-        Welcome to Tyre Emergency Ltd, your trusted local provider of <strong
-            class="fw-bold">mobile tyre fitting in {title}</strong
-        >. Whether you're facing a <strong class="fw-bold">flat tyre</strong> at
-        home or require roadside tyre assistance, our experienced team is just a
-        phone call away. We're well-equipped to handle a wide range of vehicles,
-        ensuring top-notch service for cars, vans, and more.
+        Do you live in or near {title} and need new tyres for your vehicle?
+        Why not try our convenient mobile tyre fitting service!
     </p>
     <p>
-        When you find yourself in a tyre predicament in {title}, there's no need
-        to fret. Our <strong class="fw-bold"
-            >7-day mobile tyre fitting service</strong
-        > guarantees swift and reliable help. Your safety and convenience are our
-        top priorities, and we're dedicated to getting you back on the road without
-        unnecessary delays. Don't hesitate to reach out to us at <a
-            href={`tel:${phoneNumber}`}
-            class="link-danger">{phoneNumber}</a
-        >. We're here to assist you promptly!
+        Getting your tyres fitted at home is the easy, modern way to replace
+        them. There's no need to travel to a tyre shop in {title} or sit
+        around in a waiting room. We bring our fully equipped vans right to your
+        doorstep, offering this service 7 days a week.
+    </p>
+    <h2 class="fw-bold">Emergency Tyre Replacement</h2>
+    <p>
+        Sometimes, you can't plan ahead for tyre issues. Maybe you've hit one of
+        the many potholes in {title} and now have a flat tyre. Don't worry, we
+        can still help.
     </p>
     <p>
-        In search of <strong class="fw-bold">tyres in {title}?</strong> Look no further
-        than Tyre Emergency Ltd. Our services are accessible 7 days a week, ensuring
-        a swift resolution to your tyre needs. Get in touch with us now, and we'll
-        have you back on the road in no time.
+        We specialize in fast response, 24-hour emergency tyre fitting. Whether
+        you're at home or on the roadside, we can get to you quickly because
+        we're local to {title}.
     </p>
     {
         nearbyAreas.length > 0 && (
-            <p>
-                We cover many areas of {title}, including:{" "}
-                {nearbyAreas.map((area) => (
-                    <a class="link-danger" href={`/areas/${area.toLowerCase()}/`}>
-                        {area},{" "}
-                    </a>
-                ))}
-            </p>
+            <>
+                <h2 class="fw-bold">{title} & Surrounding Areas</h2>
+                <p>
+                    We cover many areas of {title}, including:{" "}
+                    {nearbyAreas.map((area) => (
+                        <a
+                            class="link-danger"
+                            href={`/areas/${area.toLowerCase()}/`}
+                        >
+                            {area},{" "}
+                        </a>
+                    ))}
+                </p>
+            </>
         )
     }
+    <h2 class="fw-bold">Get a Quote Today</h2>
+    <p>
+        If you're interested in having your tyres fitted at your home or
+        workplace, give us a call today! We'll be happy to provide you with a
+        price and answer any questions you may have.
+    </p>
 </ServiceLayout>
