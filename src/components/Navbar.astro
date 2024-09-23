@@ -7,7 +7,7 @@ const { phoneNumber = "0330 133 9311" } = Astro.props;
             <img src="/logos/logo.png" alt="logo symbol" width="200" />
         </a>
         <div class="flex-column d-none d-md-flex">
-            <p class="h5">Call Now For a Quote</p>
+            <p class="h5">Call For 24 Hour Assistance</p>
             <a href={`tel:${phoneNumber}`} class="call-btn"><i class="bi bi-telephone-fill me-2"></i>{phoneNumber}</a>
         </div>
         <a href={`tel:${phoneNumber}`} class="d-md-none call-btn"><i class="bi bi-telephone-fill"></i></a>
@@ -122,24 +122,11 @@ const { phoneNumber = "0330 133 9311" } = Astro.props;
                         </li>
                         <li>
                             <a
-                                href="/areas/loughborough/"
-                                class="dropdown-item"
-                            >
-                                Loughborough
-                            </a>
-                        </li>
-                        <li>
-                            <a
                                 href="/areas/chesterfield/"
                                 class="dropdown-item"
                             >
                                 Chesterfield
                             </a>
-                        </li>
-                        <li>
-                            <a href="/areas/derby/" class="dropdown-item"
-                                >Derby</a
-                            >
                         </li>
                         <li>
                             <a href="/areas/lincoln/" class="dropdown-item"

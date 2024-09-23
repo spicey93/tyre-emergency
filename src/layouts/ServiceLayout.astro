@@ -1,5 +1,5 @@
 ---
-const { title, description, heading, tagline, phoneNumber = "0330 133 9311", tyreBrands = true, backgroundUrl = "/img/mobile-tyre-fitting.webp" } = Astro.props;
+const { title, description, heading, tagline, onlineBooking = false, phoneNumber = "0330 133 9311", tyreBrands = true, backgroundUrl = "/img/mobile-tyre-fitting.webp" } = Astro.props;
 
 import Layout from "./Layout.astro";
 import Hero from "../components/Hero.astro";
@@ -11,7 +11,7 @@ import CTA from "../components/CTA.astro";
 ---
 
 <Layout title={title} description={description} noIndex={false} phoneNumber={phoneNumber}>
-    <Hero heading={heading} tagline={tagline} phoneNumber={phoneNumber}, backgroundUrl={backgroundUrl}/>
+    <Hero heading={heading} tagline={tagline} phoneNumber={phoneNumber}, backgroundUrl={backgroundUrl} onlineBooking={onlineBooking}/>
     <Testimonials />
     <main class="container">
         <div class="row mt-1 mb-5 g-5">
