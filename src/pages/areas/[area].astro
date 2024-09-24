@@ -14,7 +14,7 @@ export async function getStaticPaths() {
         { params: { area: "bestwood" }, props: { title: "Bestwood" } },
         {
             params: { area: "bilsthorpe" },
-            props: { title: "Bilsthorpe", phoneNumber: "01636 33 00 44" },
+            props: { title: "Bilsthorpe", phoneNumber: "01636 33 00 44", onlineBooking: true },
         },
         { params: { area: "bingham" }, props: { title: "Bingham" } },
         {
@@ -23,6 +23,7 @@ export async function getStaticPaths() {
                 title: "Blidworth",
                 phoneNumber: "01623 325 123",
                 map: "Mansfield",
+                onlineBooking: true
             },
         },
         { params: { area: "bulwell" }, props: { title: "Bulwell" } },
@@ -34,7 +35,7 @@ export async function getStaticPaths() {
             props: { title: "Caunton", phoneNumber: "01909 251013" },
         },
         { params: { area: "chesterfield" }, props: { title: "Chesterfield" } },
-        { params: { area: "clipstone" }, props: { title: "Clipstone" } },
+        { params: { area: "clipstone" }, props: { title: "Clipstone", onlineBooking: true } },
         { params: { area: "colwick" }, props: { title: "Colwick" } },
         { params: { area: "cotgrave" }, props: { title: "Cotgrave" } },
         {
@@ -47,7 +48,7 @@ export async function getStaticPaths() {
         { params: { area: "doncaster" }, props: { title: "Doncaster" } },
         {
             params: { area: "eakring" },
-            props: { title: "Eakring", phoneNumber: "01636 33 00 44" },
+            props: { title: "Eakring", phoneNumber: "01636 33 00 44", onlineBooking: true },
         },
         {
             params: { area: "east-bridgford" },
@@ -61,11 +62,11 @@ export async function getStaticPaths() {
         { params: { area: "edwalton" }, props: { title: "Edwalton" } },
         {
             params: { area: "edwinstowe" },
-            props: { title: "Edwinstowe", phoneNumber: "01636 33 00 44" },
+            props: { title: "Edwinstowe", phoneNumber: "01636 33 00 44", onlineBooking: true },
         },
         {
             params: { area: "farnsfield" },
-            props: { title: "Farnsfield", phoneNumber: "01636 33 00 44" },
+            props: { title: "Farnsfield", phoneNumber: "01636 33 00 44", onlineBooking: true },
         },
         {
             params: { area: "fernwood" },
@@ -77,6 +78,7 @@ export async function getStaticPaths() {
                 title: "Forest Town",
                 phoneNumber: "01623 325 123",
                 map: "Mansfield",
+                onlineBooking: true
             },
         },
         { params: { area: "giltbrook" }, props: { title: "Giltbrook" } },
@@ -92,7 +94,7 @@ export async function getStaticPaths() {
         },
         {
             params: { area: "kirklington" },
-            props: { title: "Kirklington", phoneNumber: "01636 33 00 44" },
+            props: { title: "Kirklington", phoneNumber: "01636 33 00 44", onlineBooking: true },
         },
         { params: { area: "lincoln" }, props: { title: "Lincoln" } },
         { params: { area: "loughborough" }, props: { title: "Loughborough" } },
@@ -111,6 +113,7 @@ export async function getStaticPaths() {
                     "Warsop",
                 ],
                 map: "Mansfield",
+                onlineBooking: true,
             },
         },
         { params: { area: "mapperley" }, props: { title: "Mapperley" } },
@@ -164,7 +167,7 @@ export async function getStaticPaths() {
         },
         {
             params: { area: "ollerton" },
-            props: { title: "Ollerton", phoneNumber: "01636 33 00 44" },
+            props: { title: "Ollerton", phoneNumber: "01636 33 00 44", onlineBooking: true },
         },
         {
             params: { area: "radcliffe-on-trent" },
@@ -176,11 +179,12 @@ export async function getStaticPaths() {
                 title: "Rainworth",
                 phoneNumber: "01623 325 123",
                 map: "Mansfield",
+                onlineBooking: true
             },
         },
         {
             params: { area: "ravenshead" },
-            props: { title: "Ravenshead", phoneNumber: "01636 33 00 44" },
+            props: { title: "Ravenshead", phoneNumber: "01636 33 00 44", onlineBooking: true },
         },
         {
             params: { area: "retford" },
@@ -198,7 +202,7 @@ export async function getStaticPaths() {
         { params: { area: "somercotes" }, props: { title: "Somercotes" } },
         {
             params: { area: "southwell" },
-            props: { title: "Southwell", phoneNumber: "01636 33 00 44" },
+            props: { title: "Southwell", phoneNumber: "01636 33 00 44", onlineBooking: true },
         },
         {
             params: { area: "sutton-in-ashfield" },
@@ -241,6 +245,7 @@ const {
     title,
     phoneNumber = "0330 133 9311",
     nearbyAreas = [],
+    onlineBooking = false,
     map = null,
 } = Astro.props;
 ---
@@ -251,6 +256,7 @@ const {
     heading={`Tyre Fitting in ${title}`}
     tagline="We Come to You - 7 Days a Week"
     phoneNumber={phoneNumber}
+    onlineBooking={onlineBooking}
 >
     <h1 class="fw-bold mb-3">Mobile Tyre Fitting in {title}</h1>
     <p>
