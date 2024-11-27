@@ -159,7 +159,9 @@ const phoneNumber = "0330 133 9311";
     </main>
     <section class="container py-5">
       <div class="row">
-        <div class="col-12 col-lg-6 d-flex justify-content-center flex-column bg-light p-3">
+        <div
+          class="col-12 col-lg-6 d-flex justify-content-center flex-column bg-light p-3"
+        >
           <!-- How It Works Section -->
           <h2 class="fw-bold">How It Works</h2>
           <p class="lead">
@@ -193,53 +195,60 @@ const phoneNumber = "0330 133 9311";
     </section>
 
     <section class="container py-5 text-center">
- 
-          <h2 class="fw-bold">Areas We Cover</h2>
-          <p class="lead">
-            Our mobile tyre fitters cover a wide range of the East Midlands,
-            including:
-          </p>
+      <h2 class="fw-bold">Areas We Cover</h2>
+      <p class="lead">
+        Our mobile tyre fitters cover a wide range of the East Midlands,
+        including:
+      </p>
 
-
-            <p class="lead mb-0">
-              <strong>Nottingham</strong>: Beeston, Hucknall, Arnold, West
-              Bridgford, Stapleford
-            </p>
-            <p class="lead mb-0">
-              <strong>Newark</strong>: Balderton, Fernwood, Coddington, Southwell,
-              Winthorpe
-            </p>
-            <p class="lead mb-0">
-              <strong>Mansfield</strong>: Ravenshead, Shirebrook, Mansfield
-              Woodhouse, Forest Town, Pleasley
-            </p>
-            <p class="lead mb-0">
-              <strong>Worksop</strong>: Carlton-in-Lindrick, Kilton, Shireoaks,
-              Langold, South Worksop
-            </p>
-
-
-        </div>
-
-
+      <p class="lead mb-0">
+        <strong>Nottingham</strong>: Beeston, Hucknall, Arnold, West Bridgford,
+        Stapleford
+      </p>
+      <p class="lead mb-0">
+        <strong>Newark</strong>: Balderton, Fernwood, Coddington, Southwell,
+        Winthorpe
+      </p>
+      <p class="lead mb-0">
+        <strong>Mansfield</strong>: Ravenshead, Shirebrook, Mansfield Woodhouse,
+        Forest Town, Pleasley
+      </p>
+      <p class="lead mb-0">
+        <strong>Worksop</strong>: Carlton-in-Lindrick, Kilton, Shireoaks,
+        Langold, South Worksop
+      </p>
     </section>
-    <section class="bg-dark text-light text-center py-5">
-      <div class="container">
-        <p class="fs-3 fw-bold">Call Now A Quote</p>
-        <a href={`tel:${phoneNumber}`} class="call-btn"
-          ><i class="bi bi-telephone-fill me-2"></i> {phoneNumber}</a
-        >
-      </div>
-    </section>
-
-    <!-- Bootstrap script -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"></script>
-
-    <CTABar phoneNumber={phoneNumber} />
   </body>
+  <section class="bg-dark text-light text-center py-5">
+    <div class="container">
+      <p class="fs-3 fw-bold">Call Now A Quote</p>
+      <a href={`tel:${phoneNumber}`} class="call-btn"
+        ><i class="bi bi-telephone-fill me-2"></i> {phoneNumber}</a
+      >
+    </div>
+  </section>
+
+  <!-- Bootstrap script -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <CTABar phoneNumber={phoneNumber} />
+  <script>
+    function loadScript(a) {
+      var b = document.getElementsByTagName("head")[0],
+        c = document.createElement("script");
+      (c.type = "text/javascript"),
+        (c.src = "https://tracker.metricool.com/resources/be.js"),
+        (c.onreadystatechange = a),
+        (c.onload = a),
+        b.appendChild(c);
+    }
+    loadScript(function () {
+      beTracker.t({ hash: "43d6ac5aa9b302529b9516bdc1e19481" });
+    });
+  </script>
 </html>
 
 <style>
