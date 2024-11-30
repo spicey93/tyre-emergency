@@ -1,307 +1,294 @@
 ---
 export async function getStaticPaths() {
-    return [
-        { params: { area: "alfreton" }, props: { title: "Alfreton" } },
-        { params: { area: "arnold" }, props: { title: "Arnold" } },
-        {
-            params: { area: "averham" },
-            props: { title: "Averham", phoneNumber: "01636 33 00 44" },
-        },
-        {
-            params: { area: "balderton" },
-            props: { title: "Balderton", phoneNumber: "01636 33 00 44" },
-        },
-        { params: { area: "bestwood" }, props: { title: "Bestwood" } },
-        {
-            params: { area: "bilsthorpe" },
-            props: { title: "Bilsthorpe", phoneNumber: "01636 33 00 44", onlineBooking: true },
-        },
-        { params: { area: "bingham" }, props: { title: "Bingham" } },
-        {
-            params: { area: "blidworth" },
-            props: {
-                title: "Blidworth",
-                phoneNumber: "01623 325 123",
-                map: "Mansfield",
-                onlineBooking: true
-            },
-        },
-        { params: { area: "bulwell" }, props: { title: "Bulwell" } },
-        { params: { area: "burton-joyce" }, props: { title: "Burton Joyce" } },
-        { params: { area: "calverton" }, props: { title: "Calverton" } },
-        { params: { area: "carlton" }, props: { title: "Carlton" } },
-        {
-            params: { area: "caunton" },
-            props: { title: "Caunton", phoneNumber: "01909 251013" },
-        },
-        { params: { area: "chesterfield" }, props: { title: "Chesterfield" } },
-        { params: { area: "clipstone" }, props: { title: "Clipstone", onlineBooking: true } },
-        { params: { area: "colwick" }, props: { title: "Colwick" } },
-        { params: { area: "cotgrave" }, props: { title: "Cotgrave" } },
-        {
-            params: { area: "derby" },
-            props: {
-                title: "Derby",
-                nearbyAreas: ["Ilkeston", "Somercotes", "Ripley", "Alfreton"],
-            },
-        },
-        { params: { area: "doncaster" }, props: { title: "Doncaster" } },
-        {
-            params: { area: "eakring" },
-            props: { title: "Eakring", phoneNumber: "01636 33 00 44", onlineBooking: true },
-        },
-        {
-            params: { area: "east-bridgford" },
-            props: { title: "East Bridgford" },
-        },
-        {
-            params: { area: "east-markham" },
-            props: { title: "East Markham", phoneNumber: "01636 33 00 44" },
-        },
-        { params: { area: "eastwood" }, props: { title: "Eastwood" } },
-        { params: { area: "edwalton" }, props: { title: "Edwalton" } },
-        {
-            params: { area: "edwinstowe" },
-            props: { title: "Edwinstowe", phoneNumber: "01636 33 00 44", onlineBooking: true },
-        },
-        {
-            params: { area: "farnsfield" },
-            props: { title: "Farnsfield", phoneNumber: "01636 33 00 44", onlineBooking: true },
-        },
-        {
-            params: { area: "fernwood" },
-            props: { title: "Fernwood", phoneNumber: "01636 33 00 44" },
-        },
-        {
-            params: { area: "forest-town" },
-            props: {
-                title: "Forest Town",
-                phoneNumber: "01623 325 123",
-                map: "Mansfield",
-                onlineBooking: true
-            },
-        },
-        { params: { area: "giltbrook" }, props: { title: "Giltbrook" } },
-        { params: { area: "hucknall" }, props: { title: "Hucknall" } },
-        { params: { area: "ilkeston" }, props: { title: "Ilkeston" } },
-        {
-            params: { area: "kirkby-in-ashfield" },
-            props: {
-                title: "Kirkby In Ashfield",
-                phoneNumber: "01623 325 123",
-                map: "Mansfield",
-            },
-        },
-        {
-            params: { area: "kirklington" },
-            props: { title: "Kirklington", phoneNumber: "01636 33 00 44", onlineBooking: true },
-        },
-        { params: { area: "lincoln" }, props: { title: "Lincoln" } },
-        { params: { area: "loughborough" }, props: { title: "Loughborough" } },
-        {
-            params: { area: "mansfield" },
-            props: {
-                title: "Mansfield",
-                phoneNumber: "01623 325 123",
-                nearbyAreas: [
-                    "Sutton-in-Ashfield",
-                    "Rainworth",
-                    "Blidworth",
-                    "Forest-Town",
-                    "Shirebrook",
-                    "Kirkby-in-Ashfield",
-                    "Warsop",
-                ],
-                map: "Mansfield",
-                onlineBooking: true,
-            },
-        },
-        { params: { area: "mapperley" }, props: { title: "Mapperley" } },
-        {
-            params: { area: "newark" },
-            props: {
-                title: "Newark",
-                phoneNumber: "01636 33 00 44",
-                map: "Newark",
-                nearbyAreas: [
-                    "Southwell",
-                    "Bilsthorpe",
-                    "Ollerton",
-                    "Farnsfield",
-                    "Edwinstowe",
-                    "Ravenshead",
-                    "Eakring",
-                    "Kirklington",
-                    "Clipstone",
-                    "Averham",
-                    "Fernwood",
-                    "East-Markham",
-                    "Balderton",
-                ],
-            },
-        },
-        {
-            params: { area: "nottingham" },
-            props: {
-                title: "Nottingham",
-                nearbyAreas: [
-                    "Arnold",
-                    "Mapperley",
-                    "Burton-Joyce",
-                    "Giltbrook",
-                    "Calverton",
-                    "Bestwood",
-                    "West-Bridgford",
-                    "Bulwell",
-                    "Hucknall",
-                    "Radcliffe-on-Trent",
-                    "Eastwood",
-                    "East-Bridgford",
-                    "Cotgrave",
-                    "Bingham",
-                    "Carlton",
-                    "Colwick",
-                    "Edwalton",
-                ],
-            },
-        },
-        {
-            params: { area: "ollerton" },
-            props: { title: "Ollerton", phoneNumber: "01636 33 00 44", onlineBooking: true },
-        },
-        {
-            params: { area: "radcliffe-on-trent" },
-            props: { title: "Radcliffe On Trent" },
-        },
-        {
-            params: { area: "rainworth" },
-            props: {
-                title: "Rainworth",
-                phoneNumber: "01623 325 123",
-                map: "Mansfield",
-                onlineBooking: true
-            },
-        },
-        {
-            params: { area: "ravenshead" },
-            props: { title: "Ravenshead", phoneNumber: "01636 33 00 44", onlineBooking: true },
-        },
-        {
-            params: { area: "retford" },
-            props: { title: "Retford", phoneNumber: "01909 251013" },
-        },
-        { params: { area: "ripley" }, props: { title: "Ripley" } },
-        {
-            params: { area: "shirebrook" },
-            props: {
-                title: "Shirebrook",
-                phoneNumber: "01623 325 123",
-                map: "Mansfield",
-            },
-        },
-        { params: { area: "somercotes" }, props: { title: "Somercotes" } },
-        {
-            params: { area: "southwell" },
-            props: { title: "Southwell", phoneNumber: "01636 33 00 44", onlineBooking: true },
-        },
-        {
-            params: { area: "sutton-in-ashfield" },
-            props: {
-                title: "Sutton In Ashfield",
-                phoneNumber: "01623 325 123",
-                map: "Mansfield",
-            },
-        },
-        {
-            params: { area: "tuxford" },
-            props: { title: "Tuxford", phoneNumber: "01909 251013" },
-        },
-        {
-            params: { area: "warsop" },
-            props: {
-                title: "Warsop",
-                phoneNumber: "01623 325 123",
-                map: "Mansfield",
-            },
-        },
-        {
-            params: { area: "west-bridgford" },
-            props: { title: "West Bridgford" },
-        },
-        {
-            params: { area: "worksop" },
-            props: {
-                title: "Worksop",
-                nearbyAreas: ["Tuxford", "Retford", "Caunton"],
-                phoneNumber: "01909 251013",
-            },
-        },
-    ];
+  return [
+    { params: { area: "alfreton" }, props: { title: "Alfreton" } },
+    { params: { area: "arnold" }, props: { title: "Arnold" } },
+    {
+      params: { area: "averham" },
+      props: { title: "Averham" },
+    },
+    {
+      params: { area: "balderton" },
+      props: { title: "Balderton" },
+    },
+    { params: { area: "bestwood" }, props: { title: "Bestwood" } },
+    {
+      params: { area: "bilsthorpe" },
+      props: { title: "Bilsthorpe" },
+    },
+    { params: { area: "bingham" }, props: { title: "Bingham" } },
+    {
+      params: { area: "blidworth" },
+      props: {
+        title: "Blidworth",
+        map: "Mansfield",
+      },
+    },
+    { params: { area: "bulwell" }, props: { title: "Bulwell" } },
+    { params: { area: "burton-joyce" }, props: { title: "Burton Joyce" } },
+    { params: { area: "calverton" }, props: { title: "Calverton" } },
+    { params: { area: "carlton" }, props: { title: "Carlton" } },
+    {
+      params: { area: "caunton" },
+      props: { title: "Caunton" },
+    },
+    { params: { area: "chesterfield" }, props: { title: "Chesterfield" } },
+    { params: { area: "clipstone" }, props: { title: "Clipstone" } },
+    { params: { area: "colwick" }, props: { title: "Colwick" } },
+    { params: { area: "cotgrave" }, props: { title: "Cotgrave" } },
+    {
+      params: { area: "derby" },
+      props: {
+        title: "Derby",
+        nearbyAreas: ["Ilkeston", "Somercotes", "Ripley", "Alfreton"],
+      },
+    },
+    { params: { area: "doncaster" }, props: { title: "Doncaster" } },
+    {
+      params: { area: "eakring" },
+      props: {
+        title: "Eakring"
+      },
+    },
+    {
+      params: { area: "east-bridgford" },
+      props: { title: "East Bridgford" },
+    },
+    {
+      params: { area: "east-markham" },
+      props: { title: "East Markham"},
+    },
+    { params: { area: "eastwood" }, props: { title: "Eastwood" } },
+    { params: { area: "edwalton" }, props: { title: "Edwalton" } },
+    {
+      params: { area: "edwinstowe" },
+      props: {
+        title: "Edwinstowe"
+      },
+    },
+    {
+      params: { area: "farnsfield" },
+      props: {
+        title: "Farnsfield"
+      },
+    },
+    {
+      params: { area: "fernwood" },
+      props: { title: "Fernwood" },
+    },
+    {
+      params: { area: "forest-town" },
+      props: {
+        title: "Forest Town"
+      },
+    },
+    { params: { area: "giltbrook" }, props: { title: "Giltbrook" } },
+    { params: { area: "hucknall" }, props: { title: "Hucknall" } },
+    { params: { area: "ilkeston" }, props: { title: "Ilkeston" } },
+    {
+      params: { area: "kirkby-in-ashfield" },
+      props: {
+        title: "Kirkby In Ashfield",
+      },
+    },
+    {
+      params: { area: "kirklington" },
+      props: {
+        title: "Kirklington",
+      },
+    },
+    { params: { area: "lincoln" }, props: { title: "Lincoln" } },
+    { params: { area: "loughborough" }, props: { title: "Loughborough" } },
+    {
+      params: { area: "mansfield" },
+      props: {
+        title: "Mansfield",
+        nearbyAreas: [
+          "Sutton-in-Ashfield",
+          "Rainworth",
+          "Blidworth",
+          "Forest-Town",
+          "Shirebrook",
+          "Kirkby-in-Ashfield",
+          "Warsop",
+        ],
+      },
+    },
+    { params: { area: "mapperley" }, props: { title: "Mapperley" } },
+    {
+      params: { area: "newark" },
+      props: {
+        title: "Newark",
+        nearbyAreas: [
+          "Southwell",
+          "Bilsthorpe",
+          "Ollerton",
+          "Farnsfield",
+          "Edwinstowe",
+          "Ravenshead",
+          "Eakring",
+          "Kirklington",
+          "Clipstone",
+          "Averham",
+          "Fernwood",
+          "East-Markham",
+          "Balderton",
+        ],
+      },
+    },
+    {
+      params: { area: "nottingham" },
+      props: {
+        title: "Nottingham",
+        nearbyAreas: [
+          "Arnold",
+          "Mapperley",
+          "Burton-Joyce",
+          "Giltbrook",
+          "Calverton",
+          "Bestwood",
+          "West-Bridgford",
+          "Bulwell",
+          "Hucknall",
+          "Radcliffe-on-Trent",
+          "Eastwood",
+          "East-Bridgford",
+          "Cotgrave",
+          "Bingham",
+          "Carlton",
+          "Colwick",
+          "Edwalton",
+        ],
+      },
+    },
+    {
+      params: { area: "ollerton" },
+      props: {
+        title: "Ollerton",
+      },
+    },
+    {
+      params: { area: "radcliffe-on-trent" },
+      props: { title: "Radcliffe On Trent" },
+    },
+    {
+      params: { area: "rainworth" },
+      props: {
+        title: "Rainworth"
+      },
+    },
+    {
+      params: { area: "ravenshead" },
+      props: {
+        title: "Ravenshead"
+      },
+    },
+    {
+      params: { area: "retford" },
+      props: { title: "Retford" },
+    },
+    { params: { area: "ripley" }, props: { title: "Ripley" } },
+    {
+      params: { area: "shirebrook" },
+      props: {
+        title: "Shirebrook",
+      },
+    },
+    { params: { area: "somercotes" }, props: { title: "Somercotes" } },
+    {
+      params: { area: "southwell" },
+      props: {
+        title: "Southwell",
+      },
+    },
+    {
+      params: { area: "sutton-in-ashfield" },
+      props: {
+        title: "Sutton In Ashfield",
+      },
+    },
+    {
+      params: { area: "tuxford" },
+      props: { title: "Tuxford" },
+    },
+    {
+      params: { area: "warsop" },
+      props: {
+        title: "Warsop",
+      },
+    },
+    {
+      params: { area: "west-bridgford" },
+      props: { title: "West Bridgford" },
+    },
+    {
+      params: { area: "worksop" },
+      props: {
+        title: "Worksop",
+        nearbyAreas: ["Tuxford", "Retford", "Caunton"],
+      },
+    },
+  ];
 }
 
 import ServiceLayout from "../../layouts/ServiceLayout.astro";
 
 const {
-    title,
-    phoneNumber = "0330 133 9311",
-    nearbyAreas = [],
-    onlineBooking = false,
-    map = null,
+  title,
+  nearbyAreas = [],
 } = Astro.props;
+
+const phoneNumber = "0330 133 9311"
 ---
 
 <ServiceLayout
-    title={`Mobile Tyre Fitting in ${title}`}
-    description={`Tyre Emergency offers 7 day mobile tyre fitting services in ${title}. We come to you at home, work or roadside.`}
-    heading={`Tyre Fitting in ${title}`}
-    tagline="We Come to You - 7 Days a Week"
-    phoneNumber={phoneNumber}
-    onlineBooking={onlineBooking}
+  title={`Mobile Tyre Fitting in ${title}`}
+  description={`Tyre Emergency offers 7 day mobile tyre fitting services in ${title}. We come to you at home, work or roadside.`}
+  heading={`Tyre Fitting in ${title}`}
+  tagline="We Come to You - 7 Days a Week"
+  phoneNumber={phoneNumber}
 >
-    <h1 class="fw-bold mb-3">Mobile Tyre Fitting in {title}</h1>
-    <p>
-        Do you live in or near {title} and need new tyres for your vehicle?
-        Why not try our convenient mobile tyre fitting service!
-    </p>
-    <p>
-        Getting your tyres fitted at home is the easy, modern way to replace
-        them. There's no need to travel to a tyre shop in {title} or sit
-        around in a waiting room. We bring our fully equipped vans right to your
-        doorstep, offering this service 7 days a week.
-    </p>
-    <h2 class="fw-bold">Emergency Tyre Replacement</h2>
-    <p>
-        Sometimes, you can't plan ahead for tyre issues. Maybe you've hit one of
-        the many potholes in {title} and now have a flat tyre. Don't worry, we
-        can still help.
-    </p>
-    <p>
-        We specialize in fast response, 24-hour emergency tyre fitting. Whether
-        you're at home or on the roadside, we can get to you quickly because
-        we're local to {title}.
-    </p>
-    {
-        nearbyAreas.length > 0 && (
-            <>
-                <h2 class="fw-bold">{title} & Surrounding Areas</h2>
-                <p>
-                    We cover many areas of {title}, including:{" "}
-                    {nearbyAreas.map((area) => (
-                        <a
-                            class="link-danger"
-                            href={`/areas/${area.toLowerCase()}/`}
-                        >
-                            {area},{" "}
-                        </a>
-                    ))}
-                </p>
-            </>
-        )
-    }
-    <h2 class="fw-bold">Get a Quote Today</h2>
-    <p>
-        If you're interested in having your tyres fitted at your home or
-        workplace, give us a call today! We'll be happy to provide you with a
-        price and answer any questions you may have.
-    </p>
+  <h1 class="fw-bold mb-3">Mobile Tyre Fitting in {title}</h1>
+  <p>
+    Do you live in or near {title} and need new tyres for your vehicle? Why not try
+    our convenient mobile tyre fitting service!
+  </p>
+  <p>
+    Getting your tyres fitted at home is the easy, modern way to replace them.
+    There's no need to travel to a tyre shop in {title} or sit around in a waiting
+    room. We bring our fully equipped vans right to your doorstep, offering this
+    service 7 days a week.
+  </p>
+  <h2 class="fw-bold">Emergency Tyre Replacement</h2>
+  <p>
+    Sometimes, you can't plan ahead for tyre issues. Maybe you've hit one of the
+    many potholes in {title} and now have a flat tyre. Don't worry, we can still
+    help.
+  </p>
+  <p>
+    We specialize in fast response, 24-hour emergency tyre fitting. Whether
+    you're at home or on the roadside, we can get to you quickly because we're
+    local to {title}.
+  </p>
+  {
+    nearbyAreas.length > 0 && (
+      <>
+        <h2 class="fw-bold">{title} & Surrounding Areas</h2>
+        <p>
+          We cover many areas of {title}, including:{" "}
+          {nearbyAreas.map((area) => (
+            <a class="link-danger" href={`/areas/${area.toLowerCase()}/`}>
+              {area},{" "}
+            </a>
+          ))}
+        </p>
+      </>
+    )
+  }
+  <h2 class="fw-bold">Get a Quote Today</h2>
+  <p>
+    If you're interested in having your tyres fitted at your home or workplace,
+    give us a call today! We'll be happy to provide you with a price and answer
+    any questions you may have.
+  </p>
 </ServiceLayout>
