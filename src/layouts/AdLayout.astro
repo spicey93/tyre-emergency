@@ -1,0 +1,134 @@
+---
+const {
+  title,
+  phoneNumber = "0330 133 9311",
+  area = "Nottinghamshire"
+} = Astro.props;
+
+import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+import "../styles/main.css";
+import CTABar from "../components/CTABar.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="../scripts/gtm/head.js"></script>
+    <meta charset="UTF-8" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content=`Tyre Emergency is your local 24 hour mobile tyre service. We provide ${title}. Call now for a quote.`/>
+    <link rel="icon" type="image/x-icon" href="/logos/favicon.ico" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>{title} | Tyre Emergency Ltd</title>
+  </head>
+  <body>
+    <!--  ClickCease.com tracking-->
+    <script type="text/javascript">
+      var script = document.createElement("script");
+      script.async = true;
+      script.type = "text/javascript";
+      var target = "https://www.clickcease.com/monitor/stat.js";
+      script.src = target;
+      var elem = document.head;
+      elem.appendChild(script);
+    </script>
+    <noscript>
+      <a href="https://www.clickcease.com" rel="nofollow"
+        ><img src="https://monitor.clickcease.com" alt="ClickCease" /></a
+      >
+    </noscript>
+    <!--  ClickCease.com tracking-->
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MC27JVL7"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+     <!-- Header -->
+      <header class="container py-4 d-flex align-items-center justify-content-between">
+        <img width="150" src="/public/logos/logo.png" alt="logo" class="d-none d-md-block">
+        <img width="75" src="/public/logos/logo-symbol.png" alt="logo symbol" class="d-md-none">
+        <div>
+            <p class="text-center mb-0 fw-bold">24/7 Tyre Service</p>
+            <a href=`tel:${phoneNumber}` class="btn btn-dark text-white fw-bold rounded-0">Call {phoneNumber}</a>
+        </div>
+      </header>
+      <!-- Hero -->
+      <main id="adHero" class="d-flex flex-column justify-content-center align-items-center py-5 bg-dark text-light">
+        <h1 class="display-1 text-center fw-bold mb-4">{title}</h1>
+        <p class="mb-2 lead text-center"><i class="bi bi-check-circle-fill me-2"></i>24/7 Emergency Mobile Service</p>
+        <p class="mb-2 lead text-center"><i class="bi bi-check-circle-fill me-2"></i>We Cover {area} and surrounding areas</p>
+        <p class="mb-2 lead text-center"><i class="bi bi-check-circle-fill me-2"></i>Fast Response Time</p>
+        <button class="btn btn-danger fw-bold mt-3 text-white rounded-0 p-3">Call Now: {phoneNumber}</button>
+        <script defer async src='https://cdn.trustindex.io/loader.js?7879b9e328722239bd2655baba4'></script>
+      </main>
+
+     <!-- Services -->
+      <section class="container py-5">
+        <div class="row g-5">
+            <div class="col-12 col-lg-6 order-1 order-lg-1">
+                <img src="/img/mobile-tyre-fitting.jpeg" alt="Inside of a mobile tyre van" width="100%">
+            </div>
+            <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center text-center order-2 order-lg-2">
+                <h3>Mobile Tyre Fitting & Repair</h3>
+                <p>We bring tyre fitting and repairs directly to your doorstep, saving you time and hassle. Our experienced technicians ensure quick and professional service, keeping you safe on the road. Whether it’s a puncture or a tyre replacement, we’ve got you covered!</p>
+            </div>
+            <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center text-center order-4 order-lg-3">
+                <h3>Locking Wheel Nut Removal</h3>
+                <p>Lost your locking wheel nut key? No problem! Our specialized tools and techniques ensure safe and damage-free removal of locking wheel nuts. Get back on the road without any worry.</p>
+                <p class="text-muted">*Available for all major vehicle brands.</p>
+            </div>
+            <div class="col-12 col-lg-6 order-3 order-lg-4">
+                <img src="/img/locking-wheel-nut-removal.jpeg" alt="Close up of a Volvo locking wheel bolt" width="100%">
+            </div>
+            
+            
+        </div>
+      </section>
+      <!-- Reviews -->
+      <section class="container py-5">
+        <h2 class="text-center mb-5">We've Helped Hundreds of Stranded Drivers!</h2>
+        <script defer async src='https://cdn.trustindex.io/loader.js?da578e7387bf313cc136a75c74e'></script>
+      </section>
+       <!-- CTA -->
+       <section class="bg-dark text-light text-center py-5">
+        <div class="container">
+            <h2 class="fw-bold">We're Here 24 Hours a Day, 7 Days a Week</h2>
+            <h3 class="mb-3">Call Now for a Quote</h3>
+            <a href={`tel:${phoneNumber}`} class="call-btn mb-5"><i class="bi bi-telephone-fill me-2"></i> {phoneNumber}</a>
+        </div>
+    </section>
+    <CTABar phoneNumber={phoneNumber} />
+    <script>
+      function loadScript(a) {
+        var b = document.getElementsByTagName("head")[0],
+          c = document.createElement("script");
+        (c.type = "text/javascript"),
+          (c.src = "https://tracker.metricool.com/resources/be.js"),
+          (c.onreadystatechange = a),
+          (c.onload = a),
+          b.appendChild(c);
+      }
+      loadScript(function () {
+        beTracker.t({ hash: "43d6ac5aa9b302529b9516bdc1e19481" });
+      });
+    </script>
+    <!-- Bootstrap script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
+
+<style>
+    #adHero {
+        min-height: 70vh;
+    }
+</style>
