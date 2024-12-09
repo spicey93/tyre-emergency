@@ -7,13 +7,31 @@ const {
 
 import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/main.css";
-import CTABar from "../components/CTABar.astro";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <script src="../scripts/gtm/head.js"></script>
+    <!-- Google tag (gtag.js) event - delayed navigation helper -->
+<script>
+    // Helper function to delay opening a URL until a gtag event is sent.
+    // Call it in response to an action that should navigate to a URL.
+    function gtagSendEvent(url) {
+      var callback = function () {
+        if (typeof url === 'string') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion_event_phone_call_lead', {
+        'event_callback': callback,
+        'event_timeout': 2000,
+        // <event_parameters>
+      });
+      return false;
+    }
+  </script>
+  
     <meta charset="UTF-8" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="viewport" content="width=device-width" />
@@ -22,6 +40,7 @@ import CTABar from "../components/CTABar.astro";
     <link rel="icon" type="image/x-icon" href="/logos/favicon.ico" />
     <meta name="robots" content="noindex, nofollow" />
     <title>{title} | Tyre Emergency Ltd</title>
+    
   </head>
   <body>
     <!--  ClickCease.com tracking-->
@@ -56,7 +75,7 @@ import CTABar from "../components/CTABar.astro";
         <img width="75" src="/public/logos/logo-symbol.png" alt="logo symbol" class="d-md-none">
         <div>
             <p class="text-center mb-0 fw-bold">24/7 Tyre Service</p>
-            <a href=`tel:${phoneNumber}` class="btn btn-dark text-white fw-bold rounded-0">Call {phoneNumber}</a>
+            <a href=`tel:${phoneNumber}` onclick="gtag_report_conversion()" class="btn btn-dark text-white fw-bold rounded-0">Call {phoneNumber}</a>
         </div>
       </header>
       <!-- Hero -->
@@ -65,7 +84,7 @@ import CTABar from "../components/CTABar.astro";
         <p class="mb-2 lead text-center"><i class="bi bi-check-circle-fill me-2"></i>24/7 Emergency Mobile Service</p>
         <p class="mb-2 lead text-center"><i class="bi bi-check-circle-fill me-2"></i>We Cover {area} and surrounding areas</p>
         <p class="mb-2 lead text-center"><i class="bi bi-check-circle-fill me-2"></i>Fast Response Time</p>
-        <button class="btn btn-danger fw-bold mt-3 text-white rounded-0 p-3">Call Now: {phoneNumber}</button>
+        <button class="btn btn-danger fw-bold mt-3 text-white rounded-0 p-3" onclick="gtag_report_conversion()">Call Now: {phoneNumber}</button>
         <script defer async src='https://cdn.trustindex.io/loader.js?7879b9e328722239bd2655baba4'></script>
       </main>
 
@@ -101,10 +120,9 @@ import CTABar from "../components/CTABar.astro";
         <div class="container">
             <h2 class="fw-bold">We're Here 24 Hours a Day, 7 Days a Week</h2>
             <h3 class="mb-3">Call Now for a Quote</h3>
-            <a href={`tel:${phoneNumber}`} class="call-btn mb-5"><i class="bi bi-telephone-fill me-2"></i> {phoneNumber}</a>
+            <a href={`tel:${phoneNumber}`} class="call-btn mb-5" onclick="gtag_report_conversion()"><i class="bi bi-telephone-fill me-2"></i> {phoneNumber}</a>
         </div>
     </section>
-    <CTABar phoneNumber={phoneNumber} />
     <script>
       function loadScript(a) {
         var b = document.getElementsByTagName("head")[0],
