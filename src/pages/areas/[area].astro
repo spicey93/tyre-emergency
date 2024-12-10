@@ -44,6 +44,10 @@ export async function getStaticPaths() {
       },
     },
     {
+      params: { area: "blyth" },
+      props: { title: "Blyth", phoneNumber: worksopPhone },
+    },
+    {
       params: { area: "bulwell" },
       props: { title: "Bulwell", phoneNumber: nottinghamPhone },
     },
@@ -58,6 +62,10 @@ export async function getStaticPaths() {
     {
       params: { area: "carlton" },
       props: { title: "Carlton", phoneNumber: nottinghamPhone },
+    },
+    {
+      params: { area: "carlton-in-lindrick" },
+      props: { title: "Carlton in Lindrick", phoneNumber: worksopPhone },
     },
     {
       params: { area: "caunton" },
@@ -78,6 +86,10 @@ export async function getStaticPaths() {
     {
       params: { area: "cotgrave" },
       props: { title: "Cotgrave", phoneNumber: nottinghamPhone },
+    },
+    {
+      params: { area: "creswell" },
+      props: { title: "Creswell", phoneNumber: worksopPhone },
     },
     {
       params: { area: "derby" },
@@ -256,34 +268,40 @@ export async function getStaticPaths() {
       params: { area: "rainworth" },
       props: {
         title: "Rainworth",
-        phoneNumber: mansfieldPhone
+        phoneNumber: mansfieldPhone,
       },
     },
     {
       params: { area: "ravenshead" },
       props: {
         title: "Ravenshead",
-        phoneNumber: mansfieldPhone
+        phoneNumber: mansfieldPhone,
       },
     },
     {
       params: { area: "retford" },
       props: { title: "Retford", phoneNumber: mansfieldPhone },
     },
-    { params: { area: "ripley" }, props: { title: "Ripley", phoneNumber: ripleyPhone } },
+    {
+      params: { area: "ripley" },
+      props: { title: "Ripley", phoneNumber: ripleyPhone },
+    },
     {
       params: { area: "shirebrook" },
       props: {
         title: "Shirebrook",
-        phoneNumber: mansfieldPhone
+        phoneNumber: mansfieldPhone,
       },
     },
-    { params: { area: "somercotes" }, props: { title: "Somercotes", phoneNumber: ripleyPhone } },
+    {
+      params: { area: "somercotes" },
+      props: { title: "Somercotes", phoneNumber: ripleyPhone },
+    },
     {
       params: { area: "southwell" },
       props: {
         title: "Southwell",
-        phoneNumber: newarkPhone
+        phoneNumber: newarkPhone,
       },
     },
     {
@@ -301,7 +319,7 @@ export async function getStaticPaths() {
       params: { area: "warsop" },
       props: {
         title: "Warsop",
-        phoneNumber: mansfieldPhone
+        phoneNumber: mansfieldPhone,
       },
     },
     {
@@ -313,7 +331,7 @@ export async function getStaticPaths() {
       props: {
         title: "Worksop",
         nearbyAreas: ["Tuxford", "Retford", "Caunton"],
-        phoneNumber: worksopPhone
+        phoneNumber: worksopPhone,
       },
     },
   ];
