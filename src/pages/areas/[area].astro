@@ -261,6 +261,13 @@ export async function getStaticPaths() {
       },
     },
     {
+      params: { area: "pleasley"},
+      props: {
+        title: "Pleasley",
+        phoneNumber: mansfieldPhone
+      }
+    },
+    {
       params: { area: "radcliffe-on-trent" },
       props: { title: "Radcliffe On Trent", phoneNumber: nottinghamPhone },
     },
