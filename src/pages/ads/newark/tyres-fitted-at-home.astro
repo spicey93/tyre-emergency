@@ -1,0 +1,52 @@
+---
+import ServiceLayout from "../../../layouts/ServiceLayout.astro";
+const area = 'Newark';
+const phoneNumber = '01636 330044';
+const serviceDetails = {
+  title: `Tyres Fitted at Home in ${area} | Tyre Emergency Ltd`,
+  description: `Convenient and hassle-free tyre fitting service at your home in ${area}. Stay comfortable while we handle your tyres.`,
+  heading: `Tyres Fitted at Home in ${area}`,
+  tagline: "We Come to You - 7 Days a Week",
+};
+---
+
+<ServiceLayout {...serviceDetails} phoneNumber={phoneNumber}>
+  <h1 class="fw-bold mb-3">{serviceDetails.heading}</h1>
+  <p>
+    Need new tyres but don’t have the time to visit a garage? With our home tyre-fitting service in {area}, we make it easy and convenient for you. Sit back and relax at home while we take care of everything.
+  </p>
+  <p>
+    Our expert fitters come fully equipped to fit and balance your new tyres right on your driveway. No stress, no wasted time—just top-quality service delivered to your doorstep.
+  </p>
+
+  <h2 class="fw-bold">Why Choose Home Tyre Fitting?</h2>
+  <p>
+    Life is busy enough without having to spend hours waiting at a garage. Our home tyre-fitting service is perfect for:
+  </p>
+  <ul>
+    <li>Those with tight schedules</li>
+    <li>Families who want to avoid the hassle of a garage visit</li>
+    <li>Anyone looking for a more convenient solution</li>
+  </ul>
+  <p>
+    We bring the same high standards you’d expect from a workshop but with none of the inconvenience. Whether you need new tyres, replacements, or balancing, we’ve got you covered.
+  </p>
+
+  <h2 class="fw-bold">How Our Service Works</h2>
+  <p>
+    Booking your home tyre fitting in {area} couldn’t be simpler:
+  </p>
+  <ol>
+    <li><strong>Call us</strong> or book online to schedule your appointment.</li>
+    <li><strong>We arrive</strong> at your preferred location with all the tools and tyres needed.</li>
+    <li><strong>Relax</strong> while we fit and balance your tyres quickly and professionally.</li>
+  </ol>
+  <p>
+    You don’t even need to leave the house—we’ll take care of everything.
+  </p>
+
+  <h2 class="fw-bold">Get in Touch Today</h2>
+  <p>
+    Ready for hassle-free tyre fitting? Call us now at <a href={`tel:${phoneNumber}`} class="link-danger">{phoneNumber}</a> to book your appointment. Enjoy peace of mind knowing your tyres are in expert hands.
+  </p>
+</ServiceLayout>
