@@ -12002,6 +12002,10 @@ textarea.form-control-lg {
   --bs-body-font-family: "Poppins", sans-serif;
 }
 
+.dropdown-item.active, .dropdown-item:focus {
+  background-color: #ff3131 !important;
+}
+
 #hero {
   background: linear-gradient(0deg, rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.9)), url(/img/mobile-tyre-fitting.webp);
   background-size: cover;
