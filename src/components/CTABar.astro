@@ -6,15 +6,16 @@ const { phoneNumber = "0330 133 9311" } = Astro.props;
     <div class="row">
         <a
             href={`tel:${phoneNumber}`}
-            class="link-light col-6 bg-danger d-flex align-items-center justify-content-center p-3"
+            class="link-light col-12 bg-primary d-flex align-items-center justify-content-center p-3 fw-bold"
+            style="text-decoration: none;"
         >
-            <i class="bi bi-telephone-fill"></i>
+            Call Now <i class="bi bi-telephone-fill mx-2"></i> {phoneNumber}
         </a>
-        <div
+        <!-- <div
             class="col-6 bg-dark d-flex align-items-center justify-content-center p-3" data-bs-toggle="modal" data-bs-target="#adMessage"
         >
             <i class="bi bi-envelope-fill"></i>
-        </div>
+        </div> -->
     </div>
 </div>
 
