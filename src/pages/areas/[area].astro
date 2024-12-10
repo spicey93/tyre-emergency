@@ -330,7 +330,14 @@ export async function getStaticPaths() {
       params: { area: "worksop" },
       props: {
         title: "Worksop",
-        nearbyAreas: ["Tuxford", "Retford", "Caunton"],
+        nearbyAreas: [
+          "Tuxford",
+          "Retford",
+          "Caunton",
+          "Blyth",
+          "Carlton in Lindrick",
+          "Creswell",
+        ],
         phoneNumber: worksopPhone,
       },
     },
@@ -376,25 +383,30 @@ const { title, nearbyAreas = [], phoneNumber = "0330 133 9311" } = Astro.props;
       <>
         <h2 class="fw-bold">{title} & Surrounding Areas</h2>
         <p>
-          We cover many areas of {title}, including:{" "}
-          {nearbyAreas.map((area, index) => (
-            <span>
-              <a
-                class="link-danger"
-                href={`/areas/${area.toLowerCase()}/`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {area}
-              </a>
-              {index < nearbyAreas.length - 2
-                ? ", "
-                : index === nearbyAreas.length - 2
-                  ? ", and "
-                  : ""}
-            </span>
-          ))}
-        </p>
+  We cover many areas of {title}, including:{" "}
+  {nearbyAreas.map((area, index) => {
+    // Create a URL-friendly slug for the area
+    const slug = area.toLowerCase().replace(/\s+/g, '-');
+    return (
+      <span>
+        <a
+          class="link-danger"
+          href={`/areas/${slug}/`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {area}
+        </a>
+        {index < nearbyAreas.length - 2
+          ? ", "
+          : index === nearbyAreas.length - 2
+          ? ", and "
+          : ""}
+      </span>
+    );
+  })}
+</p>
+
       </>
     )
   }
