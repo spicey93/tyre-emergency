@@ -366,62 +366,69 @@ const { title, nearbyAreas = [], phoneNumber = "0330 133 9311" } = Astro.props;
 >
   <h1 class="fw-bold mb-3">Mobile Tyre Fitting {title}</h1>
   <p>
-    If you're looking for <strong>mobile tyre fitting in {title}</strong>, give
-    us a call today. At Tyre Emergency, we offer a fast-response mobile tyre
-    service across {title} and nearby areas.
+    Stuck at home or on the roadside with a flat tyre? Or simply prefer the convenience of a tyre expert coming to you? Whatever the reason, our mobile tyre fitting service in {title} is designed to make your life easier.
   </p>
   <p>
-    Our mobile tyre fitters are available 24/7, offering <em
-      >same-day fitting</em
-    >
-    with an average arrival time of just 60 minutes. If you need an emergency tyre
-    replacement in {title}, we’re here to help.
+    At Tyre Emergency, we provide fast, reliable, and hassle-free tyre fitting at your location—whether it's your home, workplace, or even the roadside. Our professional team is available 24/7 and aims to reach you within just 60 minutes.
   </p>
-  <h2 class="fw-bold">24Hr Emergency Tyre Service in {title}</h2>
+
+  <h2 class="fw-bold">Why Choose Mobile Tyre Fitting?</h2>
   <p>
-    A flat tyre can happen anytime, which is why we provide a reliable 24-hour
-    mobile tyre fitting service in {title} and surrounding areas.
+    Driving to a tyre shop isn’t always possible—or necessary! Here’s why our mobile tyre service is the best option:
   </p>
+  <ul>
+    <li><strong>Convenience:</strong> Save time and effort by letting us come to you.</li>
+    <li><strong>Fast Response:</strong> Our 24/7 service ensures we’re there when you need us, with same-day fitting available.</li>
+    <li><strong>Comprehensive Service:</strong> From puncture repairs to full replacements, we’ve got you covered.</li>
+    <li><strong>Peace of Mind:</strong> Our expert fitters bring everything needed to get you back on the road quickly and safely.</li>
+  </ul>
+
+  <h2 class="fw-bold">How It Works</h2>
   <p>
-    Whether it’s a pothole, a puncture, or another issue, don’t panic—we aim to
-    get to you quickly and get you back on the road.
+    Our mobile tyre fitting process is simple and stress-free:
   </p>
+  <ol>
+    <li><strong>Call us:</strong> Share your location and tyre details.</li>
+    <li><strong>We come to you:</strong> At home, work, or the roadside, our fully equipped team will arrive quickly.</li>
+    <li><strong>We fit or repair:</strong> Your tyres are professionally fitted, balanced, or repaired on the spot.</li>
+  </ol>
+  <p>
+    No matter where you are, our priority is to get you moving again without delay.
+  </p>
+
   {
     nearbyAreas.length > 0 && (
       <>
-        <h2 class="fw-bold">{title} & Surrounding Areas</h2>
+        <h2 class="fw-bold">{title} & Nearby Areas</h2>
         <p>
-  We cover many areas of {title}, including:{" "}
-  {nearbyAreas.map((area, index) => {
-    // Create a URL-friendly slug for the area
-    const slug = area.toLowerCase().replace(/\s+/g, '-');
-    return (
-      <span>
-        <a
-          class="link-danger"
-          href={`/areas/${slug}/`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {area}
-        </a>
-        {index < nearbyAreas.length - 2
-          ? ", "
-          : index === nearbyAreas.length - 2
-          ? ", and "
-          : ""}
-      </span>
-    );
-  })}
-</p>
-
+          We serve customers in {title} and surrounding areas, including:{" "}
+          {nearbyAreas.map((area, index) => {
+            const slug = area.toLowerCase().replace(/\s+/g, '-');
+            return (
+              <span>
+                <a
+                  class="link-danger"
+                  href={`/areas/${slug}/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {area}
+                </a>
+                {index < nearbyAreas.length - 2
+                  ? ", "
+                  : index === nearbyAreas.length - 2
+                  ? ", and "
+                  : ""}
+              </span>
+            );
+          })}
+        </p>
       </>
     )
   }
 
-  <h2 class="fw-bold">Call Us For Assistance</h2>
+  <h2 class="fw-bold">Contact Us Today</h2>
   <p>
-    If you'd like to get a price for our mobile tyre service, give us a call
-    today!
+    Don’t let a flat tyre slow you down. Call us now at <a href={`tel:${phoneNumber}`} class="link-danger">{phoneNumber}</a> for quick and professional mobile tyre fitting in {title}. Let us bring the tyre shop to you!
   </p>
 </ServiceLayout>

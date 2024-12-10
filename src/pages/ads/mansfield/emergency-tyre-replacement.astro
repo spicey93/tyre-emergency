@@ -1,0 +1,52 @@
+---
+import ServiceLayout from "../../../layouts/ServiceLayout.astro";
+const area = 'Mansfield';
+const phoneNumber = '01623 325 123';
+const serviceDetails = {
+  title: `Emergency Tyre Replacement in ${area} | Tyre Emergency Ltd`,
+  description: `Stranded with a flat tyre in ${area}? Our emergency tyre replacement service gets you back on the road quickly and safely.`,
+  heading: `Emergency Tyre Replacement in ${area}`,
+  tagline: "Fast Response, 7 Days a Week - We'll Get You Moving Again",
+};
+---
+
+<ServiceLayout {...serviceDetails} phoneNumber={phoneNumber}>
+  <h1 class="fw-bold mb-3">{serviceDetails.heading}</h1>
+  <p>
+    Stranded with a flat tyre and need help fast? Don’t worry—you’re in the right place. Our emergency tyre replacement service in {area} is designed to get you moving again quickly and safely, wherever you are.
+  </p>
+  <p>
+    Whether you’re stuck on the roadside, in a car park, or at home, we’ll come to you. With fast response times and expert technicians, we’ll replace your tyre and have you back on the road before you know it.
+  </p>
+
+  <h2 class="fw-bold">Why Choose Us for Emergency Tyre Replacement?</h2>
+  <p>
+    When you’re stuck, you need a service that’s:
+  </p>
+  <ul>
+    <li><strong>Fast:</strong> We aim to reach you within 60 minutes.</li>
+    <li><strong>Reliable:</strong> Our expert fitters carry a range of tyres to suit your vehicle.</li>
+    <li><strong>Convenient:</strong> We replace your tyre on the spot, no matter where you are.</li>
+  </ul>
+  <p>
+    You can trust us to provide a hassle-free solution when you need it most.
+  </p>
+
+  <h2 class="fw-bold">How It Works</h2>
+  <p>
+    Getting back on the road is simple:
+  </p>
+  <ol>
+    <li><strong>Call us:</strong> Share your location and vehicle details.</li>
+    <li><strong>We arrive:</strong> Our technician comes fully prepared with the right tyre and tools.</li>
+    <li><strong>You're on your way:</strong> We replace your tyre quickly and efficiently so you can continue your journey.</li>
+  </ol>
+  <p>
+    No waiting, no stress—we take care of everything.
+  </p>
+
+  <h2 class="fw-bold">Call Us Now for Immediate Assistance</h2>
+  <p>
+    Don’t wait—call <a href={`tel:${phoneNumber}`} class="link-danger">{phoneNumber}</a> now for fast and professional emergency tyre replacement in {area}. Let us help you get back on the road safely and without delay.
+  </p>
+</ServiceLayout>
