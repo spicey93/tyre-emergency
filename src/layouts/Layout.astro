@@ -95,7 +95,7 @@ import CTABar from "../components/CTABar.astro";
     <Navbar phoneNumber={phoneNumber} />
     <slot />
     <Footer phoneNumber={phoneNumber} />
-    <CTABar phoneNumber={phoneNumber} />
+    <!-- <CTABar phoneNumber={phoneNumber} /> -->
     <script>
       function loadScript(a) {
         var b = document.getElementsByTagName("head")[0],
@@ -115,5 +115,7 @@ import CTABar from "../components/CTABar.astro";
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"></script>
+      <script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-d3676855-31f2-4ed1-807a-7329affd4383" data-elfsight-app-lazy></div>
   </body>
 </html>
