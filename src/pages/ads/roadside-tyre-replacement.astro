@@ -1,0 +1,46 @@
+---
+import LandingPage from "../../layouts/LandingPage.astro";
+const phoneNumber = '01623 325 123'
+---
+
+<LandingPage
+  title="Roadside Tyre Replacement | Nottinghamshire"
+  description="Stranded with a flat tyre? Call now for fast roadside tyre replacement anywhere in Nottinghamshire. We’ll get you back on the road in under 60 minutes."
+  heading="Roadside Tyre Replacement in Nottinghamshire"
+  tagline="Flat Tyre? We’ll Replace It on the Spot."
+  onlineBooking={false}
+  phoneNumber={phoneNumber}
+  backgroundUrl="/img/mobile-tyre-fitting.webp"
+>
+  <h1 class="fw-bold">Roadside Tyre Replacement When You Need It Most</h1>
+  <p>
+    Picture this: you’re on the side of the road with a flat tyre. Maybe you’re on your way to work, picking up the kids, or heading home after a long day. Whatever the situation, being stranded isn’t just frustrating—it’s stressful.
+  </p>
+  <p>
+    That’s where we come in. Our roadside tyre replacement service is here to get you moving again, fast. Wherever you are in Nottinghamshire, we’ll arrive in under 60 minutes, replace your tyre on the spot, and have you back on the road without the hassle of a tow or garage visit.
+  </p>
+
+  <h2 class="fw-bold">How It Works</h2>
+  <p>
+    Need a tyre replaced? It’s as easy as giving us a call at <a class="text-danger" href=`tel:${phoneNumber}`>{phoneNumber}</a>. Tell us where you are and what’s happened. We’ll confirm how soon we’ll be there and send a technician straight to you. Once we arrive, we’ll replace your tyre right there at the roadside.
+  </p>
+  <p>
+    There’s no waiting around, no extra steps—just a quick, professional tyre replacement to get you on your way.
+  </p>
+
+  <h2 class="fw-bold">Why Choose Our Service?</h2>
+  <p>
+    Because we know time is precious. Being stuck on the roadside is never ideal, and that’s why we’re focused on getting to you quickly. Based in Nottinghamshire, we know the area well, so whether you’re in the city or out on a rural road, we’ll find you fast.
+  </p>
+  <p>
+    Our service is available 24/7, so it doesn’t matter if it’s early morning, late at night, or somewhere in between. When you need roadside tyre replacement, we’re ready to help.
+  </p>
+
+  <h2 class="fw-bold">Let’s Get You Moving Again</h2>
+  <p>
+    A flat tyre doesn’t have to ruin your plans. With our roadside tyre replacement service, you’re never far from help. We’ll handle everything quickly and professionally, so you can get back to what matters.
+  </p>
+  <p>
+    Call us now at <a href=`tel:${phoneNumber}` class="text-danger">{phoneNumber}</a>. We’ll be there in no time to replace your tyre and get you back on the road.
+  </p>
+</LandingPage>
