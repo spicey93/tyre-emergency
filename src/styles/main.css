@@ -8483,7 +8483,7 @@ textarea.form-control-lg {
   color: rgba(var(--bs-danger-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-light, .call-btn, #hero .container, #hero #intro div, #intro #hero div {
+.text-light, .call-btn {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important;
 }
@@ -12004,16 +12004,6 @@ textarea.form-control-lg {
 
 .dropdown-item.active, .dropdown-item:focus {
   background-color: #ff3131 !important;
-}
-
-#hero {
-  background: linear-gradient(0deg, rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.9)), url(/img/mobile-tyre-fitting.webp);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-#hero .container, #hero #intro div, #intro #hero div {
-  min-height: 75vh;
 }
 
 #map {

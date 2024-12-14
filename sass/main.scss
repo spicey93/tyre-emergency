@@ -15,21 +15,6 @@ $danger: #ff3131;
     background-color: $danger !important;  // Set active dropdown link color to red
 }
 
-#hero {
-    background: linear-gradient(0deg,
-            rgba(20, 20, 20, 0.9),
-            rgba(20, 20, 20, 0.9)),
-        url(/img/mobile-tyre-fitting.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    .container {
-        min-height: 75vh;
-        @extend .text-light;
-    }
-
-}
 
 
 #intro {
