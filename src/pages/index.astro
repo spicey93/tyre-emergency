@@ -1,6 +1,5 @@
 ---
 import ServiceLayout from "../layouts/ServiceLayout.astro";
-
 const phoneNumber = import.meta.env.PHONE_NUMBER;
 ---
 
@@ -9,7 +8,7 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
     description="Looking for 24 hour mobile tyre fitting in Nottinghamshire? Tyre Emergency offers fast, reliable, and expert service for flat tyres, punctures, and more. Call now for a quote."
     heading="24Hr Mobile Tyre Service"
     tagline="Have Your Tyres Fitted at Home, Work or Roadside"
-    onlineBooking={false}
+    backgroundUrl="/img/24-hour-mobile-tyre-fitting-service.webp"
 >
     <h1 class="fw-bold mb-3">24 Hour Mobile Tyre Fitting</h1>
     <p><em>Searching for a <strong>24-hour mobile tyre fitter near you</strong>? We’ll arrive at your location—usually in 60 minutes or less!</em></p>
@@ -44,13 +43,13 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
     <h2 class="fw-bold">How to Get a Quote</h2>
     <p>It’s easy to get a price for our <a href="/services/mobile-tyre-fitting" class="link-danger">mobile tyre fitting service</a>:</p>
     <ol class="text-start">
-        <li>Call <a href="tel:03301339311" class="link-danger">0330 133 9311</a> anytime, day or night.</li>
+        <li>Call <a href=`tel:${phoneNumber}` class="link-danger">{phoneNumber}</a> anytime, day or night.</li>
         <li>Provide your tyre size and location.</li>
         <li>Receive an instant quote and ETA from our team.</li>
     </ol>
     <p>We pride ourselves on clear pricing with no hidden charges, so you’ll know exactly what to expect.</p>
 
     <h2 class="fw-bold">Contact Us Today</h2>
-    <p>Don’t let a flat tyre slow you down. Call Tyre Emergency today on <a href="tel:03301339311" class="link-danger">0330 133 9311</a>. We’re here to provide fast, reliable, and expert <strong>24-hour mobile tyre fitting</strong> across Nottinghamshire and surrounding areas.</p>
+    <p>Don’t let a flat tyre slow you down. Call Tyre Emergency today on <a href=`tel:${phoneNumber}` class="link-danger">{phoneNumber}</a>. We’re here to provide fast, reliable, and expert <strong>24-hour mobile tyre fitting</strong> across Nottinghamshire and surrounding areas.</p>
     <p>Looking for a mobile tyre fitter near you? Look no further—call us now and get back on the road in no time.</p>
 </ServiceLayout>

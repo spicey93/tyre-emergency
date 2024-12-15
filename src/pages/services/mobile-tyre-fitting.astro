@@ -4,57 +4,55 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
 ---
 
 <ServiceLayout
-    title="Mobile Tyre Fitting | Tyre Emergency Ltd"
-    description="Get your tyres fitted at home, work or roadside today with our mobile tyre fitting service. Call today for a quote."
-    heading="Mobile Tyre Fitting"
-    tagline="Have Your Tyres Fitted at Home, Work or Roadside Today"
-    backgroundUrl="/img/mobile-tyre-service.webp"
-    onlineBooking={false}
+  title="Mobile Tyre Fitting | Tyre Emergency Ltd"
+  description="Get your tyres fitted at home, work or roadside today with our mobile tyre fitting service. Call today for a quote."
+  heading="Mobile Tyre Fitting"
+  tagline="Have Your Tyres Fitted at Home, Work or Roadside Today"
+  backgroundUrl="/img/mobile-tyre-fitting.webp"
 >
-    <h1 class="fw-bold mb-3">Mobile Tyre Fitting</h1>
-    <p>
-        Need to replace your car or van tyres but don't want the hassle of
-        traveling to a tyre shop? Or perhaps you've just had a blowout and are
-        stranded with a flat tyre? Our mobile tyre fitting service is the
-        perfect solution for you!
-    </p>
-    <p>
-        Mobile tyre fitting is a convenient and easy way to change your tyres.
-        One of our expert tyre fitters will drive a fully-equipped tyre van to
-        your location and replace your old tyres on the spot.
-    </p>
-    <p>
-        No need to take time off work or get your vehicle towed to a garage. Our
-        mobile tyre vans are stocked with all the necessary equipment to change
-        your tyres safely and professionally, right where you are.
-    </p>
-    <h2 class="fw-bold">How Does It Work?</h2>
-    <p>
-        If you’ve never used a mobile tyre service before, here’s a quick
-        summary:
-    </p>
-    <ol class="text-start">
-        <li>
-            <strong>Call Us:</strong> Ring us at 0330 133 9311 with your tyre size
-            and postcode. We’ll provide you with a quote for new tyres.
-        </li>
-        <li>
-            <strong>Book a Time:</strong> We operate 7 days a week, so we can work
-            around your schedule.
-        </li>
-        <li>
-            <strong>Pay Upon Completion:</strong> Once your new tyres are installed,
-            you can pay by cash or card.
-        </li>
-    </ol>
-    <p>
-        That’s it! And if you need an emergency tyre replacement, it’s even
-        easier—we'll come to you straight away. We always aim to reach you
-        within 60 minutes, depending on your location.
-    </p>
-    <h2 class="fw-bold">Get a Quote Today</h2>
-    <p>
-        If you’d like a price for a tyre or have any questions, just ring Dean
-        at 0330 133 9311. He’ll be happy to help.
-    </p>
+  <h1 class="fw-bold mb-3">Mobile Tyre Fitting</h1>
+  <p>
+    Need to replace your car or van tyres but don't want the hassle of traveling
+    to a tyre shop? Or perhaps you've just had a blowout and are stranded with a
+    flat tyre? Our mobile tyre fitting service is the perfect solution for you!
+  </p>
+  <p>
+    Mobile tyre fitting is a convenient and easy way to change your tyres. One
+    of our expert tyre fitters will drive a fully-equipped tyre van to your
+    location and replace your old tyres on the spot.
+  </p>
+  <p>
+    No need to take time off work or get your vehicle towed to a garage. Our
+    mobile tyre vans are stocked with all the necessary equipment to change your
+    tyres safely and professionally, right where you are.
+  </p>
+  <h2 class="fw-bold">How Does It Work?</h2>
+  <p>
+    If you’ve never used a mobile tyre service before, here’s a quick summary:
+  </p>
+  <ol class="text-start">
+    <li>
+      <strong>Call Us:</strong> Ring us at <a href=`tel:${phoneNumber}` class="text-danger">{phoneNumber}</a> with your tyre size and
+      postcode. We’ll provide you with a quote for new tyres.
+    </li>
+    <li>
+      <strong>Book a Time:</strong> We operate 7 days a week, so we can work around
+      your schedule.
+    </li>
+    <li>
+      <strong>Pay Upon Completion:</strong> Once your new tyres are installed, you
+      can pay by cash or card.
+    </li>
+  </ol>
+  <p>
+    That’s it! And if you need an emergency tyre replacement, it’s even
+    easier—we'll come to you straight away. We always aim to reach you within 60
+    minutes, depending on your location.
+  </p>
+  <h2 class="fw-bold">Get a Quote Today</h2>
+  <p>
+    If you’d like a price for a tyre or have any questions, just ring Dean at <a class="link-danger" href=`tel:${phoneNumber}`>{
+      phoneNumber
+    }</a>. He’ll be happy to help.
+  </p>
 </ServiceLayout>
