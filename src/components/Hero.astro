@@ -2,11 +2,12 @@
 const {
   heading,
   tagline,
-  backgroundUrl = "/img/mobile-tyre-fitting.webp",
+  phoneNumber = '0330 133 9311',
+  backgroundUrl = "/img/tyre-emergency-van.jpeg",
 } = Astro.props;
 
 const heroStyle = {
-  background: `linear-gradient(0deg, rgba(20, 20, 20, 0.95), rgba(20, 20, 20, 0.95)), url(${backgroundUrl})`,
+  background: `linear-gradient(0deg, rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.90)), url(${backgroundUrl})`,
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
@@ -23,24 +24,25 @@ import Form from "./Form.astro";
     <div class="row g-5">
       <div class="col-lg-7 text-light text-center text-lg-start">
         <p class="fw-bold display-3 mb-4">{heading}</p>
-        <!-- <p class="lead fs-3 mb-4">{tagline}</p> -->
-        <p class="mb-1 lead">
-          <i class="bi bi-check-square me-2"></i> Open 7 Days a Week
+        <p class="lead fs-3 mb-4">{tagline}</p>
+        <p class="mb-1">
+          <i class="bi bi-check-square-fill text-success me-2"></i> Open 7 Days a Week
         </p>
-        <p class="mb-1 lead">
-          <i class="bi bi-check-square me-2"></i> Same Day Service Available
+        <p class="mb-1">
+          <i class="bi bi-check-square-fill text-success me-2"></i> Same Day Service Available
         </p>
-        <p class="mb-5 lead">
-          <i class="bi bi-check-square me-2"></i> 10+ Years of Experience
+        <p class="mb-1">
+          <i class="bi bi-check-square-fill text-success me-2"></i> 10+ Years of Experience
         </p>
         <div class="d-lg-none">
+          <a href=`tel:${phoneNumber}` class="btn btn-danger fw-bold text-light mt-4 mb-5 btn-lg"><i class="bi bi-telephone-fill me-2"></i>Call Now For a Quote</a>
           <script
             defer
             async
             src="https://cdn.trustindex.io/loader.js?db968ff382f059027746bf43905"
           ></script>
         </div>
-        <div class="d-none d-lg-flex">
+        <div class="d-none d-lg-flex mt-4">
           <div>
             <script
             defer
@@ -50,7 +52,7 @@ import Form from "./Form.astro";
           </div>
         </div>
       </div>
-      <div class="col-10 offset-1 col-lg-4 offset-lg-1 d-flex flex-column align-items-stretch justify-content-center">
+      <div class="d-none col-lg-4 offset-lg-1 d-lg-flex flex-column align-items-stretch justify-content-center">
         <Form />
       </div>
     </div>
