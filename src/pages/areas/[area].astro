@@ -156,6 +156,10 @@ export async function getStaticPaths() {
       props: { title: "Giltbrook", phoneNumber: nottinghamPhone },
     },
     {
+      params: { area: "grantham" },
+      props: { title: "Grantham", phoneNumber: newarkPhone },
+    },
+    {
       params: { area: "hucknall" },
       props: { title: "Hucknall", phoneNumber: nottinghamPhone },
     },
@@ -197,7 +201,7 @@ export async function getStaticPaths() {
           "Shirebrook",
           "Kirkby-in-Ashfield",
           "Warsop",
-          "Pleasley"
+          "Pleasley",
         ],
         phoneNumber: mansfieldPhone,
       },
@@ -262,11 +266,11 @@ export async function getStaticPaths() {
       },
     },
     {
-      params: { area: "pleasley"},
+      params: { area: "pleasley" },
       props: {
         title: "Pleasley",
-        phoneNumber: mansfieldPhone
-      }
+        phoneNumber: mansfieldPhone,
+      },
     },
     {
       params: { area: "radcliffe-on-trent" },
@@ -363,38 +367,60 @@ const { title, nearbyAreas = [], phoneNumber = "0330 133 9311" } = Astro.props;
   heading={`Mobile Tyre Fitting in ${title}`}
   tagline="Have Your Tyres Fitted at Home, Work or Roadside Today"
   phoneNumber={phoneNumber}
-    backgroundUrl="/img/mobile-tyre-fitting-near-me.webp"
+  backgroundUrl="/img/mobile-tyre-fitting-near-me.webp"
 >
   <h1 class="fw-bold mb-3">Mobile Tyre Fitting {title}</h1>
   <p>
-    Stuck at home or on the roadside with a flat tyre? Or simply prefer the convenience of a tyre expert coming to you? Whatever the reason, our mobile tyre fitting service in {title} is designed to make your life easier.
+    Stuck at home or on the roadside with a flat tyre? Or simply prefer the
+    convenience of a tyre expert coming to you? Whatever the reason, our mobile
+    tyre fitting service in {title} is designed to make your life easier.
   </p>
   <p>
-    At Tyre Emergency, we provide fast, reliable, and hassle-free tyre fitting at your location—whether it's your home, workplace, or even the roadside. Our professional team is available 24/7 and aims to reach you within just 60 minutes.
+    At Tyre Emergency, we provide fast, reliable, and hassle-free tyre fitting
+    at your location—whether it's your home, workplace, or even the roadside.
+    Our professional team is available 24/7 and aims to reach you within just 60
+    minutes.
   </p>
 
   <h2 class="fw-bold">Why Choose Mobile Tyre Fitting?</h2>
   <p>
-    Driving to a tyre shop isn’t always possible—or necessary! Here’s why our mobile tyre service is the best option:
+    Driving to a tyre shop isn’t always possible—or necessary! Here’s why our
+    mobile tyre service is the best option:
   </p>
   <ul class="text-start">
-    <li><strong>Convenience:</strong> Save time and effort by letting us come to you.</li>
-    <li><strong>Fast Response:</strong> Our 24/7 service ensures we’re there when you need us, with same-day fitting available.</li>
-    <li><strong>Comprehensive Service:</strong> From puncture repairs to full replacements, we’ve got you covered.</li>
-    <li><strong>Peace of Mind:</strong> Our expert fitters bring everything needed to get you back on the road quickly and safely.</li>
+    <li>
+      <strong>Convenience:</strong> Save time and effort by letting us come to you.
+    </li>
+    <li>
+      <strong>Fast Response:</strong> Our 24/7 service ensures we’re there when you
+      need us, with same-day fitting available.
+    </li>
+    <li>
+      <strong>Comprehensive Service:</strong> From puncture repairs to full replacements,
+      we’ve got you covered.
+    </li>
+    <li>
+      <strong>Peace of Mind:</strong> Our expert fitters bring everything needed
+      to get you back on the road quickly and safely.
+    </li>
   </ul>
 
   <h2 class="fw-bold">How It Works</h2>
-  <p>
-    Our mobile tyre fitting process is simple and stress-free:
-  </p>
+  <p>Our mobile tyre fitting process is simple and stress-free:</p>
   <ol class="text-start">
     <li><strong>Call us:</strong> Share your location and tyre details.</li>
-    <li><strong>We come to you:</strong> At home, work, or the roadside, our fully equipped team will arrive quickly.</li>
-    <li><strong>We fit or repair:</strong> Your tyres are professionally fitted, balanced, or repaired on the spot.</li>
+    <li>
+      <strong>We come to you:</strong> At home, work, or the roadside, our fully
+      equipped team will arrive quickly.
+    </li>
+    <li>
+      <strong>We fit or repair:</strong> Your tyres are professionally fitted, balanced,
+      or repaired on the spot.
+    </li>
   </ol>
   <p>
-    No matter where you are, our priority is to get you moving again without delay.
+    No matter where you are, our priority is to get you moving again without
+    delay.
   </p>
 
   {
@@ -404,7 +430,7 @@ const { title, nearbyAreas = [], phoneNumber = "0330 133 9311" } = Astro.props;
         <p>
           We serve customers in {title} and surrounding areas, including:{" "}
           {nearbyAreas.map((area, index) => {
-            const slug = area.toLowerCase().replace(/\s+/g, '-');
+            const slug = area.toLowerCase().replace(/\s+/g, "-");
             return (
               <span>
                 <a
@@ -418,8 +444,8 @@ const { title, nearbyAreas = [], phoneNumber = "0330 133 9311" } = Astro.props;
                 {index < nearbyAreas.length - 2
                   ? ", "
                   : index === nearbyAreas.length - 2
-                  ? ", and "
-                  : ""}
+                    ? ", and "
+                    : ""}
               </span>
             );
           })}
@@ -430,6 +456,10 @@ const { title, nearbyAreas = [], phoneNumber = "0330 133 9311" } = Astro.props;
 
   <h2 class="fw-bold">Contact Us Today</h2>
   <p>
-    Don’t let a flat tyre slow you down. Call us now at <a href={`tel:${phoneNumber}`} class="link-danger">{phoneNumber}</a> for quick and professional mobile tyre fitting in {title}. Let us bring the tyre shop to you!
+    Don’t let a flat tyre slow you down. Call us now at <a
+      href={`tel:${phoneNumber}`}
+      class="link-danger">{phoneNumber}</a
+    > for quick and professional mobile tyre fitting in {title}. Let us bring
+    the tyre shop to you!
   </p>
 </ServiceLayout>
