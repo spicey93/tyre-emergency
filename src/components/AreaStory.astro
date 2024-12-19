@@ -1,0 +1,14 @@
+---
+const {imageUrl, story, area} = Astro.props;
+---
+
+<article class="row bg-secondary text-light g-0 mb-3">
+    <div class="col-md-6 p-3">
+        <h2 class="fw-bold">Tyres Fitted in {area}</h2>
+        <p>{story}</p>
+
+    </div>
+    <div class="col-md-6">
+        <img src=`${imageUrl}` alt=`Mobile tyre fitting in ${area}` width="100%" height="100%">
+    </div>
+</article>

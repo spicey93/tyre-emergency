@@ -13,7 +13,12 @@ export async function getStaticPaths() {
     },
     {
       params: { area: "arnold" },
-      props: { title: "Arnold", phoneNumber: nottinghamPhone },
+      props: {
+        title: "Arnold",
+        phoneNumber: nottinghamPhone,
+        imageUrl: "/areas/mobile-tyre-fitting-arnold.webp",
+        story: "We recieved an urgent call from a customer in Arnold who needed 4 tyres for their VW golf, and 4 locking wheel nuts to be removed. We managed to sort it all within 90 minutes.",
+      },
     },
     {
       params: { area: "averham" },
@@ -357,8 +362,15 @@ export async function getStaticPaths() {
 }
 
 import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import AreaStory from "../../components/AreaStory.astro"
 
-const { title, nearbyAreas = [], phoneNumber = "0330 133 9311" } = Astro.props;
+const {
+  title,
+  nearbyAreas = [],
+  phoneNumber = "0330 133 9311",
+  imageUrl = "",
+  story = "",
+} = Astro.props;
 ---
 
 <ServiceLayout
@@ -370,9 +382,32 @@ const { title, nearbyAreas = [], phoneNumber = "0330 133 9311" } = Astro.props;
   backgroundUrl="/img/mobile-tyre-fitting-near-me.webp"
 >
   <h1 class="fw-bold mb-3">Mobile Tyre Fitting {title}</h1>
-  <p>Are you looking for a <strong>mobile tyre fitting service in {title}?</strong> Maybe you've got a flat tyre at the side of the road? Or perhaps your tyres are worn and need replacing? In any case, here at Tyre Emergency we provide a convenient and fast mobile tyre service at your location - whether that's at home, work, or roadside.</p>
+  <p>
+    Are you looking for a <strong
+      >mobile tyre fitting service in {title}?</strong
+    > Maybe you've got a flat tyre at the side of the road? Or perhaps your tyres
+    are worn and need replacing? In any case, here at Tyre Emergency we provide a
+    convenient and fast mobile tyre service at your location - whether that's at
+    home, work, or roadside.
+  </p>
+
+  {
+    imageUrl && story && (
+      <AreaStory
+        imageUrl={imageUrl}
+        story={story}
+        area={title}
+      />
+    )
+  }
   <h2 class="fw-bold mb-3">Why Choose Us?</h2>
-  <p>We specialise in <strong>24 hour emergency mobile tyre fitting</strong>, whereby we come to you within 60 minutes of calling us - day or night. But, we also offer a competitively priced next-day tyre fitting service in {title} if you don't need an urgent tyre replacement.</p>
+  <p>
+    We specialise in <strong>24 hour emergency mobile tyre fitting</strong>,
+    whereby we come to you within 60 minutes of calling us - day or night. But,
+    we also offer a competitively priced next-day tyre fitting service in {
+      title
+    } if you don't need an urgent tyre replacement.
+  </p>
 
   {
     nearbyAreas.length > 0 && (
@@ -405,6 +440,13 @@ const { title, nearbyAreas = [], phoneNumber = "0330 133 9311" } = Astro.props;
     )
   }
 
-<h2 class="fw-bold mb-3">Get a Quote Now</h2>
-<p>If you would like a price for our mobile tyre fitting service and you live in {title} then <a href="/contact" class="text-danger">send us a message</a> or call us on <a class="text-danger" href=`tel:${phoneNumber}`>{phoneNumber}</a>. We'll be happy to get you a price.</p>
+  <h2 class="fw-bold mb-3">Get a Quote Now</h2>
+  <p>
+    If you would like a price for our mobile tyre fitting service and you live
+    in {title} then <a href="/contact" class="text-danger">send us a message</a>
+    or call us on <a class="text-danger" href=`tel:${phoneNumber}`
+      >{phoneNumber}</a
+    >. We'll be happy to get you a price.
+  </p>
+
 </ServiceLayout>
