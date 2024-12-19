@@ -370,58 +370,11 @@ const { title, nearbyAreas = [], phoneNumber = "0330 133 9311" } = Astro.props;
   backgroundUrl="/img/mobile-tyre-fitting-near-me.webp"
 >
   <h1 class="fw-bold mb-3">Mobile Tyre Fitting {title}</h1>
-  <p>
-    Stuck at home or on the roadside with a flat tyre? Or simply prefer the
-    convenience of a tyre expert coming to you? Whatever the reason, our mobile
-    tyre fitting service in {title} is designed to make your life easier.
-  </p>
-  <p>
-    At Tyre Emergency, we provide fast, reliable, and hassle-free tyre fitting
-    at your location—whether it's your home, workplace, or even the roadside.
-    Our professional team is available 24/7 and aims to reach you within just 60
-    minutes.
-  </p>
-
-  <h2 class="fw-bold">Why Choose Mobile Tyre Fitting?</h2>
-  <p>
-    Driving to a tyre shop isn’t always possible—or necessary! Here’s why our
-    mobile tyre service is the best option:
-  </p>
-  <ul class="text-start">
-    <li>
-      <strong>Convenience:</strong> Save time and effort by letting us come to you.
-    </li>
-    <li>
-      <strong>Fast Response:</strong> Our 24/7 service ensures we’re there when you
-      need us, with same-day fitting available.
-    </li>
-    <li>
-      <strong>Comprehensive Service:</strong> From puncture repairs to full replacements,
-      we’ve got you covered.
-    </li>
-    <li>
-      <strong>Peace of Mind:</strong> Our expert fitters bring everything needed
-      to get you back on the road quickly and safely.
-    </li>
-  </ul>
-
-  <h2 class="fw-bold">How It Works</h2>
-  <p>Our mobile tyre fitting process is simple and stress-free:</p>
-  <ol class="text-start">
-    <li><strong>Call us:</strong> Share your location and tyre details.</li>
-    <li>
-      <strong>We come to you:</strong> At home, work, or the roadside, our fully
-      equipped team will arrive quickly.
-    </li>
-    <li>
-      <strong>We fit or repair:</strong> Your tyres are professionally fitted, balanced,
-      or repaired on the spot.
-    </li>
-  </ol>
-  <p>
-    No matter where you are, our priority is to get you moving again without
-    delay.
-  </p>
+  <p>Are you looking for a <strong>mobile tyre fitting service in {title}?</strong> Maybe you've got a flat tyre at the side of the road? Or perhaps your tyres are worn and need replacing? In any case, here at Tyre Emergency we provide a convenient and fast mobile tyre service at your location - whether that's at home, work, or roadside.</p>
+  <h2 class="fw-bold mb-3">Why Choose Us?</h2>
+  <p>We specialise in <strong>24 hour emergency mobile tyre fitting</strong>, whereby we come to you within 60 minutes of calling us - day or night. But, we also offer a competitively priced next-day tyre fitting service in {title} if you don't need an urgent tyre replacement.</p>
+  <h2 class="fw-bold mb-3">Get a Quote Now</h2>
+  <p>If you would like a price for our mobile tyre fitting service and you live in {title}, then <a href="/contact" class="text-danger">send us a message</a> or call us on <a class="text-danger" href=`tel:${phoneNumber}`>{phoneNumber}</a>. We'll be happy to get you a price.</p>
 
   {
     nearbyAreas.length > 0 && (
@@ -454,12 +407,5 @@ const { title, nearbyAreas = [], phoneNumber = "0330 133 9311" } = Astro.props;
     )
   }
 
-  <h2 class="fw-bold">Contact Us Today</h2>
-  <p>
-    Don’t let a flat tyre slow you down. Call us now at <a
-      href={`tel:${phoneNumber}`}
-      class="link-danger">{phoneNumber}</a
-    > for quick and professional mobile tyre fitting in {title}. Let us bring
-    the tyre shop to you!
-  </p>
+
 </ServiceLayout>
