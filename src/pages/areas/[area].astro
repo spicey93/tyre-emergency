@@ -17,7 +17,8 @@ export async function getStaticPaths() {
         title: "Arnold",
         phoneNumber: nottinghamPhone,
         imageUrl: "/areas/mobile-tyre-fitting-arnold.webp",
-        story: "We recieved an urgent call from a customer in Arnold who needed 4 tyres for their VW golf, and 4 locking wheel nuts to be removed. We managed to sort it all within 90 minutes.",
+        story:
+          "We recieved an urgent call from a customer in Arnold who needed 4 tyres for their VW golf, and 4 locking wheel nuts to be removed. We managed to sort it all within 90 minutes.",
       },
     },
     {
@@ -261,6 +262,9 @@ export async function getStaticPaths() {
           "Edwalton",
         ],
         phoneNumber: nottinghamPhone,
+        imageUrl: "/areas/mobile-tyre-fitting-nottingham.webp",
+        story:
+          "On a Sunday, a customer in Nottingham called us urgently needing all four tyres replaced on his daughter's car, as they were extremely worn and she had a long trip after work. From the moment he called, we had the job completed in just 90 minutes, fitting all four tyres in an impressive 19 minutes. She was ready to travel safely in no time!",
       },
     },
     {
@@ -356,13 +360,16 @@ export async function getStaticPaths() {
           "Creswell",
         ],
         phoneNumber: worksopPhone,
+        story:
+         "Early on a Friday morning, the RAC reached out to us about a tyre blowout in Worksop. Despite the tyre being an uncommon size, we quickly sourced a replacement and, within just 60 minutes, had it fitted. The lady was soon safely back on the road!",
+        imageUrl: "/areas/mobile-tyre-fitting-worksop.webp",
       },
     },
   ];
 }
 
 import ServiceLayout from "../../layouts/ServiceLayout.astro";
-import AreaStory from "../../components/AreaStory.astro"
+import AreaStory from "../../components/AreaStory.astro";
 
 const {
   title,
@@ -393,11 +400,7 @@ const {
 
   {
     imageUrl && story && (
-      <AreaStory
-        imageUrl={imageUrl}
-        story={story}
-        area={title}
-      />
+      <AreaStory imageUrl={imageUrl} story={story} area={title} />
     )
   }
   <h2 class="fw-bold mb-3">Why Choose Us?</h2>
@@ -448,5 +451,4 @@ const {
       >{phoneNumber}</a
     >. We'll be happy to get you a price.
   </p>
-
 </ServiceLayout>
