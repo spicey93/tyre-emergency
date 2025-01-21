@@ -21,26 +21,28 @@ import Form from "./Form.astro";
 
 <section id="hero" style={heroStyle}>
   <div class="container py-5">
-    <div class="row g-5">
-      <div class="col-lg-7 text-light text-center text-lg-start d-flex flex-column justify-content-center">
+    <!-- <div class="row g-5"> -->
+      <!-- <div class="col-lg-7 text-light text-center text-lg-start d-flex flex-column justify-content-center"> -->
+       <div class="text-light text-center d-flex flex-column justify-content-center">
         <p class="fw-bold display-3 mb-4">{heading}</p>
         <p class="lead fs-3 mb-4">{tagline}</p>
         <p class="mb-0 fs-5">
-          <i class="bi bi-check-square-fill text-success me-2"></i> Open 7 Days a Week
+
+          <i class="bi bi-check-square text-light me-2"></i> Open 7 Days a Week
         </p>
         <p class="mb-0 fs-5">
-          <i class="bi bi-check-square-fill text-success me-2"></i> Same Day Service Available
+          <i class="bi bi-check-square text-light me-2"></i> Same Day Service Available
         </p>
         <p class="mb-3 fs-5">
-          <i class="bi bi-check-square-fill text-success me-2"></i> 10+ Years of Experience
+          <i class="bi bi-check-square text-light me-2"></i> 10+ Years of Experience
         </p>
-        <div class="d-lg-none">
+        <div class="">
           <a href=`tel:${phoneNumber}` class="btn btn-primary fw-bold text-light mt-4 mb-5 btn-lg"><i class="bi bi-telephone-fill me-2"></i>Call Now For a Quote</a>
         </div>
       </div>
-      <div class="d-none col-lg-4 offset-lg-1 d-lg-flex flex-column align-items-stretch justify-content-center">
+      <!-- <div class="d-none col-lg-4 offset-lg-1 d-lg-flex flex-column align-items-stretch justify-content-center">
         <Form />
-      </div>
-    </div>
+      </div> -->
+    <!-- </div> -->
   </div>
 </section>
