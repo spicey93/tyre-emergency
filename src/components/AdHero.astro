@@ -1,0 +1,48 @@
+---
+const { heading, subheading, heroContent } = Astro.props;
+---
+
+<div id="adHero" class="container d-flex">
+  <div class="row py-5">
+    <div
+      class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start mb-5 mb-md-0"
+    >
+      <h1 class="fw-bold">{heading}</h1>
+      <h2 class="mb-3">{subheading}</h2>
+      <p class="lead">{heroContent}</p>
+      <a href="tel:03301339311" class="btn btn-warning btn-lg fw-bold"
+        >Need Help? Call Us Now</a
+      >
+    </div>
+    <div
+      class="col-12 col-md-6 d-flex align-items-center justify-content-center"
+    >
+      <img
+        src="/img/mobile-tyre-fitting-near-me.webp"
+        alt=""
+        id="adHeroImg"
+        class="rounded w-100"
+      />
+    </div>
+  </div>
+</div>
+<div class="container py-5 text-center">
+    <h2 class="fw-bold">We've Helped Hundreds of Stranded Drivers</h2>
+    <p class="lead">Our goal is to get to you in less than 60 minutes and provide exceptional customer service along the way. Don't just take our word for it though, here's what our customers are saying about us...</p>
+  <script
+    defer
+    async
+    src="https://cdn.trustindex.io/loader.js?85b195e40d6d07754d66bbf3d78"
+  ></script>
+</div>
+
+<style>
+  #adHero {
+    margin-top: 150px;
+    min-height: 75vh;
+  }
+
+  #adHeroImg {
+    max-width: 500px;
+  }
+</style>
