@@ -11,6 +11,8 @@ import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/main.css";
 import AdNav from "../components/AdNav.astro";
 import AdHero from "../components/AdHero.astro";
+import Areas from "../components/Areas.astro";
+import AdReviews from "../components/AdReviews.astro";
 import CTA from "../components/CTA.astro";
 import Footer from "../components/Footer.astro";
 
@@ -122,6 +124,8 @@ import Footer from "../components/Footer.astro";
     <!-- End Google Tag Manager (noscript) -->
     <AdNav />
     <AdHero heading={heading} subheading={subheading} heroContent={heroContent}/>
+    <Areas />
+    <AdReviews />
     <slot />
     <CTA />
     <Footer />
