@@ -1,15 +1,15 @@
 ---
 export async function getStaticPaths() {
-  const ripleyPhone = "0330 133 9311"; // Closest number
-  const nottinghamPhone = "0330 133 9311"; // Generic number
-  const newarkPhone = "0330 133 9311"
-  const mansfieldPhone = "0330 133 9311";
-  const worksopPhone = "0330 133 9311";
-  const chesterfieldPhone = "0330 133 9311"; // Closest number
+  const nottinghamPhone = "0115 648 1871"; 
+  const newarkPhone = "01636 33 00 22"
+  const mansfieldPhone = "01623 325 123";
+  const worksopPhone = "01909 251051";
+  const chesterfieldPhone = "01246 792 051"; 
+
   return [
     {
       params: { area: "alfreton" },
-      props: { title: "Alfreton", phoneNumber: ripleyPhone },
+      props: { title: "Alfreton", phoneNumber: mansfieldPhone },
     },
     {
       params: { area: "arnold" },
@@ -35,7 +35,7 @@ export async function getStaticPaths() {
     },
     {
       params: { area: "bilsthorpe" },
-      props: { title: "Bilsthorpe" },
+      props: { title: "Bilsthorpe", phoneNumber: mansfieldPhone },
     },
     {
       params: { area: "bingham" },
@@ -102,7 +102,6 @@ export async function getStaticPaths() {
       props: {
         title: "Derby",
         nearbyAreas: ["Ilkeston", "Somercotes", "Ripley", "Alfreton"],
-        phoneNumber: ripleyPhone,
       },
     },
     {
@@ -305,7 +304,7 @@ export async function getStaticPaths() {
     },
     {
       params: { area: "ripley" },
-      props: { title: "Ripley", phoneNumber: ripleyPhone },
+      props: { title: "Ripley", phoneNumber: mansfieldPhone },
     },
     {
       params: { area: "shirebrook" },
@@ -316,7 +315,7 @@ export async function getStaticPaths() {
     },
     {
       params: { area: "somercotes" },
-      props: { title: "Somercotes", phoneNumber: ripleyPhone },
+      props: { title: "Somercotes", phoneNumber: mansfieldPhone },
     },
     {
       params: { area: "southwell" },
