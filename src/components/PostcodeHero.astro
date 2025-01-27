@@ -8,17 +8,17 @@ const { heading, subheading } = Astro.props;
 >
   <div class="container py-5 text-center d-flex flex-column align-items-center">
     <h1 class="fw-bold display-3">{heading}</h1>
-    <p class="lead fs-4 mb-5">{subheading}</p>
-    <form action="" method="get" id="postcodeForm" class="">
+    <p class="lead fs-4 mb-4">{subheading}</p>
+    <form action="" method="get" id="postcodeForm" class=" mb-3">
       <div class="input-group">
         <input
           type="text"
           name="postcode"
           id="postcode"
           placeholder="Postcode"
-          class="form-control"
+          class="form-control form-control-lg"
         />
-        <button class="btn btn-danger" type="submit" id="submitButton">
+        <button class="btn btn-danger btn-lg" type="submit" id="submitButton">
           <span id="submitText">Search</span>
           <div
             id="loadingSpinner"
