@@ -14,7 +14,6 @@ $danger: #ff3131;
 
 .accent {
     font-family: 'Anton', 'Roboto', sans-serif;
-    letter-spacing: 1px; /* Adjust the value as needed */
 }
 .dropdown-item.active, .dropdown-item:focus {
     background-color: $danger !important;  // Set active dropdown link color to red

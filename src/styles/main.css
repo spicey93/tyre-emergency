@@ -12004,7 +12004,6 @@ textarea.form-control-lg {
 
 .accent, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, .btn, .call-btn {
   font-family: "Anton", "Roboto", sans-serif;
-  letter-spacing: 1px; /* Adjust the value as needed */
 }
 
 .dropdown-item.active, .dropdown-item:focus {
