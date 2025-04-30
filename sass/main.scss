@@ -12,6 +12,10 @@ $danger: #ff3131;
     --bs-body-font-family: "Roboto", sans-serif;
 }
 
+.accent {
+    font-family: 'Anton', 'Roboto', sans-serif;
+    letter-spacing: 1px; /* Adjust the value as needed */
+}
 .dropdown-item.active, .dropdown-item:focus {
     background-color: $danger !important;  // Set active dropdown link color to red
 }
@@ -46,6 +50,15 @@ $danger: #ff3131;
     @extend .btn, .btn-lg, .btn-danger, .text-light, .fw-bold;
 }
 
+.btn {
+    border-radius: 0px;
+    border: 3px solid white;
+    @extend .accent, .text-uppercase;
+}
+
+h1, h2, h3, h4, h5 {
+    @extend .accent, .text-uppercase;
+}
 
 #map {
     height: 300px;

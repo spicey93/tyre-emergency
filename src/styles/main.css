@@ -8430,7 +8430,7 @@ textarea.form-control-lg {
   text-transform: lowercase !important;
 }
 
-.text-uppercase {
+.text-uppercase, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, .btn, .call-btn {
   text-transform: uppercase !important;
 }
 
@@ -12002,8 +12002,18 @@ textarea.form-control-lg {
   --bs-body-font-family: "Roboto", sans-serif;
 }
 
+.accent, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, .btn, .call-btn {
+  font-family: "Anton", "Roboto", sans-serif;
+  letter-spacing: 1px; /* Adjust the value as needed */
+}
+
 .dropdown-item.active, .dropdown-item:focus {
   background-color: #ff3131 !important;
+}
+
+.btn, .call-btn {
+  border-radius: 0px;
+  border: 3px solid white;
 }
 
 #map {
