@@ -4,7 +4,7 @@
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -11999,11 +11999,12 @@ textarea.form-control-lg {
   }
 }
 :root {
-  --bs-body-font-family: "Roboto", sans-serif;
+  --bs-body-font-family: "DM Sans", sans-serif;
 }
 
 .accent, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, .btn, .call-btn {
-  font-family: "Anton", "Roboto", sans-serif;
+  font-family: "Anton", "DM Sans", sans-serif;
+  letter-spacing: 0.05rem;
 }
 
 .dropdown-item.active, .dropdown-item:focus {
@@ -12012,7 +12013,6 @@ textarea.form-control-lg {
 
 .btn, .call-btn {
   border-radius: 0px;
-  border: 3px solid white;
 }
 
 #map {
