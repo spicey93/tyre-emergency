@@ -1,10 +1,10 @@
 ---
 export async function getStaticPaths() {
-  const nottinghamPhone = "0330 133 9311"; 
-  const newarkPhone = "0330 133 9311"
+  const nottinghamPhone = "0330 133 9311";
+  const newarkPhone = "0330 133 9311";
   const mansfieldPhone = "01623 325 123";
   const worksopPhone = "01909 251051";
-  const chesterfieldPhone = "0330 133 9311"; 
+  const chesterfieldPhone = "0330 133 9311";
 
   return [
     {
@@ -360,7 +360,7 @@ export async function getStaticPaths() {
         ],
         phoneNumber: worksopPhone,
         story:
-         "Early on a Friday morning, the RAC reached out to us about a tyre blowout in Worksop. Despite the tyre being an uncommon size, we quickly sourced a replacement and, within just 60 minutes, had it fitted. The lady was soon safely back on the road!",
+          "Early on a Friday morning, the RAC reached out to us about a tyre blowout in Worksop. Despite the tyre being an uncommon size, we quickly sourced a replacement and, within just 60 minutes, had it fitted. The lady was soon safely back on the road!",
         imageUrl: "/areas/mobile-tyre-fitting-worksop.webp",
       },
     },
@@ -411,6 +411,22 @@ const {
     } if you don't need an urgent tyre replacement.
   </p>
 
+  <h2>Need Mobile Tyre Fitting in {title}?</h2>
+  <p>
+    Call us now on {phoneNumber} or get a free quote — fast, friendly service to
+    your location.
+  </p>
+
+  <h2>How It Works</h2>
+  <p>Using our mobile tyre fitting service is quick and easy:</p>
+  <ol>
+    <li>Call us with your tyre size and location</li>
+    <li>We’ll give you a quote and estimated arrival time</li>
+    <li>Our fitter will come to your location in {title} and fit your new tyres</li>
+    <li>Pay on completion — we accept both cash and card</li>
+  </ol>
+  
+
   {
     nearbyAreas.length > 0 && (
       <>
@@ -450,4 +466,5 @@ const {
       >{phoneNumber}</a
     >. We'll be happy to get you a price.
   </p>
+
 </ServiceLayout>
