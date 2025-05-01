@@ -1,20 +1,20 @@
 // VARIABLES
-// $primary: #31FFFF;
+$primary: #31ffff ;
 $danger: #ff3131;
 
 // IMPORT PACKAGES
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 // SET BASE FONT
 :root {
-    --bs-body-font-family: "DM Sans", sans-serif;
+    --bs-body-font-family: 'Roboto Condensed', sans-serif;
 }
 
 .accent {
-    font-family: 'Anton', 'DM Sans', sans-serif;
-    letter-spacing: 0.05rem;
+    font-family: 'Anton', 'Merriweather', "Crimson Pro", 'Lato', 'Open Sans','Roboto Condensed', 'Roboto', 'Work Sans', sans-serif;
+    // letter-spacing: 0.05rem;
 }
 .dropdown-item.active, .dropdown-item:focus {
     background-color: $danger !important;  // Set active dropdown link color to red
@@ -52,7 +52,6 @@ $danger: #ff3131;
 
 .btn {
     border-radius: 0px;
-    @extend .accent, .text-uppercase;
 }
 
 h1, h2, h3, h4, h5 {

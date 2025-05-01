@@ -7,7 +7,7 @@ const {
 } = Astro.props;
 
 const heroStyle = {
-  background: `linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(${backgroundUrl})`,
+  background: `linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${backgroundUrl})`,
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
@@ -16,32 +16,16 @@ const heroStyle = {
   alignItems: "center",
 };
 
-import Form from "./Form.astro";
 ---
 
 <section id="hero" style={heroStyle}>
   <div class="container py-5">
-    <!-- <div class="row g-5"> -->
-      <!-- <div class="col-lg-7 text-light text-center text-lg-start d-flex flex-column justify-content-center"> -->
        <div class="text-light text-center d-flex flex-column justify-content-center">
-        <p class="fw-bold display-3 mb-4 accent text-uppercase"><em>{heading}</em></p>
-        <p class="lead fs-3 mb-4">{tagline}</p>
-        <p class="mb-0 fs-5">
-          <i class="bi bi-clock-fill text-light me-2"></i> 30 Minute Response
-        </p>
-        <p class="mb-0 fs-5">
-          <i class="bi bi-map-fill text-light me-2"></i> Nottinghamshire Based
-        </p>
-        <p class="mb-3 fs-5">
-          <i class="bi bi-check-square-fill text-light me-2"></i> 10+ Years Experience
-        </p>
-        <div class="">
-          <a href=`tel:${phoneNumber}` class="btn btn-warning fw-bold mt-4 mb-5 btn-lg"><i class="bi bi-telephone-fill"></i> Call Us for Help</a>
+        <p class="fw-bold display-1 mb-3 accent text-uppercase"><em>{heading}</em></p>
+        <p class="fs-2 mb-4">{tagline}</p>
+        <div class="mb-5">
+          <a href=`tel:${phoneNumber}` class="btn fs-4 btn-primary text-uppercase fw-bold btn-lg"><i class="bi bi-telephone-fill"></i> Call Us Now</a>
         </div>
       </div>
-      <!-- <div class="d-none col-lg-4 offset-lg-1 d-lg-flex flex-column align-items-stretch justify-content-center">
-        <Form />
-      </div> -->
-    <!-- </div> -->
   </div>
 </section>
