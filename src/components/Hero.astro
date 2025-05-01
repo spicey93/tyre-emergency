@@ -20,11 +20,27 @@ const heroStyle = {
 
 <section id="hero" style={heroStyle}>
   <div class="container py-5">
-       <div class="text-light text-center d-flex flex-column justify-content-center">
-        <p class="fw-bold display-1 mb-3 accent text-uppercase"><em>{heading}</em></p>
-        <p class="fs-2 mb-4">{tagline}</p>
-        <div class="mb-5">
-          <a href=`tel:${phoneNumber}` class="btn fs-4 btn-primary text-uppercase fw-bold btn-lg"><i class="bi bi-telephone-fill"></i> Call Us Now</a>
+       <div class="text-light d-flex flex-column justify-content-center">
+        <p class="fw-bold display-3 mb-3 accent text-uppercase"><em>{heading}</em></p>
+        <p class="fs-2 mb-4 fw-bold">{tagline}</p>
+        <ul class="fs-5 lead list-unstyled">
+          <li class="mb-2">
+            <i class="bi bi-geo-alt-fill text-danger me-2"></i>
+            Mobile Service — Home, Work, or Roadside
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-house-fill text-danger me-2"></i>
+            Based in Nottinghamshire — 10+ Years of Experience
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-clock-fill text-danger me-2"></i>
+            Fast Response Times — Typically Within 30 Minutes
+          </li>
+        </ul>
+        
+        
+        <div class="mt-4">
+          <a href=`tel:${phoneNumber}` class="btn fs-4 btn-outline-danger text-uppercase fw-bold btn-lg"><i class="bi bi-telephone-fill"></i> Call Us Now</a>
         </div>
       </div>
   </div>
