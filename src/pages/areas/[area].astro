@@ -9,13 +9,17 @@ export async function getStaticPaths() {
   return [
     {
       params: { area: "alfreton" },
-      props: { title: "Alfreton", phoneNumber: mansfieldPhone },
+      props: { 
+        title: "Alfreton", 
+      phoneNumber: mansfieldPhone, 
+      googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20537.350176719705!2d-1.408698033668238!3d53.09926968985734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48798c2b1f9c0691%3A0x14c50fd016a1506e!2sAlfreton!5e1!3m2!1sen!2suk!4v1746195691033!5m2!1sen!2suk' },
     },
     {
       params: { area: "arnold" },
       props: {
         title: "Arnold",
         phoneNumber: nottinghamPhone,
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41162.498185056524!2d-1.2108299334368178!3d53.00725817230053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c0e421386aa5%3A0x7ca1834c39c7fc1b!2sArnold%2C%20Nottingham!5e1!3m2!1sen!2suk!4v1746195767879!5m2!1sen!2suk",
         imageUrl: "/areas/mobile-tyre-fitting-arnold.webp",
         story:
           "We recieved an urgent call from a customer in Arnold who needed 4 tyres for their VW golf, and 4 locking wheel nuts to be removed. We managed to sort it all within 90 minutes.",
@@ -23,23 +27,39 @@ export async function getStaticPaths() {
     },
     {
       params: { area: "averham" },
-      props: { title: "Averham", phoneNumber: newarkPhone },
+      props: { title: "Averham", phoneNumber: newarkPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20543.522205528898!2d-0.8988902128957279!3d53.086339912541376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879b449be14dbc9%3A0xa933bda7c32dec5d!2sAverham%2C%20Newark%20NG23%205RS!5e1!3m2!1sen!2suk!4v1746195879505!5m2!1sen!2suk' },
     },
     {
-      params: { area: "balderton" },
-      props: { title: "Balderton", phoneNumber: newarkPhone },
+  params: { area: "balderton" },
+  props: {
+    title: "Balderton",
+    phoneNumber: newarkPhone,
+    googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20557.949460677068!2d-0.8039943838191896!3d53.0561077149269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48784abc8d836b83%3A0x23e840a59e1e4885!2sBalderton%2C%20Newark!5e1!3m2!1sen!2suk!4v1746196116524!5m2!1sen!2suk"
+  },
     },
     {
       params: { area: "bestwood" },
-      props: { title: "Bestwood", phoneNumber: nottinghamPhone },
+      props: {
+        title: "Bestwood",
+        phoneNumber: nottinghamPhone,
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20571.594271301536!2d-1.1986128339191866!3d53.02750408153479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c012d96bf7d1%3A0x4f762bb7fe97ca5b!2sBestwood%20Village%2C%20Nottingham!5e1!3m2!1sen!2suk!4v1746196082947!5m2!1sen!2suk"
+      }
     },
     {
       params: { area: "bilsthorpe" },
-      props: { title: "Bilsthorpe", phoneNumber: mansfieldPhone },
+      props: {
+        title: "Bilsthorpe",
+        phoneNumber: mansfieldPhone,
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20519.4564015219!2d-1.053845233537103!3d53.136742968083304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879ba22e0295099%3A0xfb5d41b393bfabbc!2sBilsthorpe%2C%20Newark!5e1!3m2!1sen!2suk!4v1746196148537!5m2!1sen!2suk"
+      }
     },
     {
       params: { area: "bingham" },
-      props: { title: "Bingham", phoneNumber: nottinghamPhone },
+      props: {
+        title: "Bingham",
+        phoneNumber: nottinghamPhone,
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20490.984066869513!2d-0.967562183753518!3d52.95108186281198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879de56c84a9153%3A0x62fd3cf385a50f0b!2sBingham%2C%20Nottingham!5e1!3m2!1sen!2suk!4v1746196254893!5m2!1sen!2suk"
+      }
     },
     {
       params: { area: "blidworth" },
@@ -47,95 +67,112 @@ export async function getStaticPaths() {
         title: "Blidworth",
         map: "Mansfield",
         phoneNumber: mansfieldPhone,
-      },
-    },
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20519.4564015219!2d-1.053845233537103!3d53.136742968083304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879bece6b650dbb%3A0x6a92d87796e5ae8a!2sBlidworth%2C%20Mansfield!5e1!3m2!1sen!2suk!4v1746196359568!5m2!1sen!2suk"
+      }
+    }
+    ,
     {
       params: { area: "blyth" },
-      props: { title: "Blyth", phoneNumber: worksopPhone },
+      props: {
+        title: "Blyth",
+        phoneNumber: mansfieldPhone,
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20403.572845153427!2d-1.09663730572107!3d53.37898440612721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879082c487f921f%3A0x64be069c016cb167!2sBlyth!5e1!3m2!1sen!2suk!4v1746196445891!5m2!1sen!2suk"
+      }
     },
     {
       params: { area: "bulwell" },
-      props: { title: "Bulwell", phoneNumber: nottinghamPhone },
+      props: {
+        title: "Bulwell",
+        phoneNumber: nottinghamPhone,
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20585.057099799043!2d-1.2219728840178365!3d52.99927139792272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c0230d800149%3A0xd13767c6a0e01cb0!2sBulwell%2C%20Nottingham!5e1!3m2!1sen!2suk!4v1746196493545!5m2!1sen!2suk"
+      }
     },
     {
       params: { area: "burton-joyce" },
-      props: { title: "Burton Joyce", phoneNumber: nottinghamPhone },
+      props: {
+        title: "Burton Joyce",
+        phoneNumber: nottinghamPhone,
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20590.27528557086!2d-1.0707331840560605!3d52.98832560427512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c645535fe22b%3A0xb0dd85c8d61003d6!2sBurton%20Joyce%2C%20Nottingham!5e1!3m2!1sen!2suk!4v1746196531781!5m2!1sen!2suk"
+      }
     },
     {
       params: { area: "calverton" },
-      props: { title: "Calverton", phoneNumber: nottinghamPhone },
+      props: { title: "Calverton", phoneNumber: nottinghamPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10282.802706209277!2d-1.0950046748278779!3d53.04005985684732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c758bc41ac61%3A0xa738a44dfb4345d2!2sCalverton%2C%20Nottingham!5e1!3m2!1sen!2suk!4' },
     },
     {
       params: { area: "carlton" },
-      props: { title: "Carlton", phoneNumber: nottinghamPhone },
+      props: { title: "Carlton", phoneNumber: nottinghamPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20599.701206546146!2d-1.11569598412513!3d52.968549565750344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c0d3f6e789ad%3A0x50e1ca8bbc2fba0!2sCarlton%2C%20Nottingham!5e1!3m2!1sen!2suk!4v1746196726722!5m2!1sen!2suk' },
     },
     {
       params: { area: "carlton-in-lindrick" },
-      props: { title: "Carlton in Lindrick", phoneNumber: worksopPhone },
+      props: { title: "Carlton-in-Lindrick", phoneNumber: worksopPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20414.168794688736!2d-1.1563629062643108!3d53.356866467949175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879a0ccedad0a39%3A0xc3196b1f190ba097!2sCarlton%20in%20Lindrick%2C%20Worksop!5e1!3m2!1sen!2suk!4v1746196755443!5m2!1sen!2suk' },
     },
     {
       params: { area: "caunton" },
-      props: { title: "Caunton", phoneNumber: newarkPhone },
+      props: { title: "Caunton", phoneNumber: newarkPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5130.192896401278!2d-0.8910598018471654!3d53.133989325646084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879b3f8225aa633%3A0xfd3f947f063ba303!2sCaunton%2C%20Newark!5e1!3m2!1sen!2suk!4v1746196828042!5m2!1sen!2suk' },
     },
     {
       params: { area: "chesterfield" },
-      props: { title: "Chesterfield", phoneNumber: chesterfieldPhone },
+      props: { title: "Chesterfield", phoneNumber: chesterfieldPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40933.47974872488!2d-1.4812501505009628!3d53.247035707516226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879842c07774617%3A0x603c8e349b6fb8e5!2sChesterfield!5e1!3m2!1sen!2suk!4v1746196856747!5m2!1sen!2suk' },
     },
     {
       params: { area: "clipstone" },
-      props: { title: "Clipstone", phoneNumber: newarkPhone },
+      props: { title: "Clipstone", phoneNumber: newarkPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10254.076785697456!2d-1.1267718747229465!3d53.16040397134787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879bc7a5e161e51%3A0xc4373711a8f231c6!2sClipstone%2C%20Mansfield!5e1!3m2!1sen!2suk!4v1746196881029!5m2!1sen!2suk' },
     },
     {
       params: { area: "colwick" },
-      props: { title: "Colwick", phoneNumber: nottinghamPhone },
+      props: { title: "Colwick", phoneNumber: nottinghamPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10303.121263403962!2d-1.0964569249020848!3d52.954822531961184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c40210de43a9%3A0x6ffaa969cb7ac497!2sColwick%2C%20Nottingham!5e1!3m2!1sen!2suk!4v1746196945077!5m2!1sen!2suk' },
     },
     {
       params: { area: "cotgrave" },
-      props: { title: "Cotgrave", phoneNumber: nottinghamPhone },
+      props: { title: "Cotgrave", phoneNumber: nottinghamPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10314.189159401833!2d-1.0485301249424948!3d52.9083518956426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c50692f696bf%3A0xe9ddb6e9223dcd79!2sCotgrave%2C%20Nottingham!5e1!3m2!1sen!2suk!4v1746196974375!5m2!1sen!2suk' },
     },
     {
       params: { area: "creswell" },
-      props: { title: "Creswell", phoneNumber: worksopPhone },
+      props: { title: "Creswell", phoneNumber: worksopPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10229.079591715357!2d-1.2288624746316372!3d53.26497309046205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48799880ae562aaf%3A0xa23bc1a748dcf277!2sCreswell%2C%20Worksop!5e1!3m2!1sen!2suk!4v1746197014000!5m2!1sen!2suk' },
     },
     {
       params: { area: "derby" },
       props: {
         title: "Derby",
         nearbyAreas: ["Ilkeston", "Somercotes", "Ripley", "Alfreton"],
+        googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82501.49514422352!2d-1.5523677469584345!3d52.91466111328787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879e43286a4caa7%3A0x5fc9de954e36df!2sDerby!5e1!3m2!1sen!2suk!4v1746197056877!5m2!1sen!2suk'
       },
     },
     {
       params: { area: "doncaster" },
-      props: { title: "Doncaster", phoneNumber: worksopPhone },
+      props: { title: "Doncaster", phoneNumber: worksopPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81345.85495295894!2d-1.2024237124258577!3d53.51892069004983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4878e2a8b277ed2f%3A0x829cbce4b81d7048!2sDoncaster!5e1!3m2!1sen!2suk!4v1746197088797!5m2!1sen!2suk' },
     },
     {
       params: { area: "eakring" },
       props: {
         title: "Eakring",
         phoneNumber: newarkPhone,
+        googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10256.48482712625!2d-1.0052029747317401!3d53.150323024323505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879b09533e48a65%3A0x1096e15b15b53bd0!2sEakring%2C%20Newark!5e1!3m2!1sen!2suk!4v1746197120099!5m2!1sen!2suk'
       },
     },
     {
       params: { area: "east-bridgford" },
-      props: { title: "East Bridgford", phoneNumber: nottinghamPhone },
+      props: { title: "East Bridgford", phoneNumber: nottinghamPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20593.184625141697!2d-1.0045188154415692!3d52.98222221818885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c8e93a0ed6a3%3A0xa79cf35ab94d59a6!2sEast%20Bridgford%2C%20Nottingham!5e1!3m2!1sen!2suk!4v1746197149963!5m2!1sen!2suk' },
     },
     {
       params: { area: "east-markham" },
-      props: { title: "East Markham", phoneNumber: newarkPhone },
+      props: { title: "East Markham", phoneNumber: newarkPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10232.804469511426!2d-0.9018414746452336!3d53.249400095064075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879adb67abdd2e9%3A0xdb27d640901d26bc!2sEast%20Markham%2C%20Newark!5e1!3m2!1sen!2suk!4v1746197181153!5m2!1sen!2suk' },
     },
     {
       params: { area: "eastwood" },
-      props: { title: "Eastwood", phoneNumber: nottinghamPhone },
+      props: { title: "Eastwood", phoneNumber: nottinghamPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20576.821595241898!2d-1.327485483957486!3d53.01654318789769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879eb4c290f5ae7%3A0x73c7115f9fa45f38!2sEastwood%2C%20Nottingham!5e1!3m2!1sen!2suk!4v1746197258310!5m2!1sen!2suk' },
     },
     {
       params: { area: "edwalton" },
-      props: { title: "Edwalton", phoneNumber: nottinghamPhone },
+      props: { title: "Edwalton", phoneNumber: nottinghamPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10313.640338344467!2d-1.1234193249404931!3d52.910656894964205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c30db189f035%3A0xea9b5806d7b089b4!2sEdwalton%2C%20Nottingham!5e1!3m2!1sen!2suk!4v1746197284057!5m2!1sen!2suk' },
     },
     {
       params: { area: "edwinstowe" },
       props: {
         title: "Edwinstowe",
         phoneNumber: newarkPhone,
+        googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20494.963790690712!2d-1.1040475604063942!3d53.18800580820327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879b06bfa8afb65%3A0x50e1ca8bbc34700!2sEdwinstowe%2C%20Mansfield!5e1!3m2!1sen!2suk!4v1746197315233!5m2!1sen!2suk'
       },
     },
     {
@@ -143,40 +180,43 @@ export async function getStaticPaths() {
       props: {
         title: "Farnsfield",
         phoneNumber: newarkPhone,
+        googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10267.344338336681!2d-1.0428062747714126!3d53.10484458774299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879b9be3699b003%3A0x63987e1972015abe!2sFarnsfield%2C%20Newark!5e1!3m2!1sen!2suk!4v174619'
       },
     },
     {
       params: { area: "fernwood" },
-      props: { title: "Fernwood", phoneNumber: newarkPhone },
+      props: { title: "Fernwood", phoneNumber: newarkPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10280.941888599547!2d-0.7807689748210634!3d53.04786130454749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48783561cf49685d%3A0x8bd0a488a5673c65!2sFernwood%2C%20Newark!5e1!3m2!1sen!2suk!4v1746197572744!5m2!1sen!2suk' },
     },
     {
       params: { area: "forest-town" },
       props: {
         title: "Forest Town",
         phoneNumber: mansfieldPhone,
+        googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20510.087455169265!2d-1.1776694334684303!3d53.1563561566838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879bc359ba5fe65%3A0xce06a06d58eb9778!2sForest%20Town%2C%20Mansfield!5e1!3m2!1sen!2suk!4v1746197599560!5m2!1sen!2suk'
       },
     },
     {
       params: { area: "giltbrook" },
-      props: { title: "Giltbrook", phoneNumber: nottinghamPhone },
+      props: { title: "Giltbrook", phoneNumber: nottinghamPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10290.785364384026!2d-1.2970383248570223!3d53.00658361671353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879eb64d2b4c0b3%3A0xcf7e3950cc38cfb0!2sGiltbrook%2C%20Nottingham!5e1!3m2!1sen!2suk!4v1746197635102!5m2!1sen!2suk' },
     },
     {
       params: { area: "grantham" },
-      props: { title: "Grantham", phoneNumber: newarkPhone },
+      props: { title: "Grantham", phoneNumber: newarkPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41248.52175250314!2d-0.6695028551480592!3d52.91699797904893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487820d7b8e18acd%3A0xec445ad0df69f289!2sGrantham!5e1!3m2!1sen!2suk!4v1746197680518!5m2!1sen!2suk' },
     },
     {
       params: { area: "hucknall" },
-      props: { title: "Hucknall", phoneNumber: nottinghamPhone },
+      props: { title: "Hucknall", phoneNumber: nottinghamPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20567.68994322374!2d-1.2334016338905704!3d53.03568982678246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879954d69cc2097%3A0xba547cb7c20a56fa!2sHucknall%2C%20Nottingham!5e1!3m2!1sen!2suk!4v1746197743198!5m2!1sen!2suk' },
     },
     {
       params: { area: "ilkeston" },
-      props: { title: "Ilkeston", phoneNumber: nottinghamPhone },
+      props: { title: "Ilkeston", phoneNumber: nottinghamPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41192.88843990934!2d-1.353882254327558!3d52.97538346337865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879e9445abe8adb%3A0xcaf3fc1b9cb3e264!2sIlkeston!5e1!3m2!1sen!2suk!4v1746197794197!5m2!1sen!2suk' },
     },
     {
       params: { area: "kirkby-in-ashfield" },
       props: {
         title: "Kirkby In Ashfield",
         phoneNumber: mansfieldPhone,
+        googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41078.6729451553!2d-1.3290823247883485!3d53.09510883966414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48799430187cda91%3A0xf70b9143687f7a79!2sKirkby%20in%20Ashfield!5e1!3m2!1sen!2suk!4v1746197848558!5m2!1sen!2suk'
       },
     },
     {
@@ -184,15 +224,16 @@ export async function getStaticPaths() {
       props: {
         title: "Kirklington",
         phoneNumber: newarkPhone,
+        googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5133.2753077033985!2d-0.9944569518527812!3d53.10816952948419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879b73718a875e9%3A0x7f45630974fc8b69!2sKirklington%2C%20Newark!5e1!3m2!1sen!2suk!4v1746197889685!5m2!1sen!2suk'
       },
     },
     {
       params: { area: "lincoln" },
-      props: { title: "Lincoln", phoneNumber: newarkPhone },
+      props: { title: "Lincoln", phoneNumber: newarkPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d327960.69276942854!2d-0.7556647751175707!3d53.1826085377355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487842f2d0b6c425%3A0xbb45bf9e1a3d2261!2sLincoln!5e1!3m2!1sen!2suk!4v1746197927833!5m2!1sen!2suk' },
     },
     {
       params: { area: "loughborough" },
-      props: { title: "Loughborough", phoneNumber: nottinghamPhone },
+      props: { title: "Loughborough", phoneNumber: nottinghamPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82787.01719177686!2d-1.3771643140068999!3d52.76462677248714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879d926a0f7320d%3A0x8bd926f2baff035d!2sLoughborough!5e1!3m2!1sen!2suk!4v1746197966214!5m2!1sen!2suk' },
     },
     {
       params: { area: "mansfield" },
@@ -209,11 +250,12 @@ export async function getStaticPaths() {
           "Pleasley",
         ],
         phoneNumber: mansfieldPhone,
+        googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41037.073531489164!2d-1.2347046520292557!3d53.13866837959282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879960103837b17%3A0x8ddae75902857c2a!2sMansfield!5e1!3m2!1sen!2suk!4v1746194699537!5m2!1sen!2suk'
       },
     },
     {
       params: { area: "mapperley" },
-      props: { title: "Mapperley", phoneNumber: nottinghamPhone },
+      props: { title: "Mapperley", phoneNumber: nottinghamPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20592.7669570749!2d-1.1409443840743279!3d52.98309845730841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c112885fcf4b%3A0xcee3eb19849ab038!2sMapperley%2C%20Nottingham!5e1!3m2!1sen!2suk!4v1746198029049!5m2!1sen!2suk' },
     },
     {
       params: { area: "newark" },
@@ -235,6 +277,7 @@ export async function getStaticPaths() {
           "Balderton",
         ],
         phoneNumber: newarkPhone,
+        googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20548.31663537708!2d-0.8226332337486016!3d53.07629455320319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487834455e4590d7%3A0x2fa6a5583441f3c3!2sNewark-on-Trent%2C%20Newark!5e1!3m2!1sen!2suk!4v1746198055353!5m2!1sen!2suk'
       },
     },
     {
@@ -261,6 +304,7 @@ export async function getStaticPaths() {
           "Edwalton",
         ],
         phoneNumber: nottinghamPhone,
+        googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82426.49213012397!2d-1.325947488683014!3d52.95402396005157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487832d2390779cd%3A0x108063201919db15!2sNottingham!5e1!3m2!1sen!2suk!4v1746198149723!5m2!1sen!2suk',
         imageUrl: "/areas/mobile-tyre-fitting-nottingham.webp",
         story:
           "On a Sunday, a customer in Nottingham called us urgently needing all four tyres replaced on his daughter's car, as they were extremely worn and she had a long trip after work. From the moment he called, we had the job completed in just 90 minutes, fitting all four tyres in an impressive 19 minutes. She was ready to travel safely in no time!",
@@ -271,6 +315,7 @@ export async function getStaticPaths() {
       props: {
         title: "Ollerton",
         phoneNumber: mansfieldPhone,
+        googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10244.911708654303!2d-1.0321417746894759!3d53.19876021002319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879baa19220a9c7%3A0xa1aedfc192e6e313!2sOllerton%2C%20Newark!5e1!3m2!1sen!2suk!4v1746198188011!5m2!1sen!2suk'
       },
     },
     {
@@ -278,17 +323,19 @@ export async function getStaticPaths() {
       props: {
         title: "Pleasley",
         phoneNumber: mansfieldPhone,
+        googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41008.5952477981!2d-1.3203542675582793!3d53.168474220743846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879964cb3417419%3A0x2268597bc473a29c!2sPleasley!5e1!3m2!1sen!2suk!4v1746198217605!5m2!1sen!2suk'
       },
     },
     {
       params: { area: "radcliffe-on-trent" },
-      props: { title: "Radcliffe On Trent", phoneNumber: nottinghamPhone },
+      props: { title: "Radcliffe On Trent", phoneNumber: nottinghamPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20609.44937057493!2d-1.054611534196559!3d52.94809202761869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c5da5d564c95%3A0x5abba7c9d13a9a84!2sRadcliffe%20on%20Trent%2C%20Nottingham!5e1!3m2!1sen!2suk!4v1746198249178!5m2!1sen!2suk' },
     },
     {
       params: { area: "rainworth" },
       props: {
         title: "Rainworth",
         phoneNumber: mansfieldPhone,
+        googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20527.380835436586!2d-1.1393385835951697!3d53.12014982772582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879bea5f38215af%3A0x315452726cf6b719!2sRainworth%2C%20Mansfield!5e1!3m2!1sen!2suk!4v1746198285724!5m2!1sen!2suk'
       },
     },
     {
@@ -296,32 +343,35 @@ export async function getStaticPaths() {
       props: {
         title: "Ravenshead",
         phoneNumber: mansfieldPhone,
+        googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20527.380835436586!2d-1.1393385835951697!3d53.12014982772582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879bfb2ab86847b%3A0xf53b3874c7615a0e!2sRavenshead%2C%20Nottingham!5e1!3m2!1sen!2suk!4v1746198314059!5m2!1sen!2suk'
       },
     },
     {
       params: { area: "retford" },
-      props: { title: "Retford", phoneNumber: mansfieldPhone },
+      props: { title: "Retford", phoneNumber: mansfieldPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20430.4470836913!2d-0.9640591328846647!3d53.322874859812565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4878531551c7c1fb%3A0x37f4dc33dbb2962a!2sRetford!5e1!3m2!1sen!2suk!4v1746198344323!5m2!1sen!2suk' },
     },
     {
       params: { area: "ripley" },
-      props: { title: "Ripley", phoneNumber: mansfieldPhone },
+      props: { title: "Ripley", phoneNumber: mansfieldPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20563.172094019075!2d-1.423694783857462!3d53.04516077128349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48798d0cc9b40ea7%3A0xfe149ccc0db48609!2sRipley!5e1!3m2!1sen!2suk!4v1746198372292!5m2!1sen!2suk' },
     },
     {
       params: { area: "shirebrook" },
       props: {
         title: "Shirebrook",
         phoneNumber: mansfieldPhone,
+        googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20489.747570132484!2d-1.2385287833193517!3d53.198918881938134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487997fc9b5e2621%3A0x5fae88b2cd818d0d!2sShirebrook%2C%20Mansfield!5e1!3m2!1sen!2suk!4v1746198403497!5m2!1sen!2suk'
       },
     },
     {
       params: { area: "somercotes" },
-      props: { title: "Somercotes", phoneNumber: mansfieldPhone },
+      props: { title: "Somercotes", phoneNumber: mansfieldPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20545.756118526435!2d-1.3849096837298382!3d53.08165955008703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879925397dc3717%3A0x52a6b499c63136e6!2sSomercotes%2C%20Alfreton!5e1!3m2!1sen!2suk!4v1746198463163!5m2!1sen!2suk' },
     },
     {
       params: { area: "southwell" },
       props: {
         title: "Southwell",
         phoneNumber: newarkPhone,
+        googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20549.599331697227!2d-0.97326283375801!3d53.073606804764275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879b53ab99826d5%3A0x99f5ec9e664f7dcc!2sSouthwell!5e1!3m2!1sen!2suk!4v1746198486956!5m2!1sen!2suk'
       },
     },
     {
@@ -329,22 +379,24 @@ export async function getStaticPaths() {
       props: {
         title: "Sutton In Ashfield",
         phoneNumber: mansfieldPhone,
+        googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41045.06261128629!2d-1.303511152147129!3d53.130304789011035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48799132c88ac205%3A0xd43688bcc8eb0239!2sSutton-in-Ashfield!5e1!3m2!1sen!2suk!4v1746198521320!5m2!1sen!2suk'
       },
     },
     {
       params: { area: "tuxford" },
-      props: { title: "Tuxford", phoneNumber: worksopPhone },
+      props: { title: "Tuxford", phoneNumber: worksopPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40952.41408853922!2d-0.9398904007803369!3d53.22724032982202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879ad955a06651d%3A0x219290e0300f7b!2sTuxford%2C%20Newark!5e1!3m2!1sen!2suk!4v1746198549862!5m2!1sen!2suk' },
     },
     {
       params: { area: "warsop" },
       props: {
         title: "Warsop",
         phoneNumber: mansfieldPhone,
+        googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40952.41408853922!2d-0.9398904007803369!3d53.22724032982202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879ad955a06651d%3A0x219290e0300f7b!2sTuxford%2C%20Newark!5e1!3m2!1sen!2suk!4v1746198549862!5m2!1sen!2suk'
       },
     },
     {
       params: { area: "west-bridgford" },
-      props: { title: "West Bridgford", phoneNumber: nottinghamPhone },
+      props: { title: "West Bridgford", phoneNumber: nottinghamPhone, googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41240.20049220115!2d-1.2065644414533068!3d52.925733749091854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c24c8f06887d%3A0xcf33cd98839728f!2sWest%20Bridgford%2C%20Nottingham!5e1!3m2!1sen!2suk!4v1746198605286!5m2!1sen!2suk' },
     },
     {
       params: { area: "worksop" },
@@ -362,6 +414,7 @@ export async function getStaticPaths() {
         story:
           "Early on a Friday morning, the RAC reached out to us about a tyre blowout in Worksop. Despite the tyre being an uncommon size, we quickly sourced a replacement and, within just 60 minutes, had it fitted. The lady was soon safely back on the road!",
         imageUrl: "/areas/mobile-tyre-fitting-worksop.webp",
+        googleMapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40872.43671258464!2d-1.1643324996002902!3d53.310819935624416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879082c3c0fcdef%3A0xff85eacbd2805de5!2sWorksop!5e1!3m2!1sen!2suk!4v1746198679718!5m2!1sen!2suk'
       },
     },
   ];
@@ -376,6 +429,7 @@ const {
   phoneNumber = "0330 133 9311",
   imageUrl = "",
   story = "",
+  googleMapUrl = ""
 } = Astro.props;
 ---
 
@@ -396,12 +450,12 @@ const {
     convenient and fast mobile tyre service at your location - whether that's at
     home, work, or roadside.
   </p>
-
+<!-- 
   {
     imageUrl && story && (
       <AreaStory imageUrl={imageUrl} story={story} area={title} />
     )
-  }
+  } -->
   <h2 class="mb-3">Why Choose Us?</h2>
   <p>
     We specialise in <strong>24 hour emergency mobile tyre fitting</strong>,
@@ -411,11 +465,6 @@ const {
     } if you don't need an urgent tyre replacement.
   </p>
 
-  <h2>Need Mobile Tyre Fitting in {title}?</h2>
-  <p>
-    Call us now on {phoneNumber} or get a free quote — fast, friendly service to
-    your location.
-  </p>
 
   <h2>How It Works</h2>
   <p>Using our mobile tyre fitting service is quick and easy:</p>
@@ -458,6 +507,7 @@ const {
     )
   }
 
+
   <h2 class="mb-3">Get a Quote Now</h2>
   <p>
     If you would like a price for our mobile tyre fitting service and you live
@@ -466,5 +516,9 @@ const {
       >{phoneNumber}</a
     >. We'll be happy to get you a price.
   </p>
+
+  {googleMapUrl && 
+    <iframe src=`${googleMapUrl}`  height="250" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100 mb-3"></iframe>
+    }
 
 </ServiceLayout>
