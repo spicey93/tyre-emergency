@@ -14,7 +14,8 @@ $danger: #ff3131;
 
 .accent {
     font-family: 'Anton', 'Merriweather', "Crimson Pro", 'Lato', 'Open Sans','Roboto Condensed', 'Roboto', 'Work Sans', sans-serif;
-    // letter-spacing: 0.05rem;
+    font-style: italic;
+    letter-spacing: 0.02em;
 }
 .dropdown-item.active, .dropdown-item:focus {
     background-color: $danger !important;  // Set active dropdown link color to red
@@ -52,6 +53,7 @@ $danger: #ff3131;
 
 .btn {
     border-radius: 0px;
+    @extend .accent, .btn-lg;
 }
 
 h1, h2, h3, h4, h5 {

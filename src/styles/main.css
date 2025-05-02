@@ -3304,7 +3304,7 @@ textarea.form-control-lg {
   color: var(--bs-btn-hover-color);
 }
 
-.btn-lg, .call-btn, .btn-group-lg > .btn, .btn-group-lg > .call-btn {
+.btn-lg, .btn, .call-btn, .btn-group-lg > .btn, .btn-group-lg > .call-btn {
   --bs-btn-padding-y: 0.5rem;
   --bs-btn-padding-x: 1rem;
   --bs-btn-font-size: 1.25rem;
@@ -3759,7 +3759,7 @@ textarea.form-control-lg {
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .call-btn + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn + .dropdown-toggle-split, .call-btn + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -12002,8 +12002,10 @@ textarea.form-control-lg {
   --bs-body-font-family: "Roboto Condensed", sans-serif;
 }
 
-.accent, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+.accent, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, .btn, .call-btn {
   font-family: "Anton", "Merriweather", "Crimson Pro", "Lato", "Open Sans", "Roboto Condensed", "Roboto", "Work Sans", sans-serif;
+  font-style: italic;
+  letter-spacing: 0.02em;
 }
 
 .dropdown-item.active, .dropdown-item:focus {
