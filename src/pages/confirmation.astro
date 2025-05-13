@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+const phoneNumber = import.meta.env.PHONE_NUMBER
+---
+
+<Layout
+    noIndex={true}
+    title="Order Confirmation | Tyre Emergency Ltd"
+    description="Thank you page for Tyre Emergency Ltd."
+>
+    <main class="container py-5">
+        <h1 class="mb-5">Order Confirmed</h1>
+        <p>Thank you for your order!</p>
+        <p>We'll call you on the day of your booking to confirm a more specific time slot.</p>
+        <p>If you have any questions before then, feel free to call us on <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>.</p>
+        <a href="/" class="btn btn-warning mt-3">Back to home page</a>
+        
+    </main>
+</Layout>
