@@ -4,6 +4,7 @@ const {
   tagline,
   backgroundUrl,
   phoneNumber = '0330 133 9311',
+  tyres = false,
 } = Astro.props;
 
 const heroStyle = {
@@ -39,10 +40,35 @@ const heroStyle = {
         </ul>
         
         
-        <div class="my-4">
-          <a href=`tel:${phoneNumber}` class="btn fs-2 accent btn-warning text-uppercase btn-lg pe-4"><i class="bi bi-telephone-fill"></i> Call Us Now</a>
+        <div class="my-4 d-flex flex-column flex-md-row">
+          <a href=`tel:${phoneNumber}` class="btn fs-2 accent btn-warning text-uppercase btn-lg pe-4"><span>Call Now For a Quote</span></a> 
+          {tyres &&           <a 
+            href="https://garage-bookings.com/?clientID=537&homeURL=https://tyreemergency.com/confirmation&language=en&skipConfirmationPage=n" 
+            class="btn ms-0 ms-md-2 mt-2 mt-md-0 fs-2 accent btn-success text-light text-uppercase btn-lg pe-4" 
+            target="_blank" 
+            id="online-booking-button"
+          >
+            Book Online
+          </a>}
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    const bookingButton = document.getElementById("online-booking-button");
+
+    bookingButton.addEventListener("click", function (event) {
+      const proceed = confirm(
+        "Online booking does not allow for same day fitting. If you need tyres today please call us instead.\n\nDo you want to continue?"
+      );
+
+      if (!proceed) {
+        event.preventDefault(); // Cancel the link if user says no
+      }
+    });
+  });
+</script>
+
         </div>
-        <p class="fs-5 d-none d-md-block"><span class="fw-bold">Not an emergency?</span> <a href="https://garage-bookings.com/?clientID=537&homeURL=https://tyreemergency.com/confirmation&language=en&skipConfirmationPage=n" class="link-danger" target="_blank">Book online for next day tyre fitting</a></p>
+
       </div>
   </div>
 </section>

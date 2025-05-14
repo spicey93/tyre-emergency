@@ -22,6 +22,18 @@ $dark: #231f20;
     background-color: $danger !important;  // Set active dropdown link color to red
 }
 
+.tilted-button {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    transform: skewX(-15deg);
+  }
+
+  .tilted-button span {
+    display: inline-block;
+    transform: skewX(15deg); /* Un-skew the text inside */
+  }
+
 
 #intro {
     @extend .py-5, .text-center;
