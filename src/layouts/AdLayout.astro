@@ -11,6 +11,7 @@ const {
   phoneNumber = "0330 133 9311",
   mainHeading,
   mainContent,
+  ctaText = "Call us now",
 } = Astro.props;
 
 const adHeroStyle = {
@@ -150,7 +151,7 @@ const adHeroStyle = {
 
     <div class="py-5"></div>
     <a href={`tel:${phoneNumber}`} class="fixed-bottom btn py-3 bg-danger text-light text-uppercase fs-3">
-      Stuck with a flat? Tap to call now
+      {ctaText}
     </a>
 
     <script
