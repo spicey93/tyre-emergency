@@ -2,7 +2,26 @@
 import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/main.css";
 
-const { title, description } = Astro.props;
+const {
+  title,
+  description,
+  heading,
+  tagline,
+  backgroundUrl,
+  phoneNumber = "0330 133 9311",
+  mainHeading,
+  mainContent,
+} = Astro.props;
+
+const adHeroStyle = {
+  background: `linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(${backgroundUrl})`,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  minHeight: "100vh",
+  display: "flex",
+  alignItems: "center",
+};
 ---
 
 <!doctype html>
@@ -27,7 +46,112 @@ const { title, description } = Astro.props;
         style="display:none;visibility:hidden"></iframe></noscript
     >
 
-    <slot />
+    <!-- Hero section -->
+    <section style={adHeroStyle}>
+      <div
+        class="container d-flex flex-column justify-content-center align-items-center text-center text-light"
+      >
+        <p class="h1 display-1">{heading}</p>
+        <p class="lead fs-3">{tagline}</p>
+        <ul class="list-unstyled fs-5">
+          <li class="mb-2">
+            <i class="bi bi-geo-alt text-danger me-2"></i>
+            <span>We Come to You</span>
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-truck text-danger me-2"></i>
+            <span>30-45 Minute Response</span>
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-clock text-danger me-2"></i>
+            <span>24/7 Availability</span>
+          </li>
+        </ul>
+        <a
+          href={`tel:${phoneNumber}`}
+          class="btn btn-danger text-light text-uppercase fs-3"
+          ><i class="bi bi-telephone-fill me-2"></i> Get help now</a
+        >
+        <p class="mt-4 small">
+          Rated <i class="bi bi-star-fill text-warning"></i><i
+            class="bi bi-star-fill text-warning"></i><i
+            class="bi bi-star-fill text-warning"></i><i
+            class="bi bi-star-fill text-warning"></i><i
+            class="bi bi-star-fill text-warning"></i> on Google
+        </p>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="container py-5 text-center">
+      <!-- <p class="h2">Check out some of our reviews!</p> -->
+      <script
+        defer
+        async
+        src="https://cdn.trustindex.io/loader.js?00e3366487bf825fd19696ddf22"
+      ></script>
+    </section>
+
+    <main class="container">
+      <h1 class="my-4">{mainHeading}</h1>
+      <p class="lead my-4">{mainContent}</p>
+      <h2 class="my-4">How It Works – Quick & Simple:</h2>
+      <ol>
+        <li>
+          <strong>Call Us Anytime</strong> - Our 24/7 line connects you straight
+          to a local technician ready to assist.
+        </li>
+        <li>
+          <strong>We Come to You</strong> - A trained professional heads to your
+          location with all the tools needed for on-the-spot service.
+        </li>
+        <li>
+          <strong>You're Back on the Road</strong> - Whether it’s a tyre change or
+          repair—we’ll sort it on the spot, safely and quickly.
+        </li>
+      </ol>
+      <h2 class="my-4">Why Choose Us?</h2>
+      <p class="mb-0">
+        <i class="bi bi-check me-2"></i>5 Star Rated by Local Customers
+      </p>
+      <p class="mb-0">
+        <i class="bi bi-check me-2"></i>Fast Response Times – Usually Within 30
+        Minutes
+      </p>
+      <p class="mb-0">
+        <i class="bi bi-check me-2"></i>Mobile Service – We Come to You
+      </p>
+      <p><i class="bi bi-check me-2"></i>Competitive Pricing – No Surprises</p>
+      <h2 class="my-4">Frequently Asked Questions</h2>
+      <p class="mb-0 fw-bold">What areas do you cover?</p>
+      <p class="mb-3">
+        Our tyre fitters cover a wide range of Nottinghamshire, including
+        Worksop, Doncaster, Mansfield, Newark, Retford, Nottingham, and more!
+      </p>
+      <p class="mb-0 fw-bold">Do you sell part-worn tyres?</p>
+      <p class="mb-3">No we don't. We only supply and fit new tyres.</p>
+      <p class="mb-0 fw-bold">Do you fit car, van, or caravan tyres?</p>
+      <p class="mb-3">
+        Yes we fit tyres to passenger cars, light commercial vans, motorhomes,
+        caravans, and trailers.
+      </p>
+      <p class="mb-0 fw-bold">
+        Do fit tyres to HGV's, motorbikes, or agricultural vehicles?
+      </p>
+      <p class="mb-3">Unfortunately, no we don't.</p>
+      <p class="mb-0 fw-bold">How quick could you get to me?</p>
+      <p class="mb-3">
+        It most cases, we can get to you within 30-45 minutes - depending on
+        availability, tyre size and your location.
+      </p>
+      <p class="mb-0 fw-bold">Can I pay by card?</p>
+      <p class="mb-3">Yes.</p>
+    </main>
+
+    <div class="py-5"></div>
+    <a class="fixed-bottom btn py-3 bg-danger text-light text-uppercase fs-3">
+      Stuck with a flat? Tap to call now
+    </a>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
