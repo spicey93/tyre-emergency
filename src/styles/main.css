@@ -12030,4 +12030,11 @@ textarea.form-control-lg {
 
 #map {
   height: 300px;
+}
+
+#areasWeCover {
+  background: linear-gradient(0deg, rgba(20, 20, 20, 0.85), rgba(20, 20, 20, 0.85)), url(/img/tyre-emergency-van.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }/*# sourceMappingURL=main.css.map */
