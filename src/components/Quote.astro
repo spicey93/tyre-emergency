@@ -1,6 +1,6 @@
 <div class="bg-light text-center p-4 rounded w-100" id="quoteForm">
   <p class="h3">Get a Quote</p>
-  <form action="" method="post">
+  <form method="POST" action="#" data-netlify="true">
     <!-- VRM -->
     <div id="vrmDiv">
       <label class="form-label fs-5">What's the registration?</label>
@@ -227,78 +227,6 @@
       </p>
     </div>
 
-    <!-- Locking Wheel Nut Issue -->
-    <div class="d-none" id="lockingIssueDiv">
-      <label class="form-label fs-5">What is the issue you have?</label>
-      <select
-        id="lockingIssueSelect"
-        name="order[lockingIssue]"
-        class="form-select form-select-lg"
-        required
-      >
-        <option value="">Choose an issue</option>
-        <option value="Key is broken">Key is broken</option>
-        <option value="Key is missing">Key is missing</option>
-        <option value="Bolt/nut is too tight">Bolt/nut is too tight</option>
-        <option value="Other">Other</option>
-      </select>
-
-      <div class="container">
-        <div class="row mt-2">
-          <button
-            class="btn btn-dark btn-lg col-6"
-            type="button"
-            id="lockingIssueBackBtn"
-          >
-            <i class="bi bi-arrow-left"></i> Back
-          </button>
-          <button
-            class="btn btn-danger btn-lg text-light col-6"
-            type="button"
-            id="lockingIssueBtn"
-          >
-            Next <i class="bi bi-arrow-right"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- TPMS Issue -->
-    <div class="d-none" id="tpmsIssueDiv">
-      <label class="form-label fs-5">What issue do you have?</label>
-      <select
-        id="tpmsIssueSelect"
-        name="order[tpmsIssue]"
-        class="form-select form-select-lg"
-        required
-      >
-        <option value="">Choose an issue</option>
-        <option value="TPMS valve is broken">TPMS valve is broken</option>
-        <option value="TPMS sensor faulty">TPMS sensor faulty</option>
-        <option value="Valve is leaking">Valve is leaking</option>
-        <option value="Other">Other</option>
-      </select>
-
-      <div class="container">
-        <div class="row mt-2">
-          <button
-            class="btn btn-dark btn-lg col-6"
-            type="button"
-            id="tpmsIssueBackBtn"
-          >
-            <i class="bi bi-arrow-left"></i> Back
-          </button>
-          <button
-            class="btn btn-danger btn-lg text-light col-6"
-            type="button"
-            id="tpmsIssueBtn"
-          >
-            Next <i class="bi bi-arrow-right"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-
     <!-- Fitment -->
     <div class="d-none" id="fitmentDiv">
       <label class="form-label fs-5">How soon do you need help?</label>
@@ -371,261 +299,179 @@
 </div>
 
 <script>
-  const steps = [
-    "vrmDiv",
-    "serviceDiv",
-    "lockingIssueDiv",
-    "tpmsIssueDiv",
-    "tyreSizeDiv",
-    "quantityDiv",
-    "locationDiv",
-    "fitmentDiv",
-    "customerDiv",
-  ];
-
-  let currentStep = 0;
-  let selectedService = "";
-
-  const showStep = (index) => {
-    steps.forEach((id, i) => {
-      document.getElementById(id).classList.toggle("d-none", i !== index);
-    });
-  };
-
-  const nextStep = () => {
-    if (currentStep < steps.length - 1) {
-      currentStep++;
+    const steps = [
+      "vrmDiv",         // 0
+      "serviceDiv",     // 1
+      "tyreSizeDiv",    // 2
+      "quantityDiv",    // 3
+      "locationDiv",    // 4
+      "fitmentDiv",     // 5
+      "customerDiv",    // 6
+    ];
+  
+    let currentStep = 0;
+    let isTyreFlow = false;
+  
+    const showStep = (index) => {
+      steps.forEach((id, i) => {
+        document.getElementById(id).classList.toggle("d-none", i !== index);
+      });
+    };
+  
+    const goToStep = (stepName) => {
+      currentStep = steps.indexOf(stepName);
       showStep(currentStep);
-    }
-  };
-
-  const backStep = () => {
-    if (currentStep > 0) {
-      currentStep--;
-      showStep(currentStep);
-    }
-  };
-
-  // Validation functions
-  const isVrmValid = () =>
-    document.getElementById("vrmInput").value.trim() !== "";
-  const isTyreSizeValid = () =>
-    [...document.querySelectorAll("#tyreSizeDiv select")].every(
-      (sel) => sel.value.trim() !== ""
-    );
-  const isQuantityValid = () =>
-    document.querySelector("#quantityDiv select").value.trim() !== "";
-  const isLocationValid = () =>
-    document.getElementById("postcodeInput").value.trim() !== "";
-  const isFitmentValid = () =>
-    document.querySelector("#fitmentDiv select").value.trim() !== "";
-
-  // Step handlers
-  document.getElementById("vrmBtn").addEventListener("click", () => {
-    if (isVrmValid()) {
-      currentStep = 1;
-      showStep(currentStep);
-    } else {
-      alert("Please enter a registration.");
-    }
-  });
-
-  document.getElementById("serviceBtn").addEventListener("click", () => {
-    selectedService = document.getElementById("serviceSelect").value;
-    if (!selectedService) {
-      alert("Please select a service.");
-      return;
-    }
-
-    switch (selectedService) {
-      case "Mobile Tyre Fitting":
-      case "Emergency Mobile Tyre Fitting":
-        currentStep = 4; // tyreSizeDiv
-        break;
-
-      case "Puncture Repair":
-      case "Battery Replacement":
-        currentStep = 6; // locationDiv
-        break;
-
-      case "Locking Wheel Nut Removal":
-        currentStep = 2; // lockingIssueDiv
-        break;
-
-      case "TPMS":
-        currentStep = 3; // ✅ tpmsIssueDiv
-        break;
-
-      default:
-        alert(`Thanks! We'll handle "${selectedService}" differently later.`);
-        return;
-    }
-
-    showStep(currentStep);
-  });
-
-  document.getElementById("tpmsIssueBtn").addEventListener("click", () => {
-    const issue = document.getElementById("tpmsIssueSelect").value;
-    if (!issue) {
-      alert("Please select the TPMS issue.");
-      return;
-    }
-    currentStep = 6; // go to locationDiv
-    showStep(currentStep);
-  });
-
-  document.getElementById("tpmsIssueBackBtn").addEventListener("click", () => {
-    currentStep = 1; // back to serviceDiv
-    showStep(currentStep);
-  });
-
-  document.getElementById("lockingIssueBtn").addEventListener("click", () => {
-    const issue = document.getElementById("lockingIssueSelect").value;
-    if (!issue) {
-      alert("Please select the issue you're having.");
-      return;
-    }
-    currentStep = 5; // locationDiv
-    showStep(currentStep);
-  });
-
-  document
-    .getElementById("lockingIssueBackBtn")
-    .addEventListener("click", () => {
-      currentStep = 1; // Back to service selection
-      showStep(currentStep);
-    });
-
-  document.getElementById("tyreSizeBtn").addEventListener("click", () => {
-    if (isTyreSizeValid()) nextStep();
-    else alert("Please select all tyre sizes.");
-  });
-
-  document.getElementById("quantityBtn").addEventListener("click", () => {
-    if (isQuantityValid()) nextStep();
-    else alert("Please select quantity.");
-  });
-
-  document.getElementById("postcodeBtn").addEventListener("click", () => {
-    if (isLocationValid()) nextStep();
-    else alert("Please enter a postcode.");
-  });
-
-  document.getElementById("coordinatesBtn").addEventListener("click", () => {
-    if (!navigator.geolocation) {
-      alert("Geolocation is not supported by your browser.");
-      return;
-    }
-
-    document.getElementById("coordinatesBtn").innerText = "Locating...";
-
-    navigator.geolocation.getCurrentPosition(
-      async (position) => {
-        const lat = position.coords.latitude;
-        const lon = position.coords.longitude;
-
-        try {
-          const response = await fetch(
-            `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lon}`
-          );
-          const data = await response.json();
-
-          const postcode = data.address.postcode || "";
-          if (!postcode) {
-            alert("Could not determine postcode from location.");
-            document.getElementById("coordinatesBtn").innerText =
-              "Share your location";
-            return;
-          }
-
-          document.getElementById("postcodeInput").value = postcode;
-          document.getElementById("coordinatesBtn").innerText =
-            "Share your location";
-
-          currentStep = 7; // go to fitmentDiv
-          showStep(currentStep);
-        } catch (error) {
-          alert("Error getting location. Please try again.");
-          document.getElementById("coordinatesBtn").innerText =
-            "Share your location";
-        }
-      },
-      () => {
-        alert("Unable to retrieve your location.");
-        document.getElementById("coordinatesBtn").innerText =
-          "Share your location";
-      }
-    );
-  });
-
-  document.getElementById("fitmentBtn").addEventListener("click", () => {
-    if (isFitmentValid()) nextStep();
-    else alert("Please select a fitment option.");
-  });
-
-  // Back buttons
-  document.getElementById("serviceBackBtn").addEventListener("click", () => {
-    currentStep = 0;
-    showStep(currentStep);
-  });
-
-  document
-    .getElementById("tyreSizeBackBtn")
-    .addEventListener("click", backStep);
-  document
-    .getElementById("quantityBackBtn")
-    .addEventListener("click", backStep);
-
-  // Custom back behavior for location step
-  document.getElementById("locationBackBtn").addEventListener("click", () => {
-    if (
-      selectedService === "Puncture Repair" ||
-      selectedService === "Locking Wheel Nut Removal" ||
-      selectedService === "Battery Replacement" ||
-      selectedService === "TPMS"
-    ) {
-      currentStep = 1; // Go back to service selection
-    } else {
-      currentStep = 3; // Go back to quantity as usual
-    }
-    showStep(currentStep);
-  });
-
-  document.getElementById("fitmentBackBtn").addEventListener("click", () => {
-    if (selectedService === "Puncture Repair") {
-      currentStep = 4; // Go back to location
-    } else {
-      currentStep = 3; // From fitment back to quantity
-    }
-    showStep(currentStep);
-  });
-
-  document
-    .getElementById("customerBackBtn")
-    .addEventListener("click", backStep);
-
-  // Enter key handling
-  document.getElementById("vrmInput").addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      if (isVrmValid()) {
-        currentStep = 1;
+    };
+  
+    const nextStep = () => {
+      if (currentStep < steps.length - 1) {
+        currentStep++;
         showStep(currentStep);
-      } else {
-        alert("Please enter a registration.");
       }
-    }
-  });
-
-  document.getElementById("postcodeInput").addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      if (isLocationValid()) nextStep();
+    };
+  
+    const backStep = () => {
+      if (currentStep > 0) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    };
+  
+    // Validators
+    const isVrmValid = () => document.getElementById("vrmInput").value.trim() !== "";
+    const isTyreSizeValid = () => [...document.querySelectorAll("#tyreSizeDiv select")].every(sel => sel.value.trim() !== "");
+    const isQuantityValid = () => document.querySelector("#quantityDiv select").value.trim() !== "";
+    const isLocationValid = () => document.getElementById("postcodeInput").value.trim() !== "";
+    const isFitmentValid = () => document.querySelector("#fitmentDiv select").value.trim() !== "";
+  
+    // Step: VRM
+    document.getElementById("vrmBtn").addEventListener("click", () => {
+      if (isVrmValid()) goToStep("serviceDiv");
+      else alert("Please enter a registration.");
+    });
+  
+    // Step: Service
+    document.getElementById("serviceBtn").addEventListener("click", () => {
+      const selectedService = document.getElementById("serviceSelect").value;
+  
+      if (!selectedService) {
+        alert("Please select a service.");
+        return;
+      }
+  
+      isTyreFlow = selectedService === "Mobile Tyre Fitting" || selectedService === "Emergency Mobile Tyre Fitting";
+  
+      goToStep(isTyreFlow ? "tyreSizeDiv" : "locationDiv");
+    });
+  
+    document.getElementById("serviceBackBtn").addEventListener("click", () => {
+      goToStep("vrmDiv");
+    });
+  
+    // Tyre Size
+    document.getElementById("tyreSizeBtn").addEventListener("click", () => {
+      if (isTyreSizeValid()) goToStep("quantityDiv");
+      else alert("Please select all tyre sizes.");
+    });
+  
+    document.getElementById("tyreSizeBackBtn").addEventListener("click", () => {
+      goToStep("serviceDiv");
+    });
+  
+    // Quantity
+    document.getElementById("quantityBtn").addEventListener("click", () => {
+      if (isQuantityValid()) goToStep("locationDiv");
+      else alert("Please select quantity.");
+    });
+  
+    document.getElementById("quantityBackBtn").addEventListener("click", () => {
+      goToStep("tyreSizeDiv");
+    });
+  
+    // Location
+    document.getElementById("postcodeBtn").addEventListener("click", () => {
+      if (isLocationValid()) goToStep("fitmentDiv");
       else alert("Please enter a postcode.");
-    }
-  });
-
-  document.addEventListener("DOMContentLoaded", () => {
-    showStep(currentStep);
-  });
-</script>
+    });
+  
+    document.getElementById("locationBackBtn").addEventListener("click", () => {
+      goToStep(isTyreFlow ? "quantityDiv" : "serviceDiv");
+    });
+  
+    document.getElementById("coordinatesBtn").addEventListener("click", () => {
+      if (!navigator.geolocation) {
+        alert("Geolocation is not supported by your browser.");
+        return;
+      }
+  
+      const btn = document.getElementById("coordinatesBtn");
+      btn.innerText = "Locating...";
+  
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          const lat = position.coords.latitude;
+          const lon = position.coords.longitude;
+  
+          try {
+            const res = await fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lon}`);
+            const data = await res.json();
+            const postcode = data.address.postcode;
+  
+            if (!postcode) {
+              alert("Unable to detect postcode.");
+              btn.innerText = "Share your location";
+              return;
+            }
+  
+            document.getElementById("postcodeInput").value = postcode;
+            btn.innerText = "Share your location";
+            goToStep("fitmentDiv");
+          } catch {
+            alert("Error retrieving location.");
+            btn.innerText = "Share your location";
+          }
+        },
+        () => {
+          alert("Location permission denied.");
+          btn.innerText = "Share your location";
+        }
+      );
+    });
+  
+    // Fitment
+    document.getElementById("fitmentBtn").addEventListener("click", () => {
+      if (isFitmentValid()) goToStep("customerDiv");
+      else alert("Please select a fitment option.");
+    });
+  
+    document.getElementById("fitmentBackBtn").addEventListener("click", () => {
+      goToStep("locationDiv");
+    });
+  
+    // Customer
+    document.getElementById("customerBackBtn").addEventListener("click", () => {
+      goToStep("fitmentDiv");
+    });
+  
+    // Enter key quick nav
+    document.getElementById("vrmInput").addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        if (isVrmValid()) goToStep("serviceDiv");
+        else alert("Please enter a registration.");
+      }
+    });
+  
+    document.getElementById("postcodeInput").addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        if (isLocationValid()) goToStep("fitmentDiv");
+        else alert("Please enter a postcode.");
+      }
+    });
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      showStep(currentStep);
+    });
+  </script>
+  
