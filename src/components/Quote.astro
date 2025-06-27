@@ -1,0 +1,587 @@
+<div class="bg-light text-center p-4 rounded w-100" id="quoteForm">
+  <p class="h3">Get a Quote</p>
+  <form action="" method="post">
+    <!-- VRM -->
+    <div id="vrmDiv">
+      <label class="form-label fs-5">What's the registration?</label>
+      <input
+        type="text"
+        class="form-control form-control-lg text-uppercase text-center"
+        name="order[vrm]"
+        id="vrmInput"
+        placeholder="AB12 CDE"
+        required
+      />
+      <div class="d-grid mt-2">
+        <button
+          class="btn btn-danger text-light btn-lg"
+          type="button"
+          id="vrmBtn"
+        >
+          Next <i class="bi bi-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Service Selection -->
+    <div class="d-none" id="serviceDiv">
+      <label class="form-label fs-5">What service do you need?</label>
+      <select
+        id="serviceSelect"
+        name="order[service]"
+        class="form-select form-select-lg"
+        required
+      >
+        <option value="">Choose an option</option>
+        <option value="Mobile Tyre Fitting">Mobile Tyre Fitting</option>
+        <option value="Emergency Mobile Tyre Fitting"
+          >Emergency Mobile Tyre Fitting</option
+        >
+        <option value="Puncture Repair">Puncture Repair</option>
+        <option value="Locking Wheel Nut Removal"
+          >Locking Wheel Nut Removal</option
+        >
+        <option value="Battery Replacement">Battery Replacement</option>
+        <option value="TPMS">TPMS</option>
+      </select>
+      <div class="container">
+        <div class="row mt-2">
+          <button
+            class="btn btn-dark btn-lg col-6"
+            type="button"
+            id="serviceBackBtn"
+          >
+            <i class="bi bi-arrow-left"></i> Back
+          </button>
+          <button
+            class="btn btn-danger btn-lg text-light col-6"
+            type="button"
+            id="serviceBtn"
+          >
+            Next <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tyre Size -->
+    <div id="tyreSizeDiv" class="d-none">
+      <label class="form-label fs-5">What's the tyre size?</label>
+      <div class="input-group">
+        <select
+          name="order[tyreSize][width]"
+          class="form-select form-select-lg"
+          required
+        >
+          <option value="125">125</option>
+          <option value="135">135</option>
+          <option value="145">145</option>
+          <option value="155">155</option>
+          <option value="165">165</option>
+          <option value="175">175</option>
+          <option value="185">185</option>
+          <option value="195">195</option>
+          <option value="205" selected>205</option>
+          <option value="215">215</option>
+          <option value="225">225</option>
+          <option value="235">235</option>
+          <option value="245">245</option>
+          <option value="255">255</option>
+          <option value="265">265</option>
+          <option value="275">275</option>
+          <option value="285">285</option>
+          <option value="295">295</option>
+          <option value="305">305</option>
+          <option value="315">315</option>
+          <option value="325">325</option>
+          <option value="335">335</option>
+          <option value="345">345</option>
+        </select>
+        <select
+          name="order[tyreSize][profile]"
+          class="form-select form-select-lg"
+          required
+        >
+          <option value="30">30</option>
+          <option value="35">35</option>
+          <option value="40">40</option>
+          <option value="45">45</option>
+          <option value="50">50</option>
+          <option value="55" selected>55</option>
+          <option value="60">60</option>
+          <option value="65">65</option>
+          <option value="70">70</option>
+          <option value="75">75</option>
+          <option value="80">80</option>
+          <option value="85">85</option>
+        </select>
+        <select
+          name="order[tyreSize][diameter]"
+          class="form-select form-select-lg"
+          required
+        >
+          <option value="10">R10</option>
+          <option value="11">R11</option>
+          <option value="12">R12</option>
+          <option value="13">R13</option>
+          <option value="14">R14</option>
+          <option value="15">R15</option>
+          <option value="16" selected>R16</option>
+          <option value="17">R17</option>
+          <option value="18">R18</option>
+          <option value="19">R19</option>
+          <option value="20">R20</option>
+          <option value="21">R21</option>
+          <option value="22">R22</option>
+          <option value="23">R23</option>
+        </select>
+      </div>
+      <div class="container">
+        <div class="row mt-2">
+          <button
+            class="btn btn-dark btn-lg col-6"
+            type="button"
+            id="tyreSizeBackBtn"
+          >
+            <i class="bi bi-arrow-left"></i> Back
+          </button>
+          <button
+            class="btn btn-danger text-light btn-lg col-6"
+            type="button"
+            id="tyreSizeBtn"
+          >
+            Next <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quantity -->
+    <div class="d-none" id="quantityDiv">
+      <label class="form-label fs-5">How many tyres do you need?</label>
+      <select name="order[quantity]" class="form-select form-select-lg">
+        <option value="1">1 Tyre</option>
+        <option value="2">2 Tyres</option>
+        <option value="3">3 Tyres</option>
+        <option value="4">4 Tyres</option>
+      </select>
+      <div class="container">
+        <div class="row mt-2">
+          <button
+            class="btn btn-dark btn-lg col-6"
+            type="button"
+            id="quantityBackBtn"
+          >
+            <i class="bi bi-arrow-left"></i> Back
+          </button>
+          <button
+            class="btn btn-danger text-light btn-lg col-6"
+            type="button"
+            id="quantityBtn"
+          >
+            Next <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Location -->
+    <div class="d-none" id="locationDiv">
+      <label class="form-label fs-5">Where are you?</label>
+      <input
+        type="text"
+        class="form-control form-control-lg text-uppercase text-center mb-2"
+        name="order[location]"
+        placeholder="Enter Postcode"
+        id="postcodeInput"
+        required
+      />
+      <div class="container">
+        <div class="row mt-2 mb-3">
+          <button
+            class="btn btn-dark btn-lg col-6"
+            type="button"
+            role="button"
+            id="locationBackBtn"
+          >
+            <i class="bi bi-arrow-left"></i> Back
+          </button>
+
+          <button
+            class="btn btn-danger text-light btn-lg col-6"
+            type="button"
+            id="postcodeBtn"
+          >
+            Next <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      <p class="mb-0">
+        No postcode? <button
+          class="btn btn-secondary btn-sm"
+          id="coordinatesBtn"
+          type="button"
+        >
+          <i class="bi bi-crosshair"></i> Share your location
+        </button>
+      </p>
+    </div>
+
+    <!-- Locking Wheel Nut Issue -->
+    <div class="d-none" id="lockingIssueDiv">
+      <label class="form-label fs-5">What is the issue you have?</label>
+      <select
+        id="lockingIssueSelect"
+        name="order[lockingIssue]"
+        class="form-select form-select-lg"
+        required
+      >
+        <option value="">Choose an issue</option>
+        <option value="Key is broken">Key is broken</option>
+        <option value="Key is missing">Key is missing</option>
+        <option value="Bolt/nut is too tight">Bolt/nut is too tight</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <div class="container">
+        <div class="row mt-2">
+          <button
+            class="btn btn-dark btn-lg col-6"
+            type="button"
+            id="lockingIssueBackBtn"
+          >
+            <i class="bi bi-arrow-left"></i> Back
+          </button>
+          <button
+            class="btn btn-danger btn-lg text-light col-6"
+            type="button"
+            id="lockingIssueBtn"
+          >
+            Next <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TPMS Issue -->
+    <div class="d-none" id="tpmsIssueDiv">
+      <label class="form-label fs-5">What issue do you have?</label>
+      <select
+        id="tpmsIssueSelect"
+        name="order[tpmsIssue]"
+        class="form-select form-select-lg"
+        required
+      >
+        <option value="">Choose an issue</option>
+        <option value="TPMS valve is broken">TPMS valve is broken</option>
+        <option value="TPMS sensor faulty">TPMS sensor faulty</option>
+        <option value="Valve is leaking">Valve is leaking</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <div class="container">
+        <div class="row mt-2">
+          <button
+            class="btn btn-dark btn-lg col-6"
+            type="button"
+            id="tpmsIssueBackBtn"
+          >
+            <i class="bi bi-arrow-left"></i> Back
+          </button>
+          <button
+            class="btn btn-danger btn-lg text-light col-6"
+            type="button"
+            id="tpmsIssueBtn"
+          >
+            Next <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fitment -->
+    <div class="d-none" id="fitmentDiv">
+      <label class="form-label fs-5">How soon do you need help?</label>
+      <select name="order[fitment]" class="form-select form-select-lg">
+        <option value="ASAP">ASAP</option>
+        <option value="Today">Today</option>
+        <option value="Not Urgent">Not Urgent</option>
+      </select>
+      <div class="container">
+        <div class="row mt-2 mb-3">
+          <button
+            class="btn btn-dark btn-lg col-6"
+            type="button"
+            id="fitmentBackBtn"
+          >
+            <i class="bi bi-arrow-left"></i> Back
+          </button>
+          <button
+            class="btn btn-danger text-light btn-lg col-6"
+            type="button"
+            id="fitmentBtn"
+          >
+            Next <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Customer -->
+    <div id="customerDiv" class="d-none">
+      <label class="form-label fs-5">Who do we contact?</label>
+      <input
+        type="text"
+        class="form-control form-control-lg mb-3"
+        placeholder="Name"
+        required
+        name="order[customer][name]"
+      />
+      <input
+        type="tel"
+        class="form-control form-control-lg mb-3"
+        placeholder="Phone"
+        required
+        name="order[customer][phone]"
+      />
+      <textarea
+        name="order[message]"
+        class="form-control form-control-lg mb-3"
+        placeholder="Message"></textarea>
+      <div class="container">
+        <div class="row mt-2">
+          <button
+            class="btn btn-dark btn-lg col-6"
+            type="button"
+            id="customerBackBtn"
+          >
+            <i class="bi bi-arrow-left"></i> Back
+          </button>
+          <button
+            class="btn btn-danger text-light btn-lg col-6"
+            type="submit"
+            id="customerBtn"
+          >
+            Send <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+  const steps = [
+    "vrmDiv",
+    "serviceDiv",
+    "lockingIssueDiv",
+    "tpmsIssueDiv",
+    "tyreSizeDiv",
+    "quantityDiv",
+    "locationDiv",
+    "fitmentDiv",
+    "customerDiv",
+  ];
+
+  let currentStep = 0;
+  let selectedService = "";
+
+  const showStep = (index) => {
+    steps.forEach((id, i) => {
+      document.getElementById(id).classList.toggle("d-none", i !== index);
+    });
+  };
+
+  const nextStep = () => {
+    if (currentStep < steps.length - 1) {
+      currentStep++;
+      showStep(currentStep);
+    }
+  };
+
+  const backStep = () => {
+    if (currentStep > 0) {
+      currentStep--;
+      showStep(currentStep);
+    }
+  };
+
+  // Validation functions
+  const isVrmValid = () =>
+    document.getElementById("vrmInput").value.trim() !== "";
+  const isTyreSizeValid = () =>
+    [...document.querySelectorAll("#tyreSizeDiv select")].every(
+      (sel) => sel.value.trim() !== ""
+    );
+  const isQuantityValid = () =>
+    document.querySelector("#quantityDiv select").value.trim() !== "";
+  const isLocationValid = () =>
+    document.getElementById("postcodeInput").value.trim() !== "";
+  const isFitmentValid = () =>
+    document.querySelector("#fitmentDiv select").value.trim() !== "";
+
+  // Step handlers
+  document.getElementById("vrmBtn").addEventListener("click", () => {
+    if (isVrmValid()) {
+      currentStep = 1;
+      showStep(currentStep);
+    } else {
+      alert("Please enter a registration.");
+    }
+  });
+
+  document.getElementById("serviceBtn").addEventListener("click", () => {
+    selectedService = document.getElementById("serviceSelect").value;
+    if (!selectedService) {
+      alert("Please select a service.");
+      return;
+    }
+
+    switch (selectedService) {
+      case "Mobile Tyre Fitting":
+      case "Emergency Mobile Tyre Fitting":
+        currentStep = 4; // tyreSizeDiv
+        break;
+
+      case "Puncture Repair":
+      case "Battery Replacement":
+        currentStep = 6; // locationDiv
+        break;
+
+      case "Locking Wheel Nut Removal":
+        currentStep = 2; // lockingIssueDiv
+        break;
+
+      case "TPMS":
+        currentStep = 3; // ✅ tpmsIssueDiv
+        break;
+
+      default:
+        alert(`Thanks! We'll handle "${selectedService}" differently later.`);
+        return;
+    }
+
+    showStep(currentStep);
+  });
+
+  document.getElementById("tpmsIssueBtn").addEventListener("click", () => {
+  const issue = document.getElementById("tpmsIssueSelect").value;
+  if (!issue) {
+    alert("Please select the TPMS issue.");
+    return;
+  }
+  currentStep = 6; // go to locationDiv
+  showStep(currentStep);
+});
+
+document.getElementById("tpmsIssueBackBtn").addEventListener("click", () => {
+  currentStep = 1; // back to serviceDiv
+  showStep(currentStep);
+});
+
+
+  document.getElementById("lockingIssueBtn").addEventListener("click", () => {
+    const issue = document.getElementById("lockingIssueSelect").value;
+    if (!issue) {
+      alert("Please select the issue you're having.");
+      return;
+    }
+    currentStep = 5; // locationDiv
+    showStep(currentStep);
+  });
+
+  document
+    .getElementById("lockingIssueBackBtn")
+    .addEventListener("click", () => {
+      currentStep = 1; // Back to service selection
+      showStep(currentStep);
+    });
+
+  document.getElementById("tyreSizeBtn").addEventListener("click", () => {
+    if (isTyreSizeValid()) nextStep();
+    else alert("Please select all tyre sizes.");
+  });
+
+  document.getElementById("quantityBtn").addEventListener("click", () => {
+    if (isQuantityValid()) nextStep();
+    else alert("Please select quantity.");
+  });
+
+  document.getElementById("postcodeBtn").addEventListener("click", () => {
+    if (isLocationValid()) nextStep();
+    else alert("Please enter a postcode.");
+  });
+
+  document.getElementById("coordinatesBtn").addEventListener("click", nextStep);
+
+  document.getElementById("fitmentBtn").addEventListener("click", () => {
+    if (isFitmentValid()) nextStep();
+    else alert("Please select a fitment option.");
+  });
+
+  // Back buttons
+  document.getElementById("serviceBackBtn").addEventListener("click", () => {
+    currentStep = 0;
+    showStep(currentStep);
+  });
+
+  document
+    .getElementById("tyreSizeBackBtn")
+    .addEventListener("click", backStep);
+  document
+    .getElementById("quantityBackBtn")
+    .addEventListener("click", backStep);
+
+  // Custom back behavior for location step
+  document.getElementById("locationBackBtn").addEventListener("click", () => {
+    if (
+      selectedService === "Puncture Repair" ||
+      selectedService === "Locking Wheel Nut Removal" ||
+      selectedService === "Battery Replacement" ||
+      selectedService === "TPMS"
+    ) {
+      currentStep = 1; // Go back to service selection
+    } else {
+      currentStep = 3; // Go back to quantity as usual
+    }
+    showStep(currentStep);
+  });
+
+  document.getElementById("fitmentBackBtn").addEventListener("click", () => {
+    if (selectedService === "Puncture Repair") {
+      currentStep = 4; // Go back to location
+    } else {
+      currentStep = 3; // From fitment back to quantity
+    }
+    showStep(currentStep);
+  });
+
+  document
+    .getElementById("customerBackBtn")
+    .addEventListener("click", backStep);
+
+  // Enter key handling
+  document.getElementById("vrmInput").addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      if (isVrmValid()) {
+        currentStep = 1;
+        showStep(currentStep);
+      } else {
+        alert("Please enter a registration.");
+      }
+    }
+  });
+
+  document.getElementById("postcodeInput").addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      if (isLocationValid()) nextStep();
+      else alert("Please enter a postcode.");
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    showStep(currentStep);
+  });
+</script>

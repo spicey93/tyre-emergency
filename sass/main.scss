@@ -60,12 +60,8 @@ $danger: #ff3131;
 }
 
 .call-btn {
-    @extend .btn, .btn-lg, .btn-danger, .text-light, .fw-bold;
-}
-
-.btn {
     border-radius: 0px;
-    @extend .accent, .btn-lg;
+    @extend .accent, .btn-lg, .btn-danger, .text-light, .accent, .fs-5;
 }
 
 h1, h2, h3, h4, h5 {
