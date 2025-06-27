@@ -465,20 +465,19 @@
   });
 
   document.getElementById("tpmsIssueBtn").addEventListener("click", () => {
-  const issue = document.getElementById("tpmsIssueSelect").value;
-  if (!issue) {
-    alert("Please select the TPMS issue.");
-    return;
-  }
-  currentStep = 6; // go to locationDiv
-  showStep(currentStep);
-});
+    const issue = document.getElementById("tpmsIssueSelect").value;
+    if (!issue) {
+      alert("Please select the TPMS issue.");
+      return;
+    }
+    currentStep = 6; // go to locationDiv
+    showStep(currentStep);
+  });
 
-document.getElementById("tpmsIssueBackBtn").addEventListener("click", () => {
-  currentStep = 1; // back to serviceDiv
-  showStep(currentStep);
-});
-
+  document.getElementById("tpmsIssueBackBtn").addEventListener("click", () => {
+    currentStep = 1; // back to serviceDiv
+    showStep(currentStep);
+  });
 
   document.getElementById("lockingIssueBtn").addEventListener("click", () => {
     const issue = document.getElementById("lockingIssueSelect").value;
@@ -512,7 +511,52 @@ document.getElementById("tpmsIssueBackBtn").addEventListener("click", () => {
     else alert("Please enter a postcode.");
   });
 
-  document.getElementById("coordinatesBtn").addEventListener("click", nextStep);
+  document.getElementById("coordinatesBtn").addEventListener("click", () => {
+    if (!navigator.geolocation) {
+      alert("Geolocation is not supported by your browser.");
+      return;
+    }
+
+    document.getElementById("coordinatesBtn").innerText = "Locating...";
+
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+
+        try {
+          const response = await fetch(
+            `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lon}`
+          );
+          const data = await response.json();
+
+          const postcode = data.address.postcode || "";
+          if (!postcode) {
+            alert("Could not determine postcode from location.");
+            document.getElementById("coordinatesBtn").innerText =
+              "Share your location";
+            return;
+          }
+
+          document.getElementById("postcodeInput").value = postcode;
+          document.getElementById("coordinatesBtn").innerText =
+            "Share your location";
+
+          currentStep = 7; // go to fitmentDiv
+          showStep(currentStep);
+        } catch (error) {
+          alert("Error getting location. Please try again.");
+          document.getElementById("coordinatesBtn").innerText =
+            "Share your location";
+        }
+      },
+      () => {
+        alert("Unable to retrieve your location.");
+        document.getElementById("coordinatesBtn").innerText =
+          "Share your location";
+      }
+    );
+  });
 
   document.getElementById("fitmentBtn").addEventListener("click", () => {
     if (isFitmentValid()) nextStep();
