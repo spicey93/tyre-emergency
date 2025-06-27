@@ -7,7 +7,7 @@
       <input
         type="text"
         class="form-control form-control-lg text-uppercase text-center"
-        name="order[vrm]"
+        name="registration"
         id="vrmInput"
         placeholder="AB12 CDE"
         required
@@ -69,10 +69,10 @@
       <label class="form-label fs-5">What's the tyre size?</label>
       <div class="input-group">
         <select
-          name="order[tyreSize][width]"
+          name="tyreWidth"
           class="form-select form-select-lg"
-          required
         >
+          <option value="" selected>Width</option>
           <option value="125">125</option>
           <option value="135">135</option>
           <option value="145">145</option>
@@ -81,7 +81,7 @@
           <option value="175">175</option>
           <option value="185">185</option>
           <option value="195">195</option>
-          <option value="205" selected>205</option>
+          <option value="205">205</option>
           <option value="215">215</option>
           <option value="225">225</option>
           <option value="235">235</option>
@@ -98,16 +98,16 @@
           <option value="345">345</option>
         </select>
         <select
-          name="order[tyreSize][profile]"
+          name="tyreProfile"
           class="form-select form-select-lg"
-          required
         >
+          <option value="">Profile</option>
           <option value="30">30</option>
           <option value="35">35</option>
           <option value="40">40</option>
           <option value="45">45</option>
           <option value="50">50</option>
-          <option value="55" selected>55</option>
+          <option value="55">55</option>
           <option value="60">60</option>
           <option value="65">65</option>
           <option value="70">70</option>
@@ -116,17 +116,17 @@
           <option value="85">85</option>
         </select>
         <select
-          name="order[tyreSize][diameter]"
+          name="tyreDiameter"
           class="form-select form-select-lg"
-          required
         >
+            <option value="" selected>Diameter</option>
           <option value="10">R10</option>
           <option value="11">R11</option>
           <option value="12">R12</option>
           <option value="13">R13</option>
           <option value="14">R14</option>
           <option value="15">R15</option>
-          <option value="16" selected>R16</option>
+          <option value="16">R16</option>
           <option value="17">R17</option>
           <option value="18">R18</option>
           <option value="19">R19</option>
@@ -159,7 +159,7 @@
     <!-- Quantity -->
     <div class="d-none" id="quantityDiv">
       <label class="form-label fs-5">How many tyres do you need?</label>
-      <select name="order[quantity]" class="form-select form-select-lg">
+      <select name="quantity" class="form-select form-select-lg">
         <option value="1">1 Tyre</option>
         <option value="2">2 Tyres</option>
         <option value="3">3 Tyres</option>
@@ -191,7 +191,7 @@
       <input
         type="text"
         class="form-control form-control-lg text-uppercase text-center mb-2"
-        name="order[location]"
+        name="postcode"
         placeholder="Enter Postcode"
         id="postcodeInput"
         required
@@ -230,7 +230,7 @@
     <!-- Fitment -->
     <div class="d-none" id="fitmentDiv">
       <label class="form-label fs-5">How soon do you need help?</label>
-      <select name="order[fitment]" class="form-select form-select-lg">
+      <select name="fitment" class="form-select form-select-lg">
         <option value="ASAP">ASAP</option>
         <option value="Today">Today</option>
         <option value="Not Urgent">Not Urgent</option>
@@ -263,17 +263,17 @@
         class="form-control form-control-lg mb-3"
         placeholder="Name"
         required
-        name="order[customer][name]"
+        name="Name"
       />
       <input
         type="tel"
         class="form-control form-control-lg mb-3"
         placeholder="Phone"
         required
-        name="order[customer][phone]"
+        name="Phone"
       />
       <textarea
-        name="order[message]"
+        name="Message"
         class="form-control form-control-lg mb-3"
         placeholder="Message"></textarea>
       <div class="container">
