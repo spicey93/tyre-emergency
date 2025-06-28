@@ -1,6 +1,7 @@
 // VARIABLES
 $primary: #ff3131;
 $danger: #ff3131;
+$info: #31ffff;
 
 // IMPORT PACKAGES
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
@@ -16,6 +17,7 @@ $danger: #ff3131;
     font-family: 'Anton', 'Merriweather', "Crimson Pro", 'Lato', 'Open Sans','Roboto Condensed', 'Roboto', 'Work Sans', sans-serif;
     font-style: italic;
     letter-spacing: 0.02em;
+    text-transform: uppercase;
 }
 .dropdown-item.active, .dropdown-item:focus {
     background-color: $danger !important;  // Set active dropdown link color to red

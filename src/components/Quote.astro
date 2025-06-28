@@ -14,11 +14,11 @@
       />
       <div class="d-grid mt-2">
         <button
-          class="btn btn-danger text-light btn-lg"
+          class="btn btn-info rounded-0 btn-lg accent"
           type="button"
           id="vrmBtn"
         >
-          Next <i class="bi bi-arrow-right"></i>
+          Next
         </button>
       </div>
     </div>
@@ -47,18 +47,18 @@
       <div class="container">
         <div class="row mt-2">
           <button
-            class="btn btn-dark btn-lg col-6"
+            class="btn btn-dark btn-lg col-5 accent rounded-0"
             type="button"
             id="serviceBackBtn"
           >
-            <i class="bi bi-arrow-left"></i> Back
+            Back
           </button>
           <button
-            class="btn btn-danger btn-lg text-light col-6"
+            class="btn btn-info rounded-0 btn-lg accent col-5 offset-2"
             type="button"
             id="serviceBtn"
           >
-            Next <i class="bi bi-arrow-right"></i>
+            Next
           </button>
         </div>
       </div>
@@ -66,91 +66,83 @@
 
     <!-- Tyre Size -->
     <div id="tyreSizeDiv" class="d-none">
-      <label class="form-label fs-5">What's the tyre size?</label>
-      <div class="input-group">
-        <select
-          name="tyreWidth"
-          class="form-select form-select-lg"
-        >
-          <option value="" selected>Width</option>
-          <option value="125">125</option>
-          <option value="135">135</option>
-          <option value="145">145</option>
-          <option value="155">155</option>
-          <option value="165">165</option>
-          <option value="175">175</option>
-          <option value="185">185</option>
-          <option value="195">195</option>
-          <option value="205">205</option>
-          <option value="215">215</option>
-          <option value="225">225</option>
-          <option value="235">235</option>
-          <option value="245">245</option>
-          <option value="255">255</option>
-          <option value="265">265</option>
-          <option value="275">275</option>
-          <option value="285">285</option>
-          <option value="295">295</option>
-          <option value="305">305</option>
-          <option value="315">315</option>
-          <option value="325">325</option>
-          <option value="335">335</option>
-          <option value="345">345</option>
-        </select>
-        <select
-          name="tyreProfile"
-          class="form-select form-select-lg"
-        >
-          <option value="">Profile</option>
-          <option value="30">30</option>
-          <option value="35">35</option>
-          <option value="40">40</option>
-          <option value="45">45</option>
-          <option value="50">50</option>
-          <option value="55">55</option>
-          <option value="60">60</option>
-          <option value="65">65</option>
-          <option value="70">70</option>
-          <option value="75">75</option>
-          <option value="80">80</option>
-          <option value="85">85</option>
-        </select>
-        <select
-          name="tyreDiameter"
-          class="form-select form-select-lg"
-        >
-            <option value="" selected>Diameter</option>
-          <option value="10">R10</option>
-          <option value="11">R11</option>
-          <option value="12">R12</option>
-          <option value="13">R13</option>
-          <option value="14">R14</option>
-          <option value="15">R15</option>
-          <option value="16">R16</option>
-          <option value="17">R17</option>
-          <option value="18">R18</option>
-          <option value="19">R19</option>
-          <option value="20">R20</option>
-          <option value="21">R21</option>
-          <option value="22">R22</option>
-          <option value="23">R23</option>
-        </select>
-      </div>
+      <label class="form-label fs-5"
+        >What's the tyre size? (This will be on the sidewall of the tyre)</label
+      >
+
+      <select name="tyreWidth" class="form-select mb-2 form-select-lg">
+        <option value="125">125</option>
+        <option value="135">135</option>
+        <option value="145">145</option>
+        <option value="155">155</option>
+        <option value="165">165</option>
+        <option value="175">175</option>
+        <option value="185">185</option>
+        <option value="195">195</option>
+        <option value="" selected>Width</option>
+        <option value="205">205</option>
+        <option value="215">215</option>
+        <option value="225">225</option>
+        <option value="235">235</option>
+        <option value="245">245</option>
+        <option value="255">255</option>
+        <option value="265">265</option>
+        <option value="275">275</option>
+        <option value="285">285</option>
+        <option value="295">295</option>
+        <option value="305">305</option>
+        <option value="315">315</option>
+        <option value="325">325</option>
+        <option value="335">335</option>
+        <option value="345">345</option>
+      </select>
+      <select name="tyreProfile" class="form-select mb-2 form-select-lg">
+        <option value="30">30</option>
+        <option value="35">35</option>
+        <option value="40">40</option>
+        <option value="45">45</option>
+        <option value="50">50</option>
+        <option value="" selected>Profile</option>
+        <option value="55">55</option>
+        <option value="60">60</option>
+        <option value="65">65</option>
+        <option value="70">70</option>
+        <option value="75">75</option>
+        <option value="80">80</option>
+        <option value="85">85</option>
+      </select>
+      <select name="tyreDiameter" class="form-select mb-2 form-select-lg">
+        <option value="10">R10</option>
+        <option value="11">R11</option>
+        <option value="12">R12</option>
+        <option value="13">R13</option>
+        <option value="14">R14</option>
+        <option value="15">R15</option>
+        <option value="" selected>Diameter</option>
+        <option value="16">R16</option>
+        <option value="17">R17</option>
+        <option value="18">R18</option>
+        <option value="19">R19</option>
+        <option value="20">R20</option>
+        <option value="21">R21</option>
+        <option value="22">R22</option>
+        <option value="23">R23</option>
+      </select>
+
       <div class="container">
         <div class="row mt-2">
           <button
-            class="btn btn-dark btn-lg col-6"
+            class="btn btn-dark btn-lg col-5 accent rounded-0"
             type="button"
             id="tyreSizeBackBtn"
-          >
-            <i class="bi bi-arrow-left"></i> Back
+            >Back
           </button>
           <button
-            class="btn btn-danger text-light btn-lg col-6"
+            class="btn btn-info rounded-0 btn-lg accent col-5 offset-2"
             type="button"
             id="tyreSizeBtn"
           >
-            Next <i class="bi bi-arrow-right"></i>
+            Next
           </button>
         </div>
       </div>
@@ -168,18 +160,18 @@
       <div class="container">
         <div class="row mt-2">
           <button
-            class="btn btn-dark btn-lg col-6"
+            class="btn btn-dark btn-lg col-5 accent rounded-0"
             type="button"
             id="quantityBackBtn"
           >
-            <i class="bi bi-arrow-left"></i> Back
+            Back
           </button>
           <button
-            class="btn btn-danger text-light btn-lg col-6"
+            class="btn btn-info rounded-0 btn-lg accent col-5 offset-2"
             type="button"
             id="quantityBtn"
           >
-            Next <i class="bi bi-arrow-right"></i>
+            Next
           </button>
         </div>
       </div>
@@ -199,20 +191,19 @@
       <div class="container">
         <div class="row mt-2 mb-3">
           <button
-            class="btn btn-dark btn-lg col-6"
+            class="btn btn-dark btn-lg col-5 accent rounded-0"
             type="button"
             role="button"
             id="locationBackBtn"
-          >
-            <i class="bi bi-arrow-left"></i> Back
+            >Back
           </button>
 
           <button
-            class="btn btn-danger text-light btn-lg col-6"
+            class="btn btn-info rounded-0 btn-lg accent col-5 offset-2"
             type="button"
             id="postcodeBtn"
           >
-            Next <i class="bi bi-arrow-right"></i>
+            Next
           </button>
         </div>
       </div>
@@ -238,18 +229,17 @@
       <div class="container">
         <div class="row mt-2 mb-3">
           <button
-            class="btn btn-dark btn-lg col-6"
+            class="btn btn-dark btn-lg col-5 accent rounded-0"
             type="button"
             id="fitmentBackBtn"
-          >
-            <i class="bi bi-arrow-left"></i> Back
+            >Back
           </button>
           <button
-            class="btn btn-danger text-light btn-lg col-6"
+            class="btn btn-info rounded-0 btn-lg accent col-5 offset-2"
             type="button"
             id="fitmentBtn"
           >
-            Next <i class="bi bi-arrow-right"></i>
+            Next
           </button>
         </div>
       </div>
@@ -279,18 +269,18 @@
       <div class="container">
         <div class="row mt-2">
           <button
-            class="btn btn-dark btn-lg col-6"
+            class="btn btn-dark btn-lg col-5 accent rounded-0"
             type="button"
             id="customerBackBtn"
           >
-            <i class="bi bi-arrow-left"></i> Back
+            Back
           </button>
           <button
-            class="btn btn-danger text-light btn-lg col-6"
+            class="btn btn-info rounded-0 btn-lg accent col-5 offset-2"
             type="submit"
             id="customerBtn"
           >
-            Send <i class="bi bi-arrow-right"></i>
+            Send
           </button>
         </div>
       </div>
@@ -299,179 +289,189 @@
 </div>
 
 <script>
-    const steps = [
-      "vrmDiv",         // 0
-      "serviceDiv",     // 1
-      "tyreSizeDiv",    // 2
-      "quantityDiv",    // 3
-      "locationDiv",    // 4
-      "fitmentDiv",     // 5
-      "customerDiv",    // 6
-    ];
-  
-    let currentStep = 0;
-    let isTyreFlow = false;
-  
-    const showStep = (index) => {
-      steps.forEach((id, i) => {
-        document.getElementById(id).classList.toggle("d-none", i !== index);
-      });
-    };
-  
-    const goToStep = (stepName) => {
-      currentStep = steps.indexOf(stepName);
+  const steps = [
+    "vrmDiv", // 0
+    "serviceDiv", // 1
+    "tyreSizeDiv", // 2
+    "quantityDiv", // 3
+    "locationDiv", // 4
+    "fitmentDiv", // 5
+    "customerDiv", // 6
+  ];
+
+  let currentStep = 0;
+  let isTyreFlow = false;
+
+  const showStep = (index) => {
+    steps.forEach((id, i) => {
+      document.getElementById(id).classList.toggle("d-none", i !== index);
+    });
+  };
+
+  const goToStep = (stepName) => {
+    currentStep = steps.indexOf(stepName);
+    showStep(currentStep);
+  };
+
+  const nextStep = () => {
+    if (currentStep < steps.length - 1) {
+      currentStep++;
       showStep(currentStep);
-    };
-  
-    const nextStep = () => {
-      if (currentStep < steps.length - 1) {
-        currentStep++;
-        showStep(currentStep);
-      }
-    };
-  
-    const backStep = () => {
-      if (currentStep > 0) {
-        currentStep--;
-        showStep(currentStep);
-      }
-    };
-  
-    // Validators
-    const isVrmValid = () => document.getElementById("vrmInput").value.trim() !== "";
-    const isTyreSizeValid = () => [...document.querySelectorAll("#tyreSizeDiv select")].every(sel => sel.value.trim() !== "");
-    const isQuantityValid = () => document.querySelector("#quantityDiv select").value.trim() !== "";
-    const isLocationValid = () => document.getElementById("postcodeInput").value.trim() !== "";
-    const isFitmentValid = () => document.querySelector("#fitmentDiv select").value.trim() !== "";
-  
-    // Step: VRM
-    document.getElementById("vrmBtn").addEventListener("click", () => {
-      if (isVrmValid()) goToStep("serviceDiv");
-      else alert("Please enter a registration.");
-    });
-  
-    // Step: Service
-    document.getElementById("serviceBtn").addEventListener("click", () => {
-      const selectedService = document.getElementById("serviceSelect").value;
-  
-      if (!selectedService) {
-        alert("Please select a service.");
-        return;
-      }
-  
-      isTyreFlow = selectedService === "Mobile Tyre Fitting" || selectedService === "Emergency Mobile Tyre Fitting";
-  
-      goToStep(isTyreFlow ? "tyreSizeDiv" : "locationDiv");
-    });
-  
-    document.getElementById("serviceBackBtn").addEventListener("click", () => {
-      goToStep("vrmDiv");
-    });
-  
-    // Tyre Size
-    document.getElementById("tyreSizeBtn").addEventListener("click", () => {
-      if (isTyreSizeValid()) goToStep("quantityDiv");
-      else alert("Please select all tyre sizes.");
-    });
-  
-    document.getElementById("tyreSizeBackBtn").addEventListener("click", () => {
-      goToStep("serviceDiv");
-    });
-  
-    // Quantity
-    document.getElementById("quantityBtn").addEventListener("click", () => {
-      if (isQuantityValid()) goToStep("locationDiv");
-      else alert("Please select quantity.");
-    });
-  
-    document.getElementById("quantityBackBtn").addEventListener("click", () => {
-      goToStep("tyreSizeDiv");
-    });
-  
-    // Location
-    document.getElementById("postcodeBtn").addEventListener("click", () => {
-      if (isLocationValid()) goToStep("fitmentDiv");
-      else alert("Please enter a postcode.");
-    });
-  
-    document.getElementById("locationBackBtn").addEventListener("click", () => {
-      goToStep(isTyreFlow ? "quantityDiv" : "serviceDiv");
-    });
-  
-    document.getElementById("coordinatesBtn").addEventListener("click", () => {
-      if (!navigator.geolocation) {
-        alert("Geolocation is not supported by your browser.");
-        return;
-      }
-  
-      const btn = document.getElementById("coordinatesBtn");
-      btn.innerText = "Locating...";
-  
-      navigator.geolocation.getCurrentPosition(
-        async (position) => {
-          const lat = position.coords.latitude;
-          const lon = position.coords.longitude;
-  
-          try {
-            const res = await fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lon}`);
-            const data = await res.json();
-            const postcode = data.address.postcode;
-  
-            if (!postcode) {
-              alert("Unable to detect postcode.");
-              btn.innerText = "Share your location";
-              return;
-            }
-  
-            document.getElementById("postcodeInput").value = postcode;
+    }
+  };
+
+  const backStep = () => {
+    if (currentStep > 0) {
+      currentStep--;
+      showStep(currentStep);
+    }
+  };
+
+  // Validators
+  const isVrmValid = () =>
+    document.getElementById("vrmInput").value.trim() !== "";
+  const isTyreSizeValid = () =>
+    [...document.querySelectorAll("#tyreSizeDiv select")].every(
+      (sel) => sel.value.trim() !== ""
+    );
+  const isQuantityValid = () =>
+    document.querySelector("#quantityDiv select").value.trim() !== "";
+  const isLocationValid = () =>
+    document.getElementById("postcodeInput").value.trim() !== "";
+  const isFitmentValid = () =>
+    document.querySelector("#fitmentDiv select").value.trim() !== "";
+
+  // Step: VRM
+  document.getElementById("vrmBtn").addEventListener("click", () => {
+    if (isVrmValid()) goToStep("serviceDiv");
+    else alert("Please enter a registration.");
+  });
+
+  // Step: Service
+  document.getElementById("serviceBtn").addEventListener("click", () => {
+    const selectedService = document.getElementById("serviceSelect").value;
+
+    if (!selectedService) {
+      alert("Please select a service.");
+      return;
+    }
+
+    isTyreFlow =
+      selectedService === "Mobile Tyre Fitting" ||
+      selectedService === "Emergency Mobile Tyre Fitting";
+
+    goToStep(isTyreFlow ? "tyreSizeDiv" : "locationDiv");
+  });
+
+  document.getElementById("serviceBackBtn").addEventListener("click", () => {
+    goToStep("vrmDiv");
+  });
+
+  // Tyre Size
+  document.getElementById("tyreSizeBtn").addEventListener("click", () => {
+    if (isTyreSizeValid()) goToStep("quantityDiv");
+    else alert("Please select all tyre sizes.");
+  });
+
+  document.getElementById("tyreSizeBackBtn").addEventListener("click", () => {
+    goToStep("serviceDiv");
+  });
+
+  // Quantity
+  document.getElementById("quantityBtn").addEventListener("click", () => {
+    if (isQuantityValid()) goToStep("locationDiv");
+    else alert("Please select quantity.");
+  });
+
+  document.getElementById("quantityBackBtn").addEventListener("click", () => {
+    goToStep("tyreSizeDiv");
+  });
+
+  // Location
+  document.getElementById("postcodeBtn").addEventListener("click", () => {
+    if (isLocationValid()) goToStep("fitmentDiv");
+    else alert("Please enter a postcode.");
+  });
+
+  document.getElementById("locationBackBtn").addEventListener("click", () => {
+    goToStep(isTyreFlow ? "quantityDiv" : "serviceDiv");
+  });
+
+  document.getElementById("coordinatesBtn").addEventListener("click", () => {
+    if (!navigator.geolocation) {
+      alert("Geolocation is not supported by your browser.");
+      return;
+    }
+
+    const btn = document.getElementById("coordinatesBtn");
+    btn.innerText = "Locating...";
+
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+
+        try {
+          const res = await fetch(
+            `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lon}`
+          );
+          const data = await res.json();
+          const postcode = data.address.postcode;
+
+          if (!postcode) {
+            alert("Unable to detect postcode.");
             btn.innerText = "Share your location";
-            goToStep("fitmentDiv");
-          } catch {
-            alert("Error retrieving location.");
-            btn.innerText = "Share your location";
+            return;
           }
-        },
-        () => {
-          alert("Location permission denied.");
+
+          document.getElementById("postcodeInput").value = postcode;
+          btn.innerText = "Share your location";
+          goToStep("fitmentDiv");
+        } catch {
+          alert("Error retrieving location.");
           btn.innerText = "Share your location";
         }
-      );
-    });
-  
-    // Fitment
-    document.getElementById("fitmentBtn").addEventListener("click", () => {
-      if (isFitmentValid()) goToStep("customerDiv");
-      else alert("Please select a fitment option.");
-    });
-  
-    document.getElementById("fitmentBackBtn").addEventListener("click", () => {
-      goToStep("locationDiv");
-    });
-  
-    // Customer
-    document.getElementById("customerBackBtn").addEventListener("click", () => {
-      goToStep("fitmentDiv");
-    });
-  
-    // Enter key quick nav
-    document.getElementById("vrmInput").addEventListener("keypress", (e) => {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        if (isVrmValid()) goToStep("serviceDiv");
-        else alert("Please enter a registration.");
+      },
+      () => {
+        alert("Location permission denied.");
+        btn.innerText = "Share your location";
       }
-    });
-  
-    document.getElementById("postcodeInput").addEventListener("keypress", (e) => {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        if (isLocationValid()) goToStep("fitmentDiv");
-        else alert("Please enter a postcode.");
-      }
-    });
-  
-    document.addEventListener("DOMContentLoaded", () => {
-      showStep(currentStep);
-    });
-  </script>
-  
+    );
+  });
+
+  // Fitment
+  document.getElementById("fitmentBtn").addEventListener("click", () => {
+    if (isFitmentValid()) goToStep("customerDiv");
+    else alert("Please select a fitment option.");
+  });
+
+  document.getElementById("fitmentBackBtn").addEventListener("click", () => {
+    goToStep("locationDiv");
+  });
+
+  // Customer
+  document.getElementById("customerBackBtn").addEventListener("click", () => {
+    goToStep("fitmentDiv");
+  });
+
+  // Enter key quick nav
+  document.getElementById("vrmInput").addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      if (isVrmValid()) goToStep("serviceDiv");
+      else alert("Please enter a registration.");
+    }
+  });
+
+  document.getElementById("postcodeInput").addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      if (isLocationValid()) goToStep("fitmentDiv");
+      else alert("Please enter a postcode.");
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    showStep(currentStep);
+  });
+</script>
