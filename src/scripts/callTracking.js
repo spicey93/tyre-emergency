@@ -93,8 +93,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        url: currentUrl,
-        phone: phoneNumber,
+        url: url, // ✅ Use function argument
+        phone: phone, // ✅ Use function argument
         ip: userIP,
         source: source,
       }),
