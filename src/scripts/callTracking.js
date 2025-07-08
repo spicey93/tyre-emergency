@@ -21,17 +21,17 @@ function detectSource() {
     return "google_my_business";
   }
 
-  // if (utmSource === "gmb") {
-  //   return "gmb_bilsthorpe"
-  // }
+  if (utmSource === "gmb") {
+    return "gmb_bilsthorpe"
+  }
 
-  // if (utmSource === "gmb2") {
-  //   return "gmb_worksop"
-  // }
+  if (utmSource === "gmb2") {
+    return "gmb_worksop"
+  }
 
-  // if (utmSource === "gmb3") {
-  //   return "gmb_newark"
-  // }
+  if (utmSource === "gmb3") {
+    return "gmb_newark"
+  }
 
   if (/google\./.test(referrer)) {
     return "organic";
