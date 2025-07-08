@@ -1,3 +1,5 @@
+document.getElementById("current_url").value = window.location.href;
+
 const steps = [
   "vrmDiv", // 0
   "serviceDiv", // 1
