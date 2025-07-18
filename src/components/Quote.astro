@@ -1,296 +1,305 @@
-<div class="bg-light text-center p-4 rounded w-100" id="quoteForm">
+<form
+  class="bg-light text-center p-4 rounded w-100"
+  id="quoteForm"
+  method="POST"
+  action="#"
+  data-netlify="true"
+>
   <p class="h3">Get a Quote</p>
-  <form method="POST" action="#" data-netlify="true">
-    <input type="hidden" name="current_url" id="current_url">
-    <!-- VRM -->
-    <div id="vrmDiv">
-      <label class="form-label fs-5">What's the registration?</label>
-      <input
-        type="text"
-        class="form-control form-control-lg text-uppercase text-center"
-        name="registration"
-        id="vrmInput"
-        placeholder="AB12 CDE"
-        required
-      />
-      <div class="d-grid mt-2">
+  <input type="hidden" name="current_url" id="current_url" />
+  <!-- VRM -->
+  <div id="vrmDiv">
+    <label class="form-label fs-5">What's the registration?</label>
+    <input
+      type="text"
+      class="form-control form-control-lg text-uppercase text-center"
+      name="registration"
+      id="vrmInput"
+      placeholder="AB12 CDE"
+      required
+    />
+    <div class="d-grid mt-2">
+      <button
+        class="btn btn-info rounded-0 btn-lg accent"
+        type="button"
+        id="vrmBtn"
+      >
+        Next
+      </button>
+    </div>
+  </div>
+
+  <!-- Service Selection -->
+  <div class="d-none" id="serviceDiv">
+    <label class="form-label fs-5">What service do you need?</label>
+    <select
+      id="serviceSelect"
+      name="service"
+      class="form-select form-select-lg"
+      required
+    >
+      <option value="">Choose an option</option>
+      <option value="Mobile Tyre Fitting">Mobile Tyre Fitting</option>
+      <option value="Emergency Mobile Tyre Fitting"
+        >Emergency Mobile Tyre Fitting</option
+      >
+      <option value="Puncture Repair">Puncture Repair</option>
+      <option value="Locking Wheel Nut Removal"
+        >Locking Wheel Nut Removal</option
+      >
+      <option value="Battery Replacement">Battery Replacement</option>
+      <option value="TPMS">TPMS</option>
+    </select>
+    <div class="container">
+      <div class="row mt-2">
         <button
-          class="btn btn-info rounded-0 btn-lg accent"
+          class="btn btn-dark btn-lg col-5 accent rounded-0"
           type="button"
-          id="vrmBtn"
+          id="serviceBackBtn"
+        >
+          Back
+        </button>
+        <button
+          class="btn btn-info rounded-0 btn-lg accent col-5 offset-2"
+          type="button"
+          id="serviceBtn"
         >
           Next
         </button>
       </div>
     </div>
+  </div>
 
-    <!-- Service Selection -->
-    <div class="d-none" id="serviceDiv">
-      <label class="form-label fs-5">What service do you need?</label>
-      <select
-        id="serviceSelect"
-        name="service"
-        class="form-select form-select-lg"
-        required
-      >
-        <option value="">Choose an option</option>
-        <option value="Mobile Tyre Fitting">Mobile Tyre Fitting</option>
-        <option value="Emergency Mobile Tyre Fitting"
-          >Emergency Mobile Tyre Fitting</option
-        >
-        <option value="Puncture Repair">Puncture Repair</option>
-        <option value="Locking Wheel Nut Removal"
-          >Locking Wheel Nut Removal</option
-        >
-        <option value="Battery Replacement">Battery Replacement</option>
-        <option value="TPMS">TPMS</option>
-      </select>
-      <div class="container">
-        <div class="row mt-2">
-          <button
-            class="btn btn-dark btn-lg col-5 accent rounded-0"
-            type="button"
-            id="serviceBackBtn"
-          >
-            Back
-          </button>
-          <button
-            class="btn btn-info rounded-0 btn-lg accent col-5 offset-2"
-            type="button"
-            id="serviceBtn"
-          >
-            Next
-          </button>
-        </div>
-      </div>
-    </div>
+  <!-- Tyre Size -->
+  <div id="tyreSizeDiv" class="d-none">
+    <label class="form-label fs-5"
+      >What's the tyre size? (This will be on the sidewall of the tyre)</label
+    >
 
-    <!-- Tyre Size -->
-    <div id="tyreSizeDiv" class="d-none">
-      <label class="form-label fs-5"
-        >What's the tyre size? (This will be on the sidewall of the tyre)</label
-      >
+    <select name="tyreWidth" class="form-select mb-2 form-select-lg">
+      <option value="125">125</option>
+      <option value="135">135</option>
+      <option value="145">145</option>
+      <option value="155">155</option>
+      <option value="165">165</option>
+      <option value="175">175</option>
+      <option value="185">185</option>
+      <option value="195">195</option>
+      <option value="" selected>Width</option>
+      <option value="205">205</option>
+      <option value="215">215</option>
+      <option value="225">225</option>
+      <option value="235">235</option>
+      <option value="245">245</option>
+      <option value="255">255</option>
+      <option value="265">265</option>
+      <option value="275">275</option>
+      <option value="285">285</option>
+      <option value="295">295</option>
+      <option value="305">305</option>
+      <option value="315">315</option>
+      <option value="325">325</option>
+      <option value="335">335</option>
+      <option value="345">345</option>
+    </select>
+    <select name="tyreProfile" class="form-select mb-2 form-select-lg">
+      <option value="30">30</option>
+      <option value="35">35</option>
+      <option value="40">40</option>
+      <option value="45">45</option>
+      <option value="50">50</option>
+      <option value="" selected>Profile</option>
+      <option value="55">55</option>
+      <option value="60">60</option>
+      <option value="65">65</option>
+      <option value="70">70</option>
+      <option value="75">75</option>
+      <option value="80">80</option>
+      <option value="85">85</option>
+    </select>
+    <select name="tyreDiameter" class="form-select mb-2 form-select-lg">
+      <option value="10">R10</option>
+      <option value="11">R11</option>
+      <option value="12">R12</option>
+      <option value="13">R13</option>
+      <option value="14">R14</option>
+      <option value="15">R15</option>
+      <option value="" selected>Diameter</option>
+      <option value="16">R16</option>
+      <option value="17">R17</option>
+      <option value="18">R18</option>
+      <option value="19">R19</option>
+      <option value="20">R20</option>
+      <option value="21">R21</option>
+      <option value="22">R22</option>
+      <option value="23">R23</option>
+    </select>
 
-      <select name="tyreWidth" class="form-select mb-2 form-select-lg">
-        <option value="125">125</option>
-        <option value="135">135</option>
-        <option value="145">145</option>
-        <option value="155">155</option>
-        <option value="165">165</option>
-        <option value="175">175</option>
-        <option value="185">185</option>
-        <option value="195">195</option>
-        <option value="" selected>Width</option>
-        <option value="205">205</option>
-        <option value="215">215</option>
-        <option value="225">225</option>
-        <option value="235">235</option>
-        <option value="245">245</option>
-        <option value="255">255</option>
-        <option value="265">265</option>
-        <option value="275">275</option>
-        <option value="285">285</option>
-        <option value="295">295</option>
-        <option value="305">305</option>
-        <option value="315">315</option>
-        <option value="325">325</option>
-        <option value="335">335</option>
-        <option value="345">345</option>
-      </select>
-      <select name="tyreProfile" class="form-select mb-2 form-select-lg">
-        <option value="30">30</option>
-        <option value="35">35</option>
-        <option value="40">40</option>
-        <option value="45">45</option>
-        <option value="50">50</option>
-        <option value="" selected>Profile</option>
-        <option value="55">55</option>
-        <option value="60">60</option>
-        <option value="65">65</option>
-        <option value="70">70</option>
-        <option value="75">75</option>
-        <option value="80">80</option>
-        <option value="85">85</option>
-      </select>
-      <select name="tyreDiameter" class="form-select mb-2 form-select-lg">
-        <option value="10">R10</option>
-        <option value="11">R11</option>
-        <option value="12">R12</option>
-        <option value="13">R13</option>
-        <option value="14">R14</option>
-        <option value="15">R15</option>
-        <option value="" selected>Diameter</option>
-        <option value="16">R16</option>
-        <option value="17">R17</option>
-        <option value="18">R18</option>
-        <option value="19">R19</option>
-        <option value="20">R20</option>
-        <option value="21">R21</option>
-        <option value="22">R22</option>
-        <option value="23">R23</option>
-      </select>
-
-      <div class="container">
-        <div class="row mt-2">
-          <button
-            class="btn btn-dark btn-lg col-5 accent rounded-0"
-            type="button"
-            id="tyreSizeBackBtn"
-            >Back
-          </button>
-          <button
-            class="btn btn-info rounded-0 btn-lg accent col-5 offset-2"
-            type="button"
-            id="tyreSizeBtn"
-          >
-            Next
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Quantity -->
-    <div class="d-none" id="quantityDiv">
-      <label class="form-label fs-5">How many tyres do you need?</label>
-      <select name="quantity" class="form-select form-select-lg">
-        <option value="1">1 Tyre</option>
-        <option value="2">2 Tyres</option>
-        <option value="3">3 Tyres</option>
-        <option value="4">4 Tyres</option>
-      </select>
-      <div class="container">
-        <div class="row mt-2">
-          <button
-            class="btn btn-dark btn-lg col-5 accent rounded-0"
-            type="button"
-            id="quantityBackBtn"
-          >
-            Back
-          </button>
-          <button
-            class="btn btn-info rounded-0 btn-lg accent col-5 offset-2"
-            type="button"
-            id="quantityBtn"
-          >
-            Next
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Location -->
-    <div class="d-none" id="locationDiv">
-      <label class="form-label fs-5">Where are you?</label>
-      <input
-        type="text"
-        class="form-control form-control-lg text-uppercase text-center mb-2"
-        name="postcode"
-        placeholder="Enter Postcode"
-        id="postcodeInput"
-        required
-      />
-      <div class="container">
-        <div class="row mt-2 mb-3">
-          <button
-            class="btn btn-dark btn-lg col-5 accent rounded-0"
-            type="button"
-            role="button"
-            id="locationBackBtn"
-            >Back
-          </button>
-
-          <button
-            class="btn btn-info rounded-0 btn-lg accent col-5 offset-2"
-            type="button"
-            id="postcodeBtn"
-          >
-            Next
-          </button>
-        </div>
-      </div>
-      <p class="mb-0">
-        No postcode? <button
-          class="btn btn-secondary btn-sm"
-          id="coordinatesBtn"
+    <div class="container">
+      <div class="row mt-2">
+        <button
+          class="btn btn-dark btn-lg col-5 accent rounded-0"
           type="button"
-        >
-          <i class="bi bi-crosshair"></i> Share your location
+          id="tyreSizeBackBtn"
+          >Back
         </button>
-      </p>
-    </div>
-
-    <!-- Fitment -->
-    <div class="d-none" id="fitmentDiv">
-      <label class="form-label fs-5">How soon do you need help?</label>
-      <select name="fitment" class="form-select form-select-lg">
-        <option value="ASAP">ASAP</option>
-        <option value="Today">Today</option>
-        <option value="Not Urgent">Not Urgent</option>
-      </select>
-      <div class="container">
-        <div class="row mt-2 mb-3">
-          <button
-            class="btn btn-dark btn-lg col-5 accent rounded-0"
-            type="button"
-            id="fitmentBackBtn"
-            >Back
-          </button>
-          <button
-            class="btn btn-info rounded-0 btn-lg accent col-5 offset-2"
-            type="button"
-            id="fitmentBtn"
-          >
-            Next
-          </button>
-        </div>
+        <button
+          class="btn btn-info rounded-0 btn-lg accent col-5 offset-2"
+          type="button"
+          id="tyreSizeBtn"
+        >
+          Next
+        </button>
       </div>
     </div>
+  </div>
 
-    <!-- Customer -->
-    <div id="customerDiv" class="d-none">
-      <label class="form-label fs-5">Who do we contact?</label>
-      <input
-        type="text"
-        class="form-control form-control-lg mb-3"
-        placeholder="Name"
-        required
-        name="name"
-      />
-      <input
-        type="tel"
-        class="form-control form-control-lg mb-3"
-        placeholder="Phone"
-        required
-        name="phone"
-      />
-      <input type="email" class="mb-3 form-control form-control-lg" required name="email" placeholder="Email">
-      <textarea
-        name="message"
-        class="form-control form-control-lg mb-3"
-        placeholder="Message"></textarea>
-      <div class="container">
-        <div class="row mt-2">
-          <button
-            class="btn btn-dark btn-lg col-5 accent rounded-0"
-            type="button"
-            id="customerBackBtn"
-          >
-            Back
-          </button>
-          <button
-            class="btn btn-info rounded-0 btn-lg accent col-5 offset-2"
-            type="submit"
-            id="customerBtn"
-          >
-            Send
-          </button>
-        </div>
+  <!-- Quantity -->
+  <div class="d-none" id="quantityDiv">
+    <label class="form-label fs-5">How many tyres do you need?</label>
+    <select name="quantity" class="form-select form-select-lg">
+      <option value="1">1 Tyre</option>
+      <option value="2">2 Tyres</option>
+      <option value="3">3 Tyres</option>
+      <option value="4">4 Tyres</option>
+    </select>
+    <div class="container">
+      <div class="row mt-2">
+        <button
+          class="btn btn-dark btn-lg col-5 accent rounded-0"
+          type="button"
+          id="quantityBackBtn"
+        >
+          Back
+        </button>
+        <button
+          class="btn btn-info rounded-0 btn-lg accent col-5 offset-2"
+          type="button"
+          id="quantityBtn"
+        >
+          Next
+        </button>
       </div>
     </div>
-  </form>
-</div>
+  </div>
+
+  <!-- Location -->
+  <div class="d-none" id="locationDiv">
+    <label class="form-label fs-5">Where are you?</label>
+    <input
+      type="text"
+      class="form-control form-control-lg text-uppercase text-center mb-2"
+      name="postcode"
+      placeholder="Enter Postcode"
+      id="postcodeInput"
+      required
+    />
+    <div class="container">
+      <div class="row mt-2 mb-3">
+        <button
+          class="btn btn-dark btn-lg col-5 accent rounded-0"
+          type="button"
+          role="button"
+          id="locationBackBtn"
+          >Back
+        </button>
+
+        <button
+          class="btn btn-info rounded-0 btn-lg accent col-5 offset-2"
+          type="button"
+          id="postcodeBtn"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+    <p class="mb-0">
+      No postcode? <button
+        class="btn btn-secondary btn-sm"
+        id="coordinatesBtn"
+        type="button"
+      >
+        <i class="bi bi-crosshair"></i> Share your location
+      </button>
+    </p>
+  </div>
+
+  <!-- Fitment -->
+  <div class="d-none" id="fitmentDiv">
+    <label class="form-label fs-5">How soon do you need help?</label>
+    <select name="fitment" class="form-select form-select-lg">
+      <option value="ASAP">ASAP</option>
+      <option value="Today">Today</option>
+      <option value="Not Urgent">Not Urgent</option>
+    </select>
+    <div class="container">
+      <div class="row mt-2 mb-3">
+        <button
+          class="btn btn-dark btn-lg col-5 accent rounded-0"
+          type="button"
+          id="fitmentBackBtn"
+          >Back
+        </button>
+        <button
+          class="btn btn-info rounded-0 btn-lg accent col-5 offset-2"
+          type="button"
+          id="fitmentBtn"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Customer -->
+  <div id="customerDiv" class="d-none">
+    <label class="form-label fs-5">Who do we contact?</label>
+    <input
+      type="text"
+      class="form-control form-control-lg mb-3"
+      placeholder="Name"
+      required
+      name="name"
+    />
+    <input
+      type="tel"
+      class="form-control form-control-lg mb-3"
+      placeholder="Phone"
+      required
+      name="phone"
+    />
+    <input
+      type="email"
+      class="mb-3 form-control form-control-lg"
+      required
+      name="email"
+      placeholder="Email"
+    />
+    <textarea
+      name="message"
+      class="form-control form-control-lg mb-3"
+      placeholder="Message"></textarea>
+    <div class="container">
+      <div class="row mt-2">
+        <button
+          class="btn btn-dark btn-lg col-5 accent rounded-0"
+          type="button"
+          id="customerBackBtn"
+        >
+          Back
+        </button>
+        <button
+          class="btn btn-info rounded-0 btn-lg accent col-5 offset-2"
+          type="submit"
+          id="customerBtn"
+        >
+          Send
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
 
 <script>
-  import "../scripts/quote.js"
+  import "../scripts/quote.js";
 </script>
-

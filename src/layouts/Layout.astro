@@ -126,7 +126,7 @@ import Footer from "../components/Footer.astro";
     <!-- <script defer async src='https://cdn.trustindex.io/loader.js?180cb0449749642fb2966bf6ca0'></script> -->
     <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat 2 -->
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
-<div class="elfsight-app-8561491f-224c-4cb2-8bc3-77679fbe569f" data-elfsight-app-lazy></div>
+<div id="whatsappWidget" class="elfsight-app-8561491f-224c-4cb2-8bc3-77679fbe569f" data-elfsight-app-lazy></div>
 
     <slot />
     <Footer phoneNumber={phoneNumber} />
@@ -136,7 +136,7 @@ import Footer from "../components/Footer.astro";
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"></script>
     <script>
-      import "../scripts/leadTracking.js";
+      import "../scripts/leads.js";
     </script>
   </body>
 </html>
