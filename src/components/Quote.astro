@@ -3,10 +3,13 @@
   id="quoteForm"
   method="POST"
   action="https://app.tyreemergency.com/leads"
-  data-netlify="true"
 >
   <p class="h3">Get a Quote</p>
-  <input type="hidden" name="current_url" id="current_url" />
+  <input type="hidden" name="url" id="current_url" />
+
+  <script>
+    document.getElementById("current_url").value = window.location.href;
+  </script>
   <!-- VRM -->
   <div id="vrmDiv">
     <label class="form-label fs-5">What's the registration?</label>
