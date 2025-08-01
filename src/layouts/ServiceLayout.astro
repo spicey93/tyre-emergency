@@ -6,6 +6,7 @@ const {
   tagline,
   phoneNumber = "0330 133 9311",
   backgroundUrl = "/img/mobile-tyre-fitting.webp",
+  online = false,
 } = Astro.props;
 
 import Layout from "./Layout.astro";
@@ -24,6 +25,7 @@ import CTA from "../components/CTA.astro";
     phoneNumber={phoneNumber}
     ,
     backgroundUrl={backgroundUrl}
+    online={online}
   />
 
   <!-- Testimonials -->

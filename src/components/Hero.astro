@@ -1,9 +1,11 @@
 ---
 import Quote from "./Quote.astro";
+import OnlineQuote from "./OnlineQuote.astro"
 const {
   heading,
   tagline,
   backgroundUrl,
+  online = false,
   phoneNumber = "0330 133 9311",
 } = Astro.props;
 
@@ -52,17 +54,11 @@ const heroStyle = {
         </div>
       </div>
       <div
-        class="col-lg-4 offset-lg-2 col-12 flex-column justify-content-center align-items-end"
+        class="col-lg-4 offset-lg-2 col-12 flex-column justify-content-center align-items-center"
       >
-      <Quote />
-      <form action="https://garage-bookings.com/" method="get" class="d-flex text-light align-items-center justify-content-center mt-3" target="_blank">
-        <input type="hidden" name="clientID" value="537">
-        <input type="hidden" name="homeURL" value="https://tyreemergency.com">
-        <input type="hidden" name="language" value="en">
-        <input type="hidden" name="skipConfirmationPage" value="n">
-        <p class="mb-0 me-3 fw-bold fs-5">Not Urgent?</p>
-        <button class="btn btn-outline-light btn-lg">Order Tyres Online</button>
-    </form>
+
+      {!online && <Quote />}
+      {online && <OnlineQuote />}
       </div>
     </div>
   </div>
