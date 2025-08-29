@@ -1,6 +1,5 @@
 ---
 import Quote from "./Quote.astro";
-import OnlineQuote from "./OnlineQuote.astro";
 const {
   heading,
   tagline,
@@ -21,6 +20,47 @@ const heroStyle = {
 ---
 
 <section id="hero" style={heroStyle}>
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-12 col-lg-6 text-light text-lg-start text-center">
+        <p class="fw-bold display-4 mb-3 accent text-uppercase mt-5">
+          <em>{heading}</em>
+        </p>
+        <p class="fs-2 mb-4">{tagline}</p>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <i class="bi bi-geo-alt-fill text-danger me-2"></i>
+            <span class="fw-bold">Mobile Service</span> — Home, Work, or Roadside
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-house-fill text-danger me-2"></i>
+            <span class="fw-bold">Based in Nottinghamshire</span> — 10+ Years of
+            Experience
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-clock-fill text-danger me-2"></i>
+            <span class="fw-bold">Fast Response Times</span> — Typically Within 30
+            Minutes
+          </li>
+        </ul>
+
+        <a
+          href=`tel:${phoneNumber}`
+          class="btn accent fs-3 btn-lg rounded-0 btn-info mt-3 d-lg-none"
+          ><span
+            ><i class="bi bi-telephone-fill me-2"></i>Call Us - 0330 133 9311</span
+          ></a
+        >
+      </div>
+      <div class="col-12 col-lg-4 offset-lg-2 d-flex align-items-center justify-content-center my-5">
+        <Quote />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 
+
   <div class="container py-5 text-light text-center">
     <p class="fw-bold display-4 mb-3 accent text-uppercase">
       <em>{heading}</em>
@@ -49,7 +89,8 @@ const heroStyle = {
       ></a
     >
   </div>
-</section>
+  
+  -->
 <!-- 
 <section class="py-3 bg-light border-bottom border-danger accent text-center d-none d-md-block fs-5">
   <div class="container">
